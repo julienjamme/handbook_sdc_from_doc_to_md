@@ -6,9 +6,11 @@
 
 2.  what are the key characteristics and use of the data;
 
-3.  disclosure risk;
+3.  disclosure risk (ex ante);
 
 4.  disclosure control methods;
+
+6.  disclosure risk (ex post) and information loss;
 
 5.  implementation
 
