@@ -86,7 +86,7 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 | and information loss                                     | *If the risk is deemed too high need of come back to step 5.*                                                                                                                                       |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                                                          | Information loss analysis                                                                                                                                                                           |
-                                                           | *If the information loss is deemed too high need of come back to step 5.*                                                                                                                           |
+|                                                          | *If the information loss is deemed too high need of come back to step 5.*                                                                                                                           |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Roadmap to releasing a microdata file {#tbl-roadmap}
