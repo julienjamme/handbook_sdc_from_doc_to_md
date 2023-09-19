@@ -1,6 +1,6 @@
 ## A roadmap to the release of a microdata file
 
-> This section aims at introducing the reader to the process that, starting from the original microdata file as it is produced by survey specialists, ends with the creation of a file for external users. This roadmap will drive you through the five stage process for disclosure outlined in Section 1.4 i.e.
+> This section aims at introducing the reader to the process that, starting from the original microdata file as it is produced by survey specialists, ends with the creation of a file for external users. This roadmap will drive you through the six stage process for disclosure,  mostly outlined in Section 1.4 i.e.
 
 1.  why is confidentiality protection needed;
 
@@ -10,9 +10,10 @@
 
 4.  disclosure control methods;
 
-6.  disclosure risk (ex post) and information loss;
+5.  implementation;
 
-5.  implementation
+6.  ex post assessment of disclosure risk and information loss
+
 
 Specifying, for each stage, the peculiarities of microdata release. In @tbl-roadmap we present an overview of the process.
 
@@ -59,7 +60,7 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 |                                                          |                                                                                                                                                                                                     |
 |                                                          | *List of variables to be removed, variables to be included, some ideas of level of details of structural variables*                                                                                 |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3\. Disclosure risk                                      | Disclosure scenario                                                                                                                                                                                 |
+| 3\. Disclosure risk (ex ante)                            | Disclosure scenario                                                                                                                                                                                 |
 |                                                          |                                                                                                                                                                                                     |
 |                                                          | ⇓                                                                                                                                                                                                   |
 |                                                          |                                                                                                                                                                                                     |
@@ -67,7 +68,7 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                                                          | Definition of risk                                                                                                                                                                                  |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                          | Risk assessment                                                                                                                                                                                     |
+|                                                          | Risk assessment (on the basis of original data)                                                                                                                                                     |
 |                                                          |                                                                                                                                                                                                     |
 |                                                          | ⇓                                                                                                                                                                                                   |
 |                                                          |                                                                                                                                                                                                     |
@@ -79,9 +80,14 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 |                                                          |                                                                                                                                                                                                     |
 |                                                          | *Identification of a disclosure limitation method*                                                                                                                                                  |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                          | Information loss analysis                                                                                                                                                                           |
-+----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 5\. Implementation                                       | Choice of software, parameters and thresholds for different methods                                                                                                                                 |
++----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6\. ex post assessment of disclosure risk                | Ex post disclosure risk analysis                                                                                                                                                                    |
+| and information loss                                     | *If the risk is deemed too high need of come back to step 5.*                                                                                                                              |
++----------------------------------------------------------+---------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------+
+|                                                          | Information loss analysis                                                                                                                                                                           |
+                                                          | *If the information loss is deemed too high need of come back to step 5.*                                                                                                                            |
 +----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Roadmap to releasing a microdata file {#tbl-roadmap}
