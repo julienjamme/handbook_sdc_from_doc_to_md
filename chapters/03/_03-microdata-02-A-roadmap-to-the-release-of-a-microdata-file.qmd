@@ -175,10 +175,14 @@ An example of the application of this reasoning for the definition of a dissemin
 
 ### Implementation
 
-The key stage of the SDC process is the implementation of the whole procedure, choice of software, parameters and levels of acceptable risks.
+The key action of the SDC process is the implementation of the whole procedure, choice of software, parameters and levels of acceptable risks.
 
 Documentation is an essential part of any dissemination strategy both for auditing from external authorities and transparency towards users. The former may include description of legal and administrative steps for a risk management policy together with the technical solution applied. The latter is essential for a user to understand what has been changed or limited in the data because of confidentiality constraints. If a data perturbation method has been applied then, for transparency reasons, this should be clearly stated. Information on which statistics have been preserved and which have been modified and some order of magnitude of possible changes should be provided as far as possible. If a data reduction method has been applied with some local suppression then the distribution of such suppressions should be given for a series of different dimensions of interest (distribution by variables, by household size, household type, etc.) and any other statistics that are deemed relevant for the user. The released microdata should be obviously accompanied by all necessary metadata and information on methodologies used at various stage of the survey process (sampling, imputation, validation, etc.) together with information on magnitude of sampling errors, estimation domains etc.
 
 ### Ex post assessment of disclosure risk and information loss
 
+The last -- but, of course, not least -- stage of the procedure is the ex post assessment of disclosure risk and computation of the expected information loss due to SDC. 
+
 An assessment of information loss caused by the protection methods adopted is highly recommended. A brief description of information loss measures is reported in section 3.5; examples of how to check in practice the amount of distortion or modification in the protected microdata is presented in case studies A1 and A2.
+
+Of course, the results of computation of discloure risk (both final and indirect, if applicable) and information loss should be saved in the documentation of the whole process.  
