@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -218,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 <p>As modern communication techniques have become available, the NSIs have investigated the possibilities to use these techniques. The first initiative is remote execution. In this concept the researchers will get a full description of all the meta data of the data sets available for research. However the data set available will remain on the computers of the NSIs. The researchers will prepare scripts for analysing the data sets (with SPSS, SAS etc) and send them to the NSI (by email or via some internet page). The NSI will then check the script (e.g.&nbsp;for commands like List Cases, but also other unwanted actions like printing the residuals of a regression) before running it and after a second check send back the results to the researcher.</p>
 <p>For the researcher this system has the advantage that he does no longer have to travel to the NSI. He can send a script whenever he wants. On the other hand he cannot directly run the script since this is done by the NSI. Hence correcting errors in a script can take much more time, depending of the turn around time of the NSI. This process could be speeded up if the NSI will make available a fake dataset which corresponds to the original file in terms of structure but not in content. The main objective of this data set is to avoid all unsuccessful submissions due to syntax errors etc.</p>
 <p>For the researcher remote execution has several advantages (no need for travel) but also some drawbacks (slow turn around time). For the NSIs it is very time-consuming, as they have to check so many scripts and results. It is not uncommon in statistical analysis that several scripts are submitted and executed. But then the outcome proves to be not the optimal model and a new script is submitted. However the NSI does not know in advance which script is successful and has to check everything. This is very time-consuming if the NSI takes this seriously.</p>
-<p>Current examples of this kind of systems are the Luxembourg Income Study (Lissy) and the Australian RADL</p>
+<p>Current examples of this kind of systems are the Luxembourg Income Study (Lissy) and the Australian RADL.</p>
 </section>
 <section id="remote-access" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="remote-access"><span class="header-section-number">6.4</span> Remote access</h2>
@@ -251,7 +280,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="rules-for-program-design" class="level4" data-number="6.6.1.2">
 <h4 data-number="6.6.1.2" class="anchored" data-anchor-id="rules-for-program-design"><span class="header-section-number">6.6.1.2</span> Rules for program design</h4>
-<p>To simplify project handling, and especially the confidentiality checks, the research data centres of the Federation and the Länder have developed a catalogue of rules for program design when using controlled teleprocessing[^9]. Its purpose is to allow</p>
+<p><em><strong>Goals</strong></em></p>
+<p>To simplify project handling, and especially the confidentiality checks, the research data centres of the Federation and the Länder have developed a catalogue of rules for program design when using controlled teleprocessing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Its purpose is to allow:</p>
 <ul>
 <li><p>to shape the envisaged analysis steps in a traceable manner,</p></li>
 <li><p>to facilitate readability of the user-specific “programming handwritings”,</p></li>
@@ -259,29 +289,37 @@ ul.task-list li input[type="checkbox"] {
 <li><p>and, where necessary, to change the project staff at the RDC without causing delays in the project progress.</p></li>
 </ul>
 <p>The benefits obtained from those rules for the research data centres involve a considerable advantage for users, too: The checking time for the output, for which users undoubtedly are urgently waiting for, will substantially be reduced.</p>
+<p><em><strong>Program heading</strong></em></p>
 <p>Specifically, the following requirements have been included in the rules:</p>
 <p>The program developed by the researcher should include a program heading, indicating the project title, the data material used, and contact information of the data user. The project title and the information on data material used allow rapid identification of the program at the research data centre. The contact information is important because in case of faulty programs the user can immediately be contacted by telephone or e-mail in order to agree on modifications.</p>
+<p><em><strong>Program explanation</strong></em></p>
 <p>Also, a program explanation should be provided at the beginning of the program, describing its purpose. Where applicable, information is also required on how the current analyses fit into the project’s state of affairs and progress, on the reference to previous and future analyses, or possible changes in the analysis strategy. The explanation should also contain a list of variables of the original data set used and of the new variables created by the program code, including its labels. Such information facilitates orientation when checking the results. Repeated analyses involving minor changes will more easily be recognised and cross-table confidentiality, which requires comparison with previous outputs, can be performed more rapidly. The names and contents of newly formed variables are more easily recognised by the checking person if they have been mentioned before.</p>
+<p><em><strong>Output tables</strong></em></p>
 <p>The output tables should meet specific format requirements. Every output element should have a title and a serial number. Tables must be self-explanatory, i.e.&nbsp;the table stub and rows must clearly show the table content. Tables should be manageable, that is, they must not exceed a reasonable size. Tables showing totals must have a column for the underlying number of cases to allow checking the frequency and dominance rules. These requirements are based, among other things, on the experience made with confidentiality checks of poorly structured and oversized tables. Output numbering has proved necessary to allow referring to a number when communicating with the data user, rather than having to describe in detail the content of an analysis (often quite similar to other ones) to identify the table.</p>
+<p><em><strong>Path reference</strong></em></p>
 <p>Path references to files used should be put at the beginning of the program. This provides an overview of what files are loaded by the program and what files are stored. This allows the research data centre to adjust the paths (which is frequently necessary) more rapidly than when having to search the entire program for load and store commands.</p>
+<p><em><strong>Structure</strong></em></p>
 <p>The program code should be clearly structured visually; loops should be indented and some space should be left between program blocks. Capital and small letters should be used consistently, program sections should be numbered, and long programs should be subdivided into modules. This, together with the following three items, will allow reducing the time required for getting acquainted with different programming styles and for understanding the program goals and output content.</p>
+<p><em><strong>Comments</strong></em></p>
 <p>Comments should be given on the program. All program blocks and individual commands needing explanation or analyses should be provided with intelligible and sufficiently detailed comments to facilitate understanding of the program steps. Especially the macros must be documented in detail. Variables must be indicated with their labels in the comment.</p>
+<p><em><strong>Variable names</strong></em></p>
 <p>Descriptive names should be given to newly formed variables; intelligible variable labels and, where applicable, value labels should be added.</p>
-<blockquote class="blockquote">
-<p>Designations of elements used in the code should not be changed (example: relations [everywhere either “&gt;” or “GT”], missing values [0 or -x], etc.).</p>
+<p><em><strong>Presentation</strong></em></p>
+<p>Designations of elements used in the code should not be changed (example: relations [everywhere either “<span class="math inline">\(&gt;\)</span>” or “GT”], missing values [<span class="math inline">\(0\)</span> or <span class="math inline">\(-x\)</span>], etc.).</p>
+<p><em><strong>Logging</strong></em></p>
 <p>The log function of the statistics software (creating log files) must be activated by the user’s program code or in any case must not be deactivated, depending on the statistics software. Creating the logs allows archiving the project, so that possible disclosures can be detected later.</p>
+<p><em><strong>Changing the code</strong></em></p>
 <p>Where minor changes are applied to the program, only the relevant program elements should be recalculated. The usual procedure for one’s own workplace is to perform complete runs of a program with minor changes again and again until a satisfactory result has been obtained. For controlled teleprocessing, however, this means that nearly identical outputs have to be checked again and again.</p>
-</blockquote>
 </section>
 <section id="summary" class="level4" data-number="6.6.1.3">
 <h4 data-number="6.6.1.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.6.1.3</span> Summary</h4>
 <p>Different from the program rules required by automated systems, these rules do not completely block certain procedures and commands. Manual handling allows taking individual decisions – when calling up critical procedures, and depending on the data or the specific analysis – to what extent the analysis results thus obtained can be transmitted to the user or must be retained for confidentiality reasons. In this manner, users can make optimal use of the information content of the data.</p>
-<p>Supplementary to the catalogue of rules, a model program (cf.&nbsp;6.6.1.4) has been designed and is available for the statistics packages offered (SPSS, STATA and SAS). In addition, a glossary is provided, containing the terms used in the jargon of official statistics, in programming languages and statistical packages, scientific notation and everyday language and translating them into each other.</p>
+<p>Supplementary to the catalogue of rules, a model program (cf. <a href="#sec-programmingSPSS" class="quarto-xref"><span>Section 6.6.1.4</span></a>) has been designed and is available for the statistics packages offered (SPSS, STATA and SAS). In addition, a glossary is provided, containing the terms used in the jargon of official statistics, in programming languages and statistical packages, scientific notation and everyday language and translating them into each other.</p>
 <p>The program criteria developed are sent in the form of a letter to the researchers and are part of the data usage contract. The purpose of the letter is to ask users for understanding of the list of rules, to avoid misunderstandings from the beginning, and to rapidly and efficiently make users acquainted with the rules of controlled teleprocessing, which may be quite different from the work methods they are used to at their own workplace. When developing the criteria, the model programs and the glossary, the aim was to make them generally acceptable, thus making it easier for the very different scientific users to meet the requirements.</p>
 <p>From the viewpoint of the research data centres, the individual items are maximum requirements for developing perfect program codes. If the criteria are not entirely met in some cases, it is up to the discretion of the RDC staff member to decide to what extent it is possible for him to check the results. As the research projects are handled individually and personally, interpreting the rules to the users’ benefit is rather liberal. If, however, a project is getting very difficult to follow, the research data centres may refer to the rules that must be adhered to.</p>
 </section>
-<section id="programming-example-in-spss" class="level4" data-number="6.6.1.4">
-<h4 data-number="6.6.1.4" class="anchored" data-anchor-id="programming-example-in-spss"><span class="header-section-number">6.6.1.4</span> Programming example in SPSS</h4>
+<section id="sec-programmingSPSS" class="level4" data-number="6.6.1.4">
+<h4 data-number="6.6.1.4" class="anchored" data-anchor-id="sec-programmingSPSS"><span class="header-section-number">6.6.1.4</span> Programming example in SPSS</h4>
 <pre><code>***************************************************************************.
 *** open log file.                            
 set journal on.
@@ -437,13 +475,19 @@ SAVE OUTFILE=mc85working.</code></pre>
 </section>
 <section id="references" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="references"><span class="header-section-number">6.7</span> References</h2>
-<p>John Coder and Marc Cigrang (2003), <em>LISSY: A system for providing Restricted Access to Survey Microdata from Remote Sites,</em> Monographs in Official Statistics, Luxembourg</p>
-<p>Anco Hundepool and Peter-Paul de Wolf(2005). <em>OnSite@Home: Remote Access at Statistics Netherlands,</em> Monographs of Official Statistics, Luxembourg</p>
-<p>Lars-Johan Söderberg (2005). <em>MONA,- Microdata On liNe Access as Statistics Sweden.</em> Monographs of Official Statistics, Luxembourg</p>
-<p>Lars Borchsenius (2005). N<em>ew developments in the Danish system for access to micro data,</em> Monographs of Official Statistics, Luxembourg</p>
-<p>Dr.&nbsp;Sylvia Zühlke, Markus Zwick, Sebastian Scharnhorst and Thomas Wende (2005). <em>The research data centres of the Federal Statistical Office and the statistical offices of the Länder,</em> Forschungsdatenzentrum, Statistisches Bundesamt, <a href="http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf"><u>http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf</u></a></p>
+<p>John Coder and Marc Cigrang (2003), <em>LISSY: A system for providing Restricted Access to Survey Microdata from Remote Sites</em>, Monographs in Official Statistics, Luxembourg</p>
+<p>Anco Hundepool and Peter-Paul de Wolf(2005), <em>OnSite@Home: Remote Access at Statistics Netherlands</em>, Monographs of Official Statistics, Luxembourg</p>
+<p>Lars-Johan Söderberg (2005), <em>MONA,- Microdata On liNe Access as Statistics Sweden</em>, Monographs of Official Statistics, Luxembourg</p>
+<p>Lars Borchsenius (2005), <em>New developments in the Danish system for access to micro data</em>, Monographs of Official Statistics, Luxembourg</p>
+<p>Dr.&nbsp;Sylvia Zühlke, Markus Zwick, Sebastian Scharnhorst and Thomas Wende (2005), <em>The research data centres of the Federal Statistical Office and the statistical offices of the Länder</em>, Forschungsdatenzentrum, Statistisches Bundesamt. <!-- URL no longer works [[http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf]{.underline}](http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf) --></p>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The main persons involved in developing the rules for program design as part of the ad-hoc working group on “confidentiality and documentation” of the research data centres of the Federation and the Länder are: Heike Habla, Jörg Höhne, Ricarda Nauenburg, Ramona Pohl, Dr.&nbsp;Heinz Stralla and Alexander Vogel. The chapter was written by Andrea Harausz and Ricarda Nauenburg.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
