@@ -15,11 +15,15 @@ book:
     - 06-remote-access-issues.qmd
     - 07-glossary.qmd
     - 08-final-index.qmd
-    - 09-references.qmd
   page-navigation: true
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme: 
+      - cosmo
+      - custom.scss
+
+execute:
+  freeze: auto
