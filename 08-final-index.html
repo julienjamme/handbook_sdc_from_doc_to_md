@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -340,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
 <p>modular 138, 154</p>
 <p>multiply-imputed, partially synthetic datasets 87</p>
 <p>Muralidhar-Sarathy hybrid generator 87</p>
-<p>μ−ARGUS 33, 39, 60, 102, 104</p>
+<p><span class="math inline">\(\mu\)</span>−ARGUS 33, 39, 60, 102, 104</p>
 <p>N</p>
 <p>negative contributions 123</p>
 <p>negative values 148</p>
@@ -452,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
 <p>threshold-rule 104</p>
 <p>top and bottom coding 61</p>
 <p>transition probability 78, 79, 80</p>
-<p>&nbsp;τ‑ARGUS 115, 130, 131, 136, 143, 151, 161, 182, 183</p>
+<p>&nbsp;<span class="math inline">\(\tau\)</span>‑ARGUS 115, 130, 131, 136, 143, 151, 161, 182, 183</p>
 <p>U</p>
 <p>uniques in the population 38</p>
 <p>unprojected data 74</p>

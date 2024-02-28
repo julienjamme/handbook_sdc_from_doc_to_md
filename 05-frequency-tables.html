@@ -234,7 +234,7 @@ window.Quarto = {
 <h2 data-number="5.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.1</span> Introduction</h2>
 <p>This chapter discusses disclosure controls for frequency tables, that is tables of counts (or percentages) where each cell value represents the number of respondents in that cell.</p>
 <p>Traditionally frequency tables have been the main method of dissemination for census and social data by NSIs. These tables contain counts of people or households with certain social characteristics. Frequency tables are also used for business data where characteristics are counted, such as the number of businesses. Because of their longer history there has been relatively more research on protecting frequency tables, as compared with newer output methods such as microdata.</p>
-<p>Section 5.2 of the chapter outlines the common types of disclosure risk and how the consideration of these risks leads to the definition of unsafe cells in frequency tables. The process of aggregating individual records into groups to display in tables reduces the risk of disclosure compared with microdata, but usually some additional SDC protection is needed for unsafe cells in tables. Disclosure control methods are used to reduce the disclosure risk by disguising these unsafe cells. A range of different SDC methods are described in Section 5.3. A well established method of SDC for frequency tables is rounding and section 5.4 discusses alternative techniques such as conventional and random rounding, small cell adjustment, and controlled rounding. Controlled rounding is currently the recommended method to protect frequency tables. Section 5.5 describes different information loss measures that can be used to evaluate the impact that different disclosure control methods have on the utility of frequency tables. The final section of the chapter, Section 5.6, provides information on the software package τ‑ARGUS and how it can be used to protect frequency tables</p>
+<p>Section 5.2 of the chapter outlines the common types of disclosure risk and how the consideration of these risks leads to the definition of unsafe cells in frequency tables. The process of aggregating individual records into groups to display in tables reduces the risk of disclosure compared with microdata, but usually some additional SDC protection is needed for unsafe cells in tables. Disclosure control methods are used to reduce the disclosure risk by disguising these unsafe cells. A range of different SDC methods are described in Section 5.3. A well established method of SDC for frequency tables is rounding and section 5.4 discusses alternative techniques such as conventional and random rounding, small cell adjustment, and controlled rounding. Controlled rounding is currently the recommended method to protect frequency tables. Section 5.5 describes different information loss measures that can be used to evaluate the impact that different disclosure control methods have on the utility of frequency tables. The final section of the chapter, Section 5.6, provides information on the software package <span class="math inline">\(\tau\)</span>‑ARGUS and how it can be used to protect frequency tables</p>
 </section>
 <section id="disclosure-risks" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="disclosure-risks"><span class="header-section-number">5.2</span> Disclosure risks</h2>
@@ -1310,65 +1310,57 @@ Table&nbsp;5.20: Summary of SDC rounding methods
 <h2 data-number="5.6" class="anchored" data-anchor-id="software"><span class="header-section-number">5.6</span> Software</h2>
 <section id="introduction-1" class="level3" data-number="5.6.1">
 <h3 data-number="5.6.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">5.6.1</span> Introduction</h3>
-<p>τ‑ARGUS (Hunderpool et al, 2005) is a software package which provides tools to protect tables against the risk of statistical disclosure (τ‑ARGUS is also discussed in Chapter 4). Controlled rounding is easy to use in τ‑ARGUS and the controlled rounding procedure (CRP) was developed by JJ Salazar. This procedure is based on optimisation techniques similar to the procedure developed for cell suppression. The CRP yields additive rounded tables, where the rounded values add up to the rounded totals and sub-totals shown in the table. This means realistic tables are produced and it makes it impossible to reduce the protection by “unpicking” the original values by exploiting the differences in the sums of the rounded values. The CRP implemented in τ‑ARGUS also allows the specification of hierarchical structures within the table variables.</p>
-<p>Controlled rounding gives sufficient protection to small frequencies and creates uncertainty about the zero values (<em>i.e.</em> empty cells). (This is not the case for suppression in terms of how it is now implemented in τ‑ARGUS).</p>
+<p><span class="math inline">\(\tau\)</span>‑ARGUS (Hunderpool et al, 2005) is a software package which provides tools to protect tables against the risk of statistical disclosure (<span class="math inline">\(\tau\)</span>‑ARGUS is also discussed in Chapter 4). Controlled rounding is easy to use in <span class="math inline">\(\tau\)</span>‑ARGUS and the controlled rounding procedure (CRP) was developed by JJ Salazar. This procedure is based on optimisation techniques similar to the procedure developed for cell suppression. The CRP yields additive rounded tables, where the rounded values add up to the rounded totals and sub-totals shown in the table. This means realistic tables are produced and it makes it impossible to reduce the protection by “unpicking” the original values by exploiting the differences in the sums of the rounded values. The CRP implemented in <span class="math inline">\(\tau\)</span>‑ARGUS also allows the specification of hierarchical structures within the table variables.</p>
+<p>Controlled rounding gives sufficient protection to small frequencies and creates uncertainty about the zero values (<em>i.e.</em> empty cells). (This is not the case for suppression in terms of how it is now implemented in <span class="math inline">\(\tau\)</span>‑ARGUS).</p>
 <p>In Zero-restricted Controlled Rounding cell counts are left unchanged if they are multiples of the rounding base or shifted to one of the adjacent multiples of the rounding base. The modified values are chosen so that the sum of the absolute differences between the original values and the rounded ones are minimized (under an additivity constraint). Therefore, some values will be rounded up or down to the most distant multiple of the base in order to help satisfy these constraints. In most cases a solution can be found, but in some cases it cannot and the zero-restriction constraint in CRP can be relaxed to allow the cell values to be rounded to a nonadjacent multiple of the base. This relaxation is controlled by allowing the procedure to take a maximum number of <em>steps</em>.</p>
 <p>For example, consider rounding a cell value of 7 when the rounding base equals 5. In zero-restricted rounding, the solution can be either 5 or 10. If 1 step is allowed, the solution can be 0, 5, 10 or 15. In general, let <span class="math inline">\(z\)</span> be the integer to be rounded in base <span class="math inline">\(b\)</span>, then this number can be written as</p>
 <p><span class="math inline">\(z = u b + r\)</span>,</p>
 <p>where <span class="math inline">\(ub\)</span> is the lower adjacent multiple of <span class="math inline">\(b\)</span> (hence <span class="math inline">\(u\)</span> is the floor value of <span class="math inline">\(z/b\)</span>) and <span class="math inline">\(r\)</span> is the remainder. In the zero-restricted solution the rounded value, <span class="math inline">\(a\)</span>, can take values:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 a = \begin{cases}
 ub &amp;\text{if}\quad r=0 \\
 (u+1)b &amp;\text{if}\quad r\neq0
 \end{cases}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>If <span class="math inline">\(K\)</span> steps are allowed, then <span class="math inline">\(a\)</span>, can take values:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 a = \begin{cases}
 \max_{j\in{-K,\ldots,K}}(0,(u+j))\cdot b   &amp;\text{if}\quad r=0\\
 \max_{j\in{-K,\ldots,K+1}}(0,(u+j))\cdot b &amp;\text{if}\quad r\neq0
 \end{cases}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p><span class="math inline">\(\left\{ \begin{array} { l } a = \max \{ 0 , ( u + j ) \} b , j = - K , \ldots , K , \text { if } r = 0 \\ a = \max \{ 0 , ( u + j ) \} b , j = - K , \ldots , ( K + 1 ) , \text { if } r \neq 0 \end{array} \right.\)</span>)</p>
 </section>
 <section id="optimal-first-feasible-and-rapid-solutions" class="level3" data-number="5.6.2">
 <h3 data-number="5.6.2" class="anchored" data-anchor-id="optimal-first-feasible-and-rapid-solutions"><span class="header-section-number">5.6.2</span> Optimal, first feasible and RAPID solutions</h3>
-<p>For a given table there can exist more than one controlled rounded solution, and any of these solutions is a <em>feasible</em> solution. The Controlled Rounding Program embedded in τ‑ARGUS determines the <em>optimal</em> solution by minimising the sum of the absolute distances of the rounded values, from the original ones. Denoting the cell values, including the totals and sub-totals, with <em>z</em><sub>i</sub> and the corresponding rounded values with <em>a</em><sub>i</sub>, the function that is minimised is</p>
+<p>For a given table there can exist more than one controlled rounded solution, and any of these solutions is a <em>feasible</em> solution. The Controlled Rounding Program embedded in <span class="math inline">\(\tau\)</span>‑ARGUS determines the <em>optimal</em> solution by minimising the sum of the absolute distances of the rounded values, from the original ones. Denoting the cell values, including the totals and sub-totals, with <em>z</em><sub>i</sub> and the corresponding rounded values with <em>a</em><sub>i</sub>, the function that is minimised is</p>
 <p><span class="math display">\[
 \sum\limits_{i = 1}^{N} \left| z_{i}-a_{i} \right| \quad ,
 \]</span></p>
 <p>where <span class="math inline">\(N\)</span> is the number of cells in a table (including the marginal ones). The optimisation procedure for controlled rounding is a rather complex one (<em>NP</em>-complete program), so finding the optimal solution may take a long time for large tables. In fact, the algorithm iteratively builds different rounded tables until it finds the optimal solution. In order to limit the time required to obtain a solution, the algorithm can be stopped when the first feasible solution is found. In many cases, this solution is quite close to the optimal one and it can be found in significantly less time.</p>
-<p>The RAPID solution is produced by CRP as an approximated solution when a feasible one cannot be found. This solution is obtained by rounding the internal cells to the closest multiple of the base and then computing the marginal cells by addition. This means that the computed marginal values can be many jumps away from the original value. However, a RAPID solution is produced at each iteration of the search for an optimal solution, and it will improve (in terms of the loss function) over time. τ‑ARGUS allows the user to stop CRP after the first RAPID solution is produced, but this is likely to be very far away from the optimal one.</p>
+<p>The RAPID solution is produced by CRP as an approximated solution when a feasible one cannot be found. This solution is obtained by rounding the internal cells to the closest multiple of the base and then computing the marginal cells by addition. This means that the computed marginal values can be many jumps away from the original value. However, a RAPID solution is produced at each iteration of the search for an optimal solution, and it will improve (in terms of the loss function) over time. <span class="math inline">\(\tau\)</span>‑ARGUS allows the user to stop CRP after the first RAPID solution is produced, but this is likely to be very far away from the optimal one.</p>
 </section>
 <section id="protection-provided-by-controlled-rounding" class="level3" data-number="5.6.3">
 <h3 data-number="5.6.3" class="anchored" data-anchor-id="protection-provided-by-controlled-rounding"><span class="header-section-number">5.6.3</span> Protection provided by controlled rounding</h3>
 <p>The protection provided by controlled rounding can be assessed by considering the uncertainty (about the true values achieved) when releasing rounded values; that is the existence interval that an intruder can compute for a rounded value. We assume that the values of the rounding base, <span class="math inline">\(b\)</span>, and the number of steps allowed, <span class="math inline">\(K\)</span>, are known by the user together with the output rounded table. Furthermore, we assume that it is known that the original values are positive frequencies (hence nonnegative integers).</p>
 <p><strong>Zero-restricted rounding.</strong></p>
 <p>Given a rounded value, <em>a</em>, an intruder can compute the following existence intervals for the true value, <em>z</em>:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 z \in \begin{cases}
 [0,b-1]       &amp;\text{if} \quad a = 0 \\
 [a-b+1,a+b-1] &amp;\text{if} \quad a \neq 0
 \end{cases}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>For example, if the rounding base is <span class="math inline">\(b=5\)</span> and the rounded value is <span class="math inline">\(a=0\)</span>, a user can determine that the original value is between <span class="math inline">\(0\)</span> and <span class="math inline">\(4\)</span>. If the rounded value is not <span class="math inline">\(0\)</span>, then users can determine that the true value is between <span class="math inline">\(\pm 4\)</span> units from the published value.</p>
 <p><strong>K-step rounding</strong> As mentioned above, it is assumed that the number of steps allowed is released together with the rounded table. Let <span class="math inline">\(K\)</span>* be the number of steps allowed, then an intruder can compute the following existence intervals for the true value <span class="math inline">\(z\)</span>:</p>
-<p><span class="math display">\[
-\begin{align}
+<p><span class="math display">\[\begin{align}
 z \in \begin{cases}
 [0,(K+1)b-1]            &amp;\text{if} \quad a &lt; (K+1)b \\
 [a-(K+1)b+1,a+(K+1)b-1] &amp;\text{if} \quad a \geq (K+1)b
 \end{cases}
-\end{align}
-\]</span></p>
+\end{align}\]</span></p>
 <p>For example, assume that for controlled rounding with <span class="math inline">\(b=5\)</span> and <span class="math inline">\(K=1\)</span>, <span class="math inline">\(a=15\)</span>, then a user can determine that <span class="math inline">\(z \in [ 6,24 ]\)</span>.</p>
-<p><strong>Very large tables</strong> The procedure implemented in τ‑ARGUS is capable of rounding tables up to 150K cells on an average computer. However for larger tables a partitioning procedure is available, which allows much larger tables to be rounded. Tables with over six&nbsp;million cells have been successfully rounded this way.</p>
+<p><strong>Very large tables</strong> The procedure implemented in <span class="math inline">\(\tau\)</span>‑ARGUS is capable of rounding tables up to 150K cells on an average computer. However for larger tables a partitioning procedure is available, which allows much larger tables to be rounded. Tables with over six&nbsp;million cells have been successfully rounded this way.</p>
 </section>
 </section>
 <section id="references" class="level2" data-number="5.7">
