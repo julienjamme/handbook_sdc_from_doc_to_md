@@ -2,7 +2,7 @@
 
 ### Overview of concepts and methods
 
-In this section we explain the basic concepts and methods related to microdata protection. Sections 3.4.2, 3.4.3, 3.4.4 and 3.4.5 give in-depth descriptions of some particularly complex methods: microaggregation, rank swapping, additive noise and synthetic data (the first two implemented in μ‑ARGUS).
+In this section we explain the basic concepts and methods related to microdata protection. Sections [-@sec-perturbative-masking], [-@sec-nonperturbative-masking], [-@sec-noise-addition] and [-@sec-microaggregation-further] give in-depth descriptions of some particularly complex methods: microaggregation, rank swapping, additive noise and synthetic data (the first two implemented in μ‑ARGUS).
 
 A microdata set $V$ can be viewed as a file with $n$ records, where each record contains $m$ variables on an individual respondent. The variables can be classified in four categories which are not necessarily disjoint:
 
@@ -82,7 +82,7 @@ With the exception of the not very practical method of Sullivan(1989), noise add
 
 -   It makes no assumptions on the range of possible values for $V_{i}$ (which may be infinite).
 -   The noise being added is typically continuous and with mean zero, which suits well with continuous original data.
--   No exact matching is possible with external files. Depending on the amount of noise added, approximate (interval) matching might be possible. More details can be found in Section 3.4.2 below.
+-   No exact matching is possible with external files. Depending on the amount of noise added, approximate (interval) matching might be possible. 
 :::
 
 #### Multiplicative Noise
@@ -132,7 +132,7 @@ $$
 in order to preserve the overall sum.
 :::
 
-#### Microaggregation
+#### Microaggregation {#sec-microaggregation}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -146,7 +146,7 @@ Microaggregation exists in several variants:
 -   Exact optimal vs. heuristic microaggregation (Hansen and Mukherjee, 2003), (Oganian and Domingo-Ferrer, 2001).
 -   Categorical microaggregation (V. Torra, 2004).
 
-More details on the microaggregation implemented in μ‑ARGUS are given below.
+More details on the microaggregation implemented in μ‑ARGUS are given in @sec-microaggregation-further.
 :::
 
 #### Data swapping and rank swapping
@@ -159,7 +159,7 @@ Even though the original procedure was not very used in practice (see Fienberg a
 
 It is reasonable to expect that multivariate statistics computed from data swapped with this algorithm will be less distorted than those computed after an unconstrained swap. In earlier empirical work by these authors on continuous microdata protection (Domingo-Ferrer and Torra, 2001), rank swapping has been identified as a particularly well-performing method in terms of the tradeoff between disclosure risk and information loss. Consequently, it is one of the techniques that have been implemented in the μ‑ARGUS package (Hundepool et al., 2005).
 
-**Example.** In @tbl-ex-rank-swapping, we can see an original microdata set on the left and its rankswapped version on the right. There are four variables and ten records in the original dataset; the second variable is alphanumeric, and the standard alphabetic order has been used to rank it. A value of p=10% has been used for all variables.
+**Example.** In @tbl-ex-rank-swapping, we can see an original microdata set on the left and its rankswapped version on the right. There are four variables and ten records in the original dataset; the second variable is alphanumeric, and the standard alphabetic order has been used to rank it. A value of $p=10$ has been used for all variables.
 
 ::: {#tbl-ex-rank-swapping layout-ncol=2}
   |       |        |       |       |
@@ -220,7 +220,7 @@ The Post-RAndomization Method or PRAM (Gouweleeuw et al., 1997) is a probabilist
 
 PRAM information loss and disclosure risk largely depend on the choice of the Markov matrix and are still (open) research topics (DeWolf et al., 1999).
 
-The PRAM matrix contains a row for each possible value of each variable to be protected. This rules out using the method for continuous data. More details on PRAM can be found below.
+The PRAM matrix contains a row for each possible value of each variable to be protected. This rules out using the method for continuous data. More details on PRAM can be found in @sec-PRAM.
 :::
 
 #### MASSC
@@ -250,7 +250,7 @@ Non-perturbative masking does not rely on distortion of the original data but on
 | Top and bottom coding 	|         X         	|          X         	|
 | Local suppression     	|                   	|          X         	|
 
-#### Sampling
+#### Sampling {#sec-sampling}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -271,7 +271,7 @@ If, for a continuous identifying variable, the score of a respondent is only app
 With the above sampling fraction, the maximum absolute error for estimating a maximum-variance proportion is 0.2 percent.
 :::
 
-#### Global recoding
+#### Global recoding {#sec-global-recoding}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -286,14 +286,14 @@ This technique is more appropriate for categorical microdata, where it helps dis
 It is important to realise that global recoding is applied to the whole data set, not only to the unsafe part of the set. This is done to obtain a uniform categorisation of each variable. Suppose, for instance, that we recode the 'Occupation' in the above way. Suppose furthermore that both the combinations 'Place of residence = Amsterdam', 'Gender = Female' and 'Occupation = Statistician', and 'Place of residence = Amsterdam', 'Gender = Female' and 'Occupation = Mathematician' are considered safe. To obtain a uniform categorisation of 'Occupation' we would, however, not publish these combinations, but only the combination 'Place of residence = Amsterdam', 'Gender = Female' and 'Occupation = Statistician or Mathematician'.
 :::
 
-#### Top and bottom coding
+#### Top and bottom coding {#sec-top-and-bottom-coding}
 :::{.callout-warning collapse=true}
 ## Expert level
 
 Top and bottom coding is a special case of global recoding which can be used on variables that can be ranked, that is, continuous or categorical ordinal. The idea is that top values (those above a certain threshold) are lumped together to form a new category. The same is done for bottom values (those below a certain threshold). See the μ‑ARGUS manual (Hundepool et al. 2005).
 :::
 
-#### Local suppression
+#### Local suppression {#sec-local-suppression}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -417,8 +417,8 @@ Correlated noise addition also preserves means and additionally allows preservat
 With this method, we have that the covariance matrix of the masked data is
 
 $$
-\Sigma_{z} = \Sigma + \alpha\Sigma = (1 + \alpha)\Sigma \quad . \quad \text{(3.3.2.1)}
-$$ 
+\Sigma_{z} = \Sigma + \alpha\Sigma = (1 + \alpha)\Sigma  . 
+$${#eq-sigma_z} 
 
 Preservation of correlation coefficients follows, since
 
@@ -426,7 +426,7 @@ $$
 \rho (Z_j, Z_l) = \frac{1 + \alpha}{1 + \alpha}\frac{\operatorname{Cov}\left( X_{j},X_{l} \right)}{\sqrt{\operatorname{Var}\left( X_{j} \right)\operatorname{Var}\left( X_{l} \right)}} = \rho(X_{j},X_{l})
 $$
 
-Regarding variances and covariances, we can see from Equation (3.3.2.1) that masked data only provide biased estimates for them. However, it is shown in Kim (1990) that the covariance matrix of the original data can be consistently estimated from the masked data as long as $\alpha$ is known.
+Regarding variances and covariances, we can see from @eq-sigma_z that masked data only provide biased estimates for them. However, it is shown in Kim (1990) that the covariance matrix of the original data can be consistently estimated from the masked data as long as $\alpha$ is known.
 
 As a summary, masking by correlated noise addition outputs masked data with higher analytical validity than masking by uncorrelated noise addition. Consistent estimators for several important statistics can be obtained as long as α is revealed to the data user. However, simple noise addition as discussed in this section and in the previous one is seldom used because of the very low level of protection it provides (Tendick, 1991), (Tendick and Matloff, 1994).
 :::
@@ -537,7 +537,7 @@ In terms of sums of squares, the optimal $k$-partition is the one that minimizes
 
 For a microdata set consisting of $p$ variables, these can be microaggregated together or partitioned into several groups of variables. Also the way to form groups may vary. We next review the main proposals in the literature.
 
-**Example.** This example illustrates the use of microaggregation for SDC and, more specifically, for $k$-anonymization (Samarati and L. Sweeney, 1998), (Samarati, 2001), (Sweeney, 2002), (Domingo-Ferrer and Torra, 2005). A $k$-anonymous dataset allows no re-identification of a respondent within a group of at least $k$respondents. We show in @tbl-ex-sme-dataset a dataset giving, for 11 small or medium enterprises (SMEs) in a certain town, the company name, the surface in square meters of the company's premises, its number of employees, its turnover and its net profit. Clearly, the company name is an identifier. We will consider that turnover and net profit are confidential outcome variables. A first SDC measure is to suppress the identifier "Company name" when releasing the dataset for public use. However, note that the surface of the company's premises and its number of employees can be used by a snooper as key variables. Indeed, it is easy for anybody to gauge to a sufficient accuracy the surface and number of employees of a target SME. Therefore, if the only privacy measure taken when releasing the dataset in @tbl-ex-sme-dataset is to suppress the company name, a snooper knowing that company K&K Sarl has about a dozen employees crammed in a small flat of about 50 m will still be able to use the released data to link company K&K Sarl with turnover 645,223 Euros and net profit 333,010 Euros. @tbl-ex-three-anonym-sme is a 3-anonymous version of the dataset in @tbl-ex-sme-dataset. The identifier "Company name" was suppressed and optimal bivariate microaggregation with $k = 3$ was used on the key variables "Surface" and "No. employees" (in general, if there are $p$ key variables, multivariate microaggregation with dimension $p$ should be used to mask all of them). Both variables were standardized to have mean $0$ and variance $1$ before microaggregation, in order to give them equal weight, regardless of their scale. Due to the small size of the dataset, it was feasible to compute optimal microaggregation by exhaustive search. The information or variability loss incurred for those two variables in standardized form can be measured by the within-groups sum of squares . Dividing by the total sum of squares SST=22 ---sum of squared Euclidean distances from all 11 pairs of standardized (surface, number of employees) to their average--- yielded a variability loss measure $SSE_{opt}/SST=0.34$ bounded between 0 and 1.
+**Example.** This example illustrates the use of microaggregation for SDC and, more specifically, for $k$-anonymization (Samarati and L. Sweeney, 1998), (Samarati, 2001), (Sweeney, 2002), (Domingo-Ferrer and Torra, 2005). A $k$-anonymous dataset allows no re-identification of a respondent within a group of at least $k$respondents. We show in @tbl-ex-sme-dataset a dataset giving, for 11 small or medium enterprises (SMEs) in a certain town, the company name, the surface in square meters of the company's premises, its number of employees, its turnover and its net profit. Clearly, the company name is an identifier. We will consider that turnover and net profit are confidential outcome variables. A first SDC measure is to suppress the identifier "Company name" when releasing the dataset for public use. However, note that the surface of the company's premises and its number of employees can be used by a snooper as key variables. Indeed, it is easy for anybody to gauge to a sufficient accuracy the surface and number of employees of a target SME. Therefore, if the only privacy measure taken when releasing the dataset in @tbl-ex-sme-dataset is to suppress the company name, a snooper knowing that company K&K Sarl has about a dozen employees crammed in a small flat of about 50 m will still be able to use the released data to link company K&K Sarl with turnover 645,223 Euros and net profit 333,010 Euros. @tbl-ex-three-anonym-sme is a 3-anonymous version of the dataset in @tbl-ex-sme-dataset. The identifier "Company name" was suppressed and optimal bivariate microaggregation with $k = 3$ was used on the key variables "Surface" and "No. employees" (in general, if there are $p$ key variables, multivariate microaggregation with dimension $p$ should be used to mask all of them). Both variables were standardized to have mean $0$ and variance $1$ before microaggregation, in order to give them equal weight, regardless of their scale. Due to the small size of the dataset, it was feasible to compute optimal microaggregation by exhaustive search. The information or variability loss incurred for those two variables in standardized form can be measured by the within-groups sum of squares . Dividing by the total sum of squares $SST=22$ ---sum of squared Euclidean distances from all 11 pairs of standardized (surface, number of employees) to their average--- yielded a variability loss measure $SSE_{opt}/SST=0.34$ bounded between 0 and 1.
 
  *It can be seen that the 11 records were microaggregated into three groups: one group with the 1st, 2nd, 3rd and 10th records (companies with large surface and many employees), a second group with the 4th, 5th and 9th records (companies with large surface and few employees) and a third group with the 6th, 7th, 8th and 11th records (companies with a small surface). Upon seeing @tbl-ex-three-anonym-sme, a snooper knowing that company K&K Sarl crams a dozen employees in a small flat hesitates between the four records in the third group. Therefore, since turnover and net profit are different for all records in the third group, the snooper cannot be sure about their values for K&K Sarl.*
 
@@ -588,7 +588,7 @@ However, except for specific cases such as the one depicted in @fig-fixed-vs-var
 :::{.callout-warning collapse=true}
 ## Expert level
 
-For $p = 1$, *i.e.* a univariate dataset or a multivariate dataset where variables are microaggregated one at a time, an exact polynomial shortest-path algorithm exists to find the $k$-partition that optimally solves the microaggregation problem (Hansen and Mukherjee, 2003). See its description below.
+For $p = 1$, *i.e.* a univariate dataset or a multivariate dataset where variables are microaggregated one at a time, an exact polynomial shortest-path algorithm exists to find the $k$-partition that optimally solves the microaggregation problem (Hansen and Mukherjee, 2003). See its description in @sec-Hansen_Mukherjee.
 
 For $p > 1$, finding an exact optimal solution to the microaggregation problem, *i.e.* finding a grouping where groups have maximal homogeneity and size at least $k$, has been shown to be NP-hard (Oganian and Domingo-Ferrer, 2001).
 
@@ -602,7 +602,7 @@ Thus, practical methods in the literature are heuristic:
 We next describe the two microaggregation algorithms implemented in μ‑ARGUS.
 :::
 
-#### Hansen-Mukherjee's optimal univariate microaggregation
+#### Hansen-Mukherjee's optimal univariate microaggregation {#sec-Hansen_Mukherjee}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -618,7 +618,7 @@ L(i,j) = \sum\limits_{h = i + 1}^{j}\left( v_{h} - {\overline{v}}_{(i,j)} \right
 $$
 where ${\overline{v}}_{(i,j)} = \frac{1}{j - i}\sum_{h=i+1}^{j}v_{h}$
 
-It is proven in Hansen and Mukherjee (2003) that the optimal $k$-partition for $V$ is found by taking as groups the $C(i,j)$ corresponding to the arcs in the shortest path between nodes 0 and $n$. For minimal group size $k$and a dataset of $n$ real numbers sorted in ascending order, the complexity of this optimal univariate microaggregation is $O\left( k^{2}n \right)$, that is, linear in the size of the dataset.
+It is proven in Hansen and Mukherjee (2003) that the optimal $k$-partition for $V$ is found by taking as groups the $C(i,j)$ corresponding to the arcs in the shortest path between nodes 0 and $n$. For minimal group size $k$ and a dataset of $n$ real numbers sorted in ascending order, the complexity of this optimal univariate microaggregation is $O\left( k^{2}n \right)$, that is, linear in the size of the dataset.
 :::
 
 #### The MDAV heuristic for multivariate microaggregation
@@ -631,7 +631,7 @@ MDAV Algorithm
 
 1.   Compute the average record $\overline{x}$ of all records in the dataset. Consider the most distant record $x_{r}$ to the average record $\overline{x}$ (using the squared Euclidean distance).
 2. Find the most distant record $x_{s}$ from the record $x_{r}$ considered in the previous step.
-3.  Form two groups around $x_{r}$ and $x_{s}$, respectively. One group contains $x_{r}$ and the $k - 1$ records closest to $x_{r}$. The other group contains $x_{s}$ and the $k - 1$records closest to $x_{s}$.
+3.  Form two groups around $x_{r}$ and $x_{s}$, respectively. One group contains $x_{r}$ and the $k - 1$ records closest to $x_{r}$. The other group contains $x_{s}$ and the $k - 1$ records closest to $x_{s}$.
 4. If there are at least 3k records which do not belong to any of the two groups formed in Step 3, go to Step 1 taking as new dataset the previous dataset minus the groups formed in the last instance of Step 3.
 5. If there are between $3k - 1$ and $2k$ records which do not belong to any of the two groups formed in Step 3:
     a) compute the average record $\overline{x}$ of the remaining records;
@@ -786,7 +786,7 @@ Data distortion by probability distribution was proposed in 1985 (Liew, Choi an
 
 This method is suitable for both categorical and continuous variables and consists of three steps:
 
-1.  Identify the density function underlying to each of the confidential variables in the dataset and estimate the parameters associated with that density function.
+1. Identify the density function underlying to each of the confidential variables in the dataset and estimate the parameters associated with that density function.
 2. For each confidential variable, generate a protected series by randomly drawing from the estimated density function.
 3. Map the confidential series to the protected series and publish the protected series instead of the confidential ones.
 
@@ -826,7 +826,7 @@ The bootstrap approach bears some similarity to the data distortion by probabili
 Latin Hypercube Sampling (LHS) appears in the literature as another method for generating multivariate synthetic datasets. In Huntington and Lyrintzis (1998), the LHS updated technique of Florian (1992) was improved, but the proposed scheme is still time-intensive even for a moderate number of records. In Dandekar, Cohen and Kirkendall (2002) LHS is used along with a rank correlation refinement to reproduce both the univariate (*i.e.* mean and covariance) and multivariate structure (in the sense of rank correlation) of the original dataset. In a nutshell, LHS-based methods rely on iterative refinement, are time-intensive and their running time does not only depend on the number of values to be reproduced, but on the starting values as well.
 :::
 
-#### Partially synthetic data by Cholesky decomposition
+#### Partially synthetic data by Cholesky decomposition {#sec-IPSO}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -861,8 +861,8 @@ The following information preservation result holds for IPSO-B.
 
 **Proof:** We have that
 $$
-y_{B}' = x\hat{B} + \tilde{r} = x\hat{B} + \left( \tilde{y} - x\tilde{B} \right) \qquad \text{(3.3.5.1)}
-$$ 
+y_{B}' = x\hat{B} + \tilde{r} = x\hat{B} + \left( \tilde{y} - x\tilde{B} \right) 
+$${#eq-y_B_prime} 
 where $\hat{B}$ is the MLE estimate of $B$ obtained from $\left( \tilde{y},x \right)$. Now, the expressions of $\hat{B}$ and $\tilde{B}$ are, respectively,
 $$
 \hat{B} = \left( x^{t}x \right)^{- 1}x^{t}y
@@ -875,7 +875,7 @@ Analogously, the expression of the MLE estimate of ${\hat{B}}_{B}$ obtained from
 $$
 {\hat{B}}_{B} = \left( x^{t}x \right)^{- 1}x^{t}y_{B}'
 $$
-Substituting expression (3.3.5.1) for $y_{B}'$ in the equation above, we get
+Substituting expression ([-@eq-y_B_prime]) for $y_{B}'$ in the equation above, we get
 $$
 {\hat{B}}_{B} = \left( x^{t}x \right)^{- 1}\left( x^{t}x \right)\hat{B} + \left( x^{t}x \right)^{- 1}x^{t}(\tilde{y} - x\tilde{B}) = \hat{B} + \tilde{B} - \tilde{B} = \hat{B}
 $$
@@ -996,7 +996,7 @@ We justify here the role of parameter $k$ in Microhybrid:
 -   If $k = n$, the output is a single synthetic cluster: the procedure is equivalent to calling the synthetic data generator $S$ once for the entire data set.
 -   For intermediate values of $k$, several clusters are obtained at Step 1, whose parameters $\text{parms}$ are preserved by the synthetic clusters generated at Step 2. As $k$ decreases, the number of clusters (whose parameters are preserved in the data output at Step 3) increases, which causes the output data to look more and more like the original data. Each cluster can be regarded as a constraint on the synthetic data generation: the more constraints, the less freedom there is for generating synthetic data, and the output resembles more the original data. This is why the output data can be called hybrid.
 
-It must be noted here that, depending on the synthetic generator used, there may be a lower bound for $k$ higher than 1. For example, if using IPSO (see section 3.4.7.5) with $|X|$ confidential attributes and $|Y|$ non-confidential attributes, it turns out that $k$ must be at least $2|X|+|Y|+1$; otherwise there are not enough degrees of freedom for the generator to work.
+It must be noted here that, depending on the synthetic generator used, there may be a lower bound for $k$ higher than 1. For example, if using IPSO (see @sec-IPSO) with $|X|$ confidential attributes and $|Y|$ non-confidential attributes, it turns out that $k$ must be at least $2|X|+|Y|+1$; otherwise there are not enough degrees of freedom for the generator to work.
 
 Note that the choice of parameter $k$ is more straightforward than the choice of $\alpha$ in the MS procedure above. Also, for the case of numerical microdata, Microhybrid can offer, in addition to mean and covariance exact preservation, approximate preservation of third-order and fourth-order moments, and also approximate preservation of all moments up to order four in randomly chosen subdomains of the dataset. Details are given in the above-referenced paper describing Microhybrid.
 :::
