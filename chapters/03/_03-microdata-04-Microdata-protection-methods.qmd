@@ -35,7 +35,7 @@ So far in this section, we have classified microdata protection methods by their
 -   *Continuous data*. A variable is considered continuous if it is numerical and arithmetic operations can be performed with it. Examples are income and age. Note that a numerical variable does not necessarily have an infinite range, as is the case for age. When designing methods to protect continuous data, one has the advantage that arithmetic operations are possible, and the drawback that every combination of numerical values in the original dataset is likely to be unique, which leads to disclosure if no action is taken.
 -   *Categorical data*. A variable is considered categorical when it takes values over a finite set and standard arithmetic operations do not make sense. Ordinal scales and nominal scales can be distinguished among categorical variables. In ordinal scales the order between values is relevant, whereas in nominal scales it is not. In the former case, max and min operations are meaningful while in the latter case only pairwise comparison is possible. The instruction level is an example of ordinal variable, whereas eye colour is an example of nominal variable. In fact, all quasi-identifiers in a microdata set are normally categorical nominal. When designing methods to protect categorical data, the inability to perform arithmetic operations is certainly inconvenient, but the finiteness of the value range is one property that can be successfully exploited.
 
-### Perturbative masking
+### Perturbative masking {#sec-perturbative-masking}
 
 Perturbative statistical disclosure control (SDC) methods allow for the release of the entire microdata set, although perturbed values rather than exact values are released. Not all perturbative methods are designed for continuous data; this distinction is addressed further below for each method.
 
@@ -237,7 +237,7 @@ MASSC (Singh, Yu and Dunteman, 2003) is a masking method whose acronym summarize
 MASSC, to the best of our knowledge, is the first attempt at designing a perturbative masking method in such a way that disclosure risk can be analytically quantified. Its main shortcoming is that its disclosure model simplifies reality by considering only disclosure resulting from linkage of key variables with external sources. Since key variables are typically categorical, the uniqueness approach can be used to analyze the risk of disclosure; however, doing so ignores the fact that continuous outcome variables can also be used for respondent re-identification. As an example, if respondents are companies and turnover is one outcome variable, everyone in a certain industrial sector knows which is the company with largest turnover. Thus, in practice, MASSC is a method only suited when continuous variables are not present.
 :::
 
-### Non-perturbative masking
+### Non-perturbative masking {#sec-nonperturbative-masking}
 
 Non-perturbative masking does not rely on distortion of the original data but on partial suppressions or reductions of detail. Some of the methods are usable on both categorical and continuous data, but others are not suitable for continuous data. lists the non-perturbative methods described below. For each method, the @tbl-non-perturbative-methods indicates whether it is suitable for continuous and/or categorical data.
 
@@ -370,7 +370,7 @@ Willenborg, L., and De Waal, T. (2001). *Elements of Statistical Disclosure Cont
 
 Winkler, W. E. (2004). *Re-identification methods for masked microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 216--230, Berlin Heidelberg, 2004. Springer.
 
-### Noise addition
+### Noise addition {#sec-noise-addition}
 
 <!-- **SECTION 3.3.2 HÖHNE'S METHOD TO BE ADDED BY SARAH AT THE END OF THIS SECTION (remark by Josep)** -->
 
@@ -517,7 +517,7 @@ Tendick, P. (1991). *Optimal noise addition for preserving confidentiality in mu
 
 Tendick, P., and Matloff, N. (1994). *A modified random perturbation method for database security*. ACM Transactions on Database Systems, 19:47--63.
 
-### Microaggregation: further details
+### Microaggregation: further details {#sec-microaggregation-further}
 
 Consider a microdata set with $p$ continuous variables and $n$ records (*i.e.*, the result of recording $p$ variables on $n$ individuals). A particular record can be viewed as an instance of $X' = \left( X_{1},\cdots,X_{p} \right)$, where the $X_{i}$ are the variables. With these individuals, $g$ groups are formed with $n_{i}$ individuals in the $i$-th group ($n_{i} \geq k$ and $n = \Sigma_{}^{}n_{i}$). Denote by $x_{\text{ij}}$ the $j$-th record in the $i$-th group; denote by ${\overline{x}}_{i}$ the average record over the $i$-th group, and by $\overline{x}$ the average record over the whole set of $n$ individuals.
 
@@ -677,7 +677,7 @@ Torra, V. (2004). *Microaggregation for categorical variables: a median based ap
 
 Winkler, W. E. (2004). *Masking and re-identification methods for public-use microdata: overview and research problems.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of Lecture Notes in Computer Science, pages 231--246, Berlin Heidelberg, 2004. Springer.
 
-### PRAM
+### PRAM {#sec-PRAM}
 
 PRAM is a disclosure control technique that can be applied to categorical data. Basically, it is a form of intended misclassification, using a known and predetermined probability mechanism. Applying PRAM means that for each record in a microdata file, the score on one or more categorical variables is changed with a certain probability. This is done independently for each of the records.
 PRAM is thus a perturbative method. Since PRAM uses a probability mechanism, the disclosure risk is directly influenced by this method. An intruder can never be certain that a record she thinks she has identified is indeed the identified person: with a certain probability this has been a perturbed record.
@@ -772,7 +772,7 @@ De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM,* Discu
 
 De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM,* Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
 
-### Synthetic microdata
+### Synthetic microdata {#sec-synthetic-data}
 
 Publication of synthetic ---*i.e.* simulated--- data was proposed long ago as a way to guard against statistical disclosure. The idea is to randomly generate data with the constraint that certain statistics or internal relationships of the original dataset should be preserved.
 

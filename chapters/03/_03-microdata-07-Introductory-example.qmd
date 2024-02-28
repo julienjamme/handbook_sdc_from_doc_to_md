@@ -1,4 +1,4 @@
-## Introductory example: rules at Statistics Netherlands
+## Introductory example: rules at Statistics Netherlands {#sec-intro-example}
 
 As has been shown in the previous sections there are many sophisticated ways of making a safe protected microdata set. And it is far from a simple straightforward task to select the most appropriate method for the Disclosure Protection of a microdata set. This requires a solid knowledge of the survey in question as well as a good overview of all the methods described in the previous sections.
 

@@ -1,6 +1,6 @@
-## Risk assessment
+## Risk assessment {#sec-risk-assessment}
 
-### Overview
+### Overview {#sec-risk-overview}
 
 <!--**SECTION 3.2.1 LUISA COULD PERHAPS ADD SOMETHING IN THIS SECTION FROM THE MATERIALS IN THE INTRODUCTION OF THE RECORD LINKAGE PDF, SECTION 1 OF THAT PDF (remark by Josep)**-->
 
@@ -23,18 +23,18 @@ Several definitions of risk have been proposed in the literature; here we focus 
 For the first class of risk measures a unit is at risk if its combination of scores on the identifying variables is below a given threshold. The threshold rule used within the software package μ‑ARGUS, as presented in Section , is an example of this class of risk measures.
 
 *Risk based on keys in the population*\
-For the second type of approach we are concerned with the risk of a unit as determined by its combination of scores on the identifying variables within the population or its probability of re-identification. The idea then is that a unit is at risk if such quantity is above a given threshold. Because the frequency in the population is generally unknown, it may be estimated through a modelling process. Examples of this reasoning are the individual risk of disclosure based on the Negative Binomial distribution developed by Benedetti and Franconi (1998) and Franconi and Polettini (2004), which is outlined in Section 3.3.5, and the one based on the Poisson distribution and log-linear models developed by Skinner and Holmes (1998) and Elamir and Skinner (2004) which is described in Section 3.3.6 along with current research on other probabilistic methods. Another approach based on keys in the population is the Special Uniques Detection (SUDA) Algorithm developed by Elliot et al. (2002) that uses a heuristic method to estimate the risk; this is outlined in Section 3.3.7.
+For the second type of approach we are concerned with the risk of a unit as determined by its combination of scores on the identifying variables within the population or its probability of re-identification. The idea then is that a unit is at risk if such quantity is above a given threshold. Because the frequency in the population is generally unknown, it may be estimated through a modelling process. Examples of this reasoning are the individual risk of disclosure based on the Negative Binomial distribution developed by Benedetti and Franconi (1998) and Franconi and Polettini (2004), which is outlined in @sec-argus-individual-risk, and the one based on the Poisson distribution and log-linear models developed by Skinner and Holmes (1998) and Elamir and Skinner (2004) which is described in @sec-poisson-log-linear along with current research on other probabilistic methods. Another approach based on keys in the population is the Special Uniques Detection (SUDA) Algorithm developed by Elliot et al. (2002) that uses a heuristic method to estimate the risk; this is outlined in @sec-SUDA.
 
 *Risk based on record linkage*\
-When identifying variables are continuous we cannot exploit the concept of rareness of the keys and we transform such concept into rareness in the neighbourhood of the record. A way to measure rareness in the neighbourhood is through record linkage techniques. This third class of disclosure risk is covered in Section 3.3.8.
+When identifying variables are continuous we cannot exploit the concept of rareness of the keys and we transform such concept into rareness in the neighbourhood of the record. A way to measure rareness in the neighbourhood is through record linkage techniques. This third class of disclosure risk is covered in @sec-record-linkage.
 
-Section 3.3.2 provides an introduction to disclosure risk scenarios and Section 3.2.3 introduces concepts and notation used throughout this chapter. Sections to 3.3.8 describe different approaches to microdata risk assessment as specified above. However, as microdata risk assessment is a novelty in statistical research there isn't yet agreement on what method is the best, or at least best under given circumstances. In the following sections we comment on various approaches to risk measures and try to give advice on situations where they could or could not be applied. In any case, it has been recognised that research should be undertaken to evaluate these different approaches to microdata risk assessment, see for example Shlomo and Barton (2006).
+@sec-disclosure-risk-scenarios provides an introduction to disclosure risk scenarios and @sec-concepts introduces concepts and notation used throughout this chapter. Sections to [-@sec-record-linkage] describe different approaches to microdata risk assessment as specified above. However, as microdata risk assessment is a novelty in statistical research there isn't yet agreement on what method is the best, or at least best under given circumstances. In the following sections we comment on various approaches to risk measures and try to give advice on situations where they could or could not be applied. In any case, it has been recognised that research should be undertaken to evaluate these different approaches to microdata risk assessment, see for example Shlomo and Barton (2006).
 
 The focus of these methods and this section of the handbook is for microdata samples from social surveys. For microdata samples from censuses or registers the disclosure risk is known. Business survey microdata are not typically released due to their disclosive nature (skewed distributions and very high sampling fractions).
 
-In section 1.1 we make some suggestions on practical implementation and in section 3.8 we give examples of real data sets and ways in which risk assessment could be carried out.
+In @sec-intro-example we make some suggestions on practical implementation and in @sec-further-example we give examples of real data sets and ways in which risk assessment could be carried out.
 
-### Disclosure risk scenarios
+### Disclosure risk scenarios {#sec-disclosure-risk-scenarios}
 
 *Need to add section from Luisa. My feeling is that as it stands this was quite long and could be simplified.*
 
@@ -52,7 +52,7 @@ The case study part of the Handbook  contains examples of the Nosy Neighbour sc
 
 In any case the definition of the scenario is essential as it defines the hypothesis underneath the risk estimation and the subsequent protection of the data.
 
-### Concepts and notation
+### Concepts and notation {#sec-concepts}
 
 For microdata, disclosure risk measures quantify the risk of re-identification. Individual per record disclosure risk measures are useful for identifying high-risk records and targeting the SDC methods. These individual risk measures can be aggregated to obtain global file level disclosure risk measures. These global risk measures are particularly useful to NSIs for their decision making process on whether the microdata is safe to be released and allows comparisons across different files.
 
@@ -62,21 +62,15 @@ Disclosure in a microdata context means a correct record re-identification opera
 To define the disclosure scenario, the following assumptions are made. Most of them are conservative and contribute to the definition of a worst case scenario:
 
 1.  a sample $s$ from a population $\mathcal{P}$ is to be released, and sampling design weights are available;
-
 2.  the external file available to the intruder covers the whole population $\mathcal{P}$; consequently for each $i \in s$ the matching unit $i^*$ does always exist in $\mathcal{P}$;
-
 3.  the external file available to the intruder contains the individual direct identifiers and a set of categorical identifying variables that are also present in the sample;
-
 4.  the intruder tries to match a unit $i$ in the sample with a unit $i^*$ in the population register by comparing the values of the identifying variables in the two files;
-
 5.  the intruder has no extra information other than that contained in the external file;
-
 6.  a re-identification occurs when a link between a sample unit $i$ and a population unit $i^*$ is established and $i^*$ is actually the individual of the population from which the sampled unit $i$ was derived; e.g. the match has to be a correct match before an identification takes place.
 
 Moreover we add the following assumptions:
 
 7.  the intruder tries to match all the records in the sample with a record in the external file;
-
 8.  the identifying variables agree on correct matches, that is no errors, missing values or time-changes occur in recording the identifying variables in the two microdata file.
 
 *Notation*\
@@ -88,15 +82,15 @@ $$
 \sum_{k = 1}^{K}F_{k} = N,\quad \sum_{k = 1}^{K}f_{k} = n.
 $$
 
-Formally the sample and population sizes in the models introduced in sections 3.3.5 and 3.3.6 are random and their expectations are denoted by n and N respectively. In practice, the sample and population size are usually replaced by their natural estimators; the actual sample and population sizes, assumed to be known.
+Formally the sample and population sizes in the models introduced in @sec-argus-individual-risk and [-@sec-poisson-log-linear] are random and their expectations are denoted by n and N respectively. In practice, the sample and population size are usually replaced by their natural estimators; the actual sample and population sizes, assumed to be known.
 
 Observing the values of the key on individual $i \in s$ will classify such individual into one cell. We denote by $k(i)$ the index of the cell into which individual $i \in s$ is classified based on the values of the key.
 
 According to the concept of re-identification disclosure given above, we define the (base) individual risk of disclosure of unit $i$ in the sample as its probability of re-identification under the worst case scenario. Therefore the risk $r_i$ that we get is certainly not smaller than the actual risk, the individual risk is a conservative estimate of the actual risk:
 
 $$
-r_{i}=\mathbb{P}\left( i \text{ correctly linked with } i^* \mid s , \mathcal{P} \text{, worst case scenario }\right) \qquad\text{(3.2.3.1)}
-$$
+r_{i}=\mathbb{P}\left( i \text{ correctly linked with } i^* \mid s , \mathcal{P} \text{, worst case scenario }\right) 
+$$ {#eq-3.2.3.1}
 
 All of the methods based on keys in the population described in this chapter aim to estimate this individual per-record disclosure risk measure that can be formulated as $1/F_k$. The population frequencies $F_k$ are unknown parameters and therefore need to be estimated from the sample. A global file-level disclosure risk measure can be calculated by aggregating the individual disclosure risk measures over the sample:
 
@@ -124,11 +118,11 @@ In a disclosure scenario, keys a combination of identifying variables, are suppo
 
 Following the Nosy Neighbour scenario, the aim of the μ‑ARGUS threshold rule is to avoid the occurrence of combinations of scores that are rare in the population and not only avoiding population-uniques. To define what is meant by rare the data protector has to choose a threshold value for each key. If a key occurs more often than this threshold the key is considered safe, otherwise the key must be protected because of the risk of re-identification.
 
-The level of the threshold and the number and size of the keys to be inspected depend of course on the level of protection you want to achieve. Public use files require much more protection than microdata files under contract that are only available to researchers under a contract. How this rule is used in practice is given in the example of section 3.7
+The level of the threshold and the number and size of the keys to be inspected depend of course on the level of protection you want to achieve. Public use files require much more protection than microdata files under contract that are only available to researchers under a contract. How this rule is used in practice is given in the example of @sec-intro-example.
 
 If a key is considered unsafe according to this rule, protection is required. Therefore often global recoding and local suppression are applied. These techniques are described in the sections 3.4.3.2 and 3.4.3.4
 
-### ARGUS individual risk methodology 
+### ARGUS individual risk methodology {#sec-argus-individual-risk}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -217,7 +211,7 @@ For household data it is important to include in the identifying variables that 
 Suppose one computes the risk using the household size as the only identifying variable in a household data file, and that such file contains households whose risk is above a fixed threshold. Since information on the number of components in the household cannot be removed from a file with household structure, these records cannot be safely released, and no suppression can make them safe. This permits to check for presence of very peculiar households (usually, the very large ones) that can be easily recognised in the population just by their size and whose main characteristic, namely their size, can be immediately computed from the file. For a discussion on this issue see Polettini (2004).
 :::
 
-### The Poisson model with log-linear modelling
+### The Poisson model with log-linear modelling {#sec-poisson-log-linear}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -256,7 +250,7 @@ where $\pi_{k}$ is the sampling fraction.
 In each local neighbourhood of cell *k* a smoothing polynomial regression model is carried out to estimate $\alpha_{k}$ and $\beta_{k}$, and disclosure risk measures are estimated based on the Negative Binomial Distribution, ${\hat{\tau}}_{2} = \sum_{k \in \text{SU}}^{}{\hat{r_k} =}\sum_{k \in \text{SU}}^{}\frac{{\hat{\rho}}_{k}(1 - {\hat{\rho}}_{k})^{{\hat{\alpha}}_{k}}}{{\hat{\alpha}}_{k}(1 - {\hat{\rho}}_{k})}$ , see: Rinott and Shlomo (2005, 2006).
 :::
 
-### SUDA
+### SUDA {#sec-SUDA}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -279,7 +273,7 @@ The advantage of this method is that it relates to a practical model of data int
 A new algorithm, SUDA2 has been developed, Elliot et al (2005), that improves SUDA using several methods. The development provides a much faster tool that can handle larger datasets.
 :::
 
-### Record Linkage
+### Record Linkage {#sec-record-linkage}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -394,8 +388,8 @@ Torra V., and Domingo-Ferrer J. (2003). *Record linkage methods for multidatabas
 
 Torra, V., and Miyamoto, S. (2004),. *Evaluating fuzzy clustering algorithms for microdata protection.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 175--186, Berlin Heidelberg. Springer.
 
-Willenborg, L. and de Waal, T. (1996). *Statistical Disclosure Control in Practice.* Lecture Notes in Statistics, 111, New-York: Springer Verlag.
+Willenborg, L. and De Waal, T. (1996). *Statistical Disclosure Control in Practice.* Lecture Notes in Statistics, 111, New-York: Springer Verlag.
 
-Willenborg, L. and de Waal, T. (2001). *Elements of statistical disclosure control.* Lecture Notes in Statistics, 115, New York: Springer-Verlag.
+Willenborg, L. and De Waal, T. (2001). *Elements of statistical disclosure control.* Lecture Notes in Statistics, 115, New York: Springer-Verlag.
 
 Winkler, W. E. (1993),. *Matching and record linkage.* Technical Report RR93/08, Statistical Research Division, U. S. Bureau of the Census (USA), 1993.
