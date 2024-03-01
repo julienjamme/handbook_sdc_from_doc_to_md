@@ -1,4 +1,4 @@
-## Methodological concepts of secondary cell suppression algorithms in τ‑ARGUS
+## Methodological concepts of secondary cell suppression algorithms in τ‑ARGUS {#sec-methodology-seconday-suppression-tau-argus}
 
 Within this section we briefly explain the methodological concepts of the secondary cell suppression algorithms offered by τ-ARGUS.
 

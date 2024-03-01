@@ -243,12 +243,12 @@ Non-perturbative masking does not rely on distortion of the original data but on
 
 : Non-perturbative methods vs. data types. {#tbl-non-perturbative-methods}
 
-|        _Method_       	| _Continuous data_ 	| _Categorical data_ 	|
-|:---------------------:	|:-----------------:	|:------------------:	|
-| Sampling              	|                   	|          X         	|
-| Global recoding       	|         X         	|          X         	|
-| Top and bottom coding 	|         X         	|          X         	|
-| Local suppression     	|                   	|          X         	|
+|        _Method_       | _Continuous data_ | _Categorical data_ |
+|:---------------------:|:-----------------:|:------------------:|
+| Sampling              |                   |          X         |
+| Global recoding       |         X         |          X         |
+| Top and bottom coding |         X         |          X         |
+| Local suppression     |                   |          X         |
 
 #### Sampling {#sec-sampling}
 :::{.callout-warning collapse=true}
@@ -501,7 +501,7 @@ With the exception of the not very practical method of Sullivan (1989), additiv
 
 Brand, R. (2002). *Microdata protection through noise addition*. In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 97--116, Berlin Heidelberg, 2002. Springer.
 
-Brand, R. (2002b). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics,* European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/11d1.pdf).
+Brand, R. (2002b). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics*, European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/11d1.pdf).
 
 Domingo-Ferrer, J., Sebé, F., and Castellà, J. (2004). *On the security of noise addition for privacy in statistical databases.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 149--161, Berlin Heidelberg, 2004. Springer.
 
@@ -760,17 +760,17 @@ Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisati
 
 Cator, E., Hensbergen A. and Y. Rozenholc (2005), *Statistical Disclosure Control using PRAM*, Proceedings of the 48th European Study Group Mathematics with Industry, Delft, The Netherlands, 15-19 March 2004. Delft University Press, 2005, p. 23 -- 30.
 
-Gouweleeuw, J.M., P. Kooiman, L.C.R.J. Willenborg and P.P. de Wolf (1998a), *Post Randomisation for Statistical Disclosure Control: Theory and Implementation,* Journal of Official Statistics, Vol. 14, 4, pp. 463 -- 478.
+Gouweleeuw, J.M., P. Kooiman, L.C.R.J. Willenborg and P.P. de Wolf (1998a), *Post Randomisation for Statistical Disclosure Control: Theory and Implementation*, Journal of Official Statistics, Vol. 14, 4, pp. 463 -- 478.
 
 Gouweleeuw, J.M., P. Kooiman, L.C.R.J. Willenborg and P.P. de Wolf (1998b), *The post randomisation method for protecting microdata*, Qüestiió, Quaderns d'Estadística i Investigació Operativa, Vol. 22, 1, pp. 145 -- 156.
 
 Van den Hout, A. (2000), *The analysis of data perturbed by PRAM*, Delft University Press, ISBN 90-407-2014-2.
 
-Van den Hout, A. (2004), *Analyzing misclassified data: randomized response and post randomization,* Ph.D. thesis, Utrecht University.
+Van den Hout, A. (2004), *Analyzing misclassified data: randomized response and post randomization*, Ph.D. thesis, Utrecht University.
 
-De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM,* Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf) Related Papers)
+De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf) Related Papers)
 
-De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM,* Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
+De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
 
 ### Synthetic microdata {#sec-synthetic-data}
 

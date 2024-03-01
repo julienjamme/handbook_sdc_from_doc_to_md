@@ -13,8 +13,8 @@ European Statistics Code of Practice [[http://epp.eurostat.cec.eu.int/portal/pag
 
 ISI (1985) *Declaration on Professional Ethics:* [[http://isi.cbs.nl/ethics.htm]{.underline}](http://isi.cbs.nl/ethics.htm)
 
-Pink, B et al. (2009) *Principles and Guidelines on Confidentiality Aspects of Data Integration,* UNECE United Nations Economic commission for Europe: [[http://www.unece.org/stats/publications/Confidentiality_aspects_data_integration.pdf]{.underline}](http://www.unece.org/stats/publications/Confidentiality_aspects_data_integration.pdf)
+Pink, B et al. (2009) *Principles and Guidelines on Confidentiality Aspects of Data Integration* UNECE United Nations Economic commission for Europe: [[http://www.unece.org/stats/publications/Confidentiality_aspects_data_integration.pdf]{.underline}](http://www.unece.org/stats/publications/Confidentiality_aspects_data_integration.pdf)
 
-Trewin, D et al. (2007) *Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access,* UNECE United Nations Economic commission for Europe: [[http://www.unece.org/stats/documents/tfcm/1.e.pdf]{.underline}](http://www.unece.org/stats/documents/tfcm.1.e.pdf)
+Trewin, D et al. (2007) *Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access* UNECE United Nations Economic commission for Europe: [[http://www.unece.org/stats/documents/tfcm/1.e.pdf]{.underline}](http://www.unece.org/stats/documents/tfcm.1.e.pdf)
 
 

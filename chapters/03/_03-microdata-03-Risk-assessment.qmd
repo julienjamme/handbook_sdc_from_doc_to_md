@@ -20,7 +20,7 @@ When the identifying variables are categorical (as it is usually the case in soc
 Several definitions of risk have been proposed in the literature; here we focus mainly on those for which tools are available to compute/estimate them easily. We can broadly classify disclosure risk measures into three types: risk measures based on keys in the sample, those based on keys in the population and that make use of statistical models or heuristics to estimate the quantities of interest and those based on the theory of record linkage. Whereas the first two classes are devoted to risk assessment for categorical identifying variables the third one may be used for categorical and continuous variables.
 
 *Risk based on keys in the sample*\
-For the first class of risk measures a unit is at risk if its combination of scores on the identifying variables is below a given threshold. The threshold rule used within the software package μ‑ARGUS, as presented in Section , is an example of this class of risk measures.
+For the first class of risk measures a unit is at risk if its combination of scores on the identifying variables is below a given threshold. The threshold rule used within the software package μ‑ARGUS is an example of this class of risk measures.
 
 *Risk based on keys in the population*\
 For the second type of approach we are concerned with the risk of a unit as determined by its combination of scores on the identifying variables within the population or its probability of re-identification. The idea then is that a unit is at risk if such quantity is above a given threshold. Because the frequency in the population is generally unknown, it may be estimated through a modelling process. Examples of this reasoning are the individual risk of disclosure based on the Negative Binomial distribution developed by Benedetti and Franconi (1998) and Franconi and Polettini (2004), which is outlined in @sec-argus-individual-risk, and the one based on the Poisson distribution and log-linear models developed by Skinner and Holmes (1998) and Elamir and Skinner (2004) which is described in @sec-poisson-log-linear along with current research on other probabilistic methods. Another approach based on keys in the population is the Special Uniques Detection (SUDA) Algorithm developed by Elliot et al. (2002) that uses a heuristic method to estimate the risk; this is outlined in @sec-SUDA.
@@ -161,7 +161,7 @@ After the risk has been estimated, protection takes place. One option in protect
 
 In μ‑ARGUS the technique of local suppression, when combined with the individual risk, is applied only to unsafe cells or combinations. Therefore, the user must input a *threshold* in terms of risk, e.g. probability of re-identification, to classify these as either safe or unsafe. Local suppression is applied to the unsafe individuals, so as to lower their probability of being re‑identified under the given threshold.
 
-In order to select the risk threshold, that represents a level of *acceptable risk,* i.e. a risk value under which an individual can be considered safe, the *re‑identification rate* can be used. A *release* will be considered *safe* when the expected rate of correct re-identifications is below a level the NSI considers acceptable. As the re-identification rate is cast in terms of the individual risk, a threshold on the re-identification rate can be transformed into a threshold on the individual risk (see below). Under this approach, individuals are at risk because their probability of re-identification contributes a large proportion of expected re-identifications in the file.
+In order to select the risk threshold, that represents a level of *acceptable risk*, i.e. a risk value under which an individual can be considered safe, the *re‑identification rate* can be used. A *release* will be considered *safe* when the expected rate of correct re-identifications is below a level the NSI considers acceptable. As the re-identification rate is cast in terms of the individual risk, a threshold on the re-identification rate can be transformed into a threshold on the individual risk (see below). Under this approach, individuals are at risk because their probability of re-identification contributes a large proportion of expected re-identifications in the file.
 
 In order to reduce the number of local suppressions, the procedure of releasing a safe file considers preliminary steps of protection using techniques such as *global recoding* (see @sec-global-recoding). Recoding of selected variables will indeed lower the individual risk and therefore the re-identification rate of the file.
 
@@ -325,7 +325,7 @@ Recently, the use of other record linkage methods has also been considered for d
 
 Bacher J., Brand R., and Bender S. (2002), *Re-identifying register data by survey data using cluster analysis: an empirical study*. International Journal of Uncertainty, Fuzziness and Knowledge Based Systems, 10(5):589--607, 2002.
 
-Benedetti, R. and Franconi, L. (1998). *Statistical and technological solutions for controlled data dissemination,* Pre-proceedings of New Techniques and Technologies for Statistics, 1, 225-232.
+Benedetti, R. and Franconi, L. (1998). *Statistical and technological solutions for controlled data dissemination*, Pre-proceedings of New Techniques and Technologies for Statistics, 1, 225-232.
 
 Coppola, L. and Seri, G. (2005). *Confidentiality aspects of household panel survey: the case study of Italian sample from EU-SILC.* Monographs of official statistics -- Proceedings of the Work session on statistical data confidentiality -- Geneve 9-11 November 2005, 175-180.
 
@@ -333,13 +333,13 @@ Cox, L.H. (1995). *Protecting confidentiality in business surveys*. Business Sur
 
 Dempster A. P., Laird N. M., and Rubin D. B. (1977), *Maximum likelihood from incomplete data via the em algorithm.* Journal of the Royal Statistical Society, 39:1--38, 1977.
 
-Deville, J.C. and Särndal, C.E. (1992). *Calibration estimators in survey sampling,* Journal of the American Statistical Association 87, 367--382.
+Deville, J.C. and Särndal, C.E. (1992). *Calibration estimators in survey sampling*, Journal of the American Statistical Association 87, 367--382.
 
 Domingo-Ferrer J., and Torra, V. (2001), *A quantitative comparison of disclosure control methods for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 111--134, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
 
 Domingo-Ferrer, J., and Torra, V. (2003), *Disclosure risk assessment in statistical microdata protection via advanced record linkage.* Statistics and Computing, 13:343--354.
 
-Elamir, E., Skinner, C. (2004) *Record-level Measures of Disclosure Risk for Survey Microdata,* Journal of Official Statistics (forthcoming). See also: Southampton Statistical Sciences Research Institute, University of Southampton, methodology working paper:\
+Elamir, E., Skinner, C. (2004) *Record-level Measures of Disclosure Risk for Survey Microdata*, Journal of Official Statistics (forthcoming). See also: Southampton Statistical Sciences Research Institute, University of Southampton, methodology working paper:\
 [[http://eprints.soton.ac.uk/8175/01/s3ri-workingpaper-m04-02.pdf]{.underline}](http://eprints.soton.ac.uk/8175/01/s3ri-workingpaper-m04-02.pdf)
 
 Elliot, M. J., (2000). *DIS: A new approach to the Measurement of Statistical Disclosure Risk.* International Journal of Risk Management 2(4), pp 39-48.
@@ -356,7 +356,7 @@ Franconi, L. and Polettini, S. (2004). *Individual risk estimation in µ-ARGUS: 
 
 Franconi, L. and Seri, G. (2000). *Microdata Protection at the Italian National Statistical Insititute (Istat): A User Perspective. Of Significance* Journal of the Association of Public Data Users -- Volume 2 Number 1 2000, page. 57-64.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., DeWolf, P.-P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2005), *µ-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc]{.underline}](http://neon.vb.cbs.nl/casc/deliv/MUmanual4.0.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2005), *µ-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc]{.underline}](http://neon.vb.cbs.nl/casc/deliv/MUmanual4.0.pdf).
 
 Jackson, P., Longhurst, J. (2005), *Providing access to data and making microdata safe, experiences of the ONS*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
@@ -364,7 +364,7 @@ Jaro, M.A. (1989), *Advances in record-linkage methodology as applied to matchin
 
 Pagliuca, D. and Seri, G. (1999), *Some results of individual ranking method on the system of enterprise accounts annual survey*, Esprit SDC Project, Deliverable MI-3/D2.
 
-Polettini, S. and Seri, G (2004). *Revision of "Guidelines for the protection of social microdata using the individual risk methodology*". Deliverable 1.2-D3, available at CASC web site.
+Polettini, S. and Seri, G (2004). *Revision of "Guidelines for the protection of social microdata using the individual risk methodology"*. Deliverable 1.2-D3, available at CASC web site.
 
 Ravikumar, P., and Cohen, W.W. (2004),. *A hierarchical graphical model for record linkage.* In UAI 2004, USA, 2004. Association for Uncertainty in Artificial Intelligence.
 
@@ -372,15 +372,15 @@ Rinott, Y. ,Shlomo, N (2006) *A Generalized Negative Binomial Smoothing Model fo
 
 Rinott, Y., Shlomo, N. (forthcoming) *A Smoothing Model for Sample Disclosure Risk Estimation*, Volume in memory of Yehuda Vardi in the IMS Lecture Notes Monograph Series.
 
-Shlomo, N. (2006), *Review of statistical disclosure control methods for census frequency tables,* ONS Survey Methodology Bulletin.
+Shlomo, N. (2006), *Review of statistical disclosure control methods for census frequency tables*, ONS Survey Methodology Bulletin.
 
 Shlomo, N., Barton, J. (2006) *Comparison of Methods for Estimating Disclosure Risk Measures for Microdata at the UK Office for National Statistics*, PSD\'2006 Privacy in Statistical Databases Conference, CD Proceedings, to appear
 
-Skinner, C., Shlomo, N. (2005), *Assessing disclosure risk in microdata using record-level measures,* proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
+Skinner, C., Shlomo, N. (2005), *Assessing disclosure risk in microdata using record-level measures*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
-Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models,* see: <http://eprints.soton.ac.uk/41842/01/s3ri-workingpaper-m06-14.pdf>
+Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models*, see: <http://eprints.soton.ac.uk/41842/01/s3ri-workingpaper-m06-14.pdf>
 
-Skinner, C., Holmes, D. (1998), *Estimating the re-identification risk per record in microdata,* JOS, Vol.14.
+Skinner, C., Holmes, D. (1998), *Estimating the re-identification risk per record in microdata*, JOS, Vol.14.
 
 Torra, V. (2004), *Owa operators in data modeling and re-identification.* IEEE Trans. on Fuzzy Systems, vol. 12, no. 5, pp. 652-660.
 

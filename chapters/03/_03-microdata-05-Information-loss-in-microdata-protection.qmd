@@ -16,7 +16,7 @@ Defining what a generic information loss measure is can be a tricky issue. Rough
     1.  Means and covariances on a small set of subdomains (subsets of records and/or variables)
     2. Marginal values for a few tabulations of the data
     3. At least one distributional characteristic
--   A microdata set is an *analytically interesting microdata set,* if six variables on important subdomains are provided that can be validly analyzed.\
+-   A microdata set is an *analytically interesting microdata set*, if six variables on important subdomains are provided that can be validly analyzed.\
     More precise conditions of analytical validity and analytical interest cannot be stated without taking specific data uses into account. As imprecise as they may be, the above definitions suggest some possible measures:
 -   Compare raw records in the original and the protected dataset. The more similar the SDC method to the identity function, the less the impact (but the higher the disclosure risk! ). This requires pairing records in the original dataset and records in the protected dataset. For masking methods, each record in the protected dataset is naturally paired to the record in the original dataset it originates from. For synthetic protected datasets, pairing is more artificial. In Dandekar, Domingo-Ferrer and Sebé (2002) we proposed to pair a synthetic record to the nearest original record according to some distance.
 -   Compare some statistics computed on the original and the protected datasets. The above definitions list some statistics which should be preserved as much as possible by an SDC method.
