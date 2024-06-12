@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -256,7 +256,7 @@ window.Quarto = {
 <p>Respondents are typically companies but can also be individuals or households, etc. Grouping variables typically give information on geography or economic activity or size, etc. of the respondents. The “<em>cells</em>” of a table are defined by cross-combinations of the grouping variables.</p>
 <p>Each “<em>table cell”</em> presents a sum of a quantitative variable such as income, turnover, expenditure, sales, number of employees, number of animals owned by farms, etc. These sums are the”<em>cell values</em>” (sometimes also referred to as “<em>cell totals</em>”) of a magnitude table. The individual observations of the variable (for each individual respondent) are the “<em>contributions</em>” to the cell value.</p>
 <p>Example:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
 <col style="width: 17%">
@@ -316,7 +316,7 @@ window.Quarto = {
 <p>While detailed tabulated summary information also on smaller groups of statistical objects (companies by subgroups of subsectors at the district level, households by size and income at the neighbourhood level, etc.) might be of interest to certain user groups, it is also a responsibility (maybe the most important one) of official statistics to provide summary information at a high aggregate level by producing summary statistics on large groups of a population (e.g.&nbsp;for <em>all</em> companies of an economy sector). Because of this, it is not enough to have methodologies to protect individual cells. It implies a need for the so-called “<em>secondary</em>” tabular data protection methodologies.</p>
 <p>Assume that a table displays the sum of a variable ‘production’ by three subsectors of an economy sector. Assume that this sum is sensitive for one of the subsectors and that the table is protected by cell suppression, meaning that the confidential cell value is suppressed.</p>
 <p><strong>Example 1 a:</strong> Production (in mill. Euro)</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 13%">
@@ -375,7 +375,7 @@ window.Quarto = {
 Table&nbsp;4.1: Sensitivity rules
 </figcaption>
 <div aria-describedby="tbl-sensitivity-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 84%">
@@ -523,7 +523,7 @@ x_{1}^{s} + \ldots + x_{n}^{s} &gt; \frac{k}{100} \cdot \hat{X} \qquad \text{(7)
 Table&nbsp;4.2: Example 3
 </figcaption>
 <div aria-describedby="tbl-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
 <col style="width: 20%">
@@ -586,7 +586,7 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 Table&nbsp;4.3: Upper protection levels
 </figcaption>
 <div aria-describedby="tbl-upper-protection-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 26%">
 <col style="width: 73%">
@@ -666,7 +666,7 @@ Figure&nbsp;4.2: Hierarchical structure
 </figure>
 </div>
 <p>Let the full table present turnover by the categories of EXP. Then the two subtables of this table will be:</p>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 15%">
@@ -682,7 +682,7 @@ Figure&nbsp;4.2: Hierarchical structure
 </tr>
 </tbody>
 </table>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 15%">
@@ -751,7 +751,7 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 Table&nbsp;4.4: Algorithms for practical use
 </figcaption>
 <div aria-describedby="tbl-algorithms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 22%">
@@ -800,7 +800,7 @@ Table&nbsp;4.4: Algorithms for practical use
 Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions
 </figcaption>
 <div aria-describedby="tbl-results-study-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
 <col style="width: 9%">
@@ -906,7 +906,7 @@ Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions
 Table&nbsp;4.6: Results of study B - Number and value of secondary suppressions
 </figcaption>
 <div aria-describedby="tbl-res-B-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 11%">
@@ -1162,19 +1162,18 @@ x^\lambda&amp;\text{for}\;\lambda\ne 0,\cr
 </section>
 <section id="cell-key-method" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="cell-key-method"><span class="header-section-number">4.7</span> Cell Key Method</h2>
-<p>The ‘’ (CKM) was initially developed by the Australian Bureau of Statistics (Fraser/ Wooton (2016); Thompson et al.&nbsp;(2013)) and hence is sometimes referred to as ‘’. It is a post tabular perturbative method that maintains consistency between all tables that use the same microdata and configuration. This method adds sufficient ‘’ to each cell so if an intruder tried to gather information by differencing, they would not be able to obtain the real data. It is one of the SDC methods recommended by Eurostat for the population and housing censuses 2021. In order to keep consistency between tables every record of the underlying microdata is equipped with a randomly generated number, the so called ‘’. This step is performed just once such that afterwards the Record Key is a fixed component of the microdata that is to be used for every subsequent evaluation. Now whenever the microdata are aggregated to form a table cell, the corresponding Record Keys are aggregated as well, forming the eponymous ‘’. Using said Cell Key and a predefined table that encodes a probability distribution, which is tailored to the data/purpose, the corresponding noise can be looked up and added to the original cell value, before dissemination.</p>
+<p>The ‘<em>Cell Key Method</em>’ (CKM) was initially developed by the Australian Bureau of Statistics (Fraser/ Wooton (2016); Thompson et al.&nbsp;(2013)) and hence is sometimes referred to as ‘<em>ABS method</em>’. It is a post tabular perturbative method that maintains consistency between all tables that use the same microdata and configuration. This method adds sufficient ‘<em>noise</em>’ to each cell so if an intruder tried to gather information by differencing, they would not be able to obtain the real data. It is one of the SDC methods recommended by Eurostat for the population and housing censuses 2021. In order to keep consistency between tables every record of the underlying microdata is equipped with a randomly generated number, the so called ‘<em>Record Key</em>’. This step is performed just once such that afterwards the Record Key is a fixed component of the microdata that is to be used for every subsequent evaluation. Now whenever the microdata are aggregated to form a table cell, the corresponding Record Keys are aggregated as well, forming the eponymous ‘<em>Cell Key</em>’. Using said Cell Key and a predefined table that encodes a probability distribution, which is tailored to the data/purpose, the corresponding noise can be looked up and added to the original cell value, before dissemination.</p>
 <p>Since the individual table cells are equipped with a noise independently, please note that this implies that the resulting table is no longer additive. For example, after perturbation, a population table could show that 1000 males, 1100 females and 16 non-binary persons live in an area, while the total count is 2109 persons. This non-additivity is part of the protective mechanism of this method and at the same time offers the advantage that the deviation from the original value can be kept as small as possible. It is not recommended to form such aggregates subsequently from perturbed values, because this would also add the sum of all noise terms to the aggregate, which can make the deviation uncontrollably large.</p>
 <p>The Cell Key Method is a more informed post-tabular method of disclosure control since it utilizes pre-tabular microdata information during the perturbation stage. The method is highly dependent on the lookup table used, but it is flexible in that lookup tables can be specifically designed to meet needs, and different lookup tables could potentially be used for different tables. Furthermore, the lookup table can be designed to reflect other post-tabular methods (e.g.&nbsp;small cell adjustments or random rounding). The method provides protection for flexible tables and can be used to produce perturbations for large high dimensional hierarchical tables. However, since perturbation is applied to each table cell independently, additivity gets lost. This is similar to the case of rounding but due to the complexity of the method, those inconsistencies in the data are harder to communicate.</p>
-<p>Please note that there is not one ultimate way of how to define Record Key, Cell Key and the lookup table: The Australian Bureau of Statistics for example relies on integer values for their Record Keys whereas the Center of Excellence on SDC presented an approach where the Record Keys are uniformly distributed between 0 and 1, which should allow for more flexibility regarding noise design. We’ll focus on the latter approach here, which is also implemented in <span class="math inline">\(\tau\)</span>-Argus and the R-package ‘’. In the variant suggested by the CoE on SDC all digits before the decimal point are removed from the Cell Key, which makes it another random number that is uniformly distributed between 0 and 1. The lookup table now can be interpreted as the tabular representation of a piecewise constant inverse distribution function. By looking up values that are uniformly distributed, we thus obtain realizations of a random variable with the corresponding coded distribution.</p>
-<p>It is possible to create lookup tables, which are also known as perturbation tables or p-tables, that are tailored to your needs, by using the freely accesible R-package ‘’. The package allows, among other things, to specify a maximum for the noise you want to add and the probability for the noise to be zero, which is equivalent to retaining the original value. You also have the option to generate the distribution, coded inside the perturbation table, in such a way, that certain values, such as ones or twos, do not occur in the perturbed output at all. The method for creating such tables, implemented in the package, is based on a maximum entropy approach as described, for example, in Giessing (2016) and yields a distribution with zero mean. Therefore, the distribution of the data will not get skewed by adding the noise. %For more information about the package, please see the vignette or the reference manual on cran. There are minor differences depending on whether the method is used for frequency tables or magnitude tables.</p>
+<p>Please note that there is not one ultimate way of how to define Record Key, Cell Key and the lookup table: The Australian Bureau of Statistics for example relies on integer values for their Record Keys whereas the Center of Excellence on SDC presented an approach where the Record Keys are uniformly distributed between 0 and 1, which should allow for more flexibility regarding noise design. We’ll focus on the latter approach here, which is also implemented in <span class="math inline">\(\tau\)</span>-Argus and the R-package ‘<em>cellKey</em>’. In the variant suggested by the CoE on SDC all digits before the decimal point are removed from the Cell Key, which makes it another random number that is uniformly distributed between 0 and 1. The lookup table now can be interpreted as the tabular representation of a piecewise constant inverse distribution function. By looking up values that are uniformly distributed, we thus obtain realizations of a random variable with the corresponding coded distribution.</p>
+<p>It is possible to create lookup tables, which are also known as perturbation tables or p-tables, that are tailored to your needs, by using the freely accesible R-package ‘<em>ptable</em>’. The package allows, among other things, to specify a maximum for the noise you want to add and the probability for the noise to be zero, which is equivalent to retaining the original value. You also have the option to generate the distribution, coded inside the perturbation table, in such a way, that certain values, such as ones or twos, do not occur in the perturbed output at all. The method for creating such tables, implemented in the <em>ptable</em> package, is based on a maximum entropy approach as described, for example, in Giessing (2016) and yields a distribution with zero mean. Therefore, the distribution of the data will not get skewed by adding the noise. %For more information about the <em>ptable</em> package, please see the vignette or the reference manual on cran. There are minor differences depending on whether the method is used for frequency tables or magnitude tables.</p>
 <section id="ckm-for-magnitude-tables" class="level3" data-number="4.7.1">
 <h3 data-number="4.7.1" class="anchored" data-anchor-id="ckm-for-magnitude-tables"><span class="header-section-number">4.7.1</span> CKM for Magnitude Tables</h3>
 <p>The Cell Key Method was initially developed to protect frequency tables. By adding a controlled integer noise <span class="math inline">\(v\)</span> to a table cell <span class="math inline">\(n\)</span> a perturbed value <span class="math inline">\(\hat{n}=n+v\)</span> is generated. By applying this procedure to each table cell uncertainty about the real cell value is created. In this respect, this method has similar effects as rounding, but is unbiased and provides a higher level of protection when compared to a variant with similar level of information loss. A short comparison can be found in Enderle et al.&nbsp;(2018).</p>
 <p>When adapting this method to magnitude tables, it must be noted that the amount of the noise <span class="math inline">\(v\)</span> needed, depends on the magnitude of the values in the microdata. Whereas in the case of frequencies it is a matter of protecting low counts and in particular individual cases, in the case of magnitude tables the magnitude of the individual values can vary a lot, and it is not sufficient, for example, to add a noise term of magnitude 5 when it is a matter of protecting a value that is one million. On the other hand, adding a noise term of one thousand to an original value of one hundred might be a little exaggerated. Since sufficient protection is particularly important in cases of dominance of one respondent, in the Cell Key Method for magnitude tables the amount of noise correlates with the size of the largest contribution to a cell value. So, if <span class="math inline">\(x\)</span> is the actual value of a cell, <span class="math inline">\(x_{max}\)</span> is the corresponding largest contribution and <span class="math inline">\(v\)</span> is a limited random noise variable with a discrete distribution, then the perturbed value <span class="math inline">\(\hat{x}\)</span> computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span>, where <span class="math inline">\(\delta\)</span> is an additional control parameter. Since CKM derives its protective effect from uncertainty, all published values must of course be subject to some perturbation (with some probability). But since the amount of perturbation depends on the magnitude of the largest contribution, the deviations obtained are relatively small. Especially for cells without dominance issues, by adding (or subtracting) a fraction of the largest contribution value doesn’t affect the cell value too much. Whereas in table cells with a single strongly dominating contribution, the change in value is correspondingly more significant. But this is precisely what is desired.</p>
 <p>The calculations for the Cell Key Method are normally carried out by appropriate software, such as <span class="math inline">\(\tau\)</span>-Argus, so that the user does not have to perform them themselves. Nevertheless, in the following, we give a brief, rough overview of how CKM is applied to continuous data, for interested readers. More detailed explanations can be found in Gießing and Tent (2019).</p>
-<p>Since magnitudes usually aren’t integers but continuous, it is not possible to represent all values in a finite table. Hence an interpolation technique is used, while the p-table generally maintains the same form as depicted in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. Since we don’t want for a positive value <span class="math inline">\(x\)</span> to become negative after perturbation we require <span class="math inline">\(0\leq\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span> which is equivalent to $v (-x)/( x_{max}) $. So <span class="math inline">\(v\)</span> has to be chosen with respect to <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> and hence implicitly depends on both the cell value <span class="math inline">\(x\)</span> and the largest contributor <span class="math inline">\(x_{max}\)</span>. Note, that in the case of frequency tables, the distribution of the noise <span class="math inline">\(v\)</span> depended only on the count <span class="math inline">\(n\)</span> to be perturbed, therefore, this value was used to look up the noise in the perturbation table. Accordingly, for the continuous case, the value <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is now used in the lookup step. We’ll use Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span> again, to illustrate such a lookup step. If <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is one of the numbers 0, 1, 2, 3 or any value larger than 3, the lookup step works just as is the case of frequency tables. So if said value is 3, for example, and if the corresponding Cell Key is 0.8, again we have to look for that row in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>, for which ‘’ is 3 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. Which again is met in the last table row, for which the noise is given as 1. Hence the perturbed value computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot 1\)</span>. Imagine now a true cell value <span class="math inline">\(x=300\)</span>, with largest contributor <span class="math inline">\(x_{max}=200\)</span> and an additional control parameter of <span class="math inline">\(\delta=0.5\)</span>. The corresponding result is then <span class="math inline">\(\hat{x}=300+0.5\cdot 200 \cdot 1 = 400\)</span>. Please keep in mind that in this calculation example all values (including the p-table) are chosen in such a way that the calculation can be carried out as easily as possible and that the amount of noise is not anyway typical for practical use cases.</p>
+<p>Since magnitudes usually aren’t integers but continuous, it is not possible to represent all values in a finite table. Hence an interpolation technique is used, while the p-table generally maintains the same form as depicted in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. Since we don’t want for a positive value <span class="math inline">\(x\)</span> to become negative after perturbation we require <span class="math inline">\(0\leq\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span> which is equivalent to $v (-x)/( x_{max}) $. So <span class="math inline">\(v\)</span> has to be chosen with respect to <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> and hence implicitly depends on both the cell value <span class="math inline">\(x\)</span> and the largest contributor <span class="math inline">\(x_{max}\)</span>. Note, that in the case of frequency tables, the distribution of the noise <span class="math inline">\(v\)</span> depended only on the count <span class="math inline">\(n\)</span> to be perturbed, therefore, this value was used to look up the noise in the perturbation table. Accordingly, for the continuous case, the value <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is now used in the lookup step. We’ll use Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span> again, to illustrate such a lookup step. If <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is one of the numbers 0, 1, 2, 3 or any value larger than 3, the lookup step works just as is the case of frequency tables. So if said value is 3, for example, and if the corresponding Cell Key is 0.8, again we have to look for that row in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>, for which ‘<em>orig. value</em>’ is 3 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. Which again is met in the last table row, for which the noise is given as 1. Hence the perturbed value computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot 1\)</span>. Imagine now a true cell value <span class="math inline">\(x=300\)</span>, with largest contributor <span class="math inline">\(x_{max}=200\)</span> and an additional control parameter of <span class="math inline">\(\delta=0.5\)</span>. The corresponding result is then <span class="math inline">\(\hat{x}=300+0.5\cdot 200 \cdot 1 = 400\)</span>. Please keep in mind that in this calculation example all values (including the p-table) are chosen in such a way that the calculation can be carried out as easily as possible and that the amount of noise is not anyway typical for practical use cases.</p>
 <p>In case <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is a non-integer value smaller than 3, this value cannot be found in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. To solve this issue interpolation is used, i.e.&nbsp;if <span class="math inline">\(2 &lt; x/( \delta\cdot x_{max}) &lt; 3\)</span>, there exist some unique positive numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(x/( \delta\cdot x_{max}) = 2\cdot a + 3\cdot b\)</span> and <span class="math inline">\(a+b=1\)</span>. The algorithm, as implemented in <span class="math inline">\(\tau\)</span>-Argus, for example, then computes both the noise <span class="math inline">\(v_3\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=3\)</span> and the noise <span class="math inline">\(v_2\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=2\)</span>. The correct noise is then computed as $ v_2a + v_3b$. We already looked up the noise <span class="math inline">\(v_3=1\)</span>, so we still need <span class="math inline">\(v_2\)</span>. So once again we need to search Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. After we spotted the row for which ‘’ equals 2 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>, we obtain a noise value of 0.</p>
-<p>So if we consider the case where <span class="math inline">\(x=300\)</span>, <span class="math inline">\(x_{max}=200\)</span> and <span class="math inline">\(\delta=0.6\)</span>, then <span class="math inline">\(x/( \delta\cdot x_{max}) = 2.5\)</span> and this can be written as <span class="math inline">\(2\cdot 0.5 + 3\cdot 0.5\)</span>. The perturbed value is therefore calculated as <span class="math inline">\(\hat{x}=300+0.6\cdot 200 \cdot (v_2\cdot 0.5 + v_3\cdot 0.5) = 300+0.6\cdot 200 \cdot (0\cdot 0.5 + 1\cdot 0.5)=360\)</span>.</p>
 </section>
 </section>
 <section id="references-1" class="level2" data-number="4.8">

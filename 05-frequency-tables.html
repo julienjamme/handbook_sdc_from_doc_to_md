@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -197,7 +197,11 @@ window.Quarto = {
   <li><a href="#disclosure-risks" id="toc-disclosure-risks" class="nav-link" data-scroll-target="#disclosure-risks"><span class="header-section-number">5.2</span> Disclosure risks</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">5.3</span> Methods</a></li>
   <li><a href="#rounding" id="toc-rounding" class="nav-link" data-scroll-target="#rounding"><span class="header-section-number">5.4</span> Rounding</a></li>
-  <li><a href="#cell-key-method-for-frequency-tables" id="toc-cell-key-method-for-frequency-tables" class="nav-link" data-scroll-target="#cell-key-method-for-frequency-tables"><span class="header-section-number">5.5</span> Cell Key Method for Frequency Tables</a></li>
+  <li><a href="#the-cell-key-method" id="toc-the-cell-key-method" class="nav-link" data-scroll-target="#the-cell-key-method"><span class="header-section-number">5.5</span> The Cell Key Method</a>
+  <ul class="collapse">
+  <li><a href="#frequency-tables" id="toc-frequency-tables" class="nav-link" data-scroll-target="#frequency-tables"><span class="header-section-number">5.5.1</span> Frequency Tables</a></li>
+  <li><a href="#publication-of-mean-values" id="toc-publication-of-mean-values" class="nav-link" data-scroll-target="#publication-of-mean-values"><span class="header-section-number">5.5.2</span> Publication of mean values</a></li>
+  </ul></li>
   <li><a href="#information-loss" id="toc-information-loss" class="nav-link" data-scroll-target="#information-loss"><span class="header-section-number">5.6</span> Information loss</a></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software"><span class="header-section-number">5.7</span> Software</a>
   <ul class="collapse">
@@ -252,7 +256,7 @@ window.Quarto = {
 Table&nbsp;5.1: Marital status by sex
 </figcaption>
 <div aria-describedby="tbl-mar-by-sex-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 37%">
 <col style="width: 17%">
@@ -305,7 +309,7 @@ Table&nbsp;5.1: Marital status by sex
 Table&nbsp;5.2: Marital status and sex by hours worked
 </figcaption>
 <div aria-describedby="tbl-mar-sex-hours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 24%">
 <col style="width: 13%">
@@ -393,7 +397,7 @@ Table&nbsp;5.2: Marital status and sex by hours worked
 Table&nbsp;5.3: Marital status by hours worked
 </figcaption>
 <div aria-describedby="tbl-mar-hours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 23%">
@@ -452,7 +456,7 @@ Table&nbsp;5.3: Marital status by hours worked
 Table&nbsp;5.4: Single Person households and hours worked in Area A (2001 OA definition)
 </figcaption>
 <div aria-describedby="tbl-single-hh-hours-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 22%">
 <col style="width: 36%">
@@ -490,7 +494,7 @@ Table&nbsp;5.4: Single Person households and hours worked in Area A (2001 OA def
 Table&nbsp;5.5: Single Person households and hours worked in Area A (1991 ED definition)
 </figcaption>
 <div aria-describedby="tbl-single-hh-income-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 35%">
@@ -529,7 +533,7 @@ Table&nbsp;5.5: Single Person households and hours worked in Area A (1991 ED def
 Table&nbsp;5.6: New differenced table (via geographical differencing)
 </figcaption>
 <div aria-describedby="tbl-differenced-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 35%">
@@ -571,7 +575,7 @@ Table&nbsp;5.6: New differenced table (via geographical differencing)
 Table&nbsp;5.7: Area of Residence or Workplace
 </figcaption>
 <div aria-describedby="tbl-residence-workplace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 9%">
 <col style="width: 30%">
@@ -604,7 +608,7 @@ Table&nbsp;5.7: Area of Residence or Workplace
 Table&nbsp;5.8: Employment status in Area A
 </figcaption>
 <div aria-describedby="tbl-employment-status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
@@ -635,7 +639,7 @@ Table&nbsp;5.8: Employment status in Area A
 Table&nbsp;5.9: Males working and living in Area A
 </figcaption>
 <div aria-describedby="tbl-males-work-live-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 5%">
 <col style="width: 26%">
@@ -668,7 +672,7 @@ Table&nbsp;5.9: Males working and living in Area A
 Table&nbsp;5.10: New differenced table (via linking)
 </figcaption>
 <div aria-describedby="tbl-differenced-table-linking-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 6%">
 <col style="width: 25%">
@@ -717,7 +721,7 @@ Table&nbsp;5.10: New differenced table (via linking)
 Table&nbsp;5.11: Hours worked by sex in Area A
 </figcaption>
 <div aria-describedby="tbl-hours-sex-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 14%">
@@ -762,7 +766,7 @@ Table&nbsp;5.11: Hours worked by sex in Area A
 Table&nbsp;5.12: Hours worked by sex in Area A
 </figcaption>
 <div aria-describedby="tbl-hours-sex-A-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 14%">
@@ -807,7 +811,7 @@ Table&nbsp;5.12: Hours worked by sex in Area A
 Table&nbsp;5.13: New differenced table (via sub-populations)
 </figcaption>
 <div aria-describedby="tbl-differenced-table-subpop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
 <col style="width: 11%">
@@ -860,7 +864,7 @@ Table&nbsp;5.13: New differenced table (via sub-populations)
 Table&nbsp;5.14: Summary of disclosure risks associated with frequency tables
 </figcaption>
 <div aria-describedby="tbl-summary-risks-freq-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 64%">
@@ -913,7 +917,7 @@ Table&nbsp;5.14: Summary of disclosure risks associated with frequency tables
 Table&nbsp;5.15: Summary of Tabular Disclosure Control Methods
 </figcaption>
 <div aria-describedby="tbl-summary-sdc-freq-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 34%">
 <col style="width: 22%">
@@ -985,7 +989,7 @@ Table&nbsp;5.15: Summary of Tabular Disclosure Control Methods
 Table&nbsp;5.16: Population counts by sex
 </figcaption>
 <div aria-describedby="tbl-counts-sex-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
@@ -1030,7 +1034,7 @@ Table&nbsp;5.16: Population counts by sex
 Table&nbsp;5.17: Population counts by sex (conventional rounding)
 </figcaption>
 <div aria-describedby="tbl-counts-sex-area-round-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
@@ -1078,7 +1082,7 @@ Table&nbsp;5.17: Population counts by sex (conventional rounding)
 <li><p>If the residual is 1, then with a probability of <span class="math inline">\(2/3\)</span> the cell value is rounded down to the lower multiple of 3 and with a probability of <span class="math inline">\(1/3\)</span> the cell value is rounded up to the higher multiple of 3.</p></li>
 <li><p>If the residual is 2, the probabilities are <span class="math inline">\(2/3\)</span> to round up and <span class="math inline">\(1/3\)</span> to round down.</p></li>
 </ul>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 37%">
 <col style="width: 59%">
@@ -1125,7 +1129,7 @@ Table&nbsp;5.17: Population counts by sex (conventional rounding)
 Table&nbsp;5.18: Population counts by sex (with random rounding)
 </figcaption>
 <div aria-describedby="tbl-counts-sex-round-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 30%">
@@ -1178,7 +1182,7 @@ Table&nbsp;5.18: Population counts by sex (with random rounding)
 Table&nbsp;5.19: Population counts by sex (controlled rounding)
 </figcaption>
 <div aria-describedby="tbl-counts-sex-control-round-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 30%">
@@ -1229,7 +1233,7 @@ Table&nbsp;5.19: Population counts by sex (controlled rounding)
 Table&nbsp;5.20: Summary of SDC rounding methods
 </figcaption>
 <div aria-describedby="tbl-summary-rounding-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
 <col style="width: 14%">
@@ -1279,14 +1283,294 @@ Table&nbsp;5.20: Summary of SDC rounding methods
 <p>Advantages of this method are that tables are additive, and the elimination of small cells in the table removes cases of perceived as well as actual identity disclosure. In addition, loss of information is lower for standard tables as all other cells remain the same, however information loss will be high for sparse tables. Other disadvantages include inconsistency of margins between linked tables since margins are calculated using perturbed internal cells, and this increases the risk of tables being unpicked. Furthermore, this method provides little protection against disclosure by differencing, and is not suitable for flexible table generation.</p>
 <p>Barnardisation is a form of cell perturbation which modifies each internal cell of every table by +1, 0 or -1, according to probabilities. Zeros are not adjusted. The method offers some protection against disclosure by differencing, however table totals are added up from the perturbed internal cells, resulting in inconsistent totals between tables. Typically, the probability p is quite small and therefore a high proportion of risky cells are not modified. The exact proportion of cells modified is not revealed to the user. This is generally a difficult method to implement for flexible output.</p>
 </section>
-<section id="cell-key-method-for-frequency-tables" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="cell-key-method-for-frequency-tables"><span class="header-section-number">5.5</span> Cell Key Method for Frequency Tables</h2>
-<p>The Cell Key Method was initially developed to protect frequency tables. By adding a controlled integer noise <span class="math inline">\(v\)</span> to a table cell <span class="math inline">\(n\)</span> a perturbed value <span class="math inline">\(\hat{n}=n+v\)</span> is generated. By applying this procedure to each table cell uncertainty about the real cell value is created. In this respect, this method has similar effects as rounding, but is unbiased and provides a higher level of protection when compared to a variant with similar level of information loss. A short comparison can be found in Enderle et al.&nbsp;(2018).</p>
-<p>When adapting this method to magnitude tables, it must be noted that the amount of the noise <span class="math inline">\(v\)</span> needed, depends on the magnitude of the values in the microdata. Whereas in the case of frequencies it is a matter of protecting low counts and in particular individual cases, in the case of magnitude tables the magnitude of the individual values can vary a lot, and it is not sufficient, for example, to add a noise term of magnitude 5 when it is a matter of protecting a value that is one million. On the other hand, adding a noise term of one thousand to an original value of one hundred might be a little exaggerated. Since sufficient protection is particularly important in cases of dominance of one respondent, in the Cell Key Method for magnitude tables the amount of noise correlates with the size of the largest contribution to a cell value. So, if <span class="math inline">\(x\)</span> is the actual value of a cell, <span class="math inline">\(x_{max}\)</span> is the corresponding largest contribution and <span class="math inline">\(v\)</span> is a limited random noise variable with a discrete distribution, then the perturbed value <span class="math inline">\(\hat{x}\)</span> computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span>, where <span class="math inline">\(\delta\)</span> is an additional control parameter. Since CKM derives its protective effect from uncertainty, all published values must of course be subject to some perturbation (with some probability). But since the amount of perturbation depends on the magnitude of the largest contribution, the deviations obtained are relatively small. Especially for cells without dominance issues, by adding (or subtracting) a fraction of the largest contribution value doesn’t affect the cell value too much. Whereas in table cells with a single strongly dominating contribution, the change in value is correspondingly more significant. But this is precisely what is desired.</p>
-<p>The calculations for the Cell Key Method are normally carried out by appropriate software, such as <span class="math inline">\(\tau\)</span>-Argus, so that the user does not have to perform them themselves. Nevertheless, in the following, we give a brief, rough overview of how CKM is applied to continuous data, for interested readers. More detailed explanations can be found in Gießing and Tent (2019).</p>
-<p>Since magnitudes usually aren’t integers but continuous, it is not possible to represent all values in a finite table. Hence an interpolation technique is used, while the p-table generally maintains the same form as depicted in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. Since we don’t want for a positive value <span class="math inline">\(x\)</span> to become negative after perturbation we require <span class="math inline">\(0\leq\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span> which is equivalent to $v (-x)/( x_{max}) $. So <span class="math inline">\(v\)</span> has to be chosen with respect to <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> and hence implicitly depends on both the cell value <span class="math inline">\(x\)</span> and the largest contributor <span class="math inline">\(x_{max}\)</span>. Note, that in the case of frequency tables, the distribution of the noise <span class="math inline">\(v\)</span> depended only on the count <span class="math inline">\(n\)</span> to be perturbed, therefore, this value was used to look up the noise in the perturbation table. Accordingly, for the continuous case, the value <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is now used in the lookup step. We’ll use Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span> again, to illustrate such a lookup step. If <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is one of the numbers 0, 1, 2, 3 or any value larger than 3, the lookup step works just as is the case of frequency tables. So if said value is 3, for example, and if the corresponding Cell Key is 0.8, again we have to look for that row in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>, for which ‘’ is 3 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. Which again is met in the last table row, for which the noise is given as 1. Hence the perturbed value computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot 1\)</span>. Imagine now a true cell value <span class="math inline">\(x=300\)</span>, with largest contributor <span class="math inline">\(x_{max}=200\)</span> and an additional control parameter of <span class="math inline">\(\delta=0.5\)</span>. The corresponding result is then <span class="math inline">\(\hat{x}=300+0.5\cdot 200 \cdot 1 = 400\)</span>. Please keep in mind that in this calculation example all values (including the p-table) are chosen in such a way that the calculation can be carried out as easily as possible and that the amount of noise is not anyway typical for practical use cases.</p>
-<p>In case <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is a non-integer value smaller than 3, this value cannot be found in Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. To solve this issue interpolation is used, i.e.&nbsp;if <span class="math inline">\(2 &lt; x/( \delta\cdot x_{max}) &lt; 3\)</span>, there exist some unique positive numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(x/( \delta\cdot x_{max}) = 2\cdot a + 3\cdot b\)</span> and <span class="math inline">\(a+b=1\)</span>. The algorithm, as implemented in <span class="math inline">\(\tau\)</span>-Argus, for example, then computes both the noise <span class="math inline">\(v_3\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=3\)</span> and the noise <span class="math inline">\(v_2\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=2\)</span>. The correct noise is then computed as $ v_2a + v_3b$. We already looked up the noise <span class="math inline">\(v_3=1\)</span>, so we still need <span class="math inline">\(v_2\)</span>. So once again we need to search Table <span class="math inline">\(\ref{tab:ckm_p_table}\)</span>. After we spotted the row for which ‘’ equals 2 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>, we obtain a noise value of 0.</p>
-<p>So if we consider the case where <span class="math inline">\(x=300\)</span>, <span class="math inline">\(x_{max}=200\)</span> and <span class="math inline">\(\delta=0.6\)</span>, then <span class="math inline">\(x/( \delta\cdot x_{max}) = 2.5\)</span> and this can be written as <span class="math inline">\(2\cdot 0.5 + 3\cdot 0.5\)</span>. The perturbed value is therefore calculated as <span class="math inline">\(\hat{x}=300+0.6\cdot 200 \cdot (v_2\cdot 0.5 + v_3\cdot 0.5) = 300+0.6\cdot 200 \cdot (0\cdot 0.5 + 1\cdot 0.5)=360\)</span>.</p>
+<section id="the-cell-key-method" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="the-cell-key-method"><span class="header-section-number">5.5</span> The Cell Key Method</h2>
+<section id="frequency-tables" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="frequency-tables"><span class="header-section-number">5.5.1</span> Frequency Tables</h3>
+<p>The Cell Key Method is a post tabular perturbative disclosure control method, that adds noise to the original table cell values. The protection effect arises from the uncertainty of a data attacker about whether and, if so, how much a value has been changed. Therefore, all published figures must be perturbed with the Cell Key Method, even those that do not pose a disclosure risk per se. But before the Cell Key Method can be applied, one has to consider, which maximum deviation is still acceptable and how large the variance of the noise should be. But one should always keep in mind that a low maximum deviation also leads to less protection and hence one cannot focus on information loss alone. It is especially risky to publish the maximum deviation, since a data attacker can use this information to draw further conclusions.</p>
+<div id="tbl-ckm_p_table" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ckm_p_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.21: Fictional example of a p-table
+</figcaption>
+<div aria-describedby="tbl-ckm_p_table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 26%">
+<col style="width: 8%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">orig. value</th>
+<th style="text-align: right;">pert. value</th>
+<th style="text-align: right;">prob. of occurrence</th>
+<th style="text-align: right;">noise</th>
+<th style="text-align: right;">lower bound</th>
+<th style="text-align: right;">upper bound</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>To illustrate how the Cell Key Method is used, Table <a href="#tbl-ckm_p_table" class="quarto-xref">Table&nbsp;<span>5.21</span></a> shows a purely fictional manually created perturbation table with a maximum deviation of 1 and without ones in the results after perturbation. As you can see the values in the colum ‘original value’ range from 0 to 3. This is because a different distribution is stored in the p-table for each of these values. Otherwise, negative values could arise, for example. This means that within a p-table several probability distributions for the noise are stored, which are used depending on the original value. In the given example for an original value of 1 the noise ‘’ is defined as a uniform distribution on the set <span class="math inline">\(\lbrace -1,1\rbrace\)</span>, whereas for an original value of 2 with a probability of 80% the noise is 0 and with a probability of 20% it is 1. For every original value which is at least 3 the lowest lines in the p table will be used to define the noise ‘’, which encode a symmetric distribution on <span class="math inline">\(\lbrace -1,0,1\rbrace\)</span>.</p>
+<div id="tbl-ckm_respondents" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ckm_respondents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.22: Exemplary Microdata
+</figcaption>
+<div aria-describedby="tbl-ckm_respondents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">ID</th>
+<th style="text-align: right;">Sex</th>
+<th style="text-align: right;">Record Key</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">male</td>
+<td style="text-align: right;">0.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">male</td>
+<td style="text-align: right;">0.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">male</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Now if we have a set of microdata which contains three male respondents with Record Keys 0.5, 0.3 and 0.4 respectively, as shown in Table <a href="#tbl-ckm_respondents" class="quarto-xref">Table&nbsp;<span>5.22</span></a>, then in a table cell that aggregates those three respondents the corresponding sum of Record Keys is 0.9+0.3+0.6=1.8. Since for the Cell Key the digits before the decimal point are irrelevant, we get a corresponding Cell Key of 0.8. Now to identify the noise that has to be added to the original count of 3, we have to concentrate on those lines of the p-table, for which the original value is 3 and identify that line for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. This is the last row of our exemplary table, in which the value 1 is given for the noise. Hence the perturbed count for this cell computes as [ =n+v=3+1 = 4. ] At this point, it must be pointed out that if, in addition to frequencies, magnitudes and mean values are also published, the mean values must not be shown as original values, since otherwise the frequency values can be disclosed.</p>
+</section>
+<section id="publication-of-mean-values" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="publication-of-mean-values"><span class="header-section-number">5.5.2</span> Publication of mean values</h3>
+<p>In this section, we will explain why original means must not be published when the Cell Key Method is applied to frequency counts. We will illustrate this with an example and show ways to protect the mean values. For this purpose we consider a certain population group of size <span class="math inline">\(n\)</span> and for every person <span class="math inline">\(i\in {1,\ldots ,n}\)</span> of this population we denote their corresponding age with <span class="math inline">\(x_i\)</span>. So the average age of this population group can be written as <span class="math inline">\(\frac{1}{n}\cdot\sum_{i=1\ldots n} x_i\)</span>. We now consider the following example scenario, in which both (perturbed) frequencies and (original) mean values are published. Table <a href="#tbl-ckm_mean" class="quarto-xref">Table&nbsp;<span>5.23</span></a> shows both the perturbed and the original frequency counts, as well as information about the age.</p>
+<div id="tbl-ckm_mean" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ckm_mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.23: An example table with (perturbed) ages and counts
+</figcaption>
+<div aria-describedby="tbl-ckm_mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cell 1</th>
+<th style="text-align: right;">Cell 2</th>
+<th style="text-align: right;">Marginal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Original Count (<span class="math inline">\(n\)</span>)</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Perturbed Count (<span class="math inline">\(\hat{n}\)</span>)</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Original Sum of Ages (<span class="math inline">\(x\)</span>)</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Original Mean of Ages (<span class="math inline">\(x/n\)</span>)</td>
+<td style="text-align: right;">11.25</td>
+<td style="text-align: right;">7.9167</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+Attackers now have the perturbed frequencies as well as the original mean values at their disposal. In our attack scenario, we also assume that attackers know that the maximum deviation of the frequency count is 2. Attackers can therefore conclude that the original case numbers of the inner cells must be between 7 and 11 and between 12 and 16, respectively, and that the marginal must have originally had a value between 17 and 21. For an attacker, this results in the following possible combinations:
+<ul>
+<li>The marginal is originally 19 and the inner cells are
+<ul>
+<li>7 and 12</li>
+</ul></li>
+<li>The marginal is originally 20 and the inner cells are
+<ul>
+<li>7 and 13</li>
+<li>8 and 12</li>
+</ul></li>
+<li>The marginal is originally 21 and the inner cells are +7 and 14
+<ul>
+<li>8 and 13</li>
+<li>9 and 12</li>
+</ul></li>
+</ul>
+<p>The attackers can now multiply the original mean values of the table cells known to them with the thus calculated candidates for the associated frequencies. In this way, they obtain estimations for the original magnitude value for each cell. If now for each of those estimations, they sum up those values for the inner cells, they obtain another estimated value for the marginal value. This can now be used to identify the correct combination of frequency values, since for the correct ones the sum over the inner cell values is identical to the marginal value, as shown in table ?.</p>
+<div id="tbl-ckm_attacker" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ckm_attacker-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.24: Sample calculation for an attacker
+</figcaption>
+<div aria-describedby="tbl-ckm_attacker-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Cell 1</th>
+<th style="text-align: right;">Cell 2</th>
+<th style="text-align: right;">Marginal</th>
+<th style="text-align: right;">Est. Cell 1</th>
+<th style="text-align: right;">Est. Cell 2</th>
+<th style="text-align: right;">Sum of Estimates</th>
+<th style="text-align: right;">Est. Marginal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">78.75</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">173.75</td>
+<td style="text-align: right;">175.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">78.75</td>
+<td style="text-align: right;">102.917</td>
+<td style="text-align: right;">181.667</td>
+<td style="text-align: right;">185</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">185</td>
+<td style="text-align: right;">185</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">78.75</td>
+<td style="text-align: right;">110.833</td>
+<td style="text-align: right;">189.583</td>
+<td style="text-align: right;">194.25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">102.917</td>
+<td style="text-align: right;">192.917</td>
+<td style="text-align: right;">194.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">101.25</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">196.25</td>
+<td style="text-align: right;">194.25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended. So, when using the Cell Key Method for frequency tables one has to use those perturbed counts, when generating mean values, i.e.&nbsp;if <span class="math inline">\(n\)</span> is an original count, <span class="math inline">\(\hat{n}\)</span> is the corresponding perturbed count and <span class="math inline">\(m\)</span> is the corresponding magnitude value, as it gets published, then the mean has to be calculated as <span class="math inline">\(\frac{m}{\hat{n}}\)</span>.</p>
+</section>
 </section>
 <section id="information-loss" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="information-loss"><span class="header-section-number">5.6</span> Information loss</h2>
