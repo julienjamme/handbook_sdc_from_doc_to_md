@@ -1,4 +1,4 @@
-## Laws
+## Laws {#sec-laws}
 
 For statistical disclosure control the following two laws are of importance.
 
