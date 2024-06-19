@@ -65,9 +65,9 @@ In @sec-intro-example we make some suggestions on practical implementation and i
 
 ### Disclosure risk scenarios {#sec-disclosure-risk-scenarios}
 
-*Need to add section from Luisa. My feeling is that as it stands this was quite long and could be simplified.*
+<!-- *Need to add section from Luisa. My feeling is that as it stands this was quite long and could be simplified.*
 
-*Ok, but later ... when we will be close to the final version*
+*Ok, but later ... when we will be close to the final version* -->
 
 The definition of a disclosure scenario is a first step towards the development of a strategy for producing a "safe" microdata file (MF). 
 A scenario synthetically describes (i) which is the information potentially available to the intruder, and (ii) how the intruder would use such information to identify an individual i.e. the intruder's attack means and strategy.
