@@ -1,6 +1,6 @@
-## Controlled Tabular AdjustmentControlled Tabular Adjustment
+## Controlled Tabular AdjustmentControlled Tabular Adjustment {#sec-CTA}
 
-'*Controlled Tabular Adjustment*' (CTA) suggested for instance in Cox and Dandekar (2002), Castro (2003), or Castro and Giessing (2006). CTA is a new emerging protection method for magnitude tabular data. Unlike cell suppression, it is a perturbative method.
+*'Controlled Tabular Adjustment'* (CTA) suggested for instance in Cox and Dandekar (2002), Castro (2003), or Castro and Giessing (2006). CTA is a new emerging protection method for magnitude tabular data. Unlike cell suppression, it is a perturbative method.
 
 The starting point of the cell suppression methodology presented in 4.3 is that suppressing cells in a table results in theory in replacing the confidential cell value by a feasibility interval that could principally be computed by any user of a table published with suppressions. As explained in 4.2.2., in case the proper protection is given to the cells, the feasibility interval covers the protection interval (i.e. the interval that is needed to protect the individual contribution). CTA methodology on the other hand aims at finding the closest additive table to the original table ensuring that adjusted values of all confidential cells are safely away from their original value (considering the protection intervals) and that the adjusted values are within a certain range of the real values.
 
