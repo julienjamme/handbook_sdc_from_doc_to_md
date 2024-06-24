@@ -341,3 +341,8 @@ The limits of what constitutes \"too few\" or \"dominance\" vary among statistic
 
 ## Z {-}
 
+::: {.content-visible when-format="pdf"}
+
+\printindex
+
+:::

@@ -12,11 +12,11 @@ There are different options available to NSIs for managing these disclosure risk
 a combination of the two.
 
 Applying SDC methods leads to a loss of information and statistical content and affects the inferences that users are able to make on the data. 
-The goal for an effective statistical disclosure control strategy is to choose optimum SDC techniques which maximize the utility of the data while minimizing the disclosure risk. 
+The goal for an effective statistical disclosure control strategy is to choose optimum SDC techniques which maximize the utility of the data while minimizing the \index{disclosure risk}. 
 To enable a user of a protected microdata ilfe to assess the impact of the applied SDC methods, additional information on the expected information loss should be provided. 
 
 In general two types of microdata files are released by NSIs, namely public use files (PUF) and research use files (MFR). 
-The disclosure risk in public use files is entirely managed by the design of the file and the application of SDC methods. 
+The \index{disclosure risk} in public use files is entirely managed by the design of the file and the application of SDC methods. 
 For research use microdata files SDC methods will be applied in addition to some restrictions on access and use, e.g. under a licence or access agreement,
 such as those provided by Commission Regulation 831/2202, see @sec-laws. 
 Necessarily the research release files contain more detail than the public use files.

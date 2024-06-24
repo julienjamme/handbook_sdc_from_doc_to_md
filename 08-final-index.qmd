@@ -1,3 +1,4 @@
+<!-- 
 # Index {.unnumbered}
 
 A
@@ -579,4 +580,4 @@ XPRESS 153
 [^8]: Consider for instance the table of example 3 in section 4.2.2 . Without additional knowledge the bounds for cell (1,1) are $\left( X _ { 11 } ^ { \min } \right)$ = 3 and $X _ { 11 } ^ { \max }$ = 6 . However, if cell (1,2) were a singleton-cell (a cell with a single contributor only) then this single contributor could of course exactly compute the cell value of cell (1,1) by subtracting her own contribution from the row total of row 1.
 
 [^9]: The main persons involved in developing the rules for program design as part of the ad-hoc working group on "confidentiality and documentation" of the research data centres of the Federation and the Länder are: Heike Habla, Jörg Höhne, Ricarda Nauenburg, Ramona Pohl, Dr. Heinz Stralla, and Alexander Vogel. The chapter was written by Andrea Harausz and Ricarda Nauenburg
-
+ -->

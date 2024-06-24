@@ -3,7 +3,7 @@
 ### Overview of concepts and methods
 
 In this section we explain the basic concepts and methods related to microdata protection. 
-Sections [-@sec-perturbative-masking], [-@sec-nonperturbative-masking], [-@sec-noise-addition] and [-@sec-microaggregation-further] give in-depth descriptions of some particularly complex methods: microaggregation, rank swapping, additive noise and synthetic data (the first two implemented in $\mu$‑ARGUS).
+Sections [-@sec-perturbative-masking], [-@sec-nonperturbative-masking], [-@sec-noise-addition] and [-@sec-microaggregation-further] give in-depth descriptions of some particularly complex methods: microaggregation, \index{rank swapping}, additive noise and synthetic data (the first two implemented in $\mu$‑ARGUS).
 
 A microdata set $\mathbf{X}$ can be viewed as a file with $n$ records, where each record contains $m$ variables on an individual respondent. 
 The variables can be classified in four categories which are not necessarily disjoint:
@@ -47,7 +47,7 @@ If we consider the type of data on which they can be used, a different dichotomi
 Perturbative statistical disclosure control (SDC) methods allow for the release of the entire microdata set, although perturbed values rather than exact values are released. 
 Not all perturbative methods are designed for continuous data; this distinction is addressed further below for each method.
 
-Most perturbative methods reviewed below (including noise addition, rank swapping, microaggregation and post-randomization) are special cases of matrix masking. If the original microdata set is $\mathbf{X}$, then the masked microdata set $\mathbf{X}'$ is computed as
+Most perturbative methods reviewed below (including noise addition, \index{rank swapping}, microaggregation and post-randomization) are special cases of matrix masking. If the original microdata set is $\mathbf{X}$, then the masked microdata set $\mathbf{X}'$ is computed as
 
 $$
 \mathbf{X}'=\mathbf{A}\mathbf{X}\mathbf{B} + \mathbf{C}
@@ -183,12 +183,12 @@ Records are exchanged in such a way that low-order frequency counts or marginals
 Even though the original procedure was not very used in practice (see Fienberg and McIntyre, 2004), its basic idea had a clear influence in subsequent methods. 
 In Reiss, Post and Dalenius (1982) and Reiss (1984) data swapping was introduced to protect continuous and categorical microdata, respectively. 
 Another variant of data swapping for microdata is *rank swapping*. 
-Although originally described only for ordinal variables (Greenberg, 1987), rank swapping can also be used for any numerical variable (Moore, 1996). 
+Although originally described only for ordinal variables (Greenberg, 1987), \index{rank swapping} can also be used for any numerical variable (Moore, 1996). 
 First, values of a variable $\mathbf{X}_{i}$ are ranked in ascending order, then each ranked value of $\mathbf{X}_{i}$ is swapped with another ranked value randomly chosen within a restricted range (*e.g.* the rank of two swapped values cannot differ by more than $p\%$ of the total number of records, where $p$ is an input parameter). 
 This algorithm is independently used on each original variable in the original data set.
 
 It is reasonable to expect that multivariate statistics computed from data swapped with this algorithm will be less distorted than those computed after an unconstrained swap. 
-In earlier empirical work by these authors on continuous microdata protection (Domingo-Ferrer and Torra, 2001), rank swapping has been identified as a particularly well-performing method in terms of the trade-off between disclosure risk and information loss. 
+In earlier empirical work by these authors on continuous microdata protection (Domingo-Ferrer and Torra, 2001), \index{rank swapping} has been identified as a particularly well-performing method in terms of the trade-off between \index{disclosure risk} and information loss. 
 Consequently, it is one of the techniques that have been implemented in the $\mu$‑ARGUS package (Hundepool *et al.*, 2005).
 
 **Example.** In @tbl-ex-rank-swapping, we can see an original microdata set on the left and its rankswapped version on the right. 
@@ -226,7 +226,7 @@ A value of $p=10$ has been used for all variables.
 
 : Rankswapped file {tbl-colwidths="[5,25,15,25]"}
 
-Example of rank swapping.
+Example of \index{rank swapping}.
 :::
 :::
 
@@ -258,13 +258,13 @@ Build the masked variable $Z_{i}$ as ${\overline{x}}_{1},\cdots,{\overline{x}}_{
 :::{.callout-warning collapse=true}
 ## Expert level
 
-The Post-RAndomization Method or PRAM (Gouweleeuw *et al.*, 1997) is a probabilistic, perturbative method for disclosure protection of categorical variables in microdata files. 
+The Post-RAndomization Method or \index{PRAM} (Gouweleeuw *et al.*, 1997) is a probabilistic, perturbative method for disclosure protection of categorical variables in microdata files. 
 In the masked file, the scores on some categorical variables for certain records in the original file are changed to a different score according to a prescribed probability mechanism, namely a Markov matrix.
-The Markov approach makes PRAM very general, because it encompasses noise addition, data suppression and data recoding.
+The Markov approach makes \index{PRAM} very general, because it encompasses noise addition, data suppression and data recoding.
 
-PRAM information loss and disclosure risk largely depend on the choice of the Markov matrix and are still (open) research topics (De Wolf et al., 1999).
+PRAM information loss and \index{disclosure risk} largely depend on the choice of the Markov matrix and are still (open) research topics (De Wolf et al., 1999).
 
-The PRAM matrix contains a row for each possible value of each variable to be protected. This rules out using the method for continuous data. More details on PRAM can be found in @sec-PRAM.
+The \index{PRAM} matrix contains a row for each possible value of each variable to be protected. This rules out using the method for continuous data. More details on \index{PRAM} can be found in @sec-PRAM.
 :::
 
 #### MASSC
@@ -274,11 +274,11 @@ The PRAM matrix contains a row for each possible value of each variable to be pr
 MASSC (Singh, Yu and Dunteman, 2003) is a masking method whose acronym summarizes its four steps: Micro Agglomeration, Substitution, Subsampling and Calibration. We briefly recall the purpose of those four steps: 
 
 1.  Micro agglomeration is applied to partition the original dataset into risk strata (groups of records which are at a similar risk of disclosure). These strata are formed using the key variables, *i.e.* the quasi-identifiers in the records. The idea is that those records with rarer combinations of key variables are at a higher risk.
-2. Optimal probabilistic substitution is then used to perturb the original data. (i.e. substitution is governed by a Markov matrix like in PRAM, see \[Singh, Yu and Dunteman, 2003\] for details)
+2. Optimal probabilistic substitution is then used to perturb the original data. (i.e. substitution is governed by a Markov matrix like in \index{PRAM}, see \[Singh, Yu and Dunteman, 2003\] for details)
 3. Optimal probabilistic subsampling is used to suppress some variables or even entire records (i.e. variables and/or records are suppressed with a certain probability set as parameters).
 4. Optimal sampling weight calibration is used to preserve estimates for outcome variables in the treated database whose accuracy is critical for the intended data use.
 
-MASSC, to the best of our knowledge, is the first attempt at designing a perturbative masking method in such a way that disclosure risk can be analytically quantified. 
+MASSC, to the best of our knowledge, is the first attempt at designing a perturbative masking method in such a way that \index{disclosure risk} can be analytically quantified. 
 Its main shortcoming is that its disclosure model simplifies reality by considering only disclosure resulting from linkage of key variables with external sources. 
 Since key variables are typically categorical, the uniqueness approach can be used to analyze the risk of disclosure; however, doing so ignores the fact that continuous outcome variables can also be used for respondent re-identification. 
 As an example, if respondents are companies and turnover is one outcome variable, everyone in a certain industrial sector knows which is the company with largest turnover. 
@@ -387,13 +387,13 @@ De Waal, A. G., and Willenborg, L.C.R.J. (1995). *Global recodings and local sup
 
 De Waal, A.G. and Willenborg, L. C. R. J. (1999). *Information loss through global recoding and local suppression*. Netherlands Official Statistics, 14:17--20, 1999. special issue on SDC.
 
-De Wolf, P.-P., Gouweleeuw, J. M., Kooiman, P., and Willenborg, L.C.R.J. (1999). *Reflections on PRAM*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 337--349, Luxemburg, 1999. Office for Official Publications of the European Communities.
+De Wolf, P.-P., Gouweleeuw, J. M., Kooiman, P., and Willenborg, L.C.R.J. (1999). *Reflections on \index{PRAM}*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 337--349, Luxemburg, 1999. Office for Official Publications of the European Communities.
 
 Domingo-Ferrer, J., and Mateo-Sanz, J. M. (1999). *On resampling for statistical confidentiality in contingency tables.* Computers & Mathematics with Applications, 38:13--32, 1999.
 
 Domingo-Ferrer, J., and Mateo-Sanz, J. M. (2002). *Practical data-oriented microaggregation for statistical disclosure control*. IEEE Transactions on Knowledge and Data Engineering, 14(1):189--201, 2002.
 
-Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk.* In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
+Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and \index{disclosure risk}.* In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
 Domingo-Ferrer, J., and Torra, V., (2001*). Disclosure protection methods and information loss for microdata*. In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
 
@@ -679,11 +679,11 @@ For $p = 1$, *i.e.* a univariate dataset or a multivariate dataset where variabl
 
 For $p > 1$, finding an exact optimal solution to the microaggregation problem, *i.e.* finding a grouping where groups have maximal homogeneity and size at least $k$, has been shown to be NP-hard (Oganian and Domingo-Ferrer, 2001).
 
-Unfortunately, the univariate optimal algorithm by Hansen and Mukherjee (2003) is not very useful in practice and this for two reasons: i) microdata sets are normally multivariate and using univariate microaggregation to microaggregate them one variable at a time is not good in terms of disclosure risk (see Domingo-Ferrer et al., 2002); ii) although polynomial-time, the optimal algorithm is quite slow when the number of records is large.
+Unfortunately, the univariate optimal algorithm by Hansen and Mukherjee (2003) is not very useful in practice and this for two reasons: i) microdata sets are normally multivariate and using univariate microaggregation to microaggregate them one variable at a time is not good in terms of \index{disclosure risk} (see Domingo-Ferrer et al., 2002); ii) although polynomial-time, the optimal algorithm is quite slow when the number of records is large.
 
 Thus, practical methods in the literature are heuristic:
 
--   Univariate methods deal with multivariate datasets by microaggregating one variable at a time, *i.e.* variables are sequentially and independently microaggregated. These heuristics are known as individual ranking (Defays and Nanopoulos, 1993). While they are fast and cause little information loss, these univariate heuristics have the same problem of high disclosure risk as univariate optimal microaggregation.
+-   Univariate methods deal with multivariate datasets by microaggregating one variable at a time, *i.e.* variables are sequentially and independently microaggregated. These heuristics are known as individual ranking (Defays and Nanopoulos, 1993). While they are fast and cause little information loss, these univariate heuristics have the same problem of high \index{disclosure risk} as univariate optimal microaggregation.
 -   Multivariate methods either rank multivariate data by projecting them onto a single axis (*e.g.* using the first principal component or the sum of $z$-scores (Defays and Nanopoulos, 1993) or directly deal with unprojected data (Mateo-Sanz and Domingo-Ferrer, 1999), (Domingo-Ferrer and Mateo-Sanz, 2002). When working on unprojected data, we can microaggregate all variables of the dataset at a time, or independently microaggregate groups of two variables at a time, three variables at a time, etc. In any case, it is preferable that variables within a group which is microaggregated at a time be correlated (W.E. Winkler, 2004) in order to keep as much as possible the analytic properties of the file.
 
 We next describe the two microaggregation algorithms implemented in $\mu$‑ARGUS.
@@ -769,12 +769,12 @@ Winkler, W. E. (2004). *Masking and re-identification methods for public-use mic
 ### PRAM {#sec-PRAM}
 
 PRAM is a disclosure control technique that can be applied to categorical data. Basically, it is a form of intended misclassification, using a known and predetermined probability mechanism. 
-Applying PRAM means that for each record in a microdata file, the score on one or more categorical variables is changed with a certain probability. 
+Applying \index{PRAM} means that for each record in a microdata file, the score on one or more categorical variables is changed with a certain probability. 
 This is done independently for each of the records.
-PRAM is thus a perturbative method. Since PRAM uses a probability mechanism, the disclosure risk is directly influenced by this method. 
+PRAM is thus a perturbative method. Since \index{PRAM} uses a probability mechanism, the \index{disclosure risk} is directly influenced by this method. 
 An intruder can never be certain that a record she thinks she has identified is indeed the identified person: with a certain probability this has been a perturbed record.
 
-Since the probability mechanism that is used when applying PRAM is known, characteristics of the (latent) true data can still be estimated from the perturbed data file. 
+Since the probability mechanism that is used when applying \index{PRAM} is known, characteristics of the (latent) true data can still be estimated from the perturbed data file. 
 To that end, one can make use of correction methods similar to those used in case of misclassification and randomised response situations.
 
 PRAM was used in 2001 UK Census to produce an end-user licence version of the Samples of Anonymised Records (SARs). 
@@ -784,11 +784,11 @@ See Gross(2004) [[www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf]{.underline}](
 :::{.callout-warning collapse=true}
 ## Expert level
 
-In this section a short theoretical description of PRAM is given. For a detailed description of the method, see e.g., Gouweleeuw *et al.* (1998a and 1998b). For a discussion of several issues concerning the method and its consequences, see *e.g.*, De Wolf *et al.* (1998).
+In this section a short theoretical description of \index{PRAM} is given. For a detailed description of the method, see e.g., Gouweleeuw *et al.* (1998a and 1998b). For a discussion of several issues concerning the method and its consequences, see *e.g.*, De Wolf *et al.* (1998).
 
-Let $\xi$ denote a categorical variable in the original file to which PRAM will be applied and let $X$ denote the same variable in the perturbed file. 
+Let $\xi$ denote a categorical variable in the original file to which \index{PRAM} will be applied and let $X$ denote the same variable in the perturbed file. 
 Moreover, assume that $\xi$, and hence $X$ as well, has $K$ categories, labelled $1,\ldots,K$. 
-The probabilities that define PRAM are denoted as
+The probabilities that define \index{PRAM} are denoted as
 
 $$
 p_{\text{kl}} = P(X = l \mid \xi = k)
@@ -796,17 +796,17 @@ $$
 
 *i.e.*, the probability that an original score $\xi = k$ is changed into the score $X = l$. 
 These so called transition probabilities are defined for all $k, l = 1, ..., K$.\
-Using these transition probabilities as entries of a $K \times K$ matrix, we obtain a Markov matrix that we will call the PRAM-matrix, denoted by $\mathbf{P}$.
+Using these transition probabilities as entries of a $K \times K$ matrix, we obtain a Markov matrix that we will call the \index{PRAM}-matrix, denoted by $\mathbf{P}$.
 
-Applying PRAM now means that, given the score $\xi = k$ for record $r$, the score $X$ for that record is drawn from the probability distribution $p_{k1},\ldots,p_{kK}$. 
+Applying \index{PRAM} now means that, given the score $\xi = k$ for record $r$, the score $X$ for that record is drawn from the probability distribution $p_{k1},\ldots,p_{kK}$. 
 For each record in the original file, this procedure is performed independently of the other records.
 
 To illustrate the ideas, suppose that the variable $\xi$ is gender, with scores $\xi =1$ if male and $\xi = 2$ if female. 
-Applying PRAM with $p_{11} = p_{22} = 0.9$ on a microdata file with 110 males and 90 females, would yield a perturbed microdata file with *in expectation*, 108 males and 92 females. 
+Applying \index{PRAM} with $p_{11} = p_{22} = 0.9$ on a microdata file with 110 males and 90 females, would yield a perturbed microdata file with *in expectation*, 108 males and 92 females. 
 However, in expectation, 9 of these males were originally female, and similarly, 11 of the females were originally male.
 
 *Correcting analyses*\
-More generally, the effect of PRAM on one-dimensional frequency tables is that
+More generally, the effect of \index{PRAM} on one-dimensional frequency tables is that
 
 $$
 \mathbb{E}(T_{X} \mid \xi) = \mathbf{P}^t T_{\xi}
@@ -820,7 +820,7 @@ $$
 $$
 
 This can be extended to two-dimensional frequency tables, by vectorizing such tables. 
-The corresponding PRAM-matrix is then given by the Kronecker product of the PRAM-matrices of the individual dimensions.
+The corresponding \index{PRAM}-matrix is then given by the Kronecker product of the \index{PRAM}-matrices of the individual dimensions.
 
 Alternatively, one could use the two-dimensional frequency tables[^1] $T_{\xi\eta}$ for the original data and $T_{XY}$ for the perturbed data directly in matrix notation:
 
@@ -828,19 +828,19 @@ $$
 \hat{T}_{\xi\eta} = \left( \mathbf{P}_{X}^{- 1} \right)^t T_{XY}\mathbf{P}_{Y}^{- 1}
 $$
 
-where $\mathbf{P}_{X}$ denotes the PRAM-matrix corresponding to the categorical variable $X$ and $\mathbf{P}_{Y}$ denotes the PRAM-matrix corresponding to the categorical variable $Y$.
+where $\mathbf{P}_{X}$ denotes the \index{PRAM}-matrix corresponding to the categorical variable $X$ and $\mathbf{P}_{Y}$ denotes the \index{PRAM}-matrix corresponding to the categorical variable $Y$.
 
 [^1]:When $X$ has $K$ categories and $Y$ has $L$ categories, the 2-dimensional frequency table $T_{XY}$ is a $K\times L$ matrix.
 
-For more information about correction methods for statistical analyses applied to data that have been protected with PRAM, we refer to e.g., Gouweleeuw *et al.* (1998a) and Van den Hout (1999 and 2004).
+For more information about correction methods for statistical analyses applied to data that have been protected with \index{PRAM}, we refer to e.g., Gouweleeuw *et al.* (1998a) and Van den Hout (1999 and 2004).
 
-*Choice of PRAM-matrix*\
+*Choice of \index{PRAM}-matrix*\
 The exact choice of transition probabilities influences both the amount of information loss as well as the amount of disclosure limitation. 
 Moreover, in certain situations 'illogical' changes could occur, e.g., changing the gender of a female respondent with ovarian cancer to male. 
 These kind of changes would attract the attention of a possible intruder which should be avoided.
 
 It is thus important to choose the transition probabilities in an appropriate way. 
-Illogical changes could be avoided by appointing a probability of 0 to the illogical scores. In the example given above, PRAM should not be applied to the variable gender individually, but to the crossing of the variables gender and diseases. 
+Illogical changes could be avoided by appointing a probability of 0 to the illogical scores. In the example given above, \index{PRAM} should not be applied to the variable gender individually, but to the crossing of the variables gender and diseases. 
 In that case, each transition probability of changing a score into the score (male, ovarian cancer) should be set equal to 0.
 
 The choice of the transition probabilities in relation to the disclosure limitation and the information loss is more delicate. 
@@ -853,15 +853,15 @@ A theoretical discussion on the possibility to choose the transition probabiliti
 ## Expert level
 
 In certain situations methods like global recoding, local suppression and top-coding would yield too much loss of detail in order to produce a safe microdata file. 
-In these circumstances, PRAM is an alternative. 
-Using PRAM, the amount of detail is preserved whereas the level of disclosure control is achieved by introducing uncertainty in the scores on identifying variables.
+In these circumstances, \index{PRAM} is an alternative. 
+Using \index{PRAM}, the amount of detail is preserved whereas the level of disclosure control is achieved by introducing uncertainty in the scores on identifying variables.
 
-However, in order to make adequate inferences on a microdata file to which PRAM has been applied, the statistician needs to include sophisticated changes to the standard methods. This demands a good knowledge of both PRAM and the statistical analysis that is to be applied.
+However, in order to make adequate inferences on a microdata file to which \index{PRAM} has been applied, the statistician needs to include sophisticated changes to the standard methods. This demands a good knowledge of both \index{PRAM} and the statistical analysis that is to be applied.
 
-In case a researcher is willing to make use of a remote execution facility, PRAM might be used to produce a microdata file with the same structure as the original microdata file, but with some kind of synthetic data. Such microdata files might be used as a 'test' microdata file on which a researcher can try her scripts before sending these scripts to the remote execution facility. 
+In case a researcher is willing to make use of a remote execution facility, \index{PRAM} might be used to produce a microdata file with the same structure as the original microdata file, but with some kind of synthetic data. Such microdata files might be used as a 'test' microdata file on which a researcher can try her scripts before sending these scripts to the remote execution facility. 
 Since the results of the script are not used directly, the amount of distortion of the original microdata file can be chosen to be quite large. That way a safe microdata file is produced that still exhibits the same structure (and amount of detail) as the original microdata file.
 
-In other situations, PRAM might produce a microdata file that is safe and leaves certain statistical characteristics of that file (more or less) unchanged. In that case, a researcher might perform his research on that microdata file in order to get an idea on the eventually needed research strategy. 
+In other situations, \index{PRAM} might produce a microdata file that is safe and leaves certain statistical characteristics of that file (more or less) unchanged. In that case, a researcher might perform his research on that microdata file in order to get an idea on the eventually needed research strategy. 
 Once that strategy has been determined, the researcher might come to an on-site facility in order to perform the analyses once more on the original microdata hence reducing the amount of time that she has to be at the on-site facility.
 :::
 
@@ -870,19 +870,19 @@ Once that strategy has been determined, the researcher might come to an on-site 
 Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census* , Office for National Statistics.
 [[www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf]{.underline}](http://www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf)
 
-Cator, E., Hensbergen A. and Y. Rozenholc (2005), *Statistical Disclosure Control using PRAM*, Proceedings of the 48th European Study Group Mathematics with Industry, Delft, The Netherlands, 15-19 March 2004. Delft University Press, 2005, p. 23 -- 30.
+Cator, E., Hensbergen A. and Y. Rozenholc (2005), *Statistical Disclosure Control using \index{PRAM}*, Proceedings of the 48th European Study Group Mathematics with Industry, Delft, The Netherlands, 15-19 March 2004. Delft University Press, 2005, p. 23 -- 30.
 
 Gouweleeuw, J.M., P. Kooiman, L.C.R.J. Willenborg and P.P. de Wolf (1998a), *Post Randomisation for Statistical Disclosure Control: Theory and Implementation*, Journal of Official Statistics, Vol. 14, 4, pp. 463 -- 478.
 
 Gouweleeuw, J.M., P. Kooiman, L.C.R.J. Willenborg and P.P. de Wolf (1998b), *The post randomisation method for protecting microdata*, Qüestiió, Quaderns d'Estadística i Investigació Operativa, Vol. 22, 1, pp. 145 -- 156.
 
-Van den Hout, A. (2000), *The analysis of data perturbed by PRAM*, Delft University Press, ISBN 90-407-2014-2.
+Van den Hout, A. (2000), *The analysis of data perturbed by \index{PRAM}*, Delft University Press, ISBN 90-407-2014-2.
 
 Van den Hout, A. (2004), *Analyzing misclassified data: randomized response and post randomization*, Ph.D. thesis, Utrecht University.
 
-De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf) Related Papers)
+De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of \index{PRAM}*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf) Related Papers)
 
-De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
+De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on \index{PRAM}*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
 
 ### Synthetic microdata {#sec-synthetic-data}
 
@@ -973,14 +973,14 @@ Generating plausible synthetic values for all variables in a database may be dif
 In Burridge (2004) a family of methods known as IPSO (Information Preserving Statistical Obfuscation) is proposed for generation of partially synthetic data. It consists of three methods that are described next.
 
 *Method A: The basic IPSO procedure*\
-The basic form of IPSO will be called here Method A. Informally, suppose two sets of variables $X$ and $Y$, where the former are the confidential outcome variables and the latter are quasi-identifier variables. 
+The basic form of IPSO will be called here Method A. Informally, suppose two sets of variables $X$ and $Y$, where the former are the confidential outcome variables and the latter are \index{quasi-identifier} variables. 
 Then $X$ are taken as independent and $Y$ as dependent variables. A multiple regression of $Y$ on $X$ is computed and fitted $Y_{A}'$ variables are computed. 
 Finally, variables $X$ and $Y_{A}'$ are released in place of $X$ and $Y$.
 
 More formally, let $y$and $x$ be two data matrices, with rows representing respondents and columns representing variables; the row vectors $y_{i}$ and $x_{i}$ will represent the data for the $i$-th respondent, for $i = 1,\cdots,n$. 
-The column vector $u_{j}$ will represent the quasi-identifier variable $j$, for $j = 1,\cdots,p$; in other words, the $u_{j}$ are the columns of quasi-identifier matrix $Y$. 
-Conditionally on the specific values for confidential variables, quasi-identifier variables for different respondents are assumed to be independent. 
-Conditional on the specific confidential variables $x_{i}$, the quasi-identifier variables $Y_{i}$ are assumed to follow a multivariate normal distribution with covariance matrix $\Sigma = \left\{ \sigma_{jk} \right\}$ and a mean vector $x_{i}B$, where $B$ is an $m\times p$ matrix with columns $\beta_{j}$. 
+The column vector $u_{j}$ will represent the \index{quasi-identifier} variable $j$, for $j = 1,\cdots,p$; in other words, the $u_{j}$ are the columns of \index{quasi-identifier} matrix $Y$. 
+Conditionally on the specific values for confidential variables, \index{quasi-identifier} variables for different respondents are assumed to be independent. 
+Conditional on the specific confidential variables $x_{i}$, the \index{quasi-identifier} variables $Y_{i}$ are assumed to follow a multivariate normal distribution with covariance matrix $\Sigma = \left\{ \sigma_{jk} \right\}$ and a mean vector $x_{i}B$, where $B$ is an $m\times p$ matrix with columns $\beta_{j}$. 
 Thus a separate univariate normal multiple regression model is assumed for each column of $Y$ with regression parameter equal to the corresponding column of $B$, that is, $U_{j} \sim  N\left( x\beta_{j},\sigma_{jj}I \right)$.
 
 Let $\hat{B}$ and $\hat{\Sigma}$ be the maximum likelihood estimates of $B$ and $\Sigma$ derived from the complete dataset $(y,x)$. 
@@ -994,7 +994,7 @@ If a user fits a multiple regression model to $\left( y_{A}',x \right)$, she wil
 
 IPSO Method B modifies $y_{A}'$ into $y_{B}'$ in such a way that the estimate ${\hat{B}}_{B}$ obtained by multiple linear regression from $\left( y_{B}',x \right)$ satisfies ${\hat{B}}_{B} = \hat{B}$.
 
-Suppose that $\tilde{y}$ is a new, artificial, set of quasi-identifier values. 
+Suppose that $\tilde{y}$ is a new, artificial, set of \index{quasi-identifier} values. 
 These can be any set of numbers initially, *e.g.* an i.i.d. normal random sample or a deterministically chosen set. 
 For each component new residuals ${\tilde{r}}_{j}$ are calculated by fitting the above multivariate multiple regression to the new "data" $\tilde{y}$. 
 Define
@@ -1196,11 +1196,11 @@ Z = X^{\alpha} \cdot X_{s}^{(1 - \alpha)}
 $$
 
 where $\alpha$ is an input parameter in $[0,1]$ and $Z$ is the hybrid record. 
-The authors present empirical results comparing the hybrid approach with rank swapping and microaggregation masking (the synthetic component of hybrid data is generated using Latin Hypercube Sampling by Dandekar, Cohen, and Kirkendall, 2002).
+The authors present empirical results comparing the hybrid approach with \index{rank swapping} and microaggregation masking (the synthetic component of hybrid data is generated using Latin Hypercube Sampling by Dandekar, Cohen, and Kirkendall, 2002).
 
 Post-masking optimization is another approach to combining original and synthetic microdata is proposed in Sebé *et al.* (2002). 
 The idea here is to first mask an original dataset using a masking method. 
-Then a hill-climbing optimization heuristic is run which seeks to modify the masked data to preserve the first and second-order moments of the original dataset as much as possible without increasing the disclosure risk with respect to the initial masked data. 
+Then a hill-climbing optimization heuristic is run which seeks to modify the masked data to preserve the first and second-order moments of the original dataset as much as possible without increasing the \index{disclosure risk} with respect to the initial masked data. 
 The optimization heuristic can be modified to preserve higher-order moments, but this significantly increases computation. 
 Also, the optimization heuristic can use take as initial dataset a random dataset instead of a masked dataset; in this case, the output dataset is purely synthetic.
 :::
@@ -1234,7 +1234,7 @@ Crystal.Ball. [[http://www.cbpro.com/]{.underline}](http://www.cbpro.com/).
 
 Dandekar, R., Cohen, M., and Kirkendall, N. (2002). *Sensitive micro data protection using latin hypercube sampling technique.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 245--253, Berlin Heidelberg, Springer.
 
-Dandekar, R., Domingo-Ferrer, J., and Sebé, F. (2002). *LHS-based hybrid microdata vs. rank swapping and microaggregation for numeric microdata protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 153--162, Berlin Heidelberg. Springer.
+Dandekar, R., Domingo-Ferrer, J., and Sebé, F. (2002). *LHS-based hybrid microdata vs. \index{rank swapping} and microaggregation for numeric microdata protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 153--162, Berlin Heidelberg. Springer.
 
 Domingo-Ferrer, J., and González-Nicolás, Ú. (2009). *Hybrid Microdata Using Microaggregation*. Manuscript.
 
@@ -1274,7 +1274,7 @@ Reiter, J. P. (2005b). *Significance tests for multi-component estimands from mu
 
 Rubin, D. E. (1993). *Discussion of statistical disclosure limitation.* Journal of Official Statistics, 9(2):461--468.
 
-Sebé, F., Domingo-Ferrer, J., Mateo-Sanz, J. M. and Torra, V. (2002). *Post-masking optimization of the tradeoff between information loss and disclosure risk in masked microdata sets.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 163--171, Berlin Heidelberg, Springer.
+Sebé, F., Domingo-Ferrer, J., Mateo-Sanz, J. M. and Torra, V. (2002). *Post-masking optimization of the tradeoff between information loss and \index{disclosure risk} in masked microdata sets.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 163--171, Berlin Heidelberg, Springer.
 
 
 ### Targeted Record Swapping {#sec-TRS}
@@ -1361,9 +1361,9 @@ This creates a more drastic trade off between the number of records to swap and 
 The swapping procedure can indirectly take into account the structure of the final tables through the risk value derived from the variables $\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}$ and choice of the geographic hierarchy. 
 However a large number of variables $\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}$ and a high resolution in the geographic hierarchy can result in a high share of units with high risk values and consequently many potential swaps. 
 A high swap rate, for instance beyond 10%, can quickly lead to high information loss, because the noise introduced through the swapping is not controlled for while drawing the swapped units. 
-Thus it is not feasible to both address all possible disclosure risk scenarios while maintaining high utility in the final tables.
+Thus it is not feasible to both address all possible \index{disclosure risk} scenarios while maintaining high utility in the final tables.
 
-As with any method it is advised to thoroughly tune parameters to balance information loss disclosure risk. Possible tuning parameters are:
+As with any method it is advised to thoroughly tune parameters to balance information loss \index{disclosure risk}. Possible tuning parameters are:
 
 - The geographic hierarchy and its depth of granularity.
 - The construction of the risk values $r_{i,k}$ and $r_{high}$ 

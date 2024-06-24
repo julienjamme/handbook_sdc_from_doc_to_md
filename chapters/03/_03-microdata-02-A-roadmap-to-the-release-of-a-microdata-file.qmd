@@ -4,10 +4,10 @@ This section aims at introducing the reader to the process that, starting from t
 
 1.  why is confidentiality protection needed;
 2.  what are the key characteristics and use of the data;
-3.  disclosure risk (ex ante);
+3.  \index{disclosure risk} (ex ante);
 4.  disclosure control methods;
 5.  implementation;
-6.  assessment of disclosure risk and utility (ex post)
+6.  assessment of \index{disclosure risk} and utility (ex post)
 
 Specifying, for each stage, the peculiarities of microdata release. In @tbl-roadmap we present an overview of the process.
 
@@ -60,9 +60,9 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 +-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 5\. Implementation                                        | Choice of software, parameters and thresholds for different methods                                                                                                                                   |
 +-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 6\. assessment of disclosure risk and utility (ex post)   | Ex post analysis of disclosure risk and information loss\                                                                                                                                             |
+| 6\. assessment of \index{disclosure risk} and utility (ex post)   | Ex post analysis of \index{disclosure risk} and information loss\                                                                                                                                             |
 |                                                           | ⇓\                                                                                                                                                                                                    |
-|                                                           | *In case disclosure risk and/or utility loss is too high, return to step 5.*                                                                                                                          |
+|                                                           | *In case \index{disclosure risk} and/or utility loss is too high, return to step 5.*                                                                                                                          |
 +-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Roadmap to releasing a microdata file {#tbl-roadmap}
@@ -147,7 +147,7 @@ Also, as far as possible, published totals should be preserved for transparency.
 Moreover, in case of multiple release of the same survey (e.g. PUF and microdata for research) coherence should be maintained also between different released files in the sense that releasing different files at the same time shouldn't allow the gaining of more information than for one file alone (see, Trottini et al., 2006). 
 The principles apply also to the release of longitudinal or panel microdata, where the differences between records pertaining to the same case in different waves will reflect 'events' that have occurred to that case, as well as the attributes of the individuals.
 
-Once the characteristics and uses of the survey data are clear, it is time to start the real analysis of the disclosure risk in relation to files with originally collected data -- *ex ante* assessment (in one of next subsections we will indicated also on a necessity of making *ex post* assessment of disclosure risk to verify effciency of used SDC methods).
+Once the characteristics and uses of the survey data are clear, it is time to start the real analysis of the \index{disclosure risk} in relation to files with originally collected data -- *ex ante* assessment (in one of next subsections we will indicated also on a necessity of making *ex post* assessment of \index{disclosure risk} to verify effciency of used SDC methods).
 This implies first a definition of possible situations at risk (disclosure scenarios) and second a proper definition of the 'risk' in order to quantify the phenomenon (risk assessment).
 
 *Disclosure scenario*\
@@ -174,7 +174,7 @@ Different approaches are used if the identifying variables are categorical of co
 In the former case at the basis of the definition is the concept of a 'key' (i.e. the combination of categories of the identifying variables): see @sec-risk-overview for a classification of different definitions. 
 Whereas if continuous identifying variables are present in the file a possibility is to use the concept of density: see Ichim (2009) for a detailed analysis of definitions of risk in the case of continuous variables. 
 Of course, the problem is even more complicated when we deal with a mixture of categorical and numerical key variables; for an example of this situation (quite common in enterprise microdata) see case study A1 (Community Innovation Survey).
-Another possibility in the context of continuous variables can be the assessment of disclosure risk based on the (expected) number of units for which a value of the given continuous variable falls into a predefined neighborhood of a given observation.
+Another possibility in the context of continuous variables can be the assessment of \index{disclosure risk} based on the (expected) number of units for which a value of the given continuous variable falls into a predefined neighborhood of a given observation.
 
 *Risk assessment*\
 Once a formal definition of risk has been chosen we need to measure/estimate it. 
@@ -192,7 +192,7 @@ Further advice can be gained by studying of the examples and case studies.
 
 ### SDC-methods
 
-If the risk assessment stage shows that the disclosure risk is high then the application of statistical disclosure limitation methods is necessary to produce a microdata file for external users.
+If the risk assessment stage shows that the \index{disclosure risk} is high then the application of statistical disclosure limitation methods is necessary to produce a microdata file for external users.
 
 *Masking methods*\
 Microdata protection methods can generate a protected microdata set either by *masking original data*, *i.e.* generating a modified version of the original microdata set or by *generating synthetic data* that preserve some statistical properties of the original data. Synthetic data are still difficult to implement; a description can be found in @sec-synthetic-data. 
@@ -240,19 +240,19 @@ Information on which statistics have been preserved and which have been modified
 If a data reduction method has been applied with some local suppression then the distribution of such suppressions should be given for a series of different dimensions of interest (distribution by variables, by household size, household type, etc.) and any other statistics that are deemed relevant for the user. 
 The released microdata should be obviously accompanied by all necessary metadata and information on methodologies used at various stage of the survey process (sampling, imputation, validation, etc.) together with information on magnitude of sampling errors, estimation domains etc.
 
-### Assessment of disclosure risk and utility (ex post)
-he last stage of the procedure is the ex post assessment of disclosure risk and computation of the expected information loss due to SDC. 
+### Assessment of \index{disclosure risk} and utility (ex post)
+he last stage of the procedure is the ex post assessment of \index{disclosure risk} and computation of the expected information loss due to SDC. 
 The ex post risk assessment (usually made using the same measures as in the case of ex ante assessement, for comparability) allows for confirmation whether the used procedure eliminates or sufficiently reduces the threat of unit identification or not. 
 If not, a modification of used methods (*e.g.* by changing some tools, modification of parameters, etc.) should be made. This means back to the Implementation step.
 
 An assessment of information loss caused by the applied protection methods is highly recommended. 
 Knowledge abnout possible loss of information is key for assessing data utility by possible users. 
 If the information loss is too large, the used methods or their parameterization should be changed (going back to the Implementation stage). 
-One should realise that at the same time the disclosure risk should be as small as possible. 
+One should realise that at the same time the \index{disclosure risk} should be as small as possible. 
 Thus, these quantities should be dealt with in a harmonized way. 
 A detailed description of information loss measures is reported in @sec-informationloss-microdata; examples of how to check in practice the amount of distortion or modification in the protected microdata is presented in case studies A1 and A2.
 
 The results of the computation of discloure risk (both final and indirect, if applicable) and information loss should be saved in the documentation of the whole process. 
-However, the results of the computation of disclosure risk are confidential and should only be known to entitled staff of the data holder. 
+However, the results of the computation of \index{disclosure risk} are confidential and should only be known to entitled staff of the data holder. 
 The level of expected information loss on the other hand, should be made available to the user of the protected microdata. 
 This being a very important factor that influences the quality of the final analysis results obtained by him/her.

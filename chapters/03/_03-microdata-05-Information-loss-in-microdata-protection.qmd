@@ -3,13 +3,13 @@
 
 ### Introduction
 
-The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of disclosure risk and simultaneous minimization of the information loss arising from the SDC process (what is equivalent to maximization of data utility for the possible users). So, both aspects of this problem will be described and critically discussed in this subchapter. We will present types of disclosure risk, show how one can measure of disclosure risk for categorical variables and continuous variables. Because usually for each of such types separate measures are applied, we investigate also a possibility of complex measurement of disclosure risk taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures for categorical and continuous variables are presented and next complex measures providing synthetic information in this respect are discussed. They are available already in the literature and implemented to the specialized statistical software. Finally, some remarks on the practical realization of trade-off between safety and utility of microdata are collected.
+The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of \index{disclosure risk} and simultaneous minimization of the information loss arising from the SDC process (what is equivalent to maximization of data utility for the possible users). So, both aspects of this problem will be described and critically discussed in this subchapter. We will present types of \index{disclosure risk}, show how one can measure of \index{disclosure risk} for categorical variables and continuous variables. Because usually for each of such types separate measures are applied, we investigate also a possibility of complex measurement of \index{disclosure risk} taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures for categorical and continuous variables are presented and next complex measures providing synthetic information in this respect are discussed. They are available already in the literature and implemented to the specialized statistical software. Finally, some remarks on the practical realization of trade-off between safety and utility of microdata are collected.
   
 ### Types of disclosure risk
 
 The assessment of the risk of re-identification using disclosed data involves identifying unsafe combinations for categorical variables or their values in the neighbourhood of relevant original values (for continuous variables) or levels (individual, global or hierarchical). The unsafe combinations of values of categorical variables are recognized using e.g. the $k$-anonymity or $l$-diversity rules. It is possible also when the $t$-closeness criterion is applied: in this case all records - and themselves the combinations of values of categorical variables – belonging to unsafe class are regarded to be unsafe. There are several criteria to classify the risk. We present the most important from them.
 
-Due to the range of data that can be used to identify the individual one can distinguish two types of disclosure risk for a dataset obtained once the SDC process has been applied (cf. Młodak, Pietrzak and Józefowski (2022)): 
+Due to the range of data that can be used to identify the individual one can distinguish two types of \index{disclosure risk} for a dataset obtained once the SDC process has been applied (cf. Młodak, Pietrzak and Józefowski (2022)): 
     • internal risk -- when there is a threat of identifying  units only using modified data (it is worth noting that the measures of internal risk can obviously be used to assess the risk of disclosure in the original data),
     • external risk -- when there is a threat of identifying units by attempting to link data after SDC with information from other sources possibly available to the user.
 
@@ -17,13 +17,13 @@ Internal risk results from the existence of unique combinations of values (exact
 
 Internal risk refers to the risk of a user/intruder identifying a given unit only by using information included in the file that has been made available by the data provider (e.g. statistical office). In this case, it is assumed that the user can only rely on information that can be obtained from the data set made available to to him/her. In contrast, external risk refers to the situation when the user can access alternative data sources and use them in an attempt to identify units by linking relevant data from different sources. As can be seen, these two kinds of risks are rather different.
 
-Internal risk seems to be easier to compute than the external risk. Internal threats for confidentiality can be modelled by violation of the aforementioned rules based on frequency of combinations of values of categorical variables and of observations falling into an re-identification precision interval around a given value of continuous variable. However, the estimation of external risk requires a knowledge about possible alternative data sources available for the user. This knowledge is hard to obtain, but we can (with large probability) suppose which possibilities in this respect he/she can have. For instance, if the user is employed in the labour office, one can suppose the he/she has an access to the basis of unemployed persons, which can be linked by him/her with the database from the Labour Force Survey obtained from the official statistics or similar data holder. The internal and external risk can be combined to obtain a total disclosure risk.   
+Internal risk seems to be easier to compute than the external risk. Internal threats for confidentiality can be modelled by violation of the aforementioned rules based on frequency of combinations of values of categorical variables and of observations falling into an re-identification precision interval around a given value of continuous variable. However, the estimation of external risk requires a knowledge about possible alternative data sources available for the user. This knowledge is hard to obtain, but we can (with large probability) suppose which possibilities in this respect he/she can have. For instance, if the user is employed in the labour office, one can suppose the he/she has an access to the basis of unemployed persons, which can be linked by him/her with the database from the Labour Force Survey obtained from the official statistics or similar data holder. The internal and external risk can be combined to obtain a total \index{disclosure risk}.   
 
-The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of disclosure risk and simultaneous minimization of the 
+The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of \index{disclosure risk} and simultaneous minimization of the 
 information loss arising from the SDC process (what is equivalent to maximization of data utility for the possible users). So, both aspects of this problem will 
-be described and critically discussed in this subchapter. We will present types of disclosure risk, show how one can measure of disclosure risk for categorical 
+be described and critically discussed in this subchapter. We will present types of \index{disclosure risk}, show how one can measure of \index{disclosure risk} for categorical 
 variables and continuous variables. Because usually for each of such types separate measures are applied, we investigate also a possibility of complex measurement 
-of disclosure risk taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures 
+of \index{disclosure risk} taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures 
 for categorical and continuous variables are presented and next complex measures providing synthetic information in this respect are discussed. They are available 
 already in the literature and implemented to the specialized statistical software. Finally, some remarks on the practical realization of trade-off between safety and 
 utility of microdata are collected.
@@ -36,7 +36,7 @@ variables are recognized using e.g. the $k$-anonymity or $l$-diversity rules. It
 - and themselves the combinations of values of categorical variables – belonging to unsafe class are regarded to be unsafe. There are several criteria to classify the risk. 
 We present the most important from them.
 
-Due to the range of data that can be used to identify the individual one can distinguish two types of disclosure risk for a dataset obtained once the SDC process has been 
+Due to the range of data that can be used to identify the individual one can distinguish two types of \index{disclosure risk} for a dataset obtained once the SDC process has been 
 applied (cf. Młodak, Pietrzak and Józefowski (2022)): 
 
 - internal risk -- when there is a threat of identifying  units only using modified data (it is worth noting that the measures of internal risk can obviously be used to 
@@ -57,23 +57,23 @@ on frequency of combinations of values of categorical variables and of observati
 continuous variable. However, the estimation of external risk requires a knowledge about possible alternative data sources available for the user. This knowledge is hard 
 to obtain, but we can (with large probability) suppose which possibilities in this respect he/she can have. For instance, if the user is employed in the labour office, 
 one can suppose the he/she has an access to the basis of unemployed persons, which can be linked by him/her with the database from the Labour Force Survey obtained from 
-the official statistics or similar data holder. The internal and external risk can be combined to obtain a total disclosure risk.   
+the official statistics or similar data holder. The internal and external risk can be combined to obtain a total \index{disclosure risk}.   
 
-Another classification of disclosure risk is connected with the reference object. That is, the following types of risk from this point of view are distinguished 
+Another classification of \index{disclosure risk} is connected with the reference object. That is, the following types of risk from this point of view are distinguished 
 (cf. Templ (2017)):
 
 - individual risk - the risk of disclosing data for a single record and thus identifying the corresponding individual,
 - hierarchical risk - the aggregated risk estimated for units of particular levels of a given hierarchy established within a dataset (e.g. according to 
 territorial or economic classification),
-- global risk - the aggregated disclosure risk for the whole data set.
+- global risk - the aggregated \index{disclosure risk} for the whole data set.
 
-The statistician involved in processing and dissemination of data should estimate disclosure risk at each stage of the SDC process. It allows to track changes and 
+The statistician involved in processing and dissemination of data should estimate \index{disclosure risk} at each stage of the SDC process. It allows to track changes and 
 efficiency of data protection made using various SDC methods and taking all relevant data struktures into account. Due to the fact, that information on the 
-disclosure risk can contribute to re-identification of individuals, it should be, however, confidential itself and cannot be known by the user.  
+\index{disclosure risk} can contribute to re-identification of individuals, it should be, however, confidential itself and cannot be known by the user.  
 
 ### Measures of disclosure risk for categorical variables
 
-The key measures of disclosure risk for categorical variables in microdata are, in general, based on the frequency rules in the internal dimension. 
+The key measures of \index{disclosure risk} for categorical variables in microdata are, in general, based on the frequency rules in the internal dimension. 
 That is, they are expressed by number or percentage of records violating $k$-anonymity or $l$-diversity rule or being regarded as unsafe according to the 
 $t$-closeness principle. These indicators can be applied, however, only for the raw microdata. However, we have to take also into account the fact that the 
 microdata are usually a sample from some general population, and verify that relevant population values are also safe. Of course, one should take also the 
@@ -106,7 +106,7 @@ $$
 $$
 where, as before, $\hat{F}_k = \sum_{i\in\{j:x_j=x_k\}}{\pi_i}$.
 
-Shlomo (2022) proposes measures disclosure risk in synthetic data based on the comparison of the overall distributions in the original data versus synthetic data and 
+Shlomo (2022) proposes measures \index{disclosure risk} in synthetic data based on the comparison of the overall distributions in the original data versus synthetic data and 
 using Kullback–Leibler Total Variation and Hellinger’s Distance formulas. Shlomo and Skinner (2022) introduced a new approach to measure the risk of re-identification 
 for a subpopulation in a register that is not representative of the general population based on the numbers of combinations which frequency equals in the sample in the 
 subpopulation and in the population using the Poisson model.
@@ -115,7 +115,7 @@ subpopulation and in the population using the Poisson model.
 
 For continuous variables the situation is much more complicated. They are measured on the interval or ratio scale and have continuous distributions. 
 Hence, we cannot use frequency of occurrence of individual values as a basis for measurement of the dislosure risk in this case. 
-Therefore, different solutions for measurement of disclosure risk have to be be applied. The famous approach in this context is used in the sdcMicro 
+Therefore, different solutions for measurement of \index{disclosure risk} have to be be applied. The famous approach in this context is used in the sdcMicro 
 package of the R environment dedicated to carry out the SDC process on microdata (cf. R Development Core Team (2008), Templ, Kowarik, and Meindl (2023)) 
 and described by Templ (2017). It reports the percentage of observations falling within an interval centered on its masked value whereas the upper bound 
 corresponds to a worst case scenario where an intruder is sure that each nearest neighbour is indeed the true link. More precisely, for a given variable $X$ 
@@ -133,7 +133,7 @@ If the record and its nearest neighbour in original data set refer to the same r
 Similarly, if the second nearest neighbour in the original dataset and the current record in the protected datsaset correspond to the same individual, 
 then the latter is regarded to be "linked to the second nearest". The measure of risk is here the percentage of records in the protected data set marked as 
 "linked" or "linked to the second nearest", 
-- probabilistic record linkage (Jaro (1989)): the disclosure risk is here understood as percentage of "linked" pairs of records from the original and protected datasets, 
+- probabilistic \index{record linkage} (Jaro (1989)): the \index{disclosure risk} is here understood as percentage of "linked" pairs of records from the original and protected datasets, 
 i.e. such that weights (values of likelihood that two paired records refer to the same respondent assigned by a special algorithm) are greater than an arbitrarily 
 established threshold.
 One can easily observe that in both cases also original and protected data sets are compared. This makes it impossible to assess the original risk of disclosure, 
@@ -141,8 +141,8 @@ which is usually the basis of any data disclosure control activities.
 
 ### Possibility of complex measurement of disclosure risk
 
-It is worth noting that the classical construction of measures of disclosure risk is focused on the development of separate tools for categorical and continuous variables. 
-As it was indicated earlier it is justified by their different nature. However, using them means that the actual disclosure risk may be underestimated. 
+It is worth noting that the classical construction of measures of \index{disclosure risk} is focused on the development of separate tools for categorical and continuous variables. 
+As it was indicated earlier it is justified by their different nature. However, using them means that the actual \index{disclosure risk} may be underestimated. 
 For instance, assume that (2,6,7,1) is a combination of categories of four categorical variables occurring 12 times in a given microdata set and $Y$ is a continuous 
 variable in the same set for which 10 values is contained in the interval $(43.7(1-0.2),43.7(1+0.2))$, where 0.2 is the minimum allowable level of error during trial of 
 rediscovering of the sensitive value 43.7. So, treating the combinations of categorical variables and the values of $Y$ separately, one can say that both (2,6,7,1) and $Y= 43.7$ 
@@ -150,21 +150,21 @@ are safe. However, imagine that there is only one record for which the categoric
 $(43.7(1-0.2), 43.7(1+0.2))$. Then the threat of identification of a unit associated with thus record is very high.
 
 On the other hand, the data users (in this case to concerns mainly statisticians involved in data processing and their preparation for dissemination – as the information 
-on the disclosure risk is usually confidential) are interested in obtaining precise, reliable and comprehensive information on the disclosure risk. 
+on the \index{disclosure risk} is usually confidential) are interested in obtaining precise, reliable and comprehensive information on the \index{disclosure risk}. 
 Too low quality of estimation of such risk can lead to insufficient protection of sensible information and, consequently, to violation of privacy of a respondent.
 
 Taking these premises into account, Młodak, Pietrzak, and Józefowski (2022) discussed the possibility of use in this context the distance based on the idea of the Gower’s formula.
-Recall, that this approach takes all types of variables (according to their measurement scales) into account. In this way, the disclosure risk has been assessed in context of 
+Recall, that this approach takes all types of variables (according to their measurement scales) into account. In this way, the \index{disclosure risk} has been assessed in context of 
 possible re-identification by linking relevant record from a given data set and record from a related alternative database available for the user. It is in fact the measure of 
-external risk. A similar idea can be used also to complex assessment of internal disclosure risk using the distance-based approach, where application of the analogous concept of 
-distance allows for joint estimation of change of the risk before and after performing SDC process. Also the probabilistic record linkage, where the conditional probability that a 
+external risk. A similar idea can be used also to complex assessment of internal \index{disclosure risk} using the distance-based approach, where application of the analogous concept of 
+distance allows for joint estimation of change of the risk before and after performing SDC process. Also the probabilistic \index{record linkage}, where the conditional probability that a 
 pair of records has an agreement pattern $\gamma$, given that it is a true match and the conditional probability that a pair of records has an agreement pattern $\gamma$ given they 
 are true unmatched records (cf. Sayers et al. (2016)) can be computed using using a properly selected categorization of continuous variables. 
 
 However, as one can see, these methods can be also applied only in comparative terms. If we would like to assess the primary individual disclosure risks in the original dataset, we 
 will have to use a combination of risks associated with categorical and continuous variables which are computed on the basis of the frequency rules (in the case of countinuous 
 variables - using the sumber of observations falling into $(x(1-p),x(1+p))$, as it was stated before). The global risk is e.g. the arithmetic mean of individual risks. When it is 
-also possible to use a comprehensive measure of disclosure risk, achieving a balance between minimizing these two quantities will become much easier.
+also possible to use a comprehensive measure of \index{disclosure risk}, achieving a balance between minimizing these two quantities will become much easier.
 
 ### Concepts and types of information loss and its measures
 
@@ -194,7 +194,7 @@ data uses. We will say there is little information loss if the protected dataset
 -   A microdata set is an *analytically interesting microdata set*, if six variables on important subdomains are provided that can be validly analyzed.\
     More precise conditions of analytical validity and analytical interest cannot be stated without taking specific data uses into account. As imprecise as they may be, the above definitions suggest some possible measures:
     - Compare raw records in the original and the protected dataset. The more similar the SDC method to the identity function, the less the impact 
-(but the higher the disclosure risk! ). This requires pairing records in the original dataset and records in the protected dataset. 
+(but the higher the \index{disclosure risk}! ). This requires pairing records in the original dataset and records in the protected dataset. 
 For masking methods, each record in the protected dataset is naturally paired to the record in the original dataset it originates from. 
 For synthetic protected datasets, pairing is more artificial. In Dandekar, Domingo-Ferrer and Sebé (2002) we proposed to pair a synthetic record 
 to the nearest original record according to some distance.
@@ -267,13 +267,13 @@ the count of records with category $A$ decreases and the count of records with t
 ## Expert level
 
 In De Waal and Willenborg (1999), Kooiman, Willenborg and Gouweleeuw (1998) and Willenborg and De Waal (2001), the use of Shannon's entropy to measure information loss 
-is discussed for the following methods: local suppression, global recoding and PRAM. Entropy is an information-theoretic measure, but can be used in SDC if the 
+is discussed for the following methods: local suppression, global recoding and \index{PRAM}. Entropy is an information-theoretic measure, but can be used in SDC if the 
 protection process is modelled as the noise that would be added to the original dataset in the event of it being transmitted over a noisy channel.
 
-As noted earlier, PRAM is a method that generalizes noise addition, suppression and recoding methods. Therefore, our description of the use of entropy will be limited to PRAM.
+As noted earlier, \index{PRAM} is a method that generalizes noise addition, suppression and recoding methods. Therefore, our description of the use of entropy will be limited to \index{PRAM}.
 
-Let $V$ be a variable in the original dataset and $V'$ be the corresponding variable in the PRAM-protected dataset. 
-Let $P_{V,V'} = \left\{ p\left( V' = j \mid V = i \right) \right\}$ be the PRAM Markov matrix. Then, the conditional uncertainty of $V$ given that $V' = j$ is:
+Let $V$ be a variable in the original dataset and $V'$ be the corresponding variable in the \index{PRAM}-protected dataset. 
+Let $P_{V,V'} = \left\{ p\left( V' = j \mid V = i \right) \right\}$ be the \index{PRAM} Markov matrix. Then, the conditional uncertainty of $V$ given that $V' = j$ is:
 $$
 H\left( V \mid V' = j \right) = - \sum\limits_{i = 1}^{n}{p\left( V = i \mid V' = j \right)\log p}\left( V = i \mid V' = j \right) 
 $${#eq-conditional-uncertainty} 
@@ -341,7 +341,7 @@ and too low - when the differentiation is significant. In practice, if $S_j$ is 
 In this case, the measure becomes really useless, because it will not allow to compare the loss of information in several microdata sets with statistical confidentiality 
 protected in various ways - if for each of such sets the IL1 measure will be equal to INF.
 
-Trottini (2003) argues that, since information loss is to be traded off for disclosure risk and the latter is bounded ---there is no risk higher than 100\%---, upper bounds should be enforced for information loss measures. In practice, the proposal in Trottini (2003) is to limit those measures in @tbl-loss-information based on the mean variation to a predefined maximum value.
+Trottini (2003) argues that, since information loss is to be traded off for \index{disclosure risk} and the latter is bounded ---there is no risk higher than 100\%---, upper bounds should be enforced for information loss measures. In practice, the proposal in Trottini (2003) is to limit those measures in @tbl-loss-information based on the mean variation to a predefined maximum value.
 
 Młodak (2020) proposed a new measure of information loss for continuous variables in terms of assesment of impact on the intensity of connections, which was slighthly improved by 
 Młodak, Pietrzak and Józefowski (2022). It is based on on diagonal entries of inversed correlation matrices for continuous variables in the original ($R^{-1}$) and 
@@ -454,9 +454,9 @@ loss should be assessed using the measures for contingency tables (as they are i
 Similarly as e.g. in the case of significance and loss in testing of statistical hypotheses, the most obvious and easy approach to obtain reasonable compromise 
 between these two expectations is to apply one of two following ways:
 
-- establishing arbitrarily maximum allowable level of disclosure risk and minimize the information loss in this situation - it defends, first of all, 
+- establishing arbitrarily maximum allowable level of \index{disclosure risk} and minimize the information loss in this situation - it defends, first of all, 
 the data confidentiality and trust to data holder in terms of privacy protection,
-- establishing arbitrarily maximum allowable level of information loss and minimize the disclosure risk in this situation - it defends, first of all, 
+- establishing arbitrarily maximum allowable level of information loss and minimize the \index{disclosure risk} in this situation - it defends, first of all, 
 the data utility for users and data provider as a source of reliable, creadible and useful data. 
 
 In practice, the data holder (e.g. official statistics) prefers rather the first approach as the strict protection of data privacy is usually an obligation imposed by valid law regulations. So, assurance of the safety of confidential information is very important.     
@@ -466,11 +466,11 @@ In practice, the data holder (e.g. official statistics) prefers rather the first
 
 Chatfield, C., and Collins, A. J., (1980). *Introduction to Multivariate Analysis*, Chapman and Hall, London, 1980.
 
-Dandekar, R., Domingo-Ferrer, J., and Sebé, F., (2002). *LHS-based hybrid microdata vs. rank swapping and microaggregation for numeric microdata protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 153--162, Berlin Heidelberg, 2002. Springer.
+Dandekar, R., Domingo-Ferrer, J., and Sebé, F., (2002). *LHS-based hybrid microdata vs. \index{rank swapping} and microaggregation for numeric microdata protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 153--162, Berlin Heidelberg, 2002. Springer.
 
 De Waal, A. G., and Willenborg, L. C. R. J. (1999). *Information loss through global recoding and local suppression.* Netherlands Official Statistics, 14:17--20, 1999. special issue on SDC.
 
-Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk*. In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
+Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and \index{disclosure risk}*. In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
 Domingo-Ferrer, J., and Torra, V. (2001). *Disclosure protection methods and information loss for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
 
@@ -491,13 +491,13 @@ Pagliuca, D., & Seri, G. (1999). Some results of individual ranking method on th
 *R Development Core Team. (2008). R: A Language and Environment for Statistical Computing [Computer software manual]*. Vienna, Austria. Retrieved from 
 [[http://www.R-project.org]{.underline}](http://www.R-project.org), ISBN 3-900051-07-0.
 
-Sayers, A., Ben-Shlomo, Y., Blom, A. W., & Steele, F. (2016). Probabilistic record linkage. *International Journal of Epidemiology*, 45(3), 954-964.
+Sayers, A., Ben-Shlomo, Y., Blom, A. W., & Steele, F. (2016). Probabilistic \index{record linkage}. *International Journal of Epidemiology*, 45(3), 954-964.
 
 Shlomo, N. (2022). How to Measure Disclosure Risk in Microdata? *The Survey Statistician*, 86, 13–21.
 
 Shlomo, N., & Skinner, C. (2022). Measuring risk of re-identification in microdata: state-of-the art and new directions. *Journal of the Royal Statistical Society. Series A: Statistics in Society*, 185 (4), 1644–1662.
 
-Taylor, L., Zhou, X.-H., & Rise, P. (2018). A tutorial in assessing disclosure risk in microdata. *Statistics in Medicine*, 37 (25), 3693–3706.
+Taylor, L., Zhou, X.-H., & Rise, P. (2018). A tutorial in assessing \index{disclosure risk} in microdata. *Statistics in Medicine*, 37 (25), 3693–3706.
 
 Templ, M. (2017). *Statistical Disclosure Control for Microdata. Methods and Applications in R.* Springer International Publishing AG, Cham, Switzerland.
 

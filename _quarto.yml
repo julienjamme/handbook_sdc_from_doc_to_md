@@ -2,51 +2,67 @@ project:
   type: book
 
 book:
-  title: "SDC Handbook"
-  subtitle: "ESSNet SDC"
-  author: "Various Editors"
-  date: "20/01/2023"
+  title: "Handbook on Statistical Disclosure Control"
+  subtitle: ""
+  author: Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak
+  date: today
+  date-format: YYYY, MMMM DD
+  repo-url: https://github.com/julienjamme/handbook_sdc_from_doc_to_md
   chapters:
     - index.qmd
+    - 01-Introduction.qmd
     - 02-regulations.qmd
     - 03-microdata.qmd
     - 04-magnitude-tabular-data.qmd
     - 05-frequency-tables.qmd
     - 06-remote-access-issues.qmd
     - 07-glossary.qmd
-    - 08-final-index.qmd
+    # - 08-final-index.qmd
   page-navigation: true
 
 bibliography: references.bib
+
 
 format:
   html:
     theme: 
       - cosmo
       - custom.scss
-#  pdf:
-#    pdf-engine: xelatex
-#    fig-pos: 'h'
-#    documentclass: book
-#    toc: true
-#    keep-tex: true
-#    include-in-header: 
-#      text: |
-#        \usepackage[english]{babel}
-#        \usepackage[margin=3cm]{geometry}
-#        \usepackage[utf8]{inputenc}
-#        \usepackage{float}
-#        \makeatletter
-#        \renewenvironment{table}
-#          {\@float{table}[H]}
-#          {\end@float}
-#        \makeatother
-#        \counterwithout{footnote}{chapter}
-#        \usepackage{makeidx}
-#        \makeindex
-#    include-after-body: 
-#      text: |
-#        \printindex
+    reference-location: margin
+    citation-location: margin
+    cap-location: margin
+    code-link: true
+  pdf:
+    # pdf-engine: xelatex
+    # fig-pos: 'h'
+    latex-tinytex: false
+    documentclass: book
+    classoption: oneside
+    papersize: a4
+    toc: true
+    keep-tex: true
+    # geometry:
+    #   - left=.75in
+    #   - textwidth=4.5in
+    #   - marginparsep=.25in
+    #   - marginparwidth=2.25in
+    include-in-header: 
+      text: |
+        \usepackage[english]{babel}
+        \usepackage[utf8]{inputenc}
+        \usepackage{float}
+        \usepackage{multirow}
+        \makeatletter
+        \renewenvironment{table}
+          {\@float{table}[H]}
+          {\end@float}
+        \makeatother
+        \counterwithout{footnote}{chapter}
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body: 
+      text: |
+        \printindex
 
 execute:
   freeze: auto
