@@ -109,3 +109,9 @@ The attackers can now multiply the original mean values of the table cells known
 
 Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended.
 So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e. if $n$ is an original count, $\hat{n}$ is the corresponding perturbed count and $m$ is the corresponding magnitude value, as it gets published, then, in order to avoid the disclosure risk described here, it is better to calculate the mean as $\frac{m}{\hat{n}}$.
+
+
+### Software implementing the Cell Key Method
+For application of the Cell Key Method, so called $p$-tables describing the distribution of the noise are needed. They should be specified in a certain format. The R-package \texttt{ptable}, available on CRAN, can be used to produce such $p$-tables for use in the method specific R-package \texttt{cellKey} as well as for use in the general purpose software \targus.
+For information how to use the software, we refer to the vignettes of the respective R-packages (on CRAN), to the manual of  \targus \cite{taumanual} and to the quick references for CKM in \targus \cite{QuickRefTau42x}.
+
