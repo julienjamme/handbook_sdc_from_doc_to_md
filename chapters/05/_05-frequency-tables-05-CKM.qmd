@@ -42,7 +42,7 @@ To illustrate how the Cell Key Method is used, @tbl-ckm_p_table shows a purely f
 
 
 Now if we have a set of microdata which contains three male respondents with Record Keys 0.5, 0.3 and 0.4 respectively, as shown in @tbl-ckm_respondents, then in a table cell that aggregates those three respondents the corresponding sum of Record Keys is 0.9+0.3+0.6=1.8. Since for the Cell Key the digits before the decimal point are irrelevant, we get a corresponding Cell Key of 0.8. Now to identify the noise that has to be added to the original count of 3, we have to concentrate on those lines of the p-table, for which the original value is 3 and identify that line for which $\textit{'lower bound'} < 0.8 \leq \textit{'upper bound'}$. This is the last row of our exemplary table, in which the value 1 is given for the noise. Hence the perturbed count for this cell computes as $\hat{n}=n+v=3+1 = 4$.
-At this point, it must be pointed out that if, in addition to frequencies, magnitudes and mean values are also published, the mean values should rather not be shown as original values, since otherwise there is a risk that the corresponding frequency values can be disclosed. 
+At this point, it must be pointed out that if, in addition to frequencies, magnitudes and mean values are also published, the mean values should rather not be shown as original values, since otherwise there is a risk that the corresponding original frequency values can be disclosed. 
 
 
 ### Publication of mean values
@@ -91,7 +91,7 @@ Attackers now have the perturbed frequencies as well as the original mean values
 	+ 8 and 13
 	+ 9 and 12
 
-The attackers can now multiply the original mean values of the table cells known to them with the thus calculated candidates for the associated frequencies. In this way, they obtain estimations for the original magnitude value for each cell. If now for each of those estimations, they sum up those values for the inner cells, they obtain another estimated value for the marginal value. This can now be used to identify the correct combination of frequency values, since for the correct ones the sum over the inner cell values is identical to the marginal value, as shown in @tbl-ckm_attacker.
+The attackers can now multiply the original mean values of the table cells known to them with the thus calculated candidates for the associated frequencies. In this way, they obtain estimates for the original magnitude value for each cell. If now for each of those estimates, they sum up those values for the inner cells, they obtain another estimated value for the marginal value. This can now be used to identify the correct combination of frequency values, since for the correct ones the sum over the inner cell values is identical to the marginal value, as shown in @tbl-ckm_attacker.
 
 
 | Cell 1 | Cell 2 | Marginal | Est. Cell 1 | Est. Cell 2 | Sum of Estimates | Est. Marginal |
@@ -108,4 +108,4 @@ The attackers can now multiply the original mean values of the table cells known
 
 
 Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended.
-So, when using the Cell Key Method for frequency tables one has to use those perturbed counts, when generating mean values, i.e. if $n$ is an original count, $\hat{n}$ is the corresponding perturbed count and $m$ is the corresponding magnitude value, as it gets published, then the mean has to be calculated as $\frac{m}{\hat{n}}$.
+So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e. if $n$ is an original count, $\hat{n}$ is the corresponding perturbed count and $m$ is the corresponding magnitude value, as it gets published, then the mean has to be calculated as $\frac{m}{\hat{n}}$.
