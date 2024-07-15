@@ -108,4 +108,4 @@ The attackers can now multiply the original mean values of the table cells known
 
 
 Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended.
-So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e. if $n$ is an original count, $\hat{n}$ is the corresponding perturbed count and $m$ is the corresponding magnitude value, as it gets published, then the mean has to be calculated as $\frac{m}{\hat{n}}$.
+So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e. if $n$ is an original count, $\hat{n}$ is the corresponding perturbed count and $m$ is the corresponding magnitude value, as it gets published, then, in order to avoid the disclosure risk described here, it is better to calculate the mean as $\frac{m}{\hat{n}}$.
