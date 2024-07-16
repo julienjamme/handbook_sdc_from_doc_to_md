@@ -56,5 +56,5 @@ The Cell Key Method (CKM, described in Chapter 5.5) is a cell perturbation algor
 The method is less transparent than other methods, such as, for example, conventional rounding.
 
 Rounding (discussed in Chapter 5.6) involves adjusting the values in all cells in a table to a specified base so as to create uncertainty about the real value for any cell. There are several alternative rounding methods including: conventional rounding,
-random rounding and controlled rounding. Properties of the different alternative methods (as compared in the summary table {#tbl-summary-sdc-freq-table} ) vary widely between those variants.
+random rounding and controlled rounding. Properties of the different alternative methods (as compared in the summary table @tbl-summary-sdc-freq-table ) vary widely between those variants.
 
