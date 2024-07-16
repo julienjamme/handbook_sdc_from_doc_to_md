@@ -118,22 +118,22 @@ When we replace a $(2,k)$‑dominance rule, by a $p\%$‑rule, the natural choic
 
 Thus, a $(2,80)$‑dominance rule would be replaced by a $p\%$‑rule with $p = 25$, a $(2,95)$‑dominance rule by a $p\%$‑rule with $p = 5.26$ .
 
-If we also derive $p$ from this formula, when replacing a $(1,k)$‑dominance rule, we will obtain a much larger number of sensitive cells. In addition to the cells which are unsafe according to the $(1,k)$-dominance rule which will then also be unsafe according to the $p\%$‑rule, there will be cells which were safe according to the $(1,k)$‑dominance rule, but are not safe according to the $p\%$‑rule, because the rule correctly considers the insider knowledge of a large second largest contributor. We could then put up with this increase in the number of sensitive cells. Alternatively, we could consider the number of sensitive cells that we used to assign (with the $(1,k)$-dominance rule) as a kind of a maximum-prize we are prepared to 'pay' for data protection. In that case we will reduce the parameter $p$. The effect will be that some of the cells we used to consider as sensitive according to the $(1,k)$-dominance rule will now not be sensitive. But this would be justified because those cells are less sensitive as the cells which are unsafe according to the $p\%$-rule, but are not according to the former $(1,k)$-dominance rule.
+If we also derive $p$ from this formula, when replacing a $(1,k)$‑dominance rule, we will obtain a much larger number of sensitive cells. In addition to the cells which are unsafe according to the $(1,k)$-dominance rule which will then also be unsafe according to the $p\%$‑rule, there will be cells which were safe according to the $(1,k)$‑dominance rule, but are not safe according to the $p\%$‑rule, because the rule correctly considers the insider knowledge of a large second largest contributor. We could then put up with this increase in the number of sensitive cells. Alternatively, we could consider the number of sensitive cells that we used to assign (with the $(1,k)$-dominance rule) as a kind of a maximum-prize we are prepared to 'pay' for data protection. In that case we will reduce the parameter $p$. The effect will be that some of the cells we used to consider as sensitive according to the $(1,k)$-dominance rule will now not be sensitive. But this would be justified because those cells are less sensitive as the cells which are unsafe according to the $p\%$-rule, but are not according to the former $(1,k)$-dominance rule, as illustrated above by Example 1.
 
 *Example 2*\
 Let $p = 10$, then $k = 100 \frac{100}{100 + p} = 90.9$, let the total value of a table cell be $X = 110,\!000$, let the largest two contributions be $x_{1} = 52,\!000$, and $x_{2} = 50,\!000$.
 
 Then 
 $$
-\hat{x} = X - x_{2} = 110,\!000 − 50,\!000 = 60,\!000
+\hat{x_1} = X - x_{2} = 110,\!000 − 50,\!000 = 60,\!000
 $$
 and
 $$
 100 \frac{\hat{x_1} - x_1}{x_1}=100 \frac{60,\!000 - 52,\!000}{52,\!000}=15.4
 $$
-*i.e.* the upper estimate $\hat{x} = X - x_{2}$ will overestimate the true value by $15.4\%$. So the aggregate is safe according to the $p\%$-rule at $p = 10$.
+*i.e.* the upper estimate $\hat{x_1} = X - x_{2}$ will overestimate the true value by $15.4\%$. So the aggregate is safe according to the $p\%$-rule at $p = 10$.
 
-On the other hand the two largest contributions are $x_{1} + x_{2} = 102,\!000$. As $102,000 > \frac{100} {100 + p } X = 100,\!000$ the aggregate is not safe according to the $(2,k)$-rule. Example 1 illustrates this.
+On the other hand the two largest contributions are $x_{1} + x_{2} = 102,\!000$. As $102,000 > \frac{100} {100 + p } X = 100,\!000$ the aggregate is not safe according to the $(2,k)$-rule. 
 
 *Proof of A.*\
 For an aggregate which is safe according to the $(2,k)$‑rule with $k = 100 \cdot \frac{100}{100 + p}$ the following will hold:
@@ -167,7 +167,7 @@ $$
 \frac{100-k^*}{100} = \frac{100-k}{q}
 $${#eq-k-star}
 
-For a more analytical discussion of sensitivity rules the interested reader is referred to (Cox, 2001), for more generalized formulations considering coalitions to (Loeve, 2001)
+For a more analytical discussion of sensitivity rules the interested reader is referred to (Cox, 2001), for more generalized formulations considering coalitions to (Loeve, 2001).
 
 *Negative contributions*\
 When \index{disclosure risk} has to be assessed for a variable that can take not only positive, but also negative values, we suggest to reduce the value of $p$ (or increase $k$, for the dominance-rule, resp.). It may even be adequate to take that reduction even to the extent of replacing a concentration rule by a minimum frequency rule. This recommendation is motivated by the following consideration. Above, we have explained that the $p\%$‑rule is equivalent to a $(p,q)$-rule with $q=100$. When contributions may take negative, as well as positive values, it makes sense to assume that the bound $q_{-}$ for the relative deviation of *a priori* estimates ${\hat{X}}_{R}$ exceeds $100\%$. This can be expressed as $q_{-} = 100 f$, with $f > 1$. According to ([-@eq-p-star]) the $p$ parameter $p_f$ for the case of negative/positive data should be chosen as $p_{f} = 100 \frac{p}{q_{-}} = 100 \frac{p}{100 f} = \frac{p}{f} < p$. That means particularly that for large $f$ the $p\%$-rule with corresponding parameter $p_{f}$ is asymptotically equal to the minimum frequency rule (c.f. the remark just below table 1).
@@ -200,9 +200,9 @@ In $\tau$‑ARGUS it is possible to take this into account by using the holding 
 *Sampling weights*\
 Often tables are created from datasets based on sample surveys and NSIs collect a lot of their information this way. There are two reasons why \index{disclosure risk} assessment may also be necessary for a sample survey: especially in business surveys the common approach is to sample with unequal probabilities. The first is that large companies are often sampled with probability 1. Typically it will be the case for some of the aggregates foreseen for a publication that all respondents have been sampled with probability 1. In the absence of non-response, for such an aggregate, the survey data are data for the full population. Secondly even, if sampling probabilities are smaller than 1, if an aggregate relates to a strongly skewed population, and the sampling error is small, then the probability is high that the survey estimate for the aggregate total may also be a close estimate for the largest unit in that population. It makes sense therefore to assess the \index{disclosure risk} for survey sample estimates, if the sampling errors are small but the variables are strongly sensitive. The question is then, how to determine technically, if a sample survey aggregate should be considered safe, or unsafe. The following procedure is used in τ‑ARGUS:
 
-For sample survey data each record has a sample weight associated with it. These sample weights are constructed such that the tables produced from this datasets will resemble as much as possible the population, as if the table had been based on a full census.
+For sample survey data each record has a sampling weight associated with it. These sampling weights are constructed such that the tables produced from this datasets will resemble as much as possible the population, as if the table had been based on a full census.
 
-Making a table one has to take into account these sample weights. If the data file has a sample weight, specified in the metadata, the table can be computed taking these weights into account. For making a cell total this is a straightforward procedure, however the sensitivity rules have to be adapted to the situation where we do not know the units of the population with the largest values.
+Making a table one has to take into account these sampling weights. If the data file has a sampling weight, specified in the metadata, the table can be computed taking these weights into account. For making a cell total this is a straightforward procedure, however the sensitivity rules have to be adapted to the situation where we do not know the units of the population with the largest values.
 
 One option is the following approximation:
 
