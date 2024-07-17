@@ -6,7 +6,7 @@
 
 {{< include chapters/05/_05-frequency-tables-03-Methods.qmd >}}
 
-{{< include chapters/05/_05-frequency-tables-05-CKM.qmd >}}
+{{< include chapters/05/_05-frequency-tables-04-CKM.qmd >}}
 
 {{< include chapters/05/_05-frequency-tables-04-Rounding.qmd >}}
 
