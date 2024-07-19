@@ -1,4 +1,4 @@
-## Methods
+## Methods {#sec-Methods_freq}
 
 There are a variety of disclosure control methods which can be applied to tabular data to provide confidentiality protection. The choice of which method to use needs to balance the how the data is used, the operational feasibility of the method, and the disclosure control protection it offers. SDC methods can be divided into three categories which will be discussed in turn below: those that adjust the data before tables are designed (pre-tabular), those that determine the design of the table (table redesign) and those that modify the values in the table (post-tabular). Further information on SDC methods for frequency tables can also be found in Willenborg & Ton de Waal (2001) and Doyle et al (2001).
 
