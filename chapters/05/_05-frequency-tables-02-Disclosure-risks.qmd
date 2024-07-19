@@ -1,6 +1,6 @@
 ## Disclosure risks
 
-Disclosure risks for frequency tables primarily relate to 'unsafe cells''; that is cells in a table which could lead to a statistical disclosure. There are several types of \index{disclosure risk} and the associated unsafe cells can vary in terms of their impact. A risk assessment should be undertaken to evaluate the expected outcomes of a disclosure. In order to be explicit about the disclosure risks to be managed one should also consider a range of potentially disclosive situations and use these to develop appropriate confidentiality rules to protect any unsafe cells.
+Disclosure risks for frequency tables primarily relate to 'unsafe cells'; that is cells in a table which could lead to a statistical disclosure. There are several types of \index{disclosure risk} and the associated unsafe cells can vary in terms of their impact. A risk assessment should be undertaken to evaluate the expected outcomes of a disclosure. In order to be explicit about the disclosure risks to be managed one should also consider a range of potentially disclosive situations and use these to develop appropriate confidentiality rules to protect any unsafe cells.
 
 The \index{disclosure risk} situations described in this section primarily apply to tables produced from registration processes, administrative sources or censuses, e.g. data sources with a complete coverage of the population or sub-population. Where frequency tables are derived from sample surveys, e.g. the counts in the table are weighted, some protection is provided by the sampling process. The sample a priori introduces uncertainty into the zero counts and other counts through sample error.
 
@@ -52,7 +52,7 @@ This type of disclosure is a particular problem when many tables are released fr
 
 : Marital status and sex by hours worked {#tbl-mar-sex-hours}
 
-The table shows how attribute disclosure arises due to the zeros dominating the column of the single female, and it is learned that she is in the lowest income band.
+The table shows how attribute disclosure arises due to the zeros dominating the column of the single female, and it is learned that she is in the lowest hours-worked band.
 
 The occurrence of a 2 in the table could also lead to identification if one individual contributed to the cell and therefore could identify the other individual in the cell.
 
