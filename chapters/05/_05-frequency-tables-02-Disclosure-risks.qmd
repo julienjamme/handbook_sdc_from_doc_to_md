@@ -1,4 +1,4 @@
-## Disclosure risks
+## Disclosure risks {#sec-DisclRisks_freq}
 
 Disclosure risks for frequency tables primarily relate to 'unsafe cells'; that is cells in a table which could lead to a statistical disclosure. There are several types of \index{disclosure risk} and the associated unsafe cells can vary in terms of their impact. A risk assessment should be undertaken to evaluate the expected outcomes of a disclosure. In order to be explicit about the disclosure risks to be managed one should also consider a range of potentially disclosive situations and use these to develop appropriate confidentiality rules to protect any unsafe cells.
 
