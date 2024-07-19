@@ -1,4 +1,4 @@
-## Publication of mean values
+## Publication of mean values {#sec-Means_freq}
 
 In this section, we will explain why original means should rather not be published when the Cell Key Method is applied to frequency counts. We will illustrate this with an example and show ways to publish the mean values in a safer variant.
 For this purpose we consider a certain population group of size $n$ and for every person $i\in {1,\ldots ,n}$ of this population we denote their corresponding age with $x_i$. So the average age of this population group can be written as  $\frac{1}{n}\cdot\sum_{i=1\ldots n} x_i$.
