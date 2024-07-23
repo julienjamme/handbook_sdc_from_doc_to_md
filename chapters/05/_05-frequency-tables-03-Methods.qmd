@@ -43,7 +43,7 @@ Statistical disclosure control methods that modify cell values within tabular ou
 
   : Summary of Tabular Disclosure Control Methods {#tbl-summary-sdc-freq-table}
 
-The main perturbative post-tabular methods of disclosure control are discussed in the two subsequent section.
+The main perturbative post-tabular methods of disclosure control are discussed in the two subsequent sections.
 
 Cell suppression is a non-perturbative method of disclosure control, (it is described in detail in Chapter 4), but the method essentially removes sensitive values and denotes them as missing. Protecting the unsafe cells is called primary suppression, and to ensure these cannot be derived by subtractions from published marginal totals, additional cells are selected for secondary suppression.
 
