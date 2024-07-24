@@ -1,6 +1,6 @@
 ## Publication of mean values {#sec-Means_freq}
 
-In this section, we will explain why original means should rather not be published when the Cell Key Method is applied to frequency counts. We will illustrate this with an example and show ways to publish the mean values in a safer variant.
+In this section, we will explain why original means should rather not be published when the Cell Key Method (or any other non-additive, perturbative SDC method, such as, e.g. Rounding) is applied to frequency counts. We will illustrate this with an example and show ways to publish the mean values in a safer variant.
 For this purpose we consider a certain population group of size $n$ and for every person $i\in {1,\ldots ,n}$ of this population we denote their corresponding age with $x_i$. So the average age of this population group can be written as  $\frac{1}{n}\cdot\sum_{i=1\ldots n} x_i$.
 We now consider the following example scenario, in which both (perturbed) frequencies and (original) mean values are published. @tbl-ckm_mean shows both the perturbed and the original frequency counts, as well as information about the age.
 
