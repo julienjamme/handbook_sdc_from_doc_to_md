@@ -1,4 +1,4 @@
-## Rounding
+## Rounding {#sec-Rounding_freq}
 
 Rounding involves adjusting the values in all cells in a table to a specified base so as to create uncertainty about the real value for any cell. It adds a small, but acceptable, amount of distortion to the original data. Rounding is considered to be an effective method for protecting frequency tables, especially when there are many tables produced from one dataset. It provides protection to small frequencies and zero values (e.g. empty cells). The method is simple to implement, and for the user it is easy to understand as the data is visibly perturbed.
 
@@ -98,7 +98,7 @@ Unlike other rounding methods, controlled rounding yields additive rounded table
 
 : Population counts by sex (controlled rounding) {#tbl-counts-sex-control-round}
 
-The disadvantages of controlled rounding are that it is a complicated method to implement, and it has difficulty coping with the size, scope and magnitude of the census tabular outputs. It is hard to find control-rounded solutions for sets of linked tables, and in order to find a solution cells may be rounded beyond the nearest rounding base. In this case users will know less about exactly how the table was rounded and it is also likely to result in differing values for the same internal cells across different tables.
+The disadvantages of controlled rounding are that it is a complicated method to implement, and it has difficulty coping with the size, scope and magnitude of the census tabular outputs. Controlled rounding is implemented in the software package $\tau$‑ARGUS, see @Sec-Software-Controlled-Rounding below for detailed information. Nevertheless, it is hard to find control-rounded solutions for sets of linked tables, and in order to find a solution cells may be rounded beyond the nearest rounding base. In this case users will know less about exactly how the table was rounded and it is also likely to result in differing values for the same internal cells across different tables.
 
 Semi-controlled rounding also uses linear programming to round table entries up or down but in this case it controls for the overall total in the table, or it controls for each separate output area total. Other marginal and sub totals will not necessarily be additive. This ensures that either the overall total of the table is preserved (or the output area totals are all preserved), and the utility of this method is increased compared with conventional and random rounding. Consistent totals are provided across linked tables, and therefore the method can be used to protect flexible tables, although the time it takes to implement may make it unsuitable. Disadvantages of semi-controlled rounding relate to the fact that tables are not fully additive, and finding an optimal solution can prove difficult.
 
@@ -132,5 +132,100 @@ Applying small cell adjustments involves randomly adjusting small cells within t
 
 Advantages of this method are that tables are additive, and the elimination of small cells in the table removes cases of perceived as well as actual identity disclosure. In addition, loss of information is lower for standard tables as all other cells remain the same, however information loss will be high for sparse tables. Other disadvantages include inconsistency of margins between linked tables since margins are calculated using perturbed internal cells, and this increases the risk of tables being unpicked. Furthermore, this method provides little protection against disclosure by differencing, and is not suitable for flexible table generation.
 
-Barnardisation is a form of cell perturbation which modifies each internal cell of every table by +1, 0 or -1, according to probabilities. Zeros are not adjusted. The method offers some protection against disclosure by differencing, however table totals are added up from the perturbed internal cells, resulting in inconsistent totals between tables. Typically, the probability p is quite small and therefore a high proportion of risky cells are not modified. The exact proportion of cells modified is not revealed to the user. This is generally a difficult method to implement for flexible output.
+### Software - How to use Controlled Rounding in $\tau$‑ARGUS {#Sec-Software-Controlled-Rounding}
+
+$\tau$-Argus (Hunderpool et al, 2005) is a software package which provides tools to protect tables against the risk of statistical disclosure ($\tau$-ARGUS is also discussed in Chapter 4). Controlled rounding is easy to use in $\tau$-ARGUS and the controlled rounding procedure (CRP) was developed by JJ Salazar. This procedure is based on optimisation techniques similar to the procedure developed for \index{cell suppression}. The CRP yields additive rounded tables, where the rounded values add up to the rounded totals and sub-totals shown in the table. This means realistic tables are produced and it makes it impossible to reduce the protection by "unpicking" the original values by exploiting the differences in the sums of the rounded values. The CRP implemented in $\tau$-ARGUS also allows the specification of hierarchical structures within the table variables.
+
+Controlled rounding gives sufficient protection to small frequencies and creates uncertainty about the zero values (*i.e.* empty cells). (This is not the case for suppression in terms of how it is now implemented in $\tau$-ARGUS).
+
+In Zero-restricted Controlled Rounding cell counts are left unchanged if they are multiples of the rounding base or shifted to one of the adjacent multiples of the rounding base. The modified values are chosen so that the sum of the absolute differences between the original values and the rounded ones are minimized (under an additivity constraint). Therefore, some values will be rounded up or down to the most distant multiple of the base in order to help satisfy these constraints. In most cases a solution can be found, but in some cases it cannot and the zero-restriction constraint in CRP can be relaxed to allow the cell values to be rounded to a nonadjacent multiple of the base. This relaxation is controlled by allowing the procedure to take a maximum number of *steps*.
+
+For example, consider rounding a cell value of 7 when the rounding base equals 5. In zero-restricted rounding, the solution can be either 5 or 10. If 1 step is allowed, the solution can be 0, 5, 10 or 15. In general, let $z$ be the integer to be rounded in base $b$, then this number can be written as
+
+$z = u b + r$,
+
+where $ub$ is the lower adjacent multiple of $b$ (hence $u$ is the floor value of $z/b$) and $r$ is the remainder. In the zero-restricted solution the rounded value, $a$, can take values:
+
+
+\begin{align}
+a = 
+\begin{cases}
+  a = ub &\text{if}\quad r=0 
+  \\
+  a=
+  \begin{cases}
+    ub  \\
+    (u+1)b
+  \end{cases} &\text{if}\quad r\neq0.
+\end{cases}
+\end{align}
+
+
+
+If $K$ steps are allowed, then $a$, can take values:
+
+
+
+\begin{align}
+a = \begin{cases}
+\max_{j\in{-K,\ldots,K}}(0,(u+j))\cdot b   &\text{if}\quad r=0\\
+\max_{j\in{-K,\ldots,K+1}}(0,(u+j))\cdot b &\text{if}\quad r\neq0
+\end{cases}
+\end{align}
+
+
+
+
+
+#### Optimal, first feasible and RAPID solutions
+
+For a given table there can exist more than one controlled rounded solution, and any of these solutions is a *feasible* solution. The Controlled Rounding Program embedded in τ‑ARGUS determines the *optimal* solution by minimising the sum of the absolute distances of the rounded values, from the original ones. Denoting the cell values, including the totals and sub-totals, with *z*~i~ and the corresponding rounded values with *a*~i~, the function that is minimised is
+
+$$
+\sum\limits_{i = 1}^{N} \left| z_{i}-a_{i} \right| \quad ,
+$$
+
+where $N$ is the number of cells in a table (including the marginal ones). The optimisation procedure for controlled rounding is a rather complex one (*NP*-complete program), so finding the optimal solution may take a long time for large tables. In fact, the algorithm iteratively builds different rounded tables until it finds the optimal solution. In order to limit the time required to obtain a solution, the algorithm can be stopped when the first feasible solution is found. In many cases, this solution is quite close to the optimal one and it can be found in significantly less time.
+
+The RAPID solution is produced by CRP as an approximated solution when a feasible one cannot be found. This solution is obtained by rounding the internal cells to the closest multiple of the base and then computing the marginal cells by addition. This means that the computed marginal values can be many jumps away from the original value. However, a RAPID solution is produced at each iteration of the search for an optimal solution, and it will improve (in terms of the loss function) over time. τ‑ARGUS allows the user to stop CRP after the first RAPID solution is produced, but this is likely to be very far away from the optimal one.
+
+#### Protection provided by controlled rounding
+
+The protection provided by controlled rounding can be assessed by considering the uncertainty (about the true values achieved) when releasing rounded values; that is the existence interval that an intruder can compute for a rounded value. We assume that the values of the rounding base, $b$, and the number of steps allowed, $K$, are known by the user together with the output rounded table. Furthermore, we assume that it is known that the original values are positive frequencies (hence nonnegative integers).
+
+**Zero-restricted rounding.**  
+
+Given a rounded value, *a*, an intruder can compute the following existence intervals for the true value, *z*:
+
+
+\begin{align}
+z \in \begin{cases}
+[0,b-1]       &\text{if} \quad a = 0 \\
+[a-b+1,a+b-1] &\text{if} \quad a \neq 0
+\end{cases}
+\end{align}
+
+
+For example, if the rounding base is $b=5$ and the rounded value is $a=0$, a user can determine that the original value is between $0$ and $4$. If the rounded value is not $0$, then users can determine that the true value is between $\pm 4$ units from the published value.
+
+**K-step rounding**
+
+As mentioned above, it is assumed that the number of steps allowed is released together with the rounded table. Let $K$* be the number of steps allowed, then an intruder can compute the following existence intervals for the true value $z$:
+
+
+\begin{align}
+z \in \begin{cases}
+[0,(K+1)b-1]            &\text{if} \quad a < (K+1)b \\
+[a-(K+1)b+1,a+(K+1)b-1] &\text{if} \quad a \geq (K+1)b
+\end{cases}
+\end{align}
+
+
+
+For example, assume that for controlled rounding with $b=5$ and $K=1$, $a=15$, then a user can determine that $z \in [ 6,24 ]$.
+
+**Very large tables**
+
+The procedure implemented in τ‑ARGUS is capable of rounding tables up to 150K cells on an average computer. However for larger tables a partitioning procedure is available, which allows much larger tables to be rounded. Tables with over six million cells have been successfully rounded this way.
+
 
