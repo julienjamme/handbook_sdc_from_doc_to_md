@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Handbook on Statistical Disclosure Control - 4&nbsp; Magnitude tabular data</title>
+<title>4&nbsp; Magnitude tabular data – Handbook on Statistical Disclosure Control</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,25 +62,59 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
 <body class="nav-sidebar floating slimcontent">
 
-
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-magnitude-tabular-data.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -82,100 +122,109 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Handbook on Statistical Disclosure Control</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-Introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./01-Introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-regulations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regulations, a general Background</span></a>
+  <a href="./02-regulations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regulations, a general Background</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-microdata.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Microdata</span></a>
+  <a href="./03-microdata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Microdata</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-magnitude-tabular-data.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></a>
+  <a href="./04-magnitude-tabular-data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-frequency-tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Frequency tables</span></a>
+  <a href="./05-frequency-tables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Frequency tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-remote-access-issues.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Remote access issues</span></a>
+  <a href="./06-remote-access-issues.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Remote access issues</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-glossary.html" class="sidebar-item-text sidebar-link">Glossary</a>
+  <a href="./07-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-tabular-introduction" id="toc-sec-tabular-introduction" class="nav-link active" data-scroll-target="#sec-tabular-introduction"><span class="toc-section-number">4.1</span>  Introduction</a></li>
-  <li><a href="#sec-disclosure-control-concepts-tables" id="toc-sec-disclosure-control-concepts-tables" class="nav-link" data-scroll-target="#sec-disclosure-control-concepts-tables"><span class="toc-section-number">4.2</span>  Disclosure Control Concepts for Magnitude Tabular Data</a>
+  <li><a href="#sec-tabular-introduction" id="toc-sec-tabular-introduction" class="nav-link active" data-scroll-target="#sec-tabular-introduction"><span class="header-section-number">4.1</span> Introduction</a></li>
+  <li><a href="#sec-disclosure-control-concepts-tables" id="toc-sec-disclosure-control-concepts-tables" class="nav-link" data-scroll-target="#sec-disclosure-control-concepts-tables"><span class="header-section-number">4.2</span> Disclosure Control Concepts for Magnitude Tabular Data</a>
   <ul class="collapse">
-  <li><a href="#sec-sensitive-cells-magnitude-tables" id="toc-sec-sensitive-cells-magnitude-tables" class="nav-link" data-scroll-target="#sec-sensitive-cells-magnitude-tables"><span class="toc-section-number">4.2.1</span>  Sensitive Cells in Magnitude Tables</a></li>
-  <li><a href="#sec-secondary-protection-methods" id="toc-sec-secondary-protection-methods" class="nav-link" data-scroll-target="#sec-secondary-protection-methods"><span class="toc-section-number">4.2.2</span>  Secondary tabular data protection methods</a></li>
+  <li><a href="#sec-sensitive-cells-magnitude-tables" id="toc-sec-sensitive-cells-magnitude-tables" class="nav-link" data-scroll-target="#sec-sensitive-cells-magnitude-tables"><span class="header-section-number">4.2.1</span> Sensitive Cells in Magnitude Tables</a></li>
+  <li><a href="#sec-secondary-protection-methods" id="toc-sec-secondary-protection-methods" class="nav-link" data-scroll-target="#sec-secondary-protection-methods"><span class="header-section-number">4.2.2</span> Secondary tabular data protection methods</a></li>
   </ul></li>
-  <li><a href="#the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations" id="toc-the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations" class="nav-link" data-scroll-target="#the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations"><span class="toc-section-number">4.3</span>  The <span class="math inline">\(\tau\)</span>‑ARGUS Implementation of Cell Suppression: Methodological Background, Guidance and Recommendations</a>
+  <li><a href="#the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations" id="toc-the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations" class="nav-link" data-scroll-target="#the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations"><span class="header-section-number">4.3</span> The <span class="math inline">\(\tau\)</span>‑ARGUS Implementation of Cell Suppression: Methodological Background, Guidance and Recommendations</a>
   <ul class="collapse">
-  <li><a href="#setting-up-a-tabular-data-protection-problem-in-practice" id="toc-setting-up-a-tabular-data-protection-problem-in-practice" class="nav-link" data-scroll-target="#setting-up-a-tabular-data-protection-problem-in-practice"><span class="toc-section-number">4.3.1</span>  Setting up a Tabular Data Protection Problem in Practice</a></li>
-  <li><a href="#evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus" id="toc-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus" class="nav-link" data-scroll-target="#evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus"><span class="toc-section-number">4.3.2</span>  Evaluation of Secondary Cell Suppression algorithms offered by <span class="math inline">\(\tau\)</span>‑ARGUS</a></li>
-  <li><a href="#processing-table-protection-efficiently" id="toc-processing-table-protection-efficiently" class="nav-link" data-scroll-target="#processing-table-protection-efficiently"><span class="toc-section-number">4.3.3</span>  Processing table protection efficiently <!--{#processing-table-protection-efficiently .Opmaakprofiel-Kop-3-+-Na:--3-pt} --></a></li>
-  <li><a href="#introductive-example" id="toc-introductive-example" class="nav-link" data-scroll-target="#introductive-example"><span class="toc-section-number">4.3.4</span>  Introductive Example <!-- {#introductive-example .Opmaakprofiel-Kop-3-+-Na:--3-pt} --></a></li>
+  <li><a href="#setting-up-a-tabular-data-protection-problem-in-practice" id="toc-setting-up-a-tabular-data-protection-problem-in-practice" class="nav-link" data-scroll-target="#setting-up-a-tabular-data-protection-problem-in-practice"><span class="header-section-number">4.3.1</span> Setting up a Tabular Data Protection Problem in Practice</a></li>
+  <li><a href="#evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus" id="toc-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus" class="nav-link" data-scroll-target="#evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus"><span class="header-section-number">4.3.2</span> Evaluation of Secondary Cell Suppression algorithms offered by <span class="math inline">\(\tau\)</span>‑ARGUS</a></li>
+  <li><a href="#processing-table-protection-efficiently" id="toc-processing-table-protection-efficiently" class="nav-link" data-scroll-target="#processing-table-protection-efficiently"><span class="header-section-number">4.3.3</span> Processing table protection efficiently <!--{#processing-table-protection-efficiently .Opmaakprofiel-Kop-3-+-Na:--3-pt} --></a></li>
+  <li><a href="#introductive-example" id="toc-introductive-example" class="nav-link" data-scroll-target="#introductive-example"><span class="header-section-number">4.3.4</span> Introductive Example <!-- {#introductive-example .Opmaakprofiel-Kop-3-+-Na:--3-pt} --></a></li>
   </ul></li>
-  <li><a href="#methodological-concepts-of-secondary-algorithms-in-tauargus" id="toc-methodological-concepts-of-secondary-algorithms-in-tauargus" class="nav-link" data-scroll-target="#methodological-concepts-of-secondary-algorithms-in-tauargus"><span class="toc-section-number">4.4</span>  Methodological concepts of secondary algorithms in <span class="math inline">\(\tau\)</span>‑ARGUS</a>
+  <li><a href="#methodological-concepts-of-secondary-algorithms-in-tauargus" id="toc-methodological-concepts-of-secondary-algorithms-in-tauargus" class="nav-link" data-scroll-target="#methodological-concepts-of-secondary-algorithms-in-tauargus"><span class="header-section-number">4.4</span> Methodological concepts of secondary algorithms in <span class="math inline">\(\tau\)</span>‑ARGUS</a>
   <ul class="collapse">
-  <li><a href="#optimal" id="toc-optimal" class="nav-link" data-scroll-target="#optimal"><span class="toc-section-number">4.4.1</span>  Optimal</a></li>
-  <li><a href="#modular" id="toc-modular" class="nav-link" data-scroll-target="#modular"><span class="toc-section-number">4.4.2</span>  Modular <!--{#modular .Opmaakprofiel-Kop-3-+-Na:--3-pt}--></a></li>
-  <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network"><span class="toc-section-number">4.4.3</span>  Network</a></li>
-  <li><a href="#hypercube" id="toc-hypercube" class="nav-link" data-scroll-target="#hypercube"><span class="toc-section-number">4.4.4</span>  Hypercube</a></li>
+  <li><a href="#optimal" id="toc-optimal" class="nav-link" data-scroll-target="#optimal"><span class="header-section-number">4.4.1</span> Optimal</a></li>
+  <li><a href="#modular" id="toc-modular" class="nav-link" data-scroll-target="#modular"><span class="header-section-number">4.4.2</span> Modular <!--{#modular .Opmaakprofiel-Kop-3-+-Na:--3-pt}--></a></li>
+  <li><a href="#network" id="toc-network" class="nav-link" data-scroll-target="#network"><span class="header-section-number">4.4.3</span> Network</a></li>
+  <li><a href="#hypercube" id="toc-hypercube" class="nav-link" data-scroll-target="#hypercube"><span class="header-section-number">4.4.4</span> Hypercube</a></li>
   </ul></li>
-  <li><a href="#sec-CTA" id="toc-sec-CTA" class="nav-link" data-scroll-target="#sec-CTA"><span class="toc-section-number">4.5</span>  Controlled Tabular AdjustmentControlled Tabular Adjustment</a></li>
-  <li><a href="#cell-key-method-for-magnitude-tables" id="toc-cell-key-method-for-magnitude-tables" class="nav-link" data-scroll-target="#cell-key-method-for-magnitude-tables"><span class="toc-section-number">4.6</span>  Cell Key Method for Magnitude Tables</a></li>
-  <li><a href="#measurement-of-disclosure-risk-and-information-loss" id="toc-measurement-of-disclosure-risk-and-information-loss" class="nav-link" data-scroll-target="#measurement-of-disclosure-risk-and-information-loss"><span class="toc-section-number">4.7</span>  Measurement of disclosure risk and information loss</a>
+  <li><a href="#sec-CTA" id="toc-sec-CTA" class="nav-link" data-scroll-target="#sec-CTA"><span class="header-section-number">4.5</span> Controlled Tabular AdjustmentControlled Tabular Adjustment</a></li>
+  <li><a href="#cell-key-method-for-magnitude-tables" id="toc-cell-key-method-for-magnitude-tables" class="nav-link" data-scroll-target="#cell-key-method-for-magnitude-tables"><span class="header-section-number">4.6</span> Cell Key Method for Magnitude Tables</a></li>
+  <li><a href="#measurement-of-disclosure-risk-and-information-loss" id="toc-measurement-of-disclosure-risk-and-information-loss" class="nav-link" data-scroll-target="#measurement-of-disclosure-risk-and-information-loss"><span class="header-section-number">4.7</span> Measurement of disclosure risk and information loss</a>
   <ul class="collapse">
-  <li><a href="#disclosure-risk" id="toc-disclosure-risk" class="nav-link" data-scroll-target="#disclosure-risk"><span class="toc-section-number">4.7.1</span>  Disclosure risk</a></li>
-  <li><a href="#information-loss" id="toc-information-loss" class="nav-link" data-scroll-target="#information-loss"><span class="toc-section-number">4.7.2</span>  Information loss</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">4.7.3</span>  References</a></li>
+  <li><a href="#disclosure-risk" id="toc-disclosure-risk" class="nav-link" data-scroll-target="#disclosure-risk"><span class="header-section-number">4.7.1</span> Disclosure risk</a></li>
+  <li><a href="#information-loss" id="toc-information-loss" class="nav-link" data-scroll-target="#information-loss"><span class="header-section-number">4.7.2</span> Information loss</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.7.3</span> References</a></li>
   </ul></li>
-  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1"><span class="toc-section-number">4.8</span>  References</a></li>
+  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1"><span class="header-section-number">4.8</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Magnitude tabular data</span></h1>
 </div>
 
 
@@ -197,7 +246,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <section id="sec-tabular-introduction" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-tabular-introduction"><span class="header-section-number">4.1</span> Introduction</h2>
@@ -268,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
 For instance, let a table cell display the turnover of companies in the mining sector for a particular region X. Let us assume that company A is the only mining company in this region. This is a fact that will be known to certain intruders (think, for instance, of another mining company B in a neighbouring region Y). So, if that table cell is published, company B would be able to disclose the turnover of company A.</p>
 <p>In order to establish if a is connected to the publication of a cell value in a table, and in order to protect against this risk, data providers (like, e.g.&nbsp;National Statistical Institutes) should apply tabular data protection methods. In many countries this is a legal obligation to official statistical agencies. It may also be regarded as a necessary requirement in order to maintain the trust of respondents: After all, if in the instance above company A realizes that company B might, by looking into the published table, disclose the value of turnover it has reported, and if it considers this value as confidential information, it may refuse to respond to that survey in the next period, or (if the survey is compulsory) it may choose to provide incorrect or inaccurate information.</p>
 <p>Especially for business statistics, the most popular method for tabular data protection is <em></em> . In tables protected by , all values of cells for which a has been established are eliminated from the publication. Alternatively, other methods based on cell perturbation etc. may also be used to protect tabular data. While we focus in this chapter on , we will also mention alternatives.</p>
-<p><a href="#sec-disclosure-control-concepts-tables"><span>Section&nbsp;4.2</span></a> introduces into the methodological concepts of tabular data protection. In <a href="#sec-sensitive-cells-magnitude-tables"><span>Section&nbsp;4.2.1</span></a> we present the most common methods for assessment for each individual cell of a table (and for special combinations of individual cells). These methods are called <em>“primary”</em> disclosure control methods. Table cells for which a has been established are called <em>“sensitive”</em>, <em>“confidential”</em>, or <em>“unsafe”</em> cells. Primary is usually assessed by applying certain sensitivity rules. <a href="#sec-sensitive-cells-magnitude-tables"><span>Section&nbsp;4.2.1</span></a> explains the concept of sensitivity rules and the most common rules.</p>
+<p><a href="#sec-disclosure-control-concepts-tables" class="quarto-xref"><span>Section 4.2</span></a> introduces into the methodological concepts of tabular data protection. In <a href="#sec-sensitive-cells-magnitude-tables" class="quarto-xref"><span>Section 4.2.1</span></a> we present the most common methods for assessment for each individual cell of a table (and for special combinations of individual cells). These methods are called <em>“primary”</em> disclosure control methods. Table cells for which a has been established are called <em>“sensitive”</em>, <em>“confidential”</em>, or <em>“unsafe”</em> cells. Primary is usually assessed by applying certain sensitivity rules. <a href="#sec-sensitive-cells-magnitude-tables" class="quarto-xref"><span>Section 4.2.1</span></a> explains the concept of sensitivity rules and the most common rules.</p>
 <p>While detailed tabulated summary information also on smaller groups of statistical objects (companies by subgroups of subsectors at the district level, households by size and income at the neighbourhood level, etc.) might be of interest to certain user groups, it is also a responsibility (maybe the most important one) of official statistics to provide summary information at a high aggregate level by producing summary statistics on large groups of a population (e.g.&nbsp;for <em>all</em> companies of an economy sector). Because of this, it is not enough to have methodologies to protect individual cells. It implies a need for the so-called <em>“secondary”</em> tabular data protection methodologies.</p>
 <p>Assume that a table displays the sum of a variable “Production” by three subsectors of an economy sector. Assume that this sum is sensitive for one of the subsectors and that the table is protected by , meaning that the confidential cell value is suppressed.</p>
 <p><em>Example 1 a:</em><br>
@@ -302,22 +353,22 @@ Production (in mill. Euro)</p>
 <p>The other option is that the “total” is not foreseen to be displayed / published. Then no secondary protection measure would be needed. In this instance, because the production for one subsector is suppressed, interested users of the table cannot compute the production for the sector on their own – and so the sector-level information is completely lost!</p>
 <p>From a general perspective, the purpose of secondary tabular data protection methodologies is chiefly to avoid undesirable effects such as this, ensuring that – while some “small”, primary confidential cells within detailed tables may have to be protected (by or by some perturbative method) – sums for larger groups, i.e.&nbsp;the margins of those detailed tables, are preserved to some extent. For this means that suppression of marginal cells should be avoided as far as possible. For perturbative methods it means that high level margins should try to be preserved exactly (more or less).</p>
 <p>Considering this as the basic idea of secondary protection, after @#sec-sensitive-cells-magnitude-tables we assume for the remainder of the chapter margins and overall totals always to be part of a table.</p>
-<p>In <a href="#sec-secondary-protection-methods"><span>Section&nbsp;4.2.2</span></a> we introduce the concepts of secondary tabular data protection methodologies. The focus will be on , but we will also mention other methodologies.</p>
-<p>The software package τ‑ARGUS (see Hundepool et al., 2005) provides software tools for disclosure protection methods for tabular data. <span class="quarto-unresolved-ref">?sec-tau-argus-suppression</span> is concerned with the practical implementation of secondary as offered by τ‑ARGUS. In <span class="quarto-unresolved-ref">?sec-setting-up-a-tabular-data-protection-problem-in-practice</span> we discuss information loss concepts as well as table structures considered by τ‑ARGUS. We compare the performance of different algorithms for secondary in <span class="quarto-unresolved-ref">?sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-τargus</span> and give software recommendations. In <span class="quarto-unresolved-ref">?sec-efficient-protection-process</span> we explain how to set up procedures for tabular data protection in a practical way and give an introductive example in <span class="quarto-unresolved-ref">?sec-introductive-example</span>. In <span class="quarto-unresolved-ref">?sec-methodology-seconday-suppression-tau-argus</span> we briefly introduce the methodological concepts of the secondary algorithms provided by τ-ARGUS. The chapter ends with <a href="#sec-CTA"><span>Section&nbsp;4.5</span></a>, introducing Controlled Tabular Adjustment as new emerging protection technique for magnitude tables which could become an alternative to the well-established methodologies.</p>
+<p>In <a href="#sec-secondary-protection-methods" class="quarto-xref"><span>Section 4.2.2</span></a> we introduce the concepts of secondary tabular data protection methodologies. The focus will be on , but we will also mention other methodologies.</p>
+<p>The software package τ‑ARGUS (see Hundepool et al., 2005) provides software tools for disclosure protection methods for tabular data. <span class="quarto-unresolved-ref">?sec-tau-argus-suppression</span> is concerned with the practical implementation of secondary as offered by τ‑ARGUS. In <span class="quarto-unresolved-ref">?sec-setting-up-a-tabular-data-protection-problem-in-practice</span> we discuss information loss concepts as well as table structures considered by τ‑ARGUS. We compare the performance of different algorithms for secondary in <span class="quarto-unresolved-ref">?sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-τargus</span> and give software recommendations. In <span class="quarto-unresolved-ref">?sec-efficient-protection-process</span> we explain how to set up procedures for tabular data protection in a practical way and give an introductive example in <span class="quarto-unresolved-ref">?sec-introductive-example</span>. In <span class="quarto-unresolved-ref">?sec-methodology-seconday-suppression-tau-argus</span> we briefly introduce the methodological concepts of the secondary algorithms provided by τ-ARGUS. The chapter ends with <a href="#sec-CTA" class="quarto-xref"><span>Section 4.5</span></a>, introducing Controlled Tabular Adjustment as new emerging protection technique for magnitude tables which could become an alternative to the well-established methodologies.</p>
 </section>
 <section id="sec-disclosure-control-concepts-tables" class="level2 page-columns page-full" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-disclosure-control-concepts-tables"><span class="header-section-number">4.2</span> Disclosure Control Concepts for Magnitude Tabular Data</h2>
 <p>In this section we explain the main concepts for assessment and control of for magnitude tables.</p>
-<p><a href="#sec-sensitive-cells-magnitude-tables"><span>Section&nbsp;4.2.1</span></a> is concerned with for each individual cell of tables presenting summaries of quantitative variables and will introduce the most common methods used to assess this risk.</p>
-<p>In order to preserve the margins of tables to some extent while protecting individual sensitive cells, special disclosure control methodologies have been developed. <a href="#sec-secondary-protection-methods"><span>Section&nbsp;4.2.2</span></a> presents basic concepts of these methodologies, focusing on secondary as the most prominent instance. We finish section methods with a brief, comparative overview of alternative methods for tabular data protection.</p>
+<p><a href="#sec-sensitive-cells-magnitude-tables" class="quarto-xref"><span>Section 4.2.1</span></a> is concerned with for each individual cell of tables presenting summaries of quantitative variables and will introduce the most common methods used to assess this risk.</p>
+<p>In order to preserve the margins of tables to some extent while protecting individual sensitive cells, special disclosure control methodologies have been developed. <a href="#sec-secondary-protection-methods" class="quarto-xref"><span>Section 4.2.2</span></a> presents basic concepts of these methodologies, focusing on secondary as the most prominent instance. We finish section methods with a brief, comparative overview of alternative methods for tabular data protection.</p>
 <section id="sec-sensitive-cells-magnitude-tables" class="level3 page-columns page-full" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="sec-sensitive-cells-magnitude-tables"><span class="header-section-number">4.2.1</span> Sensitive Cells in Magnitude Tables</h3>
-<div class="callout-warning callout callout-style-default callout-captioned page-columns page-full">
+<div class="callout callout-style-default callout-warning callout-titled page-columns page-full">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Expert level
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -326,7 +377,7 @@ Expert level
 <div class="callout-body-container callout-body page-columns page-full">
 <p>We begin this section by describing intruder scenarios typically considered by statistical agencies in the context of disclosure control for magnitude tables. Considering these intruder scenarios statistical agencies have developed some <em>‘safety rules’</em> as measures to assess disclosure risks. This section will also introduce the most popular rules using some illustrative examples. Finally, we compare rules and give guidance on making a decision between alternative rules.</p>
 <p><em>Intruder scenarios</em><br>
-If a table cell relates to a small group (or even only one) respondent, then publication of the cell value may imply a . This is the case, if these respondents could be identified by an intruder using information displayed in the table. In example 1 of <a href="#sec-tabular-introduction"><span>Section&nbsp;4.1</span></a>, for the intruder (company B) it is enough to know that the cell value reports the turnover of mining companies in region X. In that example company B is assumed to be able to identify company A as the only mining company in region X. Hence, publication of the cell value implies a : if company B looks into the publication they will be able to disclose the turnover of company A.</p>
+If a table cell relates to a small group (or even only one) respondent, then publication of the cell value may imply a . This is the case, if these respondents could be identified by an intruder using information displayed in the table. In example 1 of <a href="#sec-tabular-introduction" class="quarto-xref"><span>Section 4.1</span></a>, for the intruder (company B) it is enough to know that the cell value reports the turnover of mining companies in region X. In that example company B is assumed to be able to identify company A as the only mining company in region X. Hence, publication of the cell value implies a : if company B looks into the publication they will be able to disclose the turnover of company A.</p>
 <p>But what if a cell value does not relate to one, but to two respondents?</p>
 <p><em>Example 1b</em><br>
 Let us assume this time that both companies (A and B) are located in region X, and are the only mining companies there. Let us further assume that they both are aware of this fact. Then again publication of the cell value implies a (this time to both companies): if any of the two companies look into the publication and subtract their own contribution to the cell value (i.e.&nbsp;the turnover they reported) from the cell value, they will be able to disclose the turnover of the other company.</p>
@@ -338,12 +389,13 @@ Assume now that the table cell relates to more than two respondents. Imagine thi
 Let us reconsider the example once more. Assume this time that in region X there are 51 companies that belong to the mining sector, e.g.&nbsp;company A and 50 very small companies S<sub>1</sub> to S<sub>50</sub>. Assume further that 99&nbsp;% of the turnover in mining in region X is contributed by company A. In that scenario, the cell value (turnover in the mining sector for region X) is a pretty close approximation of the turnover of company A. And even though the potential intruder (in our example mining company B of the neighbour region Y) may not be able to identify all 51 mining companies of region X, it is very likely that they will know that there is one very big company in region X and which company that is.</p>
 <p><em>Sensitivity of variables</em><br>
 The presumption of the sensitivity of a variable often matters in the choice of a particular protection method. For example, especially in the case of tables presenting business magnitude information many agencies decide that this kind of information must be protected also against the kind of approximate disclosure illustrated by example 1d above, because it is so sensitive.</p>
-<p>Considering the above explained intruder scenarios statistical agencies have developed some <em>‘safety rules’</em> (also referred to as <em>‘sensitivity rules’</em> or <em>‘sensitivity measures’</em>), measures to assess disclosure risks. We will now introduce the most popular rules, starting with an overview presenting formal representation of these rules in <a href="#tbl-sensitivity-rules">Table&nbsp;<span>4.1</span></a>. After that, the rules (or rather, classes of rules) will be discussed in detail. We explain in which situations it may make sense to use those rules, using simple examples for illustration where necessary.</p>
+<p>Considering the above explained intruder scenarios statistical agencies have developed some <em>‘safety rules’</em> (also referred to as <em>‘sensitivity rules’</em> or <em>‘sensitivity measures’</em>), measures to assess disclosure risks. We will now introduce the most popular rules, starting with an overview presenting formal representation of these rules in <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a>. After that, the rules (or rather, classes of rules) will be discussed in detail. We explain in which situations it may make sense to use those rules, using simple examples for illustration where necessary.</p>
 <p><em>Sensitivity rules</em><br>
-<a href="#tbl-sensitivity-rules">Table&nbsp;<span>4.1</span></a> briefly presents the most common sensitivity rules. Throughout this chapter we denote <span class="math inline">\(x_{1} \geq x_{2} \geq \cdots \geq x_{N}\)</span> the ordered contributions by respondents <span class="math inline">\(1,2,\ldots,N\)</span>, respectively, to a cell with cell total (or cell value) <span class="math inline">\(X = \sum_{i=1}^N x_{i}\)</span></p>
-<div id="tbl-sensitivity-rules" class="anchored page-columns page-full">
+<a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a> briefly presents the most common sensitivity rules. Throughout this chapter we denote <span class="math inline">\(x_{1} \geq x_{2} \geq \cdots \geq x_{N}\)</span> the ordered contributions by respondents <span class="math inline">\(1,2,\ldots,N\)</span>, respectively, to a cell with cell total (or cell value) <span class="math inline">\(X = \sum_{i=1}^N x_{i}\)</span></p>
+<div id="tbl-sensitivity-rules" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-sensitivity-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 14%">
 <col style="width: 84%">
@@ -371,13 +423,18 @@ The presumption of the sensitivity of a variable often matters in the choice of 
 </tr>
 </tbody>
 </table>
-<div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<span class="math inline">\(X − x_{n} − \cdots − x_{2} − x_{1} &lt; \frac{p}{100} x_{1}\)</span> for the case of coalitions of <span class="math inline">\(n-1\)</span> respondents, where <span class="math inline">\(n&gt;2\)</span></p></li></div><div class="quarto-table-caption margin-caption">Table&nbsp;4.1: Sensitivity rules</div></div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-sensitivity-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Sensitivity rules
+</figcaption>
+</figure>
+</div>
 <p>Note that both the dominance rule and the <span class="math inline">\(p\%\)</span>-rule are meaningful only when all contributions are non-negative. Moreover, the dominance rule does not make sense for <span class="math inline">\(k=100\)</span> and neither does the <span class="math inline">\(p\%\)</span>-rule for <span class="math inline">\(p = 0\)</span>. Both rules are asymptotically equal to minimum frequency rules for <span class="math inline">\(k\rightarrow 100\)</span>, or <span class="math inline">\(p \rightarrow 0\)</span> respectively.</p>
 <p>Both, the dominance rule and the <span class="math inline">\(p\%\)</span>-rule belong to a class of rules which are referred to as <em>“concentration rules”</em> below.</p>
 <p>When is used to protect the table, any aggregate (or: cell in a table) that is indeed <em>‘unsafe’</em>, or <em>‘sensitive’</em> according to the sensitivity rule employed, is subject to what is called <em>‘primary suppression’</em>.</p>
 <p>Choice of a particular sensitivity rule is usually based on certain intruder scenarios involving assumptions about additional knowledge available in public or to particular users of the data, and on some (intuitive) notion on the sensitivity of the variable involved.</p>
 <p><em>Minimum frequency rule</em><br>
-When the disseminating agency thinks it is enough to prevent exact disclosure, all cells with at least as many respondents as a certain, fixed minimum frequency <span class="math inline">\(n\)</span> are considered safe. Example 1 of <a href="#sec-tabular-introduction"><span>Section&nbsp;4.1</span></a> (cell value referring to one company in the mining sector of a region) illustrates the for cells with frequency 1. Example 1b above (on two mining companies) shows that there is a similar risk for cells with frequency 2.</p>
+When the disseminating agency thinks it is enough to prevent exact disclosure, all cells with at least as many respondents as a certain, fixed minimum frequency <span class="math inline">\(n\)</span> are considered safe. Example 1 of <a href="#sec-tabular-introduction" class="quarto-xref"><span>Section 4.1</span></a> (cell value referring to one company in the mining sector of a region) illustrates the for cells with frequency 1. Example 1b above (on two mining companies) shows that there is a similar risk for cells with frequency 2.</p>
 <p>Normally the minimum frequency <span class="math inline">\(n\)</span> will be set to 3.</p>
 <p>An exception is the case when for some <span class="math inline">\(n_0\)</span> larger than 3 the agency thinks it is realistic to assume that a coalition of <span class="math inline">\(n_0 - 2\)</span> respondents contributing to the same cell may pool their data to disclose the contribution of another respondent. In such a case we set <span class="math inline">\(n\)</span> to <span class="math inline">\(n_0\)</span>. Example 1c above provides an instance for this case with <span class="math inline">\(n_0=5\)</span>. (The intruder knows the pooled data of <span class="math inline">\(5 - 2 = 3\)</span> companies (e.g.&nbsp;B, C and D)).</p>
 <p>It should be stressed here that a minimum frequency larger than 3 normally does not make much sense, even though in example 1c, for some cells of a table it may happen that such a ‘pooled data’ situation actually occurs. Usually there is no way for an agency to know for which cell which size to assume for the ‘pool’. Let us assume, for instance, that in a cell with 100 respondents 99 are in the stock market and are therefore obliged to publish data which are also their contributions to that cell value. Then we should consider 99 as the size of the pool, because anybody could add up (<em>i.e.</em> pool) these 99 published data values in order to disclose the (confidential) contribution of company 100 who is not in the stock market. But should the agency really consider all cells with less than 101 respondents as unsafe?</p>
@@ -393,10 +450,10 @@ We will show in the following that, according to both types of concentration rul
 <p>Assume that there are no coalitions of respondents, <em>i.e.</em> there are no intruders knowing more than one of the contributions. Then the closest upper estimate of any other contribution can be obtained by the second largest contributor, when it subtracts its own contribution <span class="math inline">\(x_{2}\)</span> from the aggregate total (<em>i.e.</em> cell value) <span class="math inline">\(X\)</span> to estimate the largest contribution (<span class="math inline">\({\hat{x}}_{1} = X - x_{2}\)</span>) as seen in example 1. All other scenarios of a contributor subtracting its own value from the total, to estimate another, result in larger relative error. In the, rather unlikely, scenario that <span class="math inline">\(n - 1\)</span> (for <span class="math inline">\(n &gt; 2\)</span>), respondents pool their data in order to disclose the contribution of another, the closest upper estimate of any other contribution can be obtained by the coalition of respondents <span class="math inline">\(2, 3,\ldots, n\)</span> when they estimate <span class="math inline">\({\hat{x}}_{1} = X - x_{2} - x_{3} - \ldots - x_{n}\)</span>.</p>
 <p>The question is now, how to determine whether such an estimate is ‘relatively close’.</p>
 <p>Application of the <span class="math inline">\(p\%\)</span>-rule yields that the upper estimate <span class="math inline">\({\hat{x}}_{1}\)</span> will overestimate the true value by at least <span class="math inline">\(p\%\)</span> for any non-sensitive cell, <em>i.e.</em> <span class="math inline">\({\hat{x}}_{1} - x_{1} \geq \frac{p}{100} x_{1}\)</span> . That is, the <span class="math inline">\(p\%\)</span>‑rule sets the difference between estimate and true value of the largest contribution in relation to the value of the largest contribution itself.</p>
-<p>When we adapt relation (<a href="#eq-dominance-formula"><span>4.1</span></a>) in table 1 (see definition of the <span class="math inline">\((n,k)\)</span>-rule) to the case of <span class="math inline">\(n = 2\)</span>, subtract both sides from <span class="math inline">\(X\)</span> and then divide by <span class="math inline">\(X\)</span> the result is <span id="eq-dominance-relative-error"><span class="math display">\[
+<p>When we adapt relation (<a href="#eq-dominance-formula" class="quarto-xref"><span>4.1</span></a>) in table 1 (see definition of the <span class="math inline">\((n,k)\)</span>-rule) to the case of <span class="math inline">\(n = 2\)</span>, subtract both sides from <span class="math inline">\(X\)</span> and then divide by <span class="math inline">\(X\)</span> the result is <span id="eq-dominance-relative-error"><span class="math display">\[
 (X - x_{2}) - x_{1} &lt; \frac{100 - k}{100} X
 \tag{4.3}\]</span></span></p>
-<p>In this formulation, the <span class="math inline">\((2,k)\)</span>-rule looks very similar to the formulation of the <span class="math inline">\(p\%\)</span>-rule given by (<a href="#eq-p-percent-formula"><span>4.2</span></a>). Both rules define an aggregate to be sensitive, when the estimate <span class="math inline">\(\hat{x}_{1} = X - x_{2}\)</span> does not overestimate the true value of <span class="math inline">\(x_{1}\)</span> ‘sufficiently’. The difference between both rules is in how they determine this ‘sufficiency’. According to the <span class="math inline">\(p\%\)</span>-rule, it is expressed as a rate (i.e.&nbsp;<span class="math inline">\(p\%\)</span>) of the true value of the largest contribution <span class="math inline">\(x_{1}\)</span>, while according to the <span class="math inline">\((2,k)\)</span>‑rule, it is expressed as a rate (i.e.&nbsp;<span class="math inline">\((100-k)\%\)</span>) of the aggregate total <span class="math inline">\(X\)</span>. Considering this, the concept of the <span class="math inline">\(p\%\)</span>-rule seems to be more natural than that of the <span class="math inline">\((2,k)\)</span>-rule.</p>
+<p>In this formulation, the <span class="math inline">\((2,k)\)</span>-rule looks very similar to the formulation of the <span class="math inline">\(p\%\)</span>-rule given by (<a href="#eq-p-percent-formula" class="quarto-xref"><span>4.2</span></a>). Both rules define an aggregate to be sensitive, when the estimate <span class="math inline">\(\hat{x}_{1} = X - x_{2}\)</span> does not overestimate the true value of <span class="math inline">\(x_{1}\)</span> ‘sufficiently’. The difference between both rules is in how they determine this ‘sufficiency’. According to the <span class="math inline">\(p\%\)</span>-rule, it is expressed as a rate (i.e.&nbsp;<span class="math inline">\(p\%\)</span>) of the true value of the largest contribution <span class="math inline">\(x_{1}\)</span>, while according to the <span class="math inline">\((2,k)\)</span>‑rule, it is expressed as a rate (i.e.&nbsp;<span class="math inline">\((100-k)\%\)</span>) of the aggregate total <span class="math inline">\(X\)</span>. Considering this, the concept of the <span class="math inline">\(p\%\)</span>-rule seems to be more natural than that of the <span class="math inline">\((2,k)\)</span>-rule.</p>
 <p><span class="math inline">\((2,k)\)</span>-rules correspond to <span class="math inline">\(p\%\)</span>-rules in the following way:</p>
 <p>If <span class="math inline">\(k\)</span> is set to <span class="math inline">\(100 \frac{100}{100+p}\)</span> then</p>
 <ol type="A">
@@ -421,24 +478,24 @@ Let <span class="math inline">\(p = 10\)</span>, then <span class="math inline">
 For an aggregate which is safe according to the <span class="math inline">\((2,k)\)</span>‑rule with <span class="math inline">\(k = 100 \cdot \frac{100}{100 + p}\)</span> the following will hold: <span id="eq-i"><span class="math display">\[
 x_{1} \leq \frac{k}{100} \cdot X = \frac{100}{100 + p} X
 \tag{4.4}\]</span></span> and <span id="eq-ii"><span class="math display">\[\frac{ \left( X - x_{2} \right) - x_{1} }{ X } \geq 1 - \frac{k}{100} = 1 - \frac{100}{100 + p} = \frac{p} {100 + p}
-\tag{4.5}\]</span></span> (c.f. (<a href="#eq-dominance-relative-error"><span>4.3</span></a>) ).<br>
+\tag{4.5}\]</span></span> (c.f. (<a href="#eq-dominance-relative-error" class="quarto-xref"><span>4.3</span></a>) ).<br>
 This is equivalent to <span id="eq-iii"><span class="math display">\[
 \frac{ \left( X - x_{2} \right) - x_{1} }{ x_1 } \geq \frac{p}{100+p}\frac{X}{x1}
-\tag{4.6}\]</span></span> From (<a href="#eq-i"><span>4.4</span></a>) it follows that <span class="math display">\[
+\tag{4.6}\]</span></span> From (<a href="#eq-i" class="quarto-xref"><span>4.4</span></a>) it follows that <span class="math display">\[
 \frac{ p }{ 100 + p } \frac{ X }{ x_{1} } \geq \frac{p}{100}
-\]</span> And hence from (<a href="#eq-iii"><span>4.6</span></a>) that <span class="math display">\[\frac{ \left( X - x_{2} \right) -  x_{1} } { x_{1} } \geq \frac{p}{ 100 + p } \cdot \frac{ X }{ x_{ 1 } } \geq \frac{ p }{ 100 }
+\]</span> And hence from (<a href="#eq-iii" class="quarto-xref"><span>4.6</span></a>) that <span class="math display">\[\frac{ \left( X - x_{2} \right) -  x_{1} } { x_{1} } \geq \frac{p}{ 100 + p } \cdot \frac{ X }{ x_{ 1 } } \geq \frac{ p }{ 100 }
 \]</span></p>
 <p><em>The <span class="math inline">\((p,q)\)</span>-rule</em><br>
 A well known extension of the <span class="math inline">\(p\%\)</span>-rule is the so called prior‑posterior <span class="math inline">\((p,q)\)</span>‑rule. With the extended rule, one can formally account for general knowledge about individual contributions assumed to be around <em>prior</em> to the publication, in particular that the second largest contributor can estimate the smaller contributions <span class="math inline">\(X_{R} = \sum_{ i &gt; 2 } x_{1}\)</span> to within <span class="math inline">\(q\%\)</span>. An aggregate is then considered unsafe when the second largest respondent could estimate the largest contribution <span class="math inline">\(x_{1}\)</span> to within <span class="math inline">\(p\)</span> percent of <span class="math inline">\(x_{1}\)</span> , by subtracting her own contribution and this estimate <span class="math inline">\({\hat{X}}_{R}\)</span> from the cell total, <em>i.e.</em> when <span class="math inline">\(|\left( X - x_{2} \right) - x_{1} - {\hat{X}}_{R}| &lt; \frac{p}{100} x_{1}\)</span>. Because <span class="math inline">\(\left( X - x_{2} \right) - x_{1} = X_{R}\)</span>, the left hand side is assumed to be less than <span class="math inline">\(\frac{q}{100} X_{R}\)</span>. So the aggregate is considered to be sensitive, if <span class="math inline">\(X_{R} &lt; \frac{p}{q} x_{1}\)</span>. Evidently, it is actually the ratio <span class="math inline">\(\frac{p}{q}\)</span> which determines which cells are considered safe, or unsafe. Therefore, any <span class="math inline">\((p,q)\)</span>‑rule with <span class="math inline">\(q &lt; 100\)</span> can also be expressed as <span class="math inline">\(( p^*, q^*)\)</span>‑rule, with <span class="math inline">\(q^* = 100\)</span> and <span id="eq-p-star"><span class="math display">\[
 p^* := 100  \frac{p}{q}
 \tag{4.7}\]</span></span></p>
-<p>Of course we can also adapt the <span class="math inline">\((n,k)\)</span>-dominance rule to account for <span class="math inline">\(q\%\)</span> relative a priori bounds: Let e.g.&nbsp;<span class="math inline">\(n = 2\)</span>. According to (<a href="#eq-dominance-relative-error"><span>4.3</span></a>) above, an aggregate should then be considered unsafe when the second largest respondent could estimate the largest contribution <span class="math inline">\(x_{1}\)</span> to within <span class="math inline">\((100 - k)\)</span> percent of <span class="math inline">\(X\)</span> , by subtracting her own contribution and the estimate <span class="math inline">\({\hat{X}}_{R}\)</span> from the cell total, <em>i.e.</em> when <span class="math inline">\(|\left( X - x_{2} \right) - x_{1} - {\hat{X}}_{R}| &lt; (100 - k)/100 X\)</span>. Just as in the case of the <span class="math inline">\(p\%\)</span>-rule, we see that the aggregate is sensitive, when <span class="math inline">\(X_{R} &lt; \frac{100 - k}{q} X\)</span>, and that for given parameters <span class="math inline">\(k\)</span> and <span class="math inline">\(q\)</span> the parameter <span class="math inline">\(k^*\)</span> corresponding to <span class="math inline">\(q^* = 100\)</span> should be chosen such that <span id="eq-k-star"><span class="math display">\[
+<p>Of course we can also adapt the <span class="math inline">\((n,k)\)</span>-dominance rule to account for <span class="math inline">\(q\%\)</span> relative a priori bounds: Let e.g.&nbsp;<span class="math inline">\(n = 2\)</span>. According to (<a href="#eq-dominance-relative-error" class="quarto-xref"><span>4.3</span></a>) above, an aggregate should then be considered unsafe when the second largest respondent could estimate the largest contribution <span class="math inline">\(x_{1}\)</span> to within <span class="math inline">\((100 - k)\)</span> percent of <span class="math inline">\(X\)</span> , by subtracting her own contribution and the estimate <span class="math inline">\({\hat{X}}_{R}\)</span> from the cell total, <em>i.e.</em> when <span class="math inline">\(|\left( X - x_{2} \right) - x_{1} - {\hat{X}}_{R}| &lt; (100 - k)/100  X\)</span>. Just as in the case of the <span class="math inline">\(p\%\)</span>-rule, we see that the aggregate is sensitive, when <span class="math inline">\(X_{R} &lt; \frac{100 - k}{q} X\)</span>, and that for given parameters <span class="math inline">\(k\)</span> and <span class="math inline">\(q\)</span> the parameter <span class="math inline">\(k^*\)</span> corresponding to <span class="math inline">\(q^* = 100\)</span> should be chosen such that <span id="eq-k-star"><span class="math display">\[
 \frac{100-k^*}{100} = \frac{100-k}{q}
 \tag{4.8}\]</span></span></p>
 <p>For a more analytical discussion of sensitivity rules the interested reader is referred to (Cox, 2001), for more generalized formulations considering coalitions to (Loeve, 2001)</p>
 <p><em>Negative contributions</em><br>
-When has to be assessed for a variable that can take not only positive, but also negative values, we suggest to reduce the value of <span class="math inline">\(p\)</span> (or increase <span class="math inline">\(k\)</span>, for the dominance-rule, resp.). It may even be adequate to take that reduction even to the extent of replacing a concentration rule by a minimum frequency rule. This recommendation is motivated by the following consideration. Above, we have explained that the <span class="math inline">\(p\%\)</span>‑rule is equivalent to a <span class="math inline">\((p,q)\)</span>-rule with <span class="math inline">\(q=100\)</span>. When contributions may take negative, as well as positive values, it makes sense to assume that the bound <span class="math inline">\(q_{-}\)</span> for the relative deviation of <em>a priori</em> estimates <span class="math inline">\({\hat{X}}_{R}\)</span> exceeds <span class="math inline">\(100\%\)</span>. This can be expressed as <span class="math inline">\(q_{-} = 100 f\)</span>, with <span class="math inline">\(f &gt; 1\)</span>. According to (<a href="#eq-p-star"><span>4.7</span></a>) the <span class="math inline">\(p\)</span> parameter <span class="math inline">\(p_f\)</span> for the case of negative/positive data should be chosen as <span class="math inline">\(p_{f} = 100 \frac{p}{q_{-}} = 100 \frac{p}{100 f} = \frac{p}{f} &lt; p\)</span>. That means particularly that for large <span class="math inline">\(f\)</span> the <span class="math inline">\(p\%\)</span>-rule with corresponding parameter <span class="math inline">\(p_{f}\)</span> is asymptotically equal to the minimum frequency rule (c.f. the remark just below table 1).</p>
-<p>In case of the dominance rule, because of (<a href="#eq-p-star"><span>4.7</span></a>) , <span class="math inline">\(k_{f}\)</span> can be determined by <span class="math inline">\(\frac{100 - k_{f}}{100} = \frac{100 - k}{100 f}\)</span>, and because <span class="math inline">\(f &gt; 1\)</span> this means that <span class="math inline">\(k_{ f } &gt; k\)</span>. For large <span class="math inline">\(f\)</span> the dominance rule with parameter <span class="math inline">\(k_{ f }\)</span> will be asymptotically equal to the minimum frequency rule.</p>
+When has to be assessed for a variable that can take not only positive, but also negative values, we suggest to reduce the value of <span class="math inline">\(p\)</span> (or increase <span class="math inline">\(k\)</span>, for the dominance-rule, resp.). It may even be adequate to take that reduction even to the extent of replacing a concentration rule by a minimum frequency rule. This recommendation is motivated by the following consideration. Above, we have explained that the <span class="math inline">\(p\%\)</span>‑rule is equivalent to a <span class="math inline">\((p,q)\)</span>-rule with <span class="math inline">\(q=100\)</span>. When contributions may take negative, as well as positive values, it makes sense to assume that the bound <span class="math inline">\(q_{-}\)</span> for the relative deviation of <em>a priori</em> estimates <span class="math inline">\({\hat{X}}_{R}\)</span> exceeds <span class="math inline">\(100\%\)</span>. This can be expressed as <span class="math inline">\(q_{-} = 100 f\)</span>, with <span class="math inline">\(f &gt; 1\)</span>. According to (<a href="#eq-p-star" class="quarto-xref"><span>4.7</span></a>) the <span class="math inline">\(p\)</span> parameter <span class="math inline">\(p_f\)</span> for the case of negative/positive data should be chosen as <span class="math inline">\(p_{f} = 100 \frac{p}{q_{-}} = 100 \frac{p}{100 f} = \frac{p}{f} &lt; p\)</span>. That means particularly that for large <span class="math inline">\(f\)</span> the <span class="math inline">\(p\%\)</span>-rule with corresponding parameter <span class="math inline">\(p_{f}\)</span> is asymptotically equal to the minimum frequency rule (c.f. the remark just below table 1).</p>
+<p>In case of the dominance rule, because of (<a href="#eq-p-star" class="quarto-xref"><span>4.7</span></a>) , <span class="math inline">\(k_{f}\)</span> can be determined by <span class="math inline">\(\frac{100 - k_{f}}{100} = \frac{100 - k}{100 f}\)</span>, and because <span class="math inline">\(f &gt; 1\)</span> this means that <span class="math inline">\(k_{ f } &gt; k\)</span>. For large <span class="math inline">\(f\)</span> the dominance rule with parameter <span class="math inline">\(k_{ f }\)</span> will be asymptotically equal to the minimum frequency rule.</p>
 <p><em>Waivers</em><br>
 Sometimes, respondents authorize publication of an aggregate even if this publication might cause a risk of disclosure for their contributions. Such authorizations are also referred to as <em>‘waivers’</em>. When <span class="math inline">\(s\)</span> is the largest respondent from which no such waiver has been obtained, and <span class="math inline">\(r\)</span> is the largest respondent except for <span class="math inline">\(s\)</span> then for any pair <span class="math inline">\((i,j)\)</span>, <span class="math inline">\(i \neq j\)</span> of respondents, where no waiver has been obtained from <span class="math inline">\(j\)</span>, it holds <span class="math inline">\(x_{i} + x_{j} \leq x_{r} + x_{s}\)</span>. Therefore, we will be able to deal with such a situation properly, if we reformulate the concentration rules as<br>
 <br>
@@ -467,33 +524,34 @@ Often tables are created from datasets based on sample surveys and NSIs collect 
 This procedure cannot be applied in combination with the holding concept, because naturally for the approximate contributions it is unknown which holding they belong to.</p>
 <p>It should be noted here that with the above procedure it may happen that a cell is considered safe, even though the sample estimate of the cell total provides a very close estimate of the unit in the population with the largest value. Assume <em>e.g.</em> the sequence of values in the full population to be 900, 100, 100, and seven times 5. Then the population total would be 1135. Assume that we sampled two units, both with a value of 100, but with different probabilities so that the sampling weights for the two are 1, and 9, respectively, yielding a population estimate of 1000 which will not be sensitive according to the above procedure. If the second largest unit as an intruder subtracts her own contribution (= 100) from the population estimate she will obtain an estimate of the value of the largest unit which exactly matches the true value of 900. But there is of course a sampling error connected to this estimate and this fact should be considered by the intruder.</p>
 <p>On the other hand, there is a certain tendency for overprotection associated to the above procedure, <em>i.e.</em> there is a chance that according to the above procedure an aggregate is unsafe, when in fact it is not. Assume <em>e.g.</em> the sequence of values in the full population to be 100, 50, 50, 1, 1. Assume we have sampled (with unequal probabilities) the unit with value 100 with a sampling weight of 2 associated to it, and one of the units with value 1 with a sampling weight of 3. According to the above procedure two values of 100 would be considered as largest contribution for an estimated cell total of 203 which according to for instance a <span class="math inline">\(p\%\)</span>-rule would be considered as sensitive for any <span class="math inline">\(p&gt;3\)</span> . But in fact, even the second largest unit in the population with a value of 50 will overestimate the value 100 of the largest unit by about 50% when it subtracts her own contribution from the population estimate of 203.</p>
-<p>This tendency for overprotection can be avoided, when, instead of the above procedure, in the case of sample surveys we replace for instance for the <span class="math inline">\(p\%\)</span>‑rule the formulation (<a href="#eq-p-percent-formula"><span>4.2</span></a>) of <a href="#tbl-sensitivity-rules">Table&nbsp;<span>4.1</span></a> by the following <span id="eq-p-percent-weighted"><span class="math display">\[
+<p>This tendency for overprotection can be avoided, when, instead of the above procedure, in the case of sample surveys we replace for instance for the <span class="math inline">\(p\%\)</span>‑rule the formulation (<a href="#eq-p-percent-formula" class="quarto-xref"><span>4.2</span></a>) of <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a> by the following <span id="eq-p-percent-weighted"><span class="math display">\[
 \hat{X} - x_{2}^{s} - x_{1}^{s} &lt; \frac{p}{100} x_{1}^{s}
 \tag{4.9}\]</span></span></p>
 <p>where <span class="math inline">\(\hat{X}\)</span> denote the estimated population total, and <span class="math inline">\(x_{i}^{s}\)</span>, <span class="math inline">\(i = 1,2\)</span>, the largest two observations from the sample.</p>
-<p>The difference between this, and the above procedure is that with (<a href="#eq-p-percent-weighted"><span>4.9</span></a>) we consider as intruder the respondent with the second largest contribution observed in the sample, whereas according to the above procedure, whenever the sampling weight of the largest respondent is 2 or more, an ‘artificial’ intruder is assumed who contributes as much as the largest observation from the sample.</p>
-<p>Considering formulation (<a href="#eq-dominance-relative-error"><span>4.3</span></a>) of the dominance-rule, it is straightforward to see that we can adapt (<a href="#eq-p-percent-weighted"><span>4.9</span></a>) to the case of dominance‑rules by <span id="eq-dominance-weighted"><span class="math display">\[
+<p>The difference between this, and the above procedure is that with (<a href="#eq-p-percent-weighted" class="quarto-xref"><span>4.9</span></a>) we consider as intruder the respondent with the second largest contribution observed in the sample, whereas according to the above procedure, whenever the sampling weight of the largest respondent is 2 or more, an ‘artificial’ intruder is assumed who contributes as much as the largest observation from the sample.</p>
+<p>Considering formulation (<a href="#eq-dominance-relative-error" class="quarto-xref"><span>4.3</span></a>) of the dominance-rule, it is straightforward to see that we can adapt (<a href="#eq-p-percent-weighted" class="quarto-xref"><span>4.9</span></a>) to the case of dominance‑rules by <span id="eq-dominance-weighted"><span class="math display">\[
 x_{1}^{s} + \ldots + x_{n}^{s} &gt; \frac{k}{100} \hat{X}
 \tag{4.10}\]</span></span></p>
-<p>It is also important to note in this context that sampling weight should be kept confidential, because otherwise we must replace (<a href="#eq-p-percent-weighted"><span>4.9</span></a>) by <span id="eq-p-percent-weighted-alt"><span class="math display">\[
+<p>It is also important to note in this context that sampling weight should be kept confidential, because otherwise we must replace (<a href="#eq-p-percent-weighted" class="quarto-xref"><span>4.9</span></a>) by <span id="eq-p-percent-weighted-alt"><span class="math display">\[
 \hat{X} - w_{2} x_{2}^{s} - w_{1} x_{1}^{s} &lt; \frac{p}{100} x_{1}^{s}
 \tag{4.11}\]</span></span></p>
-<p>where <span class="math inline">\(w_{i}\)</span>, <span class="math inline">\(i=1,2\)</span>, denote the sampling weights. Obviously, according to (<a href="#eq-p-percent-weighted-alt"><span>4.11</span></a>) more aggregates will be sensitive.</p>
-<p>Considering this as the basic idea of secondary protection, after <a href="#sec-sensitive-cells-magnitude-tables"><span>Section&nbsp;4.2.1</span></a> we assume for the remainder of the chapter margins and overall totals always to be part of a table.</p>
-<p>In <a href="#sec-secondary-protection-methods"><span>Section&nbsp;4.2.2</span></a> we introduce into the concepts of secondary tabular data protection methodologies.</p>
+<p>where <span class="math inline">\(w_{i}\)</span>, <span class="math inline">\(i=1,2\)</span>, denote the sampling weights. Obviously, according to (<a href="#eq-p-percent-weighted-alt" class="quarto-xref"><span>4.11</span></a>) more aggregates will be sensitive.</p>
+<p>Considering this as the basic idea of secondary protection, after <a href="#sec-sensitive-cells-magnitude-tables" class="quarto-xref"><span>Section 4.2.1</span></a> we assume for the remainder of the chapter margins and overall totals always to be part of a table.</p>
+<p>In <a href="#sec-secondary-protection-methods" class="quarto-xref"><span>Section 4.2.2</span></a> we introduce into the concepts of secondary tabular data protection methodologies.</p>
 </div>
 </div>
 </div>
-</section>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;<span class="math inline">\(X − x_{n} − \cdots − x_{2} − x_{1} &lt; \frac{p}{100} x_{1}\)</span> for the case of coalitions of <span class="math inline">\(n-1\)</span> respondents, where <span class="math inline">\(n&gt;2\)</span></p></div></div></section>
 <section id="sec-secondary-protection-methods" class="level3 page-columns page-full" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="sec-secondary-protection-methods"><span class="header-section-number">4.2.2</span> Secondary tabular data protection methods</h3>
 <p>For reasons explained in the introduction of this chapter, we assume here that tables always include margins and overall totals along with their ‘inner’ cells. Thus, there is always a linear relationship between cells of a table. (Consider for instance example 1a of the introduction to this chapter: The sector result (say: <span class="math inline">\(X_T\)</span>) is the sum of the three sub-sector results (<span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_3\)</span>), i.e.&nbsp;the linear relationship between these four cells is given by the relation <span class="math inline">\(X_T = X_1 + X_2 + X_3\)</span>. As we have seen in example 1a, if it has been established that a is connected to the release of certain cells of a table, then it is not enough to prevent publication of these cells. Other cells must be suppressed (so called ‘complementary’ or ‘secondary’ suppressions), or be otherwise manipulated in order to prevent the value of the protected sensitive cell being recalculated through f.i. differencing.<img src="Images/media/image176.png" style="width:0.2in;height:0.2in"></p>
 <p>Within this section we explain the methodological background of secondary tabular data protection methods.</p>
 <p>At the end of the section we give a brief comparison of secondary , partial suppression and controlled tabular adjustment as alternative disclosure limitation techniques.</p>
-<div class="page-columns page-full"><p>When a table is protected by , by making use of the linear relation between published and suppressed cell values in a table with suppressed entries, it is always possible for any particular suppressed cell of a table to derive upper and lower bounds for its true value. This holds for either tables with non-negative values, and those tables containing negative values as well, when it is assumed that instead of zero, some other (possibly tight) lower bound for any cell is available to data users in advance of publication. The interval given by these bounds is called the <em>‘feasibility interval’</em>. Example 3<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (<a href="#tbl-example-3">Table&nbsp;<span>4.2</span></a>) illustrates the computation of the feasibility interval in the case of a simple two-dimensional table where all cells may only assume non-negative values:</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Geurts, 1992, Table 10, p 20</p></li></div></div>
-<div id="tbl-example-3" class="anchored page-columns page-full">
+<p>When a table is protected by , by making use of the linear relation between published and suppressed cell values in a table with suppressed entries, it is always possible for any particular suppressed cell of a table to derive upper and lower bounds for its true value. This holds for either tables with non-negative values, and those tables containing negative values as well, when it is assumed that instead of zero, some other (possibly tight) lower bound for any cell is available to data users in advance of publication. The interval given by these bounds is called the <em>‘feasibility interval’</em>. Example 3<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (<a href="#tbl-example-3" class="quarto-xref">Table&nbsp;<span>4.2</span></a>) illustrates the computation of the feasibility interval in the case of a simple two-dimensional table where all cells may only assume non-negative values:</p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Geurts, 1992, Table 10, p 20</p></div></div><div id="tbl-example-3" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 32%">
 <col style="width: 20%">
@@ -535,7 +593,12 @@ x_{1}^{s} + \ldots + x_{n}^{s} &gt; \frac{k}{100} \hat{X}
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;4.2: Example 3</div></div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Example 3
+</figcaption>
+</figure>
+</div>
 <p>For this table the following linear relations hold:</p>
 <p><span class="math display">\[\begin{align}
 X_{11} + X_{12} &amp;= 7 \quad \text{(R1)} \\
@@ -548,9 +611,10 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 <p>A general mathematical statement for the linear programming problem to compute upper and lower bounds for the suppressed entries of a table is given in Fischetti and Salazar (2000).</p>
 <p>In principle, a set of suppressions (the <em>‘suppression pattern’</em>) should only be considered valid, if the bounds for the feasibility interval of any sensitive cell cannot be used to deduce bounds on an individual respondent contribution contributing to that cell that are too close according to the sensitivity rule employed. For a mathematical statement of that condition, we determine safety bounds for primary suppressions. We call the deviation between those safety bounds and the true cell value <em>‘upper and lower protection levels’</em>. The formulas of table 2 can be used to compute upper protection levels. Out of symmetry considerations the lower protection level is often set identical to the upper protection level.</p>
 <p>Note that we recommend using protection levels of zero when instead of a concentration rule only a minimum frequency rule has been used for primary assessment. As explained in 4.2.1, minimum frequency rules (instead of concentration rules) should only be used, if it is enough to prevent exact disclosure only. And in such a case, a protection level of zero should be enough. Using <span class="math inline">\(\tau\)</span>-ARGUS this can be achieved by setting the parameter ‘minimum frequency range’ to zero.</p>
-<div id="tbl-upper-protection-levels" class="anchored page-columns page-full">
+<div id="tbl-upper-protection-levels" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-upper-protection-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 26%">
 <col style="width: 73%">
@@ -580,10 +644,15 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;4.3: Upper protection levels</div></div>
-<p>If the distance between upper bound of the feasibility interval and true value of a sensitive cell is below the upper protection level computed according to the formulas of <a href="#tbl-upper-protection-levels">Table&nbsp;<span>4.3</span></a>, then this upper bound could be used to derive an estimate for individual contributions of the sensitive cell that is too close according to the safety rule employed, which can easily be proven along the lines of Cox (1981).</p>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-upper-protection-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.3: Upper protection levels
+</figcaption>
+</figure>
+</div>
+<p>If the distance between upper bound of the feasibility interval and true value of a sensitive cell is below the upper protection level computed according to the formulas of <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.3</span></a>, then this upper bound could be used to derive an estimate for individual contributions of the sensitive cell that is too close according to the safety rule employed, which can easily be proven along the lines of Cox (1981).</p>
 <p>Cell X = 330 with 3 contributions of distinct respondents <span class="math inline">\(x_{1}=300,\ x_{2}=20,\ x_{3}=10\)</span> is confidential (or ‘unsafe’) according to the <span class="math inline">\((1,85)\)</span>- dominance rule. If the feasible upper bound <span class="math inline">\(X^{\max}\)</span> for this confidential cell value is less than <span class="math inline">\(\frac{100}{85} \cdot x_{1} = 352.94\)</span> , then it will provide an upper estimate for the largest contribution <span class="math inline">\(x_{1}\)</span> which is too close according to the <span class="math inline">\((1,85)\)</span>-dominance rule.</p>
-<p>Example 5 proves the formula given in <a href="#tbl-upper-protection-levels">Table&nbsp;<span>4.3</span></a> for the case of the <span class="math inline">\(p\%\)</span>-rule:</p>
+<p>Example 5 proves the formula given in <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.3</span></a> for the case of the <span class="math inline">\(p\%\)</span>-rule:</p>
 <p>Let <span class="math inline">\(X + U\)</span> be the upper bound of the feasibility interval for a cell with cell value <span class="math inline">\(X\)</span> . The second largest respondent can then deduce an upper bound <span class="math inline">\(x_{1}^{U}\)</span>by subtracting its own contribution from that upper bound: <span class="math inline">\(x_{1}^{U} = X + U - x_{2}\)</span>. According to the definition of the <span class="math inline">\(p\%\)</span>-rule proper protection means that <span class="math inline">\(x_{1}^{U} \geq \left( 1 + \frac{p}{100} \right) \cdot x_{1}\)</span>. So, if the feasibility interval provides upper protection, it must hold that <span class="math inline">\(U \geq \left( 1 + \frac{p}{100} \right) \cdot x_{1} - X + x_{2} = p/100 \cdot x_{1} - \left( X - x_{1} - x_{2} \right)\)</span>.</p>
 <p>The distance between upper bound of the feasibility interval and true value of a sensitive cell must exceed the upper protection level; otherwise the sensitive cell is not properly protected. This safety criterion is a necessary, but not always sufficient criterion for proper protection! It is a sufficient criterion, when the largest respondent makes the same contribution also within the combination of suppressed cells within the same aggregation (a row or column relation of the table, for instance), and when no individual contribution of any respondent (or coalition of respondents) to such a combination of suppressed cells is larger than the second largest respondent’s (or coalition’s) contribution.</p>
 <p>Cases where the criterion is not sufficient arise typically, when the only other suppressed cell within the same aggregation is a sensitive cell too (and not the marginal cell of the aggregation), or when the same respondent can contribute to more than one cell within the same aggregation. In these cases, it may turn out that the individual contribution of a respondent may still be disclosed, even though the upper bound of the feasibility interval is well away from the value of the sensitive cell to which this respondent contributes. The most prominent case is that of two cells with only one single contributor (a.k.a. <em>‘singletons’</em>) within the same aggregation. No matter how large the cell values, because they both know their own contribution of course, both can use this additional knowledge to disclose the other’s contribution. For an analytical discussion of these issues see Cox(2001). In principle, a suppression pattern should not be considered as valid, when certain respondents can use their insider knowledge (on their own contribution to a cell) to disclose individual contributions of other respondents.</p>
@@ -595,10 +664,14 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 <section id="the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations" class="level2 page-columns page-full" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="the-tauargus-implementation-of-cell-suppression-methodological-background-guidance-and-recommendations"><span class="header-section-number">4.3</span> The <span class="math inline">\(\tau\)</span>‑ARGUS Implementation of Cell Suppression: Methodological Background, Guidance and Recommendations</h2>
 <p>The software package <span class="math inline">\(\tau\)</span>‑ARGUS provides software tools for disclosure protection methods for tabular data. This can be achieved by modifying the table so that it contains less, or less detailed, information. <span class="math inline">\(\tau\)</span>‑ARGUS allows for several modifications of a table: a table can be redesigned, meaning that rows and columns can be combined; sensitive cells can be suppressed and additional cells to protect these can be found in some optimal way (secondary ). Several alternative algorithms for the selection of secondary suppressions are available in <span class="math inline">\(\tau\)</span>‑ARGUS, e.g.&nbsp;the Hypercube/GHMiter method, a Modular and a Full optimal solution, and a method based on a network flow algorithm. Instead of one could also use other methods for disclosure control of tables. One of these alternative methods is Controlled Rounding. However, use of Controlled Rounding is more common for frequency tables.</p>
-<div id="fig-tau-argus-overview" class="quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="Images/media/tau_argus_overview.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;4.1: Overview of the <span class="math inline">\(\tau\)</span>‑ARGUS architecture</figcaption><p></p>
+<div id="fig-tau-argus-overview" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-tau-argus-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/media/tau_argus_overview.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-tau-argus-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Overview of the <span class="math inline">\(\tau\)</span>‑ARGUS architecture
+</figcaption>
 </figure>
 </div>
 <p>We start this section by introducing the basic issues related to the question of how to properly set up a tabular data protection problem for a given set of tables that are intended to be published, discussing tabular data structures, and particularly tables with hierarchical structures. Section 4.3.2 provides an evaluation of algorithms for secondary offered by <span class="math inline">\(\tau\)</span>-ARGUS, including a recommendation on which tool to use in which situation. After that, in section 4.3.3 we give some guidance on processing table protection efficiently, especially in the case of linked tables. We finish the section with an introductive example in 4.3.4.</p>
@@ -612,11 +685,15 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 <p>Data collected within government statistical systems must meet the requirements of many users, who differ widely in the particular interest they take in the data. Some may need community-level data, while others need detailed data on a particular branch of the economy but no regional detail. As statisticians, we try to cope with this range of interest in our data by providing the data at several levels of detail. We usually combine explanatory variables in multiple ways, when creating tables for publication. If two tables presenting data on the same response variable share some categories of at least one explanatory variable, there will be cells which are presented in both tables – those tables are said to be <em>linked</em> by the cells they have in common. In order to offer a range of statistical detail, we use elaborate classification schemes to categorize respondents. Thus, a respondent will often belong to various categories of the same classification scheme ‑ for instance a particular community within a particular county within a particular state ‑ and may thus fall into three categories of the regional classification.</p>
 <p>The structure between the categories of hierarchical variables also implies sub-structure for the table. When, in the following, we talk about sub-tables without substructure, we mean a table constructed in the following way:</p>
 <p>For any explanatory variable we pick one particular non-bottom-level category (the ‘food production sector’ for instance). Then we construct a ‘sub-variable’. This sub-variable consists only of the category picked in the first step and those categories of the level immediately below belonging to this category (bakers, butchers, etc.). After doing that for each explanatory variable the table specified through a set of these sub-variables is free from substructure then, and is a sub-table of the original one. Any cell within the sub-table does also belong to the original table. Many cells of the original table will appear in more than one sub-table: The sub-tables are linked. Example 6 provides a simple instance of a one-dimensional table with hierarchical structure.</p>
-<p>Assume the categories A, AA, AB, AB1, AB2, and AB3 of some variable EXP resemble a hierarchical structure as depicted in <a href="#fig-hierarchical-structure">Figure&nbsp;<span>4.2</span></a> below:</p>
-<div id="fig-hierarchical-structure" class="quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="Images/media/chap4_hierarchical_structure.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;4.2: Hierarchical structure</figcaption><p></p>
+<p>Assume the categories A, AA, AB, AB1, AB2, and AB3 of some variable EXP resemble a hierarchical structure as depicted in <a href="#fig-hierarchical-structure" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> below:</p>
+<div id="fig-hierarchical-structure" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-hierarchical-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/media/chap4_hierarchical_structure.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-hierarchical-structure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Hierarchical structure
+</figcaption>
 </figure>
 </div>
 <p>Let the full table present turnover by the categories of EXP. Then the two subtables of this table will be:</p>
@@ -658,8 +735,8 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 <p>For mathematical formulation of linked tables structures see de Wolf (2007) and de Wolf, Giessing (2008).</p>
 <p>The challenge of tabular data protection is to preserve as much information in the table as possible, while creating the required uncertainty about the true values of the sensitive cells, as explained in the previous section. It is necessary to somehow rate the information content of data, in order to be able to express the task of selecting an ‘optimal set’ of secondary suppressions, or, alternatively, of adjusting a table in an optimal way, as mathematical programming problem. Information loss is expressed in these mathematical models as the sum of costs associated to the secondary suppressions, or non-sensitive cells subject to adjustment.</p>
 <p>For , the idea of equating a minimum loss of information with the smallest number of suppressions is probably the most natural concept. This would be implemented technically by assigning identical costs to each cell. Yet experience has shown that this concept often yields a suppression pattern in which many large cells are suppressed, which is undesirable. In practice other cost functions, based on cell values, or power transformations thereof, or cell frequencies yield better results. Note that several criteria, other than the numeric value, may also have an impact on a user’s perception of a particular cells importance, such as its situation within the table (totals and sub-totals are often rated as highly important), or its category (certain categories of variables are often considered to be of secondary importance). <span class="math inline">\(\tau\)</span>-ARGUS offers special facilities to choose a cost function and to carry out power transformations of the cost function:</p>
-<div class="page-columns page-full"><p>The cost function indicates the relative importance of a cell. In principle the user could attach a separate cost to each individual cell, but that will become a rather cumbersome operation. Therefore in <span class="math inline">\(\tau\)</span>‑ARGUS a few standard cost functions are available<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;One of the secondary methods of t-ARGUS, the hypercube method, uses an elaborate internal weighting scheme in order to avoid to some extent the suppression of totals and subtotals which is essential for the performance of the method. In order to avoid that this internal weighting scheme is thrown out of balance, it has been decided to make the cost function facilities of t-ARGUS inoperational for this method.</p></li></div></div>
-<ul>
+<p>The cost function indicates the relative importance of a cell. In principle the user could attach a separate cost to each individual cell, but that will become a rather cumbersome operation. Therefore in <span class="math inline">\(\tau\)</span>‑ARGUS a few standard cost functions are available<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;One of the secondary methods of t-ARGUS, the hypercube method, uses an elaborate internal weighting scheme in order to avoid to some extent the suppression of totals and subtotals which is essential for the performance of the method. In order to avoid that this internal weighting scheme is thrown out of balance, it has been decided to make the cost function facilities of t-ARGUS inoperational for this method.</p></div></div><ul>
 <li><p>Unity, i.e.&nbsp;all cells have equal weight (just minimising the number of suppressions)</p></li>
 <li><p>The number of contributors (minimising the number of contributors to be hidden)</p></li>
 <li><p>The cell value itself (preserving as much as possible the largest – usually most important – cells)</p></li>
@@ -684,8 +761,8 @@ x^{\lambda} \quad &amp;\text{for }\lambda\neq0 \\
 <p>The software package <span class="math inline">\(\tau\)</span>−ARGUS offers a variety of algorithms to assign secondary suppressions which will be described in detail in section 4.4. While some of those algorithms are not yet fully developed, or not yet fully integrated into the package, respectively, two are indeed powerful tools for automated tabular data protection. In this section we focus on those latter algorithms. We compare them with respect to quality aspects of the protected tables, while considering also some practical issues. Based on this comparison, we finally give some recommendation on the use of those algorithms.</p>
 <p>We begin this section by introduction of certain minimum protection standards PS1, and PS2. We explain why it is a ‘must’ for an algorithm to satisfy those standards in order to be useable in practice. For those algorithms that qualify ‘useable’ according to these criteria, we report some results of studies comparing algorithm performance with regard to information loss, and .</p>
 <p>In section 4.2.2 we have defined criteria for a safe suppression pattern. It is of course possible to design algorithms that will ensure that no suppression pattern is considered feasible unless all of these criteria are satisfied. In practice, however, such an algorithm would either require too much computer resource (in particular: CPU time) when applied to the large, detailed tabulations of official statistics, or the user would have to put up with a strong tendency for oversuppression. In the following, we therefore define minimum standards for a suppression pattern that is safe w.r.t. the safety rule adopted except for a residual that might be acceptable to an agency. It should be noted that those standards are definitely superior, or at least equal to what could be achieved by the traditional manual procedures for , even if carried out with utmost care! For the evaluation, we consider only those algorithms that ensure validity of the suppression pattern at least with respect to those relaxed standards.</p>
-<div class="page-columns page-full"><p>For a table with hierarchical substructure, feasibility intervals computed on basis of the set of equations for the full table normally tend to be much closer than those computed on basis of separate sets of equations corresponding to sub-tables without any substructure. Moreover, making use of the additional knowledge of a respondent, who is the single respondent to a cell (a so called <em>‘singleton’</em>), it is possible to derive intervals that are much closer than without this knowledge<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;Consider for instance the table of example 3 in section 4.2.2. Without additional knowledge the bounds for cell (1,1) are <span class="math inline">\(X_{11}^\text{min} = 3\)</span> and <span class="math inline">\(X_{11}\text{max} = 6\)</span>. However, if cell (1,2) were a singleton-cell (a cell with only a single contributor) then this single contributor could of course exactly compute the cell value of cell (1,1) by subtracting her own contribution from the row total of row 1.</p></li></div></div>
-<p>Based on the assumption of a simple but probably more realistic disclosure scenario where intruders will deduce feasibility intervals separately for each sub-table, rather than taking the effort to consider the full table, and that single respondents, using their special additional knowledge, are more likely attempting to reveal other suppressed cell values when they are within the same row or column (more general: relation), the following minimum protection standards (PS) make sense:</p>
+<p>For a table with hierarchical substructure, feasibility intervals computed on basis of the set of equations for the full table normally tend to be much closer than those computed on basis of separate sets of equations corresponding to sub-tables without any substructure. Moreover, making use of the additional knowledge of a respondent, who is the single respondent to a cell (a so called <em>‘singleton’</em>), it is possible to derive intervals that are much closer than without this knowledge<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Consider for instance the table of example 3 in section 4.2.2. Without additional knowledge the bounds for cell (1,1) are <span class="math inline">\(X_{11}^\text{min} = 3\)</span> and <span class="math inline">\(X_{11}\text{max} = 6\)</span>. However, if cell (1,2) were a singleton-cell (a cell with only a single contributor) then this single contributor could of course exactly compute the cell value of cell (1,1) by subtracting her own contribution from the row total of row 1.</p></div></div><p>Based on the assumption of a simple but probably more realistic disclosure scenario where intruders will deduce feasibility intervals separately for each sub-table, rather than taking the effort to consider the full table, and that single respondents, using their special additional knowledge, are more likely attempting to reveal other suppressed cell values when they are within the same row or column (more general: relation), the following minimum protection standards (PS) make sense:</p>
 <blockquote class="blockquote">
 <p>(PS1) <em>Protection against exact external disclosure</em>:<br>
 With a valid suppression pattern, it is not possible to disclose the value of a sensitive cell exactly, if no additional knowledge (like that of a singleton) is considered, and if subsets of table equations are considered separately, i.e.&nbsp;when feasibility intervals are computed separately for each sub-table.</p>
@@ -699,10 +776,10 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 <p>The Hypercube is based on a hypercube heuristic implemented by Repsilber (2002). See also the descriptions of this method in 4.4.4.</p>
 <p>Note that in the current implementation of <span class="math inline">\(\tau\)</span>-ARGUS, use of the optimization tools requires a license for additional commercial software (LP-solver), whereas use of the hypercube method is free. While Modular is only available for the Windows platform, of Hypercube there are also versions for Unix, IBM (OS 390) and SNI (BS2000).</p>
 <p>Both Modular and Hypercube provide sufficient protection according to standards PS1* (protection against inferential disclosure) and PS2 above. Regarding singleton disclosure, Hypercube even satisfies the extended standard PS2*. However, simplifications of the heuristic approach of Hypercube cause a certain tendency for oversuppression. This evaluation therefore includes a relaxed variant that, instead of PS1*, satisfies only the reduced standard PS1, i.e.&nbsp;zero protection against inferential disclosure. We therefore refer to this method as Hyper0 in the following. Hyper0 processing can be achieved simply by deactivating the option “Protection against inferential disclosure required” when running Hypercube out of <span class="math inline">\(\tau\)</span>‑ARGUS.</p>
-<div class="page-columns page-full">
-<div id="tbl-algorithms" class="anchored page-columns page-full">
+<div id="tbl-algorithms" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-algorithms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 17%">
 <col style="width: 22%">
@@ -738,16 +815,20 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;4.4: Algorithms for practical use</div></div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-algorithms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.4: Algorithms for practical use
+</figcaption>
+</figure>
 </div>
 <p>In the following, we briefly report results of two evaluations studies, in the following referred to as study A, and study B. For further detail on these studies see Giessing (2004) for study A, and Giessing et al.&nbsp;(2006) for study B. Both studies are based on tabulations of a strongly skewed magnitude variable.</p>
 <p>For study A, we used a variety of hierarchical tables generated from the synthetic micro‑data set supplied as CASC deliverable 3-D3. In particular, we generated 2- and 3-dimensional tables, where one of the dimensions had a hierarchical structure. Manipulation of the depth of this hierarchy resulted in 7 different tables, with a total number of cells varying between 460 and 150,000 cells. Note that the Hyper0 method was not included in study A.</p>
 <p>For study B, which was carried out on behalf of the German federal and state statistical offices, we used 2-dimensional tables of the German turnover tax statistics. Results have been derived for tables with 7-level hierarchical structure (given by the NACE economy classification) of the first dimension, and 4‑level structure of the second dimension given by the variable Region.</p>
-<p>We compare the loss of information due to secondary suppression in terms of the number and cell values of secondary suppression, and analyze the of the protected tables. <a href="#tbl-results-study-A">Table&nbsp;<span>4.5</span></a> reports the results regarding the loss of information obtained in study A.</p>
-<div class="page-columns page-full">
-<div id="tbl-results-study-A" class="anchored page-columns page-full">
+<p>We compare the loss of information due to secondary suppression in terms of the number and cell values of secondary suppression, and analyze the of the protected tables. <a href="#tbl-results-study-A" class="quarto-xref">Table&nbsp;<span>4.5</span></a> reports the results regarding the loss of information obtained in study A.</p>
+<div id="tbl-results-study-A" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-results-study-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 9%">
 <col style="width: 9%">
@@ -843,13 +924,17 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions</div></div>
 </div>
-<p><a href="#tbl-res-B">Table&nbsp;<span>4.6</span></a> presents information loss results from study B on the two topmost levels of the second dimension variable Region, e.g.&nbsp;on the national, and state level.</p>
-<div class="page-columns page-full">
-<div id="tbl-res-B" class="anchored page-columns page-full">
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-results-study-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions
+</figcaption>
+</figure>
+</div>
+<p><a href="#tbl-res-B" class="quarto-xref">Table&nbsp;<span>4.6</span></a> presents information loss results from study B on the two topmost levels of the second dimension variable Region, e.g.&nbsp;on the national, and state level.</p>
+<div id="tbl-res-B" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-res-B-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-
 <colgroup>
 <col style="width: 19%">
 <col style="width: 11%">
@@ -904,7 +989,11 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;4.6: Results of study B - Number and value of secondary suppressions</div></div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-res-B-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.6: Results of study B - Number and value of secondary suppressions
+</figcaption>
+</figure>
 </div>
 <p>Both studies show that best results are achieved by the modular method, while using either variant of the hypercube method leads to an often quite considerable increase in the amount of secondary suppression compared to the result of the modular method. The size of this increase varies between hierarchical levels of the aggregation: on the higher levels of a table the increase tends to be even larger than on the lower levels. Considering the results of study B presented in table 4.6, on the national level we observe an increase of about 214% for Hypercube (14% for Hyper0), compared to an increase of 75% (41%) on the state level. In Giessing et al.&nbsp;(2006) we report also results on the district level. On that level the increase was about 28% on the higher NACE levels for Hypercube (9% for Hyper0), and 20 % for Hypercube (14% for Hyper0) on the lower levels. In study A we observed increases mostly around 30% for Hypercube, for the smallest 2‑di­mensional, and the largest 3-dimensional instance even of 50% and 60%, respectively. In particular, our impression is that the hypercube method tends to behave especially badly (compared to Modular), when tabulations involve many short equations, with only a few positions.</p>
 <p>A first conclusion from the results of study B reported above was, because of the massive oversuppression, to exclude the Hypercube method in the variant that prevents inferential disclosure from any further experimentation. Although clearly only second-best performer, testing with Hyper0 was to be continued, because of technical and cost advantages mentioned above.</p>
@@ -1055,12 +1144,12 @@ Note that this option is not valid for the hypercube, as the hypercube has its o
 <section id="cell-key-method-for-magnitude-tables" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="cell-key-method-for-magnitude-tables"><span class="header-section-number">4.6</span> Cell Key Method for Magnitude Tables</h2>
 <p>The ‘<em>Cell Key Method</em>’ (CKM) was initially developed by the Australian Bureau of Statistics (Fraser/ Wooton (2016); Thompson et al.&nbsp;(2013)) and hence is sometimes referred to as ‘<em>ABS method</em>’. It is a post tabular perturbative method that maintains consistency between all tables that use the same microdata and configuration. This method adds sufficient ‘<em>noise</em>’ to each cell so if an intruder tried to gather information by differencing, they would not be able to obtain the real data. It is one of the SDC methods recommended by Eurostat for the population and housing censuses 2021. In order to keep consistency between tables every record of the underlying microdata is equipped with a randomly generated number, the so called ‘<em>Record Key</em>’. This step is performed just once such that afterwards the Record Key is a fixed component of the microdata that is to be used for every subsequent evaluation. Now whenever the microdata are aggregated to form a table cell, the corresponding Record Keys are aggregated as well, forming the eponymous ‘<em>Cell Key</em>’. Using said Cell Key and a predefined table that encodes a probability distribution, which is tailored to the data/purpose, the corresponding noise can be looked up and added to the original cell value, before dissemination.</p>
-<p>For more general information about the Cell Key Method please see <a href="05-frequency-tables.html#sec-CKM_freq"><span>Section&nbsp;5.5.1</span></a>.</p>
+<p>For more general information about the Cell Key Method please see <a href="05-frequency-tables.html#sec-CKM_freq" class="quarto-xref"><span>Section 5.5.1</span></a>.</p>
 <p>The Cell Key Method was initially developed to protect frequency tables. By adding a controlled integer noise <span class="math inline">\(v\)</span> to a table cell <span class="math inline">\(n\)</span> a perturbed value <span class="math inline">\(\hat{n}=n+v\)</span> is generated. By applying this procedure to each table cell uncertainty about the real cell value is created. In this respect, this method has similar effects as rounding, but is unbiased and provides a higher level of protection when compared to a variant with similar level of information loss. A short comparison can be found in Enderle et al.&nbsp;(2018).</p>
 <p>When adapting this method to magnitude tables, it must be noted that the amount of the noise <span class="math inline">\(v\)</span> needed, depends on the magnitude of the values in the microdata. Whereas in the case of frequencies it is a matter of protecting low counts and in particular individual cases, in the case of magnitude tables the magnitude of the individual values can vary a lot, and it is not sufficient, for example, to add a noise term of magnitude 5 when it is a matter of protecting a value that is one million. On the other hand, adding a noise term of one thousand to an original value of one hundred might be a little exaggerated. Since sufficient protection is particularly important in cases of dominance of one respondent, for the Cell Key Method for magnitude tables the amount of noise correlates with the size of the largest contribution to a cell value. So, if <span class="math inline">\(x\)</span> is the actual value of a cell, <span class="math inline">\(x_{max}\)</span> is the corresponding largest contribution and <span class="math inline">\(v\)</span> is a limited random noise variable with a discrete distribution, then the perturbed value <span class="math inline">\(\hat{x}\)</span> computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span>, where <span class="math inline">\(\delta\)</span> is an additional control parameter. Since CKM derives its protective effect from uncertainty, all published values must of course be subject to some perturbation (with some probability). But since the amount of perturbation depends on the magnitude of the largest contribution, the deviations obtained are relatively small. Especially for cells without dominance issues, by adding (or subtracting) a fraction of the largest contribution value doesn’t affect the cell value too much. Whereas in table cells with a single strongly dominating contribution, the change in value is correspondingly more significant. But this is precisely what is desired.</p>
 <p>The calculations for the Cell Key Method are normally carried out by appropriate software, such as <span class="math inline">\(\tau\)</span>-Argus, so that the user does not have to perform them themselves. Nevertheless, in the following, we give a brief, rough overview of how CKM is applied to continuous data, for interested readers. More detailed explanations can be found in Gießing and Tent (2019).</p>
-<p>Since magnitudes usually aren’t integers but continuous, it is not possible to represent all values in a finite table. Hence an interpolation technique is used, while the p-table generally maintains the same form as depicted in <a href="05-frequency-tables.html#tbl-ckm_attacker">Table&nbsp;<span>5.24</span></a>, in <a href="05-frequency-tables.html#sec-CKM_freq"><span>Section&nbsp;5.5.1</span></a> about CKM for frequency tables. Since we don’t want for a positive value <span class="math inline">\(x\)</span> to become negative after perturbation we require <span class="math inline">\(0\leq\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span> which is equivalent to <span class="math inline">\(v \geq (-x)/( \delta\cdot x_{max})\)</span>. So <span class="math inline">\(v\)</span> has to be chosen with respect to <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> and hence implicitly depends on both the cell value <span class="math inline">\(x\)</span> and the largest contributor <span class="math inline">\(x_{max}\)</span>. Note, that in the case of frequency tables, the distribution of the noise <span class="math inline">\(v\)</span> depended only on the count <span class="math inline">\(n\)</span> to be perturbed, therefore, this value was used to look up the noise in the perturbation table. Accordingly, for the continuous case, the value <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is now used in the lookup step. We’ll use <a href="05-frequency-tables.html#tbl-ckm_attacker">Table&nbsp;<span>5.24</span></a> again, to illustrate such a lookup step. If <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is one of the numbers 0, 1, 2, 3 or any value larger than 3, the lookup step works just as is the case of frequency tables. So if said value is 3, for example, and if the corresponding Cell Key is 0.8, again we have to look for that row in <a href="05-frequency-tables.html#tbl-ckm_attacker">Table&nbsp;<span>5.24</span></a>, for which ‘<em>orig. value</em>’ is 3 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. Which again is met in the last table row, for which the noise is given as 1. Hence the perturbed value computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot 1\)</span>. Imagine now a true cell value <span class="math inline">\(x=300\)</span>, with largest contributor <span class="math inline">\(x_{max}=200\)</span> and an additional control parameter of <span class="math inline">\(\delta=0.5\)</span>. The corresponding result is then <span class="math inline">\(\hat{x}=300+0.5\cdot 200 \cdot 1 = 400\)</span>. Please keep in mind that in this calculation example all values (including the p-table) are chosen in such a way that the calculation can be carried out as easily as possible and that the amount of noise is not anyway typical for practical use cases.</p>
-<p>In case <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is a non-integer value smaller than 3, this value cannot be found in <a href="05-frequency-tables.html#tbl-ckm_attacker">Table&nbsp;<span>5.24</span></a>. To solve this issue interpolation is used, i.e.&nbsp;if <span class="math inline">\(2 &lt; x/( \delta\cdot x_{max}) &lt; 3\)</span>, there exists a unique pair of positive numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(x/( \delta\cdot x_{max}) = 2\cdot a + 3\cdot b\)</span> and <span class="math inline">\(a+b=1\)</span>. The algorithm, as implemented in <span class="math inline">\(\tau\)</span>-Argus, for example, then computes both the noise <span class="math inline">\(v_3\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=3\)</span> and the noise <span class="math inline">\(v_2\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=2\)</span>. The correct noise then results as <span class="math inline">\(v_2\cdot a + v_3\cdot b\)</span>. We already looked up the noise <span class="math inline">\(v_3=1\)</span>, so we still need <span class="math inline">\(v_2\)</span>. So once again we need to search <a href="05-frequency-tables.html#tbl-ckm_attacker">Table&nbsp;<span>5.24</span></a>. After we spotted the row for which ‘’ equals 2 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>, we obtain a noise value of 0.</p>
+<p>Since magnitudes usually aren’t integers but continuous, it is not possible to represent all values in a finite table. Hence an interpolation technique is used, while the p-table generally maintains the same form as depicted in <a href="05-frequency-tables.html#tbl-ckm_attacker" class="quarto-xref">Table&nbsp;<span>5.24</span></a>, in <a href="05-frequency-tables.html#sec-CKM_freq" class="quarto-xref"><span>Section 5.5.1</span></a> about CKM for frequency tables. Since we don’t want for a positive value <span class="math inline">\(x\)</span> to become negative after perturbation we require <span class="math inline">\(0\leq\hat{x}=x+\delta\cdot x_{max} \cdot v\)</span> which is equivalent to <span class="math inline">\(v \geq (-x)/( \delta\cdot x_{max})\)</span>. So <span class="math inline">\(v\)</span> has to be chosen with respect to <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> and hence implicitly depends on both the cell value <span class="math inline">\(x\)</span> and the largest contributor <span class="math inline">\(x_{max}\)</span>. Note, that in the case of frequency tables, the distribution of the noise <span class="math inline">\(v\)</span> depended only on the count <span class="math inline">\(n\)</span> to be perturbed, therefore, this value was used to look up the noise in the perturbation table. Accordingly, for the continuous case, the value <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is now used in the lookup step. We’ll use <a href="05-frequency-tables.html#tbl-ckm_attacker" class="quarto-xref">Table&nbsp;<span>5.24</span></a> again, to illustrate such a lookup step. If <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is one of the numbers 0, 1, 2, 3 or any value larger than 3, the lookup step works just as is the case of frequency tables. So if said value is 3, for example, and if the corresponding Cell Key is 0.8, again we have to look for that row in <a href="05-frequency-tables.html#tbl-ckm_attacker" class="quarto-xref">Table&nbsp;<span>5.24</span></a>, for which ‘<em>orig. value</em>’ is 3 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>. Which again is met in the last table row, for which the noise is given as 1. Hence the perturbed value computes as <span class="math inline">\(\hat{x}=x+\delta\cdot x_{max} \cdot 1\)</span>. Imagine now a true cell value <span class="math inline">\(x=300\)</span>, with largest contributor <span class="math inline">\(x_{max}=200\)</span> and an additional control parameter of <span class="math inline">\(\delta=0.5\)</span>. The corresponding result is then <span class="math inline">\(\hat{x}=300+0.5\cdot 200 \cdot 1 = 400\)</span>. Please keep in mind that in this calculation example all values (including the p-table) are chosen in such a way that the calculation can be carried out as easily as possible and that the amount of noise is not anyway typical for practical use cases.</p>
+<p>In case <span class="math inline">\(x/( \delta\cdot x_{max})\)</span> is a non-integer value smaller than 3, this value cannot be found in <a href="05-frequency-tables.html#tbl-ckm_attacker" class="quarto-xref">Table&nbsp;<span>5.24</span></a>. To solve this issue interpolation is used, i.e.&nbsp;if <span class="math inline">\(2 &lt; x/( \delta\cdot x_{max}) &lt; 3\)</span>, there exists a unique pair of positive numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(x/( \delta\cdot x_{max}) = 2\cdot a + 3\cdot b\)</span> and <span class="math inline">\(a+b=1\)</span>. The algorithm, as implemented in <span class="math inline">\(\tau\)</span>-Argus, for example, then computes both the noise <span class="math inline">\(v_3\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=3\)</span> and the noise <span class="math inline">\(v_2\)</span> for the case <span class="math inline">\(x/( \delta\cdot x_{max})=2\)</span>. The correct noise then results as <span class="math inline">\(v_2\cdot a +  v_3\cdot b\)</span>. We already looked up the noise <span class="math inline">\(v_3=1\)</span>, so we still need <span class="math inline">\(v_2\)</span>. So once again we need to search <a href="05-frequency-tables.html#tbl-ckm_attacker" class="quarto-xref">Table&nbsp;<span>5.24</span></a>. After we spotted the row for which ‘’ equals 2 and for which <span class="math inline">\(\textit{'lower bound'} &lt; 0.8 \leq \textit{'upper bound'}\)</span>, we obtain a noise value of 0.</p>
 </section>
 <section id="measurement-of-disclosure-risk-and-information-loss" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="measurement-of-disclosure-risk-and-information-loss"><span class="header-section-number">4.7</span> Measurement of disclosure risk and information loss</h2>
@@ -1185,12 +1274,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1222,11 +1314,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1236,8 +1367,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1249,9 +1389,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1291,20 +1667,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./03-microdata.html" class="pagination-link">
+      <a href="./03-microdata.html" class="pagination-link" aria-label="Microdata">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Microdata</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./05-frequency-tables.html" class="pagination-link">
+      <a href="./05-frequency-tables.html" class="pagination-link" aria-label="Frequency tables">
         <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Frequency tables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
