@@ -2,21 +2,6 @@
 
 For statistical disclosure control the following two laws are of importance.
 
--   **Commission Regulation (EC) No 831/2002 of 17 May 2002 implementing Council Regulation (EC) No 322/97 on Community Statistics, concerning access to confidential data for scientific purposes.** This Regulation aims to serve scientific users (mainly researchers of universities and legally established research institutes) of European microdata. Admission of new users requires explicit approval of the Member States. Discussions about the level of detail for the microdata (to which the researchers get restricted access) take place in the relevant Working Groups. Originally, this Regulation covered four surveys: Labour Force Survey (LFS), Continuing Vocational Training Survey (CVTS), European Community Household Panel (ECHP) and Community Innovation Survey (CIS). From 2003 the European Union Statistics on Income and Living Conditions (EU-SILC) replaced the ECHP. The Structure of Earnings Survey (SES) was added to this Regulation by Commission Regulation (EC) No 1104/2006 of 18 July 2006. Later also the Adult Education Survey (AES) and the Farm Structure Survey (FSS) became part of this Regulation. Article 3 of this Commission Regulation foresees a fairly straightforward and simple request process for researchers from the following categories or organisations:
-
-    -   universities and other higher education organisations established under Community law or by the law of a Member State;
-
-    -   organisations or institutions for scientific research established under Community law or by the law of a Member State;
-
-    -   national statistical institutes of the Member States;
-
-    -   the European Central Bank and the national central banks of the Member States (since 2007).
-
-For other bodies, article 3 of the regulation lays down the condition that they must first be approved by the Committee on Statistical Confidentiality (CSC) if they wish to make requests to access confidential data for scientific purposes. The prerequisite to achieve admissibility is that the institution has demonstrated that it fulfils a set of criteria.
-
-The existing Commission Regulation 831/2002 continues to apply but its revision is necessary in order to better correspond to the new regulatory framework and to take account of other developments since 2002.
-
-The European Statistical System Committee (ESSC) suggested at its first meeting in May 2009 to leave the decision on the way the revision of the Regulation will be carried out to the High-level Working Group on Statistical Confidentiality (HLWGSC). The first meeting of the HLWGSC took place in October 2009 and it was decided there to appoint a Task Force to deal with that subject. In December 2009 the first meeting of this Task Force on the revision of Commission Regulation 831/2002 took place.
 
 -   **Commission Regulation (EC) No 223/2009 of the European Parliament and Council of 11 March 2009 on European statistics.** This regulation has entered into force on the 1 April 2009 and replaced the Regulation 322/97 on Community Statistics and Regulation 1101/2008 (previously 1588/90) on the transmission of data subject to statistical confidentiality.
 
@@ -27,4 +12,22 @@ Article 2, clause 1(e) defines statistical confidentiality as \"the protection o
 Confidential data are defined as \"data which allow statistical units to be identified, either directly or indirectly, thereby disclosing individual information. To determine whether a statistical unit is identifiable, account shall be taken of all relevant means that might reasonably be used by a third party to identify the statistical unit\".
 
 Chapter V \'Statistical Confidentiality\' describes in detail rules and measures that shall apply to ensure that confidential data are exclusively used for statistical purposes and how their unlawful disclosure shall be prevented (Articles 20 -26). Article 23, in particular, makes provision for the access to confidential data for scientific purposes.
+
+-  **Commission Regulation (EC) No 557/2013 of 17 June 2013 implementing Regulation (EC) No 223/2009 of the European Parliament and the Council on European Statistics as regards access to confidential data for scientific purposes and repealing Commission Regulation (EC) No 831/2002.** This Regulation establishes the conditions under which access to confidential data transmitted to the Commission (Eurostat) may be granted for enabling statistical analyses for scientific purposes, and the rules of cooperation between the Commission (Eurostat) and national statistical authorities in order to facilitate such access.
+
+In Article 3 general principles are described. The Commission (Eurostat) may grant access to confidential data for scientific purposes held by it for the development, production or dissemination of European statistics as referred to in Article 1 of Regulation (EC) No 223/2009, provided that the following conditions are satisfied:
+
+-	access is requested by a recognized research entity;
+
+-	an appropriate research proposal has been submitted;
+
+-	the requested type of confidential data for scientific purposes has been submitted;
+
+-	access is provided either by the Commission (Eurostat) or by another access facility accredited by the Commission (Eurostat);
+
+-	the relevant national statistical authority which provided the data has given its approval.
+
+The original Regulation 831/2002 covered four surveys: Labour Force Survey (LFS), Continuing Vocational Training Survey (CVTS), European Community Household Panel (ECHP) and Community Innovation Survey (CIS). Later other surveys were added and the European Union Statistics on Income and Living Conditions (EU-SILC) replaced the ECHP.
+
+Discussions about the level of detail for the microdata (to which the researchers get access) take place in the relevant Working Groups. Currently, the task to approve this level of detail is delegated to the Directors’ Group on Methodology (DIME). In addition to the DIME two Expert Groups in the ESS exist that deal with Statistical Disclosure Control (SDC): the Expert Group on SDC and the Microdata Access Network Group (MANG).
 
