@@ -3,18 +3,10 @@
 Many Member States have an ethical code that forms the basis of the production of official statistics.
 
 *ISI Declaration on Professional Ethics*\
-After an intense preparation process taking place from 1979 to 1985, the International Statistical Institute (ISI) adopted the ISI Declaration on Professional Ethics in 1985. This Declaration is still applicable. For statistical disclosure control the clauses 4.5 and 4.6 of the Declaration are of importance and therefore they are cited below.
-
-> 4.5 Maintaining confidentiality of records
-> 
-> *Statistical data are unconcerned with individual identities. They are collected to answer questions such as 'how many?' or 'what proportion?', not 'who?'. The identities and records of co-operating (or non-cooperating) subjects should therefore be kept confidential, whether or not confidentiality has been explicitly pledged.*
-> 
-> 4.6 Inhibiting disclosure of identities
->
-> *Statisticians should take appropriate measures to prevent their data from being published or otherwise released in a form that would allow any subject's identity to be disclosed or inferred.*
+After an intense preparation process taking place from 1979 to 1985, the International Statistical Institute (ISI) adopted the ISI Declaration on Professional Ethics in 1985. A newer version was adopted in 2010 by the ISI Council. Finally, an updated version was endorsed by the ISI Executive Committee. Whilst the 2010 Declaration content remains largely valid, the increasing use of a diversity of data sources, linked data sets and computationally heavy statistical methods has required updates introduced in 2023.
 
 *European Statistics Code of Practice*\
-On 24 February 2005 the Statistical Programme Committee adopted the European Statistics Code of Practice. This Code of Practice has the dual purpose of:
+On 24 February 2005 the Statistical Programme Committee adopted the European Statistics Code of Practice. On 17 November 2017 a renewed version of this Code was adopted by the European Statistical System Committee (ESSC). This Code of Practice has the dual purpose of:
 
 -   Improving trust and confidence in the independence, integrity and accountability of both National Statistical Authorities and Eurostat, and in the credibility and quality of the statistics they produce and disseminate (i.e. an external focus);
 
@@ -24,21 +16,21 @@ The Code of Practice is based on 15 Principles. Governance authorities and stati
 
 > Principle 5: Statistical Confidentiality
 > 
-> *The privacy of data providers (households, enterprises, administrations and other respondents), the confidentiality of the information they provide and its use only for statistical purposes must be absolutely guaranteed.*
+> *The privacy of data providers, the confidentiality of the information they provide, its use only for statistical purposes and the security of the data are absolutely guaranteed.*
 
 Indicators
 
--   Statistical confidentiality is guaranteed in law.
+- 5.1 Statistical confidentiality is guaranteed in law.
 
--   Statistical authority staff sign legal confidentiality commitments on appointment.
+-	5.2 Staff sign legal confidentiality commitments on appointment.
 
--   Substantial penalties are prescribed for any wilful breaches of statistical confidentiality.
+-	5.3 Penalties are prescribed for any wilful breaches of statistical confidentiality.
 
--   Instructions and guidelines are provided on the protection of statistical confidentiality in the production and dissemination processes. These guidelines are spelled out in writing and made known to the public.
+-	5.4 Guidelines and instructions are provided to staff on the protection of statistical confidentiality throughout the statistical processes. The confidentiality policy is made known to the public.
 
--   Physical and technological provisions are in place to protect the security and integrity of statistical databases.
+-	5.5 The necessary regulatory, administrative, technical and organisational measures are in place to protect the security and integrity of statistical data and their transmission, in accordance with best practices, international standards, as well as European and national legislation.
 
--   Strict protocols apply to external users accessing statistical microdata for research purposes.
+-	5.6 Strict protocols apply to external users accessing statistical microdata for research purposes.
 
 *UNECE principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access*\
 The 2003 Conference of European Statisticians (CES) of the United Nations Statistical Commission for Europe installed a Task Force, chaired by Dennis Trewin (at that time the Australian Statistician), to draft Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access. In their final report of 2007 the following two key objectives in these guidelines are mentioned:
@@ -76,7 +68,7 @@ The guidelines of the report were endorsed by the CES plenary session in 2006. T
 The report originally contained an annex with 22 case studies describing good practices in different countries. It is a dynamic document that is updated from time to time.
 
 *UNECE Principles and Guidelines on Confidentiality Aspects of Data Integration*\
-In 2007 and 2008 a CES Task Force chaired by Brian Pink, the current Australian Statistician, drafted Principles and Guidelines on Confidentiality Aspects of Data Integration.
+In 2007 and 2008 a CES Task Force chaired by Brian Pink, at that time the Australian Statistician, drafted Principles and Guidelines on Confidentiality Aspects of Data Integration.
 
 Data integration is concerned with integrating unit record data from different administrative and/or survey sources to compile new official statistics which can then be released in their own right. In addition these integrated data sets may be used to support a range of economic and social research not possible using traditional sources.
 
@@ -86,5 +78,5 @@ In developing these principles, it is recognised that integration of statistical
 
 However, for many other countries the notion of integrating data from different sources for statistical and related research purposes is relatively new. The drafted principles and associated guidelines are designed to provide some clarity and consistency of application.
 
-These Principles and Guidelines were endorsed by the Conference of European Statisticians at their June 2009 meeting.
+These Principles and Guidelines were endorsed by the CES at their June 2009 meeting.
 
