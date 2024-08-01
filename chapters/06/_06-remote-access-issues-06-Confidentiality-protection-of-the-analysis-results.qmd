@@ -1,5 +1,11 @@
 ## Confidentiality protection of the analysis results
 
+### Output checking
+
+Output checking is the process of checking the disclosure risk of research results based on microdata files made available in RDCs. NSIs and other institutions can establish their own rules for output checking.
+
+In 2009, a document \'Guidelines for the checking of output based on microdata research\' was prepared within the European project ESSnet SDC. In 2015, this document was a basis for a document \'Guidelines for Output Checking\' prepared within the DwB (Data without Boundaries) project. Both documents provide guidelines and practical advice for output checkers. Principles-based model and rule-of-thumb model are described; the former considers the entire context of the output, while the latter is based on strict rules. The overall rule of thumb is defined and its application to different types of output is described. Organisational aspects of output checking are discussed.
+
 ### Rules for designing programs for controlled teleprocessing using microdata of official statistics in Germany
 
 #### Introduction
@@ -34,7 +40,7 @@ The program developed by the researcher should include a program heading, indica
 
 _**Program explanation**_
 
-Also, a program explanation should be provided at the beginning of the program, describing its purpose. Where applicable, information is also required on how the current analyses fit into the project's state of affairs and progress, on the reference to previous and future analyses, or possible changes in the analysis strategy. The explanation should also contain a list of variables of the original data set used and of the new variables created by the program code, including its labels. Such information facilitates orientation when checking the results. Repeated analyses involving minor changes will more easily be recognised and cross-table confidentiality, which requires comparison with previous outputs, can be performed more rapidly. The names and contents of newly formed variables are more easily recognised by the checking person if they have been mentioned before.
+Also, a program explanation should be provided at the beginning of the program, describing its purpose. Where applicable, information is also required on how the current analyses fit into the project's state of affairs and progress, on the reference to previous and future analyses, or possible changes in the analysis strategy. The explanation should also contain a list of variables of the original dataset used and of the new variables created by the program code, including its labels. Such information facilitates orientation when checking the results. Repeated analyses involving minor changes will more easily be recognised and cross-table confidentiality, which requires comparison with previous outputs, can be performed more rapidly. The names and contents of newly formed variables are more easily recognised by the checking person if they have been mentioned before.
 
 _**Output tables**_
 
