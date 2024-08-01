@@ -8,5 +8,5 @@ Lars-Johan Söderberg (2005), *MONA,- Microdata On liNe Access as Statistics Swe
 
 Lars Borchsenius (2005), *New developments in the Danish system for access to micro data*, Monographs of Official Statistics, Luxembourg
 
-Dr. Sylvia Zühlke, Markus Zwick, Sebastian Scharnhorst and Thomas Wende (2005), *The research data centres of the Federal Statistical Office and the statistical offices of the Länder*, Forschungsdatenzentrum, Statistisches Bundesamt. <!-- URL no longer works [[http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf]{.underline}](http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf) -->
+Dr. Sylvia Zühlke, Markus Zwick, Sebastian Scharnhorst and Thomas Wende (2005), *The research data centres of the Federal Statistical Office and the statistical offices of the Länder*, Forschungsdatenzentrum, Statistisches Bundesamt. <!-- URL no longer works [[http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf]{.underline}](http://www.forschungsdatenzentrum.de/publikationen/veroeffentlichungen/fdz_arbeitspapier-03.pdf)
 
