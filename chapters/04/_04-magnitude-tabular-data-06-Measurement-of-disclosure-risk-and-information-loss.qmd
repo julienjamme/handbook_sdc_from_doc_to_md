@@ -1,7 +1,7 @@
-## Measurement of disclosure risk and information loss 
-### Disclosure risk
+## Measurement of disclosure risk\index{disclosure risk}  and information loss 
+### Disclosure risk\index{disclosure risk} 
 
-The disclosure risk for tabular data (especially magnitude) includes the assessment of:
+The disclosure risk\index{disclosure risk}  for tabular data (especially magnitude) includes the assessment of:
 
 - primary risk,
 
@@ -9,15 +9,15 @@ The disclosure risk for tabular data (especially magnitude) includes the assessm
 
 The primary risk concerns the threat for direct identification of an unit resulting from too low frequency or existence of outliers according to the presented magnitude in the cell. The secondary risk assessment is necessary due to the fact that primary confidential cells in detailed tables may still not ensure sufficient protection against re-identification: together with single cells also sums for larger groups, i.e. the margins are computed. Then the protection of the primary sensitive cells can be undone, by some differencing. Therefore the risk of such an event should also be assessed. 
 
-The key measure for assessing primary disclosure risk in the case of magnitude tables is based on the $(n,k)$-dominance or $p\%$ rules (c.f. 4.2.1, table 4.1). In some formal regulations or recommendations it is assumed $n=1$ and $k=75$. Hovever, in 4.2.1, following the reach practical experience, it is recommended to use $n>1$ in this context. Quite commonly the $(n,k)$-dominance is combined with $k$-anonymity: a cell is regarded as unsafe if it violates the $k$-anonymity or the $(n,k)$-dominance. Therefore the dislosure risk can be measured as the share of cells violating the finally assumed principle. A broader discussion on an application of these rules to assess the disclosure risk is performed in 4.2. See also Hundepool et al. (2012).
+The key measure for assessing primary disclosure risk\index{disclosure risk}  in the case of magnitude tables is based on the $(n,k)$-dominance or $p\%$ rules (c.f. 4.2.1, table 4.1). In some formal regulations or recommendations it is assumed $n=1$ and $k=75$. Hovever, in 4.2.1, following the reach practical experience, it is recommended to use $n>1$ in this context. Quite commonly the $(n,k)$-dominance is combined with $k$-anonymity: a cell is regarded as unsafe if it violates the $k$-anonymity or the $(n,k)$-dominance. Therefore the dislosure risk can be measured as the share of cells violating the finally assumed principle. A broader discussion on an application of these rules to assess the disclosure risk\index{disclosure risk}  is performed in 4.2. See also Hundepool et al. (2012).
 
-However, this assessment concerns risk at the level of individual table cells. When designing tables, a risk measure at table level might be convenient. For frequncy tables, Antal, Shlomo and Elliot (2014) formulate four fundamental properties for a disclosure risk measure at table level: 
+However, this assessment concerns risk at the level of individual table cells. When designing tables, a risk measure at table level might be convenient. For frequncy tables, Antal, Shlomo and Elliot (2014) formulate four fundamental properties for a disclosure risk\index{disclosure risk}  measure at table level: 
 
-- small cell values should have higher disclosure risk than larger,
+- small cell values should have higher disclosure risk\index{disclosure risk}  than larger,
 
-- uniformly distributed frequencies imply low disclosure risk,
+- uniformly distributed frequencies imply low disclosure risk\index{disclosure risk} ,
 
-- the more zero cells in the census table, the higher the disclosure risk,
+- the more zero cells in the census table, the higher the disclosure risk\index{disclosure risk} ,
 
 - the risk measure should be bounded by 0 and 1.
 
@@ -38,7 +38,7 @@ r=1-\frac{1}{2}\left(\frac{H}{\log n}+\frac{1}{n}\sum_{i=1}^n{\frac{x_{i(\text{m
 $$
 where $x_{i(\text{max})}$ is the share of the largest contributors to the cell $C_i$ and $x_j$ is the contribution of the $j$-th unit to it. This measure takes value from $[0,1]$ and is easily interpretable. 
 
-The disclosure risk assessment can be also adjusted to the specificity of currently used SDC method. For instance, Enderle, Giessing and Tent (2020) have proposed an original risk measure for continous data perturbed using the Cell Key approach. It assumes that an intruder can know the amount of noise and the maximum deviation parameter. Then he/she can determine the feasibility intervals for original internal and margin cells using the noisy values. The risk estimate is then a weighted sum of risk probabilities, e.g. risk probabilites computed by summing up certain probabilities defined by the p-table relating to "risky" constellations, weighted by the empirical probability of the respective constellation to occur in a given test dataset. 
+The disclosure risk\index{disclosure risk}  assessment can be also adjusted to the specificity of currently used SDC method. For instance, Enderle, Giessing and Tent (2020) have proposed an original risk measure for continous data perturbed using the Cell Key approach. It assumes that an intruder can know the amount of noise and the maximum deviation parameter. Then he/she can determine the feasibility intervals for original internal and margin cells using the noisy values. The risk estimate is then a weighted sum of risk probabilities, e.g. risk probabilites computed by summing up certain probabilities defined by the p-table relating to "risky" constellations, weighted by the empirical probability of the respective constellation to occur in a given test dataset. 
 
 ### Information loss
 
@@ -74,7 +74,7 @@ $$
 
 However, there may be missing data in the tables. When perturbative SDC methods are applied, these gaps will result mainly from missing data occurring in the original microdata being a basis of construction of tables. In this case, during computation of cell values one can omit these gaps or earlier make an imputation of them. The only inconvenience may appear when there are no data concerning the categories defined by the cell. Then one must either resign from a given structure of the table (e.g. by combining some of the original categories into another, more coarse one), or the measure of loss should be based on the measurement of loss at the level of microdata corresponding to this cell, performed in the manner described in chapter 3.
  
-More difficult is the situation where non-perturbative post-tabular SDC methods are used. For assessing information loss from the perspective of the data user, one can make a comparison of tables before and after the SDC process. For this, one should simulate a table, in which for missing cells their values are imputed. On the other hand, for controlling the process of selection of secondary cell suppression, information loss will be expressed as the sum of costs incurred due to it. The problem is whether the weight of each cell in the table is the same, or whether cells with a higher value have a higher weight (cf. the discussion in 4.3.1). In practice, suppression of too many cells with high values can significantly decrease the utility of disseminated data. The issue of information loss can be variously expressed, depending on preferences and needs of a user. In this way, it is possible to influence the operation of the algorithm for selecting cells for secondary suppression. In 4.3.1 (see also Hundepool et al. (2012)) we indicate the most common criteria taken into account when the cost function for cell suppression is defined:
+More difficult is the situation where non-perturbative post-tabular SDC methods are used. For assessing information loss from the perspective of the data user, one can make a comparison of tables before and after the SDC process. For this, one should simulate a table, in which for missing cells their values are imputed. On the other hand, for controlling the process of selection of secondary cell suppression\index{cell suppression} , information loss will be expressed as the sum of costs incurred due to it. The problem is whether the weight of each cell in the table is the same, or whether cells with a higher value have a higher weight (cf. the discussion in 4.3.1). In practice, suppression of too many cells with high values can significantly decrease the utility of disseminated data. The issue of information loss can be variously expressed, depending on preferences and needs of a user. In this way, it is possible to influence the operation of the algorithm for selecting cells for secondary suppression. In 4.3.1 (see also Hundepool et al. (2012)) we indicate the most common criteria taken into account when the cost function for cell suppression\index{cell suppression}  is defined:
 
 - the same weights for all cells - for minimalization of the number of secondary suppressed cells,
 
