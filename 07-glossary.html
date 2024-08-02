@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -267,6 +267,7 @@ window.Quarto = {
 </section>
 <section id="c" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="c">C</h2>
+<p><span id="Cell_Key_Method" class="anchor"></span><strong>Cell Key Method (CKM):</strong> A post-tabular perturbative SDC method that adds noise to the original cell values. The tables are protected consistently, but they are no longer additive.</p>
 <p><span id="Cell_suppression" class="anchor"></span><strong>Cell suppression:</strong> In <a href="#Tabular_data"><u>tabular data</u></a> the cell suppression SDC method consists of <a href="#Primary_suppression"><u>primary</u></a> and <a href="#Secondary_suppression"><u>complementary (secondary)</u></a> suppression. <a href="#Primary_suppression"><u>Primary suppression</u></a> can be characterised as withholding the values of all <a href="#Risky_cells"><u>risky cells</u></a> from publication, which means that their value is not shown in the table but replaced by a symbol such as ‘×’ to indicate the suppression. According to the definition of <a href="#Risky_cells"><u>risky cells</u></a>, in frequency count tables all cells containing small counts and in tables of magnitudes all cells containing small counts or presenting a case of <a href="#Dominance_rule"><u>dominance</u></a> have to be primary suppressed. To reach the desired protection for <a href="#Risky_cells"><u>risky cells</u></a>, it is necessary to suppress additional non- <a href="#Risky_cells"><u>risky cells</u></a>, which is called <a href="#Secondary_suppression"><u>complementary (secondary) suppression.</u></a> The pattern of complementary suppressed cells has to be carefully chosen to provide the desired level of ambiguity for the <a href="#Risky_cells"><u>risky cells</u></a> with the least amount of suppressed information.</p>
 <p><span id="Complementary_suppression" class="anchor"></span><strong>Complementary suppression:</strong> Synonym of <a href="#Secondary_suppression"><u>secondary suppression</u></a>.</p>
 <p><strong>Complete disclosure:</strong> Synonym of <a href="#Exact_disclosure"><u>exact disclosure</u></a>.</p>
@@ -444,6 +445,7 @@ The limits of what constitutes "too few" or "dominance" vary among statistical d
 <p><strong>Tables of magnitude data:</strong> Tables of magnitude data present the aggregate of a “quantity of interest” over all units of analysis in the cell. When data are from a sample, the cells may contain weighted aggregates, where quantities are multiplied by units’ weights to bring sample results up to population levels. The data may be presented as averages by dividing the aggregates by the number of units in their cells.</p>
 <p><span id="Tabular_data" class="anchor"></span><strong>Tabular data:</strong> Aggregate information on entities presented in tables.</p>
 <p><span id="Target_dataset" class="anchor"></span><strong>Target dataset:</strong> An <a href="#Anonymised_data"><u>anonymised data</u></a>set in which an <a href="#Intruder"><u>intruder</u></a> attempts to identify particular population units.</p>
+<p><span id="Targeted_Record_Swapping" class="anchor"></span><strong>Targeted Record Swapping (TRS):</strong> A pre-tabular perturbative SDC method that applies a swapping procedure to the microdata before generating a table. The tables are additive and protected consistently.</p>
 <p><strong>Threshold (rule):</strong> Usually, with the threshold rule, a cell in a table of frequencies is defined to be sensitive if the number of respondents is less than some specified number. Some agencies require at least five respondents in a cell, others require three. When thresholds are not respected, an agency may restructure tables and combine categories or use <a href="#Cell_suppression"><u>cell suppression</u></a> or <a href="#Rounding"><u>rounding</u></a>, or provide other additional protection in order to satisfy the rule.</p>
 <p><span id="Top_and_bottom_coding" class="anchor"></span><strong>Top and bottom coding:</strong> It consists in setting top-codes or bottom-codes on quantitative variables. A top-code for a variable is an upper limit on all published values of that variable. Any value greater than this upper limit is replaced by the upper limit or is not published on the <a href="#Microdata"><u>microdata</u></a> file at all. Similarly, a bottom-code is a lower limit on all published values for a variable. Different limits may be used for different quantitative variables, or for different subpopulations.</p>
 <p><strong>Top coding:</strong> See <a href="#Top_and_bottom_coding"><u>top and bottom coding</u></a>.</p>
