@@ -4,7 +4,7 @@ project:
 book:
   title: "Handbook on Statistical Disclosure Control"
   subtitle: ""
-  author: Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak
+  author: Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak, Johannes Gussenbauer
   date: today
   date-format: YYYY, MMMM DD
   repo-url: https://github.com/julienjamme/handbook_sdc_from_doc_to_md
