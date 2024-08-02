@@ -32,6 +32,8 @@ The underlined links in this glossary refer to other term in this glossary. This
 
 ## C {-}
 
+[]{#Cell_Key_Method .anchor}**Cell Key Method (CKM):** A post-tabular perturbative SDC method that adds noise to the original cell values. The tables are protected consistently, but they are no longer additive.
+
 []{#Cell_suppression .anchor}**Cell suppression:** In [[tabular data]{.underline}](#Tabular_data) the cell suppression SDC method consists of [[primary]{.underline}](#Primary_suppression) and [[complementary (secondary)]{.underline}](#Secondary_suppression) suppression. [[Primary suppression]{.underline}](#Primary_suppression) can be characterised as withholding the values of all [[risky cells]{.underline}](#Risky_cells) from publication, which means that their value is not shown in the table but replaced by a symbol such as '×' to indicate the suppression. According to the definition of [[risky cells]{.underline}](#Risky_cells), in frequency count tables all cells containing small counts and in tables of magnitudes all cells containing small counts or presenting a case of [[dominance]{.underline}](#Dominance_rule) have to be primary suppressed. To reach the desired protection for [[risky cells]{.underline}](#Risky_cells), it is necessary to suppress additional non- [[risky cells]{.underline}](#Risky_cells), which is called [[complementary (secondary) suppression.]{.underline}](#Secondary_suppression) The pattern of complementary suppressed cells has to be carefully chosen to provide the desired level of ambiguity for the [[risky cells]{.underline}](#Risky_cells) with the least amount of suppressed information.
 
 []{#Complementary_suppression .anchor}**Complementary suppression:** Synonym of [[secondary suppression]{.underline}](#Secondary_suppression).
@@ -312,6 +314,8 @@ The limits of what constitutes \"too few\" or \"dominance\" vary among statistic
 []{#Tabular_data .anchor}**Tabular data:** Aggregate information on entities presented in tables.
 
 []{#Target_dataset .anchor}**Target dataset:** An [[anonymised data]{.underline}](#Anonymised_data)set in which an [[intruder]{.underline}](#Intruder) attempts to identify particular population units.
+
+[]{#Targeted_Record_Swapping .anchor}**Targeted Record Swapping (TRS):** A pre-tabular perturbative SDC method that applies a swapping procedure to the microdata before generating a table. The tables are additive and protected consistently.
 
 **Threshold (rule):** Usually, with the threshold rule, a cell in a table of frequencies is defined to be sensitive if the number of respondents is less than some specified number. Some agencies require at least five respondents in a cell, others require three. When thresholds are not respected, an agency may restructure tables and combine categories or use [[cell suppression]{.underline}](#Cell_suppression) or [[rounding]{.underline}](#Rounding), or provide other additional protection in order to satisfy the rule.
 
