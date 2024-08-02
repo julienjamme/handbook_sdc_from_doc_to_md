@@ -1,4 +1,4 @@
-## The $\tau$‑ARGUS Implementation of Cell Suppression: Methodological Background, Guidance and Recommendations
+## The $\tau$‑ARGUS Implementation of Cell Suppression: Methodological Background, Guidance and Recommendations {#sec-tau-argus-suppression}
 
 The software package $\tau$‑ARGUS provides software tools for disclosure protection methods for tabular data. This can be achieved by modifying the table so that it contains less, or less detailed, information. $\tau$‑ARGUS allows for several modifications of a table: a table can be redesigned, meaning that rows and columns can be combined; sensitive cells can be suppressed and additional cells to protect these can be found in some optimal way (secondary cell suppression\index{cell suppression}). Several alternative algorithms for the selection of secondary suppressions are available in $\tau$‑ARGUS, e.g. the Hypercube/GHMiter method, a Modular and a Full optimal solution, and a method based on a network flow algorithm. Instead of cell suppression\index{cell suppression} one could also use other methods for disclosure control of tables. One of these alternative methods is Controlled Rounding. However, use of Controlled Rounding is more common for frequency tables.
 
@@ -6,7 +6,7 @@ The software package $\tau$‑ARGUS provides software tools for disclosure prote
 
 We start this section by introducing the basic issues related to the question of how to properly set up a tabular data protection problem for a given set of tables that are intended to be published, discussing tabular data structures, and particularly tables with hierarchical structures. Section 4.3.2 provides an evaluation of algorithms for secondary cell suppression\index{cell suppression} offered by $\tau$-ARGUS, including a recommendation on which tool to use in which situation. After that, in section 4.3.3 we give some guidance on processing table protection efficiently, especially in the case of linked tables. We finish the section with an introductive example in 4.3.4.
 
-### Setting up a Tabular Data Protection Problem in Practice {#setting-up-a-tabular-data-protection-problem-in-practice}
+### Setting up a Tabular Data Protection Problem in Practice {#sec-setting-up-a-tabular-data-protection-problem-in-practice}
 
 At the beginning of this section we explain the basic concept of tables in the context of tabular data protection, and complex structures like hierarchical and linked tables. In order to find a good balance between protection of individual response data and provision of information -- in other words, to take control of the loss of information that obviously cannot be avoided completely because of the requirements of disclosure control, it is necessary to somehow rate the information loss connected to a cell that is suppressed. We therefore complete this section by explaining the concept of cell costs to rate information loss.
 
@@ -90,7 +90,7 @@ $$
 
 So choosing $\lambda = \frac{1}{2}$ will give the square-root.
 
-### Evaluation of Secondary Cell Suppression algorithms offered by $\tau$‑ARGUS {#evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus}
+### Evaluation of Secondary Cell Suppression algorithms offered by $\tau$‑ARGUS {#sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus}
 
 The software package $\tau$−ARGUS offers a variety of algorithms to assign secondary suppressions which will be described in detail in section 4.4. While some of those algorithms are not yet fully developed, or not yet fully integrated into the package, respectively, two are indeed powerful tools for automated tabular data protection. In this section we focus on those latter algorithms. We compare them with respect to quality aspects of the protected tables, while considering also some practical issues. Based on this comparison, we finally give some recommendation on the use of those algorithms.
 
@@ -292,7 +292,7 @@ In the next section we will give some hints on what to do, if according to these
 
 Concerning protection against singleton (insider) disclosure, the Hypercube method fulfils a higher standard. However, our empirical results confirm that in practice there are very few singleton cells left unprotected by Modular against this kind of \index{disclosure risk}. We are therefore confident that the problem can be fixed easily by a specialized audit step that would not even involve linear programming methods.
 
-### Processing table protection efficiently <!--{#processing-table-protection-efficiently .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
+### Processing table protection efficiently {#sec-efficient-protection-process} <!-- .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
 
 Within this section we give some guidance for how to facilitate disclosure analysis, and how to use the methods of $\tau$-ARGUS in an efficient way. For more tips and tricks to improve practical performance, see van der Meijden (2006).
 
@@ -373,7 +373,7 @@ If the microdata is available, one should simply add another variable to the dat
 
 In the more difficult case that the microdata is not available, we could make a new table file, selecting only bottom-level cells. In this new file, we could replace the original cell values by their absolutes, and then use $\tau$‑ARGUS facilities to add up the table again.
 
-### Introductive Example <!-- {#introductive-example .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
+### Introductive Example {#sec-introductive-example} <!-- .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
 
 The German census of horticulture is a decennial survey. The main publication of 2005 data involves about 70 response variables grouped by geography and size class of horticultural area. Many of the response variables are frequencies which were not considered as sensitive. Magnitude variables are horticultural or agricultural area, classified by type of establishment, or by production type, etc., and number of labourers classified in similar ways.
 
