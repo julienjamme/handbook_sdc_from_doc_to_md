@@ -22,7 +22,7 @@ This can be prepared (partially) externally or it can be specified interactively
 3. **Global recoding.** Selection of possible recodings and inspection of the results.
 4. Selection and application of **other protection methods** like:
     a.  Microaggregation ([-@sec-microaggregation])
-    b.  \index{PRAM} ([-@sec-PRAM])
+    b.  PRAM\index{PRAM} ([-@sec-PRAM])
     c.  Rounding ([-@sec-rounding])
     d.  Top and bottom coding ([-@sec-top-and-bottom-coding])
     e.  Rank swapping ([-@sec-data-rank-swapping])
