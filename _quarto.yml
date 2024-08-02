@@ -32,37 +32,37 @@ format:
     citation-location: margin
     cap-location: margin
     code-link: true
-  pdf:
-    # pdf-engine: xelatex
-    # fig-pos: 'h'
-    latex-tinytex: false
-    documentclass: book
-    classoption: oneside
-    papersize: a4
-    toc: true
-    keep-tex: true
-    # geometry:
-    #   - left=.75in
-    #   - textwidth=4.5in
-    #   - marginparsep=.25in
-    #   - marginparwidth=2.25in
-    include-in-header: 
-      text: |
-        \usepackage[english]{babel}
-        \usepackage[utf8]{inputenc}
-        \usepackage{float}
-        \usepackage{multirow}
-        \makeatletter
-        \renewenvironment{table}
-          {\@float{table}[H]}
-          {\end@float}
-        \makeatother
-        \counterwithout{footnote}{chapter}
-        \usepackage{makeidx}
-        \makeindex
-    include-after-body: 
-      text: |
-        \printindex
+  # pdf:
+  #   # pdf-engine: xelatex
+  #   # fig-pos: 'h'
+  #   latex-tinytex: false
+  #   documentclass: book
+  #   classoption: oneside
+  #   papersize: a4
+  #   toc: true
+  #   keep-tex: true
+  #   # geometry:
+  #   #   - left=.75in
+  #   #   - textwidth=4.5in
+  #   #   - marginparsep=.25in
+  #   #   - marginparwidth=2.25in
+  #   include-in-header: 
+  #     text: |
+  #       \usepackage[english]{babel}
+  #       \usepackage[utf8]{inputenc}
+  #       \usepackage{float}
+  #       \usepackage{multirow}
+  #       \makeatletter
+  #       \renewenvironment{table}
+  #         {\@float{table}[H]}
+  #         {\end@float}
+  #       \makeatother
+  #       \counterwithout{footnote}{chapter}
+  #       \usepackage{makeidx}
+  #       \makeindex
+  #   include-after-body: 
+  #     text: |
+  #       \printindex
 
 execute:
   freeze: auto
