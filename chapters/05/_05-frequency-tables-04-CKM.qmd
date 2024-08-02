@@ -46,5 +46,5 @@ At this point, it should be pointed out that if, in addition to frequencies, mag
 
 ### Software implementing the Cell Key Method
 For application of the Cell Key Method, so called $p$-tables describing the distribution of the noise are needed. They should be specified in a certain format. The R-package \texttt{ptable}, available on CRAN, can be used to produce such $p$-tables for use in the method specific R-package \texttt{cellKey} as well as for use in the general purpose software $\tau$‑ARGUS.
-For information how to use the software, we refer to the vignettes of the respective R-packages (on CRAN), to the manual of  \targus \cite{taumanual} and to the quick references for CKM in $\tau$‑ARGUS \cite{QuickRefTau42x}.
+For information how to use the software, we refer to the vignettes of the respective R-packages (on CRAN), to the manual of  $\tau$-ARGUS \cite{taumanual} and to the quick references for CKM in $\tau$‑ARGUS \cite{QuickRefTau42x}.
 
