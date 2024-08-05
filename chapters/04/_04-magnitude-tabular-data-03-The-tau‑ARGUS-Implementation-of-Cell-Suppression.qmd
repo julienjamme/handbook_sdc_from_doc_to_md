@@ -144,7 +144,7 @@ Both Modular and Hypercube provide sufficient protection according to standards 
 
 ::: {.content-visible when-format="pdf"}
 
-\begin{table}[H]
+\begin{table}
 \begin{tabular}{|cc|c|cc|}
 \hline
 \multicolumn{2}{|c|}{Algorithm}                                                                                                                                              & Modular                                                                                    & \multicolumn{1}{c|}{Hypercube}                                & Hyper0                               \\ \hline
@@ -201,21 +201,21 @@ We compare the loss of information due to secondary suppression in terms of the 
 ::: {.content-visible when-format="pdf"}
 
 \begin{table}
-\begin{tabular}{ccccccc}
-\multicolumn{2}{c}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Table\\ Hier.\\  levels\end{tabular}}}} & \multirow{2}{*}{\textbf{No. Cells}} & \multicolumn{2}{c}{\textbf{No. Suppressions (\%)}} & \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Added Value of \\ Suppressions (\%)\end{tabular}}} \\
-\multicolumn{2}{c}{}                                                                                          &                                     & \textbf{Hypercube}        & \textbf{Modular}       & \textbf{Hypercube}                                   & \textbf{Modular}                                  \\
-\multicolumn{7}{c}{2-dimensional tables}                                                                                                                                                                                                                                                                            \\
+\begin{tabular}{crrrrrr}
+\multicolumn{2}{c}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Table\\ Hier.\\  levels\end{tabular}}}} & \multirow{2}{*}{\textbf{No. Cells}} & \multicolumn{2}{c}{\textbf{No. Suppressions (\%)}} & \multicolumn{2}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Added Value of \\ Suppressions (\%)\end{tabular}}} \\ \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+\multicolumn{2}{c}{}                                                                                          &                                     & \textbf{Hypercube}        & \textbf{Modular}       & \textbf{Hypercube}                                   & \textbf{Modular}                                  \\ 
+\rowcolor{cyan} \multicolumn{7}{c}{2-dimensional tables}  \\
 1                                                     & 3                                                     & 460                                 & 6.96                      & 4.35                   & 0.18                                                 & 0.05                                              \\
 2                                                     & 4                                                     & 1,050                               & 10.95                     & 8.29                   & 0.98                                                 & 0.62                                              \\
 3                                                     & 6                                                     & 8,230                               & 14.92                     & 11.48                  & 6.78                                                 & 1.51                                              \\
 4                                                     & 7                                                     & 16,530                              & 14.97                     & 11.13                  & 8.24                                                 & 2.12                                              \\
-\multicolumn{7}{c}{3-dimensional tables}                                                                                                                                                                                                                                                                            \\
+\rowcolor{cyan} \multicolumn{7}{c}{3-dimensional tables}                                                                                                                                                                                                                                                                            \\
 5                                                     & 3                                                     & 8,280                               & 14.63                     & 10.72                  & 6.92                                                 & 1.41                                              \\
 6                                                     & 4                                                     & 18,900                              & 17.31                     & 15.41                  & 12.57                                                & 3.55                                              \\
 7                                                     & 6                                                     & 148,140                             & 15.99                     & 10.63                  & 23.16                                                & 3.91                                             
 \end{tabular}
 \caption{ Results of study A - Number and value of secondary suppressions }
-\label{tbl-res-A}
+\label{tbl-results-study-A}
 \end{table}
 
 :::
@@ -292,7 +292,7 @@ In the next section we will give some hints on what to do, if according to these
 
 Concerning protection against singleton (insider) disclosure, the Hypercube method fulfils a higher standard. However, our empirical results confirm that in practice there are very few singleton cells left unprotected by Modular against this kind of \index{disclosure risk}. We are therefore confident that the problem can be fixed easily by a specialized audit step that would not even involve linear programming methods.
 
-### Processing table protection efficiently {#sec-efficient-protection-process} <!-- .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
+### Processing table protection efficiently {#sec-efficient-protection-process}
 
 Within this section we give some guidance for how to facilitate disclosure analysis, and how to use the methods of $\tau$-ARGUS in an efficient way. For more tips and tricks to improve practical performance, see van der Meijden (2006).
 
@@ -373,7 +373,7 @@ If the microdata is available, one should simply add another variable to the dat
 
 In the more difficult case that the microdata is not available, we could make a new table file, selecting only bottom-level cells. In this new file, we could replace the original cell values by their absolutes, and then use $\tau$‑ARGUS facilities to add up the table again.
 
-### Introductive Example {#sec-introductive-example} <!-- .Opmaakprofiel-Kop-3-+-Na:--3-pt} -->
+### Introductive Example {#sec-introductive-example} 
 
 The German census of horticulture is a decennial survey. The main publication of 2005 data involves about 70 response variables grouped by geography and size class of horticultural area. Many of the response variables are frequencies which were not considered as sensitive. Magnitude variables are horticultural or agricultural area, classified by type of establishment, or by production type, etc., and number of labourers classified in similar ways.
 
