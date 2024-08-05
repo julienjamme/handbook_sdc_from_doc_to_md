@@ -19,6 +19,9 @@ ISI (1985) *Declaration on Professional Ethics:* [[http://isi-web.org/declaratio
 
 Pink, B et al. (2009) *Principles and Guidelines on Confidentiality Aspects of Data Integration* UNECE United Nations Economic commission for Europe: [[https://digitallibrary.un.org/record/651518?v=pdf]{.underline}](https://digitallibrary.un.org/record/651518?v=pdf)
 
-Trewin, D et al. (2007) *Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access* UNECE United Nations Economic commission for Europe: [[https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf]{.underline}](https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf)
+Trewin, D et al. (2007) *Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access* UNECE United Nations Economic commission for Europe: 
+
+<!-- url too long for pdf. seems not breakable because of the points => shorten the visible url -->
+[[https://unece.org/.../Managing.statistical.confidentiality.and.microdata.access.pdf]{.underline}](https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf)
 
 
