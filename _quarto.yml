@@ -4,7 +4,19 @@ project:
 book:
   title: "Handbook on Statistical Disclosure Control"
   subtitle: ""
-  author: Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak, Johannes Gussenbauer
+  author: 
+    - name: Anco Hundepool
+    - name: Josep Domingo-Ferrer
+    - name: Luisa Franconi
+    - name: Sarah Giessing
+    - name: Rainer Lenz
+    - name: Jane Naylor
+    - name: Eric Schulte Nordholt
+    - name: Giovanni Seri
+    - name: Peter-Paul De Wolf
+    - name: Reinhard Tent
+    - name: Andrzej Młodak
+    - name: Johannes Gussenbauer
   date: today
   date-format: YYYY, MMMM DD
   repo-url: https://github.com/julienjamme/handbook_sdc_from_doc_to_md
@@ -32,38 +44,48 @@ format:
     citation-location: margin
     cap-location: margin
     code-link: true
-  pdf:
-    # pdf-engine: xelatex
-    # fig-pos: 'h'
-    latex-tinytex: false
-    documentclass: book
-    classoption: oneside
-    papersize: a4
-    toc: true
-    keep-tex: true
-    # geometry:
-    #   - left=.75in
-    #   - textwidth=4.5in
-    #   - marginparsep=.25in
-    #   - marginparwidth=2.25in
-    include-in-header: 
-      text: |
-        \usepackage[english]{babel}
-        \usepackage[utf8]{inputenc}
-        \usepackage{float}
-        \usepackage{multirow}
-        \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
-        \makeatletter
-        \renewenvironment{table}
-          {\@float{table}[H]}
-          {\end@float}
-        \makeatother
-        \counterwithout{footnote}{chapter}
-        \usepackage{makeidx}
-        \makeindex
-    include-after-body: 
-      text: |
-        \printindex
+  # titlepage-pdf:
+  #   titlepage: academic
+  #   documentclass: scrbook
+  #   classoption: ["oneside", "open=any"]
+  #   number-sections: true
+  # pdf:
+  #   # pdf-engine: xelatex
+  #   # fig-pos: 'h'
+  #   latex-tinytex: false
+  #   documentclass: scrbook
+  #   classoption: ["oneside", "open=any"]
+  #   papersize: a4
+  #   toc: true
+  #   keep-tex: true
+  #   geometry:
+  #     - left=3cm
+  #     - right=3cm
+  #     # - textwidth=4.5in
+  #     # - marginparsep=.25in
+  #     # - marginparwidth=2.25in
+  #   template-partials:
+  #     - "before-body.tex"
+  #     - "_titlepage.tex" 
+  #   include-in-header: 
+  #     text: |
+  #       \usepackage[english]{babel}
+  #       \usepackage[utf8]{inputenc}
+  #       \usepackage{float}
+  #       \usepackage{multirow}
+  #       \usepackage{hyperref}
+  #       \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+  #       \makeatletter
+  #       \renewenvironment{table}
+  #         {\@float{table}[H]}
+  #         {\end@float}
+  #       \makeatother
+  #       \counterwithout{footnote}{chapter}
+  #       \usepackage{makeidx}
+  #       \makeindex
+  #   include-after-body: 
+  #     text: |
+  #       \printindex
 
 execute:
   freeze: auto
