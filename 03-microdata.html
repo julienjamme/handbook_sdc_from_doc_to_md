@@ -227,7 +227,6 @@ window.Quarto = {
   <li><a href="#sec-microaggregation-further" id="toc-sec-microaggregation-further" class="nav-link" data-scroll-target="#sec-microaggregation-further"><span class="header-section-number">3.4.5</span> Microaggregation: further details</a></li>
   <li><a href="#sec-PRAM" id="toc-sec-PRAM" class="nav-link" data-scroll-target="#sec-PRAM"><span class="header-section-number">3.4.6</span> PRAM</a></li>
   <li><a href="#sec-synthetic-data" id="toc-sec-synthetic-data" class="nav-link" data-scroll-target="#sec-synthetic-data"><span class="header-section-number">3.4.7</span> Synthetic microdata</a></li>
-  <li><a href="#sec-TRS" id="toc-sec-TRS" class="nav-link" data-scroll-target="#sec-TRS"><span class="header-section-number">3.4.8</span> Targeted Record Swapping</a></li>
   </ul></li>
   <li><a href="#sec-informationloss-microdata" id="toc-sec-informationloss-microdata" class="nav-link" data-scroll-target="#sec-informationloss-microdata"><span class="header-section-number">3.5</span> Measurement of disclosure risk and information loss</a>
   <ul class="collapse">
@@ -2398,90 +2397,6 @@ Z = X^{\alpha} \cdot X_{s}^{(1 - \alpha)}
 <p>Reiter, J. P. (2005b). <em>Significance tests for multi-component estimands from multiply-imputed, synthetic microdata</em>. Journal of Statistical Planning and Inference, 131(2):365–377.</p>
 <p>Rubin, D. E. (1993). <em>Discussion of statistical disclosure limitation.</em> Journal of Official Statistics, 9(2):461–468.</p>
 <p>Sebé, F., Domingo-Ferrer, J., Mateo-Sanz, J. M. and Torra, V. (2002). <em>Post-masking optimization of the tradeoff between information loss and disclosure risk in masked microdata sets.</em> In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 163–171, Berlin Heidelberg, Springer.</p>
-</section>
-</section>
-<section id="sec-TRS" class="level3" data-number="3.4.8">
-<h3 data-number="3.4.8" class="anchored" data-anchor-id="sec-TRS"><span class="header-section-number">3.4.8</span> Targeted Record Swapping</h3>
-<p>Targeted Records Swapping (TRS) is a pre-tabular perturbation method. It’s intended use is to apply a swapping procedure to the micro data before generating a table. Although it is applied solely on micro data it is generally considered a protection method used for tabular data and not recommended for protecting micro data. TRS can be used for tables with and without spatial characteristics, with the prior case containing also grid data products or tables created by cross-tabulating with grid cells.<br>
-During the TRS the spatial character of the data can be taken into account to some degree.</p>
-<section id="the-trs-noise-mechanism" class="level4" data-number="3.4.8.1">
-<h4 data-number="3.4.8.1" class="anchored" data-anchor-id="the-trs-noise-mechanism"><span class="header-section-number">3.4.8.1</span> The TRS noise mechanism</h4>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Expert level
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Regardless of the table, be it count data or a magnitude table, the methodology of the TRS does not change. This is a direct consequence of the fact that the method is applied to the underlying micro data before generating any table.</p>
-<p>Consider population units <span class="math inline">\(i = 1, \ldots, N\)</span> where each unit <span class="math inline">\(i\)</span> has <span class="math inline">\(p\)</span> characteristics or variables <span class="math inline">\(\{\mathbf{x}_{1},\ldots,\mathbf{x}_{n}\} = \mathbf{X} \in \mathbb{R}^{n\times p}\)</span>. Furthermore there exists a geographic hierarchy <span class="math inline">\(\mathcal{G}^{1} \succ \mathcal{G}^{2} \succ \ldots \succ \mathcal{G}^{K}\)</span> where each <span class="math inline">\(\mathcal{G}^{k}\)</span> is the set of disjointly split areas <span class="math inline">\(g_m^{k}\)</span>, <span class="math inline">\(m=1,\ldots,M_k\)</span> and each <span class="math inline">\(g_m^{k}\)</span> is further disjointly subdivided into smaller areas <span class="math inline">\(g_m^{k+1}\)</span>,<span class="math inline">\(m=1,\ldots,M_{k+1}\)</span>:</p>
-<p><span class="math display">\[
-\mathcal{G}^{k} = \{g_m^{k} \mid g_i^{k}\cap g_j^{k} = \varnothing \text{ for }i\neq j \} \quad \forall k = 1,\ldots,K
-\]</span></p>
-<p>where</p>
-<p><span class="math display">\[
-g_m^{k} = \dot{\bigcup}_{m=1}^{M_{k+1}}g_m^{k+1} \quad \forall k = 1,\ldots,K-1 \quad .
-\]</span></p>
-<p>The notation <span class="math inline">\(a\dot{\cup}b\)</span> refers to the disjoint union meaning that <span class="math inline">\(a\cap b = \varnothing\)</span>.</p>
-<p>With the above definition each unit <span class="math inline">\(i\)</span> in the population can be assigned to a single area <span class="math inline">\(g_{m_i}^{k}\)</span> for each geographic hierarchy level <span class="math inline">\(\mathcal{G}^{k}\)</span>, <span class="math inline">\(k = 1,\ldots,K\)</span>. Consider as geographic hierarchy for example the NUTS regions, NUTS1 <span class="math inline">\(\succ\)</span> NUTS2 <span class="math inline">\(\succ\)</span> NUTS3, or grid cells, 1000m grid cells <span class="math inline">\(\succ\)</span> 500m grid cells <span class="math inline">\(\succ\)</span> 250m grid cells.</p>
-<p>Given the geographic hierarchy levels <span class="math inline">\(\mathcal{G}^{k}\)</span>, <span class="math inline">\(k = 1,\ldots,K\)</span> calculate for each unit <span class="math inline">\(i = 1, \ldots, N\)</span> risk values <span class="math inline">\(r_{i,k}\)</span>. As an example one can choose <span class="math inline">\(k\)</span>-anonymity as risk measure and a subset of <span class="math inline">\(Q\)</span> variables <span class="math inline">\(\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}\)</span> to derive risk values <span class="math inline">\(r_{i,k}\)</span>. They can be defined by calculating the number of units <span class="math inline">\(j\)</span> which have the same values for variables <span class="math inline">\(\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}\)</span> as unit <span class="math inline">\(i\)</span> and taking the inverse.</p>
-<p><span class="math display">\[
-c_{i,k} = \sum\limits_{j=1}^N \mathbf{1}[x_{i,q_1} = x_{j,q_1}, x_{i,q_2} = x_{j,q_2}, \ldots, x_{i,q_Q} = x_{j,q_Q}]
-\]</span></p>
-<p><span class="math display">\[
-r_{i,k} = \frac{1}{c_{i,k}}
-\]</span></p>
-<p>Having the risk values <span class="math inline">\(r_{i,k}\)</span> for each unit <span class="math inline">\(i\)</span> and each geographic hierarchy level calculated the TRS can be defined as follows:</p>
-<ol type="1">
-<li>Define initial, use-case specific, parameter.
-<ul>
-<li>A global swap rate <span class="math inline">\(p\)</span>;</li>
-<li>Define a risk value <span class="math inline">\(r_{high}\)</span> beyond which all units with <span class="math inline">\(r_{i,k}\)</span> are considered for the geographic hierarchy level <span class="math inline">\(k\)</span>;</li>
-<li>A subset of <span class="math inline">\(T\)</span> variables <span class="math inline">\(\mathbf{x}_{t_1},\ldots,\mathbf{x}_{t_T}\)</span> which are considered while swapping units;</li>
-</ul></li>
-<li>Begin at the first hierarchy level <span class="math inline">\(\mathcal{G}^{1}\)</span> and select all units <span class="math inline">\(j\)</span> for which <span class="math inline">\(r_{i,1} \geq r_{high}\)</span>.</li>
-<li>For each <span class="math inline">\(j\)</span> select all units <span class="math inline">\(l_1,\ldots,l_L\)</span>, which do not belong to the same area <span class="math inline">\(g_{m_j}^{1}\)</span> and have the same values for variables <span class="math inline">\(\mathbf{x}_{t_1},\ldots,\mathbf{x}_{t_T}\)</span> as unit <span class="math inline">\(j\)</span>. In addition units <span class="math inline">\(l_1,\ldots,l_L\)</span> cannot have been swapped already. <span class="math display">\[
-g_{m_j}^{1} \neq g_{m_l}^{1}
-\]</span> <span class="math display">\[
-x_{j,t_1} = x_{l,t_1}, x_{j,t_2} = x_{l,t_2}, \ldots, x_{j,t_T} = x_{l,t_T}
-\]</span></li>
-<li>Sample for each <span class="math inline">\(j\)</span> one unit from the set <span class="math inline">\(\{l \mid g_{m_j}^{1} \neq g_{m_l}^{1} \land x_{j,t_1} = x_{l,t_1} \land, \ldots, \land x_{j,t_T} = x_{l,t_T}\}\)</span> by normalising corresponding risk value <span class="math inline">\(r_{l,1}\)</span> and using them as sampling probabilities.
-<ul>
-<li>Previously swapped units should be excuded from this set.</li>
-</ul></li>
-<li>Swap all variables, holding geographic information in <span class="math inline">\(\mathbf{X}\)</span>, between unit <span class="math inline">\(j\)</span> and the sampled unit.
-<ul>
-<li>Some implementation of targeted record swapping consider only swapping specific variable values from <span class="math inline">\(\mathbf{X}\)</span> between <span class="math inline">\(j\)</span> and the sampled unit.</li>
-</ul></li>
-<li>Iterate through the geographic hierarchies <span class="math inline">\(k=2,\ldots,K\)</span> and repeat in each of them steps 3. - 5.</li>
-<li>At the final geographic hierarchy <span class="math inline">\(k=K\)</span> if the number of already swapped units is less than <span class="math inline">\(p\times N\)</span> additional units are swapped to reach <span class="math inline">\(p\times N\)</span> overall swaps.</li>
-</ol>
-<p>If the population units refer to people living in dwellings and the aim is to swap only full dwellings with each other and not only individuals it can be useful to set</p>
-<p><span class="math display">\[
-r_{i,k} = \max_{j \text{ living in same dwelling as }i}r_{j,k}
-\]</span></p>
-<p>prior to applying the swapping procedure. In addition <span class="math inline">\(\mathbf{x}_{1(q)},\ldots,\mathbf{x}_q\)</span> should be defined such that they refer to variables holding dwelling information.</p>
-<p>The above described procedure is implemented in the R package <code>sdcMicro</code> as well as in the software <code>muArgus</code>, alongside a multitude of parameters to fine tune the procedure.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="pros-and-cons-of-targeted-record-swapping" class="level4" data-number="3.4.8.2">
-<h4 data-number="3.4.8.2" class="anchored" data-anchor-id="pros-and-cons-of-targeted-record-swapping"><span class="header-section-number">3.4.8.2</span> Pros and cons of targeted record swapping</h4>
-<p>Indicated by the name of the method the TRS aims to swap micro data records prior to building a table and specifically targeting records during the swapping procedure which have a higher risk of disclosure with respect to the final tables. The protection of the TRS itself is considered to be the uncertainty that an identified unit <span class="math inline">\(i\)</span> has a considerable chance of actually being a swapped unit and that the information derived from this unit does not contain the information of the original unit <span class="math inline">\(i\)</span>. In general it is recommended to apply the TRS on the micro data set only once and afterwards build various tables from the same perturbed micro data. This creates a more drastic trade off between the number of records to swap and the utility of the final tables. The swapping procedure can indirectly take into account the structure of the final tables through the risk value derived from the subest of variables <span class="math inline">\(\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}\)</span> and choice of the geographic hierarchy. However a large number of variables <span class="math inline">\(\mathbf{x}_{q_1},\ldots,\mathbf{x}_{q_Q}\)</span> and a high resolution in the geographic hierarchy can result in a high share of units with high risk values and consequently many potential swaps. A high swap rate, for instance beyond 10%, can quickly lead to high information loss, because the noise introduced through the swapping is not controlled for while drawing the swapped units. Thus it is not feasible to both address all possible disclosure risk scenarios while maintaining high utility in the final tables.</p>
-<p>As with any method it is advised to thoroughly tune parameters to balance information loss and disclosure risk. Possible tuning parameters are:</p>
-<ul>
-<li>The geographic hierarchy and its depth of granularity.</li>
-<li>The construction of the risk values <span class="math inline">\(r_{i,k}\)</span> and <span class="math inline">\(r_{high}\)</span></li>
-<li>The choice of <span class="math inline">\(\mathbf{x}_{t_1},\ldots,\mathbf{x}_{t_T}\)</span></li>
-<li>The global swap rate <span class="math inline">\(p\)</span></li>
-</ul>
-<p>Because the noise is applied to the microdata before building any tables the additivity between inner and marginal aggregates will always be preserved.</p>
 <!-- ## Information loss in microdata protection {#sec-informationloss-microdata} -->
 </section>
 </section>
@@ -2582,7 +2497,7 @@ More precise conditions of analytical validity and analytical interest cannot be
 <section id="sec-direct-comparison" class="level4" data-number="3.5.8.1">
 <h4 data-number="3.5.8.1" class="anchored" data-anchor-id="sec-direct-comparison"><span class="header-section-number">3.5.8.1</span> Direct comparison of categorical values</h4>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2591,7 +2506,7 @@ Expert level
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Comparison of matrices <span class="math inline">\(X\)</span> and <span class="math inline">\(X^{\prime}\)</span> for categorical data requires the definition of a distance for categorical variables. Definitions consider only the distances between pairs of categories that can appear when comparing an original record and its protected version (see discussion above on pairing original and protected records).</p>
 <p>For a nominal variable <span class="math inline">\(V\)</span> (a categorical variable taking values over an unordered set), the only permitted operation is comparison for equality. This leads to the following distance definition: <span class="math display">\[
@@ -2609,7 +2524,7 @@ d_V(c,c')=\begin{cases}
 <section id="sec-contingency-table" class="level4" data-number="3.5.8.2">
 <h4 data-number="3.5.8.2" class="anchored" data-anchor-id="sec-contingency-table"><span class="header-section-number">3.5.8.2</span> Comparison of contingency tables</h4>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2618,7 +2533,7 @@ Expert level
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>An alternative to directly comparing the values of categorical variables is to compare their contingency tables. Given two datasets <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> (the original and the protected set, respectively) and their corresponding <span class="math inline">\(t\)</span>-dimensional contingency tables for <span class="math inline">\(t \leq K\)</span>, we can define a contingency table-based information loss measure <span class="math inline">\(CTBIL\)</span> for a subset <span class="math inline">\(W\)</span> of variables as follows: <span id="eq-CTBIL"><span class="math display">\[
 CTBIL(F,G;W,K)=\sum_{\{V_{ji}\cdots V_{jt}\} f\subseteq W\atop|\{V_{ji}\cdots V_{jt}\}|\leq K}\sum_{i_1\cdots i_t}|x^F_{i_1\cdots i_t}-x^G_{i_1\cdots i_t} |
@@ -2632,7 +2547,7 @@ CTBIL(F,G;W,K)=\sum_{\{V_{ji}\cdots V_{jt}\} f\subseteq W\atop|\{V_{ji}\cdots V_
 <section id="entropy-based-measures" class="level4" data-number="3.5.8.3">
 <h4 data-number="3.5.8.3" class="anchored" data-anchor-id="entropy-based-measures"><span class="header-section-number">3.5.8.3</span> Entropy-based measures</h4>
 <div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2641,7 +2556,7 @@ Expert level
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>In De Waal and Willenborg (1999), Kooiman, Willenborg and Gouweleeuw (1998) and Willenborg and De Waal (2001), the use of Shannon’s entropy to measure information loss is discussed for the following methods: local suppression, global recoding and PRAM. Entropy is an information-theoretic measure, but can be used in SDC if the protection process is modelled as the noise that would be added to the original dataset in the event of it being transmitted over a noisy channel.</p>
 <p>As noted earlier, PRAM is a method that generalizes noise addition, suppression and recoding methods. Therefore, our description of the use of entropy will be limited to PRAM.</p>
@@ -2882,7 +2797,7 @@ This can be prepared (partially) externally or it can be specified interactively
 </ol>
 <p>Once a problem instance has been created, some helpful summary statistics such as the number of observations violating <span class="math inline">\(k\)</span>$-anonymity or (global) risk measures such as the expected number of re-identifications given the defined risk-scenario are readily available and are shown by simply printing out the object.</p>
 <p>The next step is then to interactively apply anonymization techniques to an sdc object and re-assess the impact of its application both on risk-measures as well as on data-utility. If the application yields unexpected or bad results, the implemented <code>undo()</code>-method can be used to revert to the state before application of the specific methods. This allows to quickly try out different parameter settings and makes the anonymization process quite interactive.</p>
-<p>The package allows to (for example) add stochastic noise to numerical variables (<a href="#sec-noise-addition" class="quarto-xref"><span>3.4.4</span></a>) using <code>addNoise()</code>, post-randomize values in categorically scaled variables (<a href="#sec-PRAM" class="quarto-xref"><span>3.4.6</span></a>) with function <code>pram()</code>, create synthetic microdata (<a href="#sec-synthetic-data" class="quarto-xref"><span>3.4.7</span></a>) with method <code>dataGen()</code> or perform global recoding (<a href="#sec-global-recoding" class="quarto-xref"><span>3.4.3.2</span></a>) by using <code>globalRecode()</code>. Furthermore it is possible to apply rank-swapping (<a href="#sec-data-rank-swapping" class="quarto-xref"><span>3.4.2.4</span></a>) with function <code>rankSwap()</code>, compute SUDA-scores (<a href="#sec-SUDA" class="quarto-xref"><span>3.3.7</span></a>) using <code>suda2()</code>, compute individual risk estimates (<a href="#sec-argus-individual-risk" class="quarto-xref"><span>3.3.5</span></a> with <code>indivRisk()</code> and <code>freqCalc()</code> as well as make a set of categorical key variables fulfill <span class="math inline">\(k\)</span>-anonymity using <code>kAnon()</code>. In current versions of the package, TRS (targeted record swapping) (see also section <a href="#sec-TRS" class="quarto-xref"><span>3.4.8</span></a>) is implemented and can be called using the <code>recordSwap()</code> function. A detailed discussion and overview is available in a custom <a href="https://sdctools.github.io/sdcMicro/articles/recordSwapping.html"><code>vignette</code></a>.</p>
+<p>The package allows to (for example) add stochastic noise to numerical variables (<a href="#sec-noise-addition" class="quarto-xref"><span>3.4.4</span></a>) using <code>addNoise()</code>, post-randomize values in categorically scaled variables (<a href="#sec-PRAM" class="quarto-xref"><span>3.4.6</span></a>) with function <code>pram()</code>, create synthetic microdata (<a href="#sec-synthetic-data" class="quarto-xref"><span>3.4.7</span></a>) with method <code>dataGen()</code> or perform global recoding (<a href="#sec-global-recoding" class="quarto-xref"><span>3.4.3.2</span></a>) by using <code>globalRecode()</code>. Furthermore it is possible to apply rank-swapping (<a href="#sec-data-rank-swapping" class="quarto-xref"><span>3.4.2.4</span></a>) with function <code>rankSwap()</code>, compute SUDA-scores (<a href="#sec-SUDA" class="quarto-xref"><span>3.3.7</span></a>) using <code>suda2()</code>, compute individual risk estimates (<a href="#sec-argus-individual-risk" class="quarto-xref"><span>3.3.5</span></a> with <code>indivRisk()</code> and <code>freqCalc()</code> as well as make a set of categorical key variables fulfill <span class="math inline">\(k\)</span>-anonymity using <code>kAnon()</code>. In current versions of the package, TRS (targeted record swapping) (see also section <a href="05-frequency-tables.html#sec-TRS" class="quarto-xref"><span>5.6</span></a>) is implemented and can be called using the <code>recordSwap()</code> function. A detailed discussion and overview is available in a custom <a href="https://sdctools.github.io/sdcMicro/articles/recordSwapping.html"><code>vignette</code></a>.</p>
 <p>This architecture of <span class="math inline">\(\mu\)</span>-ARGUS has the advantage that all real SDC-work, that will be done interactively, will have a very quick response time. Inspecting the results of various recodings is easy and simple.</p>
 </section>
 <section id="sec-sdcmicro" class="level3" data-number="3.6.3">
@@ -2902,7 +2817,7 @@ This can be prepared (partially) externally or it can be specified interactively
 <p>It should be noted that while it is very convenient to work with an object created with <code>createSdcObj()</code>, it is perfectly possible to apply all implemented methods of the package also to simpler data-structures like a <code>data.frame</code>.</p></li>
 <li><p><strong>Application of SDC-methods</strong> Once a problem instance has been created, some helpful summary statistics such as the number of observations violating <span class="math inline">\(k\)</span>-anonymity or (global) risk measures such as the expected number of re-identifications given the defined risk-scenario, are readily available and are shown by simply printing out the object.</p>
 <p>The next step is then to interactively apply SDC techniques to the object and re-assess the impact of its application both on risk-measures as well as on data-utility. If the application yields unexpected or bad results, the implemented <code>undo()</code>-method can be used to revert to the state before application of the specific methods. This allows to quickly try out different parameter settings and makes the process of applying SDC methods quite interactive.</p>
-<p>The package allows to (for example) add stochastic noise to numerical variables (<a href="#sec-noise-addition" class="quarto-xref"><span>3.4.4</span></a>) using <code>addNoise()</code>, post-randomize values in categorically scaled variables (<a href="#sec-PRAM" class="quarto-xref"><span>3.4.6</span></a>) with function <code>pram()</code>, create synthetic microdata (<a href="#sec-synthetic-data" class="quarto-xref"><span>3.4.7</span></a>) with method <code>dataGen()</code> or perform global recoding (<a href="#sec-global-recoding" class="quarto-xref"><span>3.4.3.2</span></a>) by using <code>globalRecode()</code>. Furthermore it is possible to apply rank-swapping (<a href="#sec-data-rank-swapping" class="quarto-xref"><span>3.4.2.4</span></a>) with function <code>rankSwap()</code>, compute SUDA-scores (<a href="#sec-SUDA" class="quarto-xref"><span>3.3.7</span></a>) using <code>suda2()</code>, compute individual risk estimates (<a href="#sec-argus-individual-risk" class="quarto-xref"><span>3.3.5</span></a> with <code>indivRisk()</code> and <code>freqCalc()</code> as well as make a set of categorical key variables fulfill <span class="math inline">\(k\)</span>-anonymity using <code>kAnon()</code>. In the current versions of the package, TRS (targeted record swapping, <a href="#sec-TRS" class="quarto-xref"><span>3.4.8</span></a>) is implemented and can be called using the <code>recordSwap()</code> function. A detailed discussion and overview is available in a custom <a href="https://sdctools.github.io/sdcMicro/articles/recordSwapping.html">vignette</a>.</p></li>
+<p>The package allows to (for example) add stochastic noise to numerical variables (<a href="#sec-noise-addition" class="quarto-xref"><span>3.4.4</span></a>) using <code>addNoise()</code>, post-randomize values in categorically scaled variables (<a href="#sec-PRAM" class="quarto-xref"><span>3.4.6</span></a>) with function <code>pram()</code>, create synthetic microdata (<a href="#sec-synthetic-data" class="quarto-xref"><span>3.4.7</span></a>) with method <code>dataGen()</code> or perform global recoding (<a href="#sec-global-recoding" class="quarto-xref"><span>3.4.3.2</span></a>) by using <code>globalRecode()</code>. Furthermore it is possible to apply rank-swapping (<a href="#sec-data-rank-swapping" class="quarto-xref"><span>3.4.2.4</span></a>) with function <code>rankSwap()</code>, compute SUDA-scores (<a href="#sec-SUDA" class="quarto-xref"><span>3.3.7</span></a>) using <code>suda2()</code>, compute individual risk estimates (<a href="#sec-argus-individual-risk" class="quarto-xref"><span>3.3.5</span></a> with <code>indivRisk()</code> and <code>freqCalc()</code> as well as make a set of categorical key variables fulfill <span class="math inline">\(k\)</span>-anonymity using <code>kAnon()</code>. In the current versions of the package, TRS (targeted record swapping, <a href="05-frequency-tables.html#sec-TRS" class="quarto-xref"><span>5.6</span></a>) is implemented and can be called using the <code>recordSwap()</code> function. A detailed discussion and overview is available in a custom <a href="https://sdctools.github.io/sdcMicro/articles/recordSwapping.html">vignette</a>.</p></li>
 <li><p><strong>Exporting Results</strong> Once the interactive process has been finished, the package allows to quickly write out a safe dataset that contains all applied techniques also respecting any settings defined when initializing the object itself such as <em>“ghost-variables”</em> using function <code>writeSafeFile()</code>.</p>
 <p>Further more there is a <code>report()</code> functionality available that can be applied to an sdc-object at any time. This method can be called to either generate an internal or external report summarizing the process. The difference between the internal and the external report is the level of detail. While the external report is targeted for public consumption and does not contain any (sensitive) values such as specific parameter settings, the internal report lists any techniques that have been applied to protect the microdata in great detail. Both variants result in a <code>html</code> file that can easily be shared.</p></li>
 <li><p><strong>Graphical User-Interface</strong> Creating safe, protected microdata files is often a challenging task. Also having to dive into <code>R</code> and write code to perform several steps of the procedure can be a hurdle for non-experts in <code>R</code>. In order to mitigate this problem and to facilitate the use of <code>sdcMicro</code>, the package comes with an interactive, shiny-based graphical user-interface (Meindl, 2019). The interface can be started using the <code>sdcApp</code> function and its functionality is explained in detail in a custom <a href="https://sdctools.github.io/sdcMicro/articles/sdcMicro.html">vignette</a></p></li>
