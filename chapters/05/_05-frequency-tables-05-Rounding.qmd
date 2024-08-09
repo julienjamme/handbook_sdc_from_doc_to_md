@@ -9,8 +9,8 @@ There are several alternative rounding methods including; conventional rounding,
 When using conventional rounding, each cell is rounded to the nearest multiple of the base. The marginal totals and table totals are rounded independently from the internal cells. An example of conventional rounding is provided below; @tbl-counts-sex-area shows counts of males and females in different areas, while @tbl-counts-sex-area-round shows the same information rounded to a base of 5.
 
 
-|        	| **Male** 	| **Female** 	| **Total** 	|
-|--------	|:--------:	|:----------:	|:---------:	|
+| | Male | Female | Total	|
+|-|:-:|:-:|:-:|
 | Area A 	|     1    	|      0     	|     1     	|
 | Area B 	|     3    	|      3     	|     6     	|
 | Area C 	|    12    	|     20     	|     32    	|
@@ -19,8 +19,8 @@ When using conventional rounding, each cell is rounded to the nearest multiple o
 : Population counts by sex {#tbl-counts-sex-area}
 
 
-|        	| **Male** 	| **Female** 	| **Total** 	|
-|--------	|:--------:	|:----------:	|:---------:	|
+| | Male | Female | Total	|
+|-|:-:|:-:|:-:|
 | Area A 	|     0    	|      0     	|     0     	|
 | Area B 	|     5    	|      5     	|     5     	|
 | Area C 	|    10    	|     20     	|     35    	|
@@ -42,37 +42,26 @@ If we are rounding to base 3 the residual of the cell value after dividing by 3 
 
 -   If the residual is 2, the probabilities are $2/3$ to round up and $1/3$ to round down.
 
-  --------------------------- -------------------------------------------
-  Original Value              Rounded Value (probability)
+  
+| Original Value | Rounded Value (probability)
+|:-:|:-:|
+|  0  |  0 ($1$) |
+|  1  |  0 ($2/3$) or 3 ($1/3$) |
+|  2  |  3($2/3$) or 0($1/3$) |
+|  3  |  3 ($1$) |
+|  4  |  3($2/3$) or 6($1/3$) |
+|  5  |  6($2/3$) or 3($1/3$) |
+|  6  |  6 ($1$) |
 
-  0                           0 ($1$)
-
-  1                           0 ($2/3$) or 3 ($1/3$)
-
-  2                           3($2/3$) or 0($1/3$)
-
-  3                           3 ($1$)
-
-  4                           3($2/3$) or 6($1/3$)
-
-  5                           6($2/3$) or 4($1/3$)
-
-  6                           6 ($1$)
-  --------------------------- -------------------------------------------
 
 As an example, @tbl-counts-sex-round shows a possible solution for @tbl-counts-sex-area using random rounding to base 5.
 
-  ----------- ---------------------- -------------------------- -----------
-              **Male**               **Female**                 **Total**
-
-  Area A      0                      0                          0
-
-  Area B      5                      0                          5
-
-  Area C      10                     20                         35
-
-  Total       15                     20                         40
-  ----------- ---------------------- -------------------------- -----------
+| | Male | Female | Total	|
+|-|:-:|:-:|:-:|
+| Area A | 0 | 0 | 0 |
+| Area B | 5 | 0 | 5 |
+| Area C | 10 | 20 | 35 |
+| Total | 15 | 20 | 40 |
 
 : Population counts by sex (with random rounding) {#tbl-counts-sex-round}
 
@@ -84,17 +73,12 @@ Unlike other rounding methods, controlled rounding yields additive rounded table
 
 @tbl-counts-sex-control-round shows a possible rounding solution for @tbl-counts-sex-area, using controlled rounding to base 5.
 
-  ----------- ---------------------- -------------------------- -----------
-              **Male**               **Female**                 **Total**
-
-  Area A      5                      0                          5
-
-  Area B      0                      5                          5
-
-  Area C      10                     20                         30
-
-  Total       15                     25                         40
-  ----------- ---------------------- -------------------------- -----------
+| | Male | Female | Total	|
+|-|:-:|:-:|:-:|
+| Area A | 5 | 0 | 5 |
+| Area B | 0 | 5 | 5 |
+| Area C | 10 | 20 | 30 |
+| Total | 15 | 25 | 40 |
 
 : Population counts by sex (controlled rounding) {#tbl-counts-sex-control-round}
 
@@ -102,16 +86,12 @@ The disadvantages of controlled rounding are that it is a complicated method to 
 
 Semi-controlled rounding also uses linear programming to round table entries up or down but in this case it controls for the overall total in the table, or it controls for each separate output area total. Other marginal and sub totals will not necessarily be additive. This ensures that either the overall total of the table is preserved (or the output area totals are all preserved), and the utility of this method is increased compared with conventional and random rounding. Consistent totals are provided across linked tables, and therefore the method can be used to protect flexible tables, although the time it takes to implement may make it unsuitable. Disadvantages of semi-controlled rounding relate to the fact that tables are not fully additive, and finding an optimal solution can prove difficult.
 
-  ---------------------------------------------------------------- --------------------------- ----------------------------------------------------- -------------------------------------------------
-                                                                   **Conventional Rounding**   **Controlled (and semi-controlled) Rounding**         **Random rounding**
-
-  Internal cells add to table totals (additvity)                   No                          Yes                                                   No
-
-  Method provides enough SDC protection (and cannot be unpicked)   No                          Yes                                                   In some situations this method can be unpicked.
-
-  Method is quick and easy to implement                            Yes                         It can take time for this method to find a solution   Yes
-  ---------------------------------------------------------------- --------------------------- ----------------------------------------------------- -------------------------------------------------
-
+|     | Conventional Rounding | Controlled (and semi-controlled) Rounding |  Random rounding |
+|:-|:-|:-|:-|
+| Internal cells add to table totals (additvity) | No | Yes | No |
+| Method provides enough SDC protection (and cannot be unpicked) | No |Yes| In some situations this method can be unpicked |
+| Method is quick and easy to implement | Yes | It can take time for this method to find a solution | Yes |
+  
 : Summary of SDC rounding methods {#tbl-summary-rounding-methods}
 
 There are some more specialised rounding methods which have been used at various times by NSIs to protect census data, two of these methods are described below.
