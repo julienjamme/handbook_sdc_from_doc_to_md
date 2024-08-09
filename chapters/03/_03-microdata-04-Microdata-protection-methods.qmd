@@ -57,21 +57,21 @@ where $\mathbf{A}$ is a record-transforming mask, $\mathbf{B}$ is a variable-tra
 
 @tbl-perturbative-methods lists the perturbative methods described below. For each method, the table indicates whether it is suitable for continuous and/or categorical data.
 
-+-----------------------+-------------------------+-----------------------+
-|*Method*               |  *Continuous data*      |  *Categorical data*   |
-+=======================+:=======================:+:=====================:+ 
-|Noise addition\        |  X\                     | \                     | 
-|Microaggregation\      |  X\                     | \(X\)\                |
-|Rank swapping\         |  X\                     | X\                    |
-|Rounding\              |  X\                     | \                     |
-|Resampling\            |  X\                     | \                     | 
-|PRAM\                  |  \                      | X\                    |
-|MASSC                  |                         | X\                    |
-+-----------------------+-------------------------+-----------------------+
 
 : Perturbative methods vs. data types. "X" denotes applicable and "(X)" denotes applicable with some adaptation. {#tbl-perturbative-methods}
 
-#### Noise addition
+|_Method_              |  _Continuous data_     |  _Categorical data_  |
+|----------------------|:----------------------:|:--------------------:|
+|Noise addition        |  X                     |                      |
+|Microaggregation      |  X                     | \(X\)                |
+|Rank swapping         |  X                     | X                    |
+|Rounding              |  X                     |                      |
+|Resampling            |  X                     |                      | 
+|PRAM                  |                        | X                    |
+|MASSC                 |                        | X                    |
+
+
+#### Noise addition{#sec-noise-addition}
 :::{.callout-warning collapse=true}
 ## Expert level
 
@@ -173,7 +173,9 @@ More details on the microaggregation implemented in $\mu$‑ARGUS are given in @
 :::
 
 #### Data swapping and rank swapping {#sec-data-rank-swapping}
+
 :::{.callout-warning collapse=true}
+
 ## Expert level
 
 Data swapping was originally presented as an SDC method for databases containing only categorical variables (Dalenius and Reiss, 1978). 
@@ -196,6 +198,9 @@ There are four variables and ten records in the original dataset; the second var
 A value of $p=10$ has been used for all variables.
 
 ::: {#tbl-ex-rank-swapping layout-ncol=2}
+---
+tbl-cap-location: bottom
+---
   |       |        |       |       |
   |------:|:------:|------:|------:|
   |1      | K      | 3.7   | 4.4   |
@@ -209,7 +214,7 @@ A value of $p=10$ has been used for all variables.
   |9      | D      | 8.0   | 9.5   |
   |10     | C      | 10.0  | 3.2   |
 
-: Original file {tbl-colwidths="[5,25,15,25]"}
+  : Original file {tbl-colwidths="[5,25,15,25]"}
 
   |       |        |       |       |
   |------:|:------:|------:|------:|
@@ -224,10 +229,12 @@ A value of $p=10$ has been used for all variables.
   |9      |  C     | 10.0  | 7.5   |
   |10     |  D     | 8.0   | 3.4   |
 
-: Rankswapped file {tbl-colwidths="[5,25,15,25]"}
+  : Rankswapped file {tbl-colwidths="[5,25,15,25]"}
 
-Example of rank swapping\index{rank swapping}.
+  Example of rank swapping\index{rank swapping}.
+
 :::
+
 :::
 
 #### Rounding {#sec-rounding}
@@ -295,7 +302,7 @@ For each method, the @tbl-non-perturbative-methods indicates whether it is suita
 : Non-perturbative methods vs. data types. {#tbl-non-perturbative-methods}
 
 |        _Method_       | _Continuous data_ | _Categorical data_ |
-|:---------------------:|:-----------------:|:------------------:|
+|-----------------------|:-----------------:|:------------------:|
 | Sampling              |                   |          X         |
 | Global recoding       |         X         |          X         |
 | Top and bottom coding |         X         |          X         |
@@ -668,6 +675,9 @@ On the other hand, if variable-sized groups are allowed then the five data on th
 However, except for specific cases such as the one depicted in @fig-fixed-vs-variable-sized-group, the small gain in within-group homogeneity obtained with variable-sized groups hardly justifies the higher computational overhead of this option with respect to fixed-sized groups. 
 This is particularly evident for multivariate data, as noted by Sande (2002).
 
+---
+fig-cap-location: bottom
+---
 ![Variable-sized groups versus fixed-sized groups](Images/media/image66.png){#fig-fixed-vs-variable-sized-group width="3.8in" height="2.4in"}
 :::
 
@@ -791,7 +801,7 @@ Moreover, assume that $\xi$, and hence $X$ as well, has $K$ categories, labelled
 The probabilities that define PRAM\index{PRAM} are denoted as
 
 $$
-p_{\text{kl}} = P(X = l \mid \xi = k)
+p_{\text{kl}} = \mathbb{P}(X = l \mid \xi = k)
 $$
 
 *i.e.*, the probability that an original score $\xi = k$ is changed into the score $X = l$. 
