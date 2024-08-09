@@ -35,34 +35,6 @@ When the above scheme has been followed a safe microdata file has been generated
 This architecture of $\mu$‑ARGUS has the advantage that all real SDC-work, that will be done interactively, will have a very quick response time. Inspecting the results of various recodings is easy and simple.
 
 ### sdcMicro {#sec-sdcmicro}
-[`sdcMicro`](https://github.com/sdcTools/sdcMicro) is an [`R`](https://r-project.org) package implementing almost all methods discussed in Chapter [-@sec-microdata-protection-methods] that allow to create anonymized microdata sets.
-The required steps to use the package are essentially the same as outlined in Section [-@sec-mu-argus] above and are quickly summarized below as well.
-
-1.  **Definition of a problem**
-
-The first step is always to create an `R` object that defines the current sdc problem. This task can be achieved by calling function `createSdcObj()`. In this function, quite a few parameters can be set. The most important ones are quickly described below:
-
--   **Data**: the input data set needs to be a `data.frame` / `data.table` but it should be noted that any functionality from `R` can be used to create such objects from a variety of files exported or generated from other tools such as SAS, SPSS or STATA among using plain text-files (such as `.csv)` or other structured formats like .`json` or `.xml` as long those can be converted to a rectangular data structures. It is of course also possible to use queries to database systems in order to create suitable input objects.
--   **Key variables for risk assessment**: the user is required to specify a set of categorical key variables. These variables are automatically used when computing risk measures (see also Section [-@sec-concepts]).
--   **Numerical key variables**: It is also possible (but optional) to specify a set of numerical variables that are deemed important. Such variables can (automatically) be used to apply suitable perturbation methods (such as e.g masking by noise) to it.
--   **Weights**: In case the underlying microdata step from a survey sample, a variable holding suitable weights can be specified. This is required in order to make sure that risk measures are computed correctly.
--   **Strata**: Sometimes it is useful if a specific anonymization approach is applied independently to specific strata of the underlying population. In `sdcMicro` this can be achieved by defining a variable that holds different values for different groups of the population.
--   **Ghost-variables**: This allows to link variables to (categorical key) variables in a sense that modifications to the relevant key-variable (e.g suppression) are transferred and applied to the dependent variables that are referred to as *"ghost"* variables
--   **Excluding direct identifiers**: In statistical practice microdata files often contain direct identifiers which can be identified already on creation of an input object. If such variables have been defined, they will be removed prior to any computations.
-
-It should also be noted that while it is very convenient to work with an `R` object created with ``createSdcObj()` but it is perfectly possible to apply all implemented methods of the package also to simpler data-structures like `data.frames`.
-
-2.  **Application of SDC-methods**
-
-Once a problem instance has been created, some helpful summary statistics such as the number of observations violating $k$$-anonymity or (global) risk measures such as the expected number of re-identifications given the defined risk-scenario are readily available and are shown by simply printing out the object.
-
-The next step is then to interactively apply anonymization techniques to an sdc object and re-assess the impact of its application both on risk-measures as well as on data-utility. If the application yields unexpected or bad results, the implemented `undo()`-method can be used to revert to the state before application of the specific methods. This allows to quickly try out different parameter settings and makes the anonymization process quite interactive.
-
-The package allows to (for example) add stochastic noise to numerical variables ([-@sec-noise-addition]) using `addNoise()`, post-randomize values in categorically scaled variables ([-@sec-PRAM]) with function `pram()`, create synthetic microdata ([-@sec-synthetic-data]) with method `dataGen()` or perform global recoding ([-@sec-global-recoding]) by using `globalRecode()`. Furthermore it is possible to apply rank-swapping ([-@sec-data-rank-swapping]) with function `rankSwap()`, compute SUDA-scores ([-@sec-SUDA]) using `suda2()`, compute individual risk estimates ([-@sec-argus-individual-risk)] with `indivRisk()` and `freqCalc()` as well as make a set of categorical key variables fulfill $k$-anonymity using `kAnon()`. In current versions of the package, TRS (targeted record swapping) (see also section [-@sec-TRS]) is implemented and can be called using the `recordSwap()` function. A detailed discussion and overview is available in a custom [`vignette`](https://sdctools.github.io/sdcMicro/articles/recordSwapping.html).
-
-This architecture of $\mu$-ARGUS has the advantage that all real SDC-work, that will be done interactively, will have a very quick response time. Inspecting the results of various recodings is easy and simple.
-
-### sdcMicro {#sec-sdcmicro}
 [sdcMicro](https://github.com/sdcTools/sdcMicro) is an [R](https://r-project.org) package implementing almost all methods discussed in @sec-microdata-protection-methods. 
 The required steps to use the package are essentially the same as outlined in @sec-mu-argus and are quickly summarized below as well.
 
