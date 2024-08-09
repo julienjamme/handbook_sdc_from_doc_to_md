@@ -16,24 +16,6 @@ We now consider the following example scenario, in which both (perturbed) freque
 
 
 Attackers now have the perturbed frequencies as well as the original mean values at their disposal. In our attack scenario, we also assume that attackers know that the maximum deviation of the frequency count is 2. Attackers can therefore conclude that the original case numbers of the inner cells must be between 7 and 11 and between 12 and 16, respectively, and that the marginal must have originally had a value between 17 and 21. For an attacker, this results in the following possible combinations:
-\begin{itemize}
-    \item The marginal is originally 19 and the inner cells are
-	\begin{itemize}
-    \item 7 and 12
-\end{itemize}
-    \item The marginal is originally 20 and the inner cells are
-	\begin{itemize}
-    \item 7 and 13
-    \item 8 and 12
-\end{itemize}
-    \item The marginal is originally 21 and the inner cells are
-	\begin{itemize}
-    \item 7 and 14
-    	    \item 8 and 13
-	    \item 9 and 12
-\end{itemize}
-\end{itemize}
-
 
 * The marginal is originally 19 and the inner cells are
     + 7 and 12
@@ -41,9 +23,9 @@ Attackers now have the perturbed frequencies as well as the original mean values
     + 7 and 13
     + 8 and 12
 * The marginal is originally 21 and the inner cells are
-    +7 and 14
-	+ 8 and 13
-	+ 9 and 12
+    + 7 and 14
+    + 8 and 13
+    + 9 and 12
 
 The attackers can now multiply the original mean values of the table cells known to them with the thus calculated candidates for the associated frequencies. In this way, they obtain estimates for the original magnitude value for each cell. If now for each of those estimates, they sum up those values for the inner cells, they obtain another estimated value for the marginal value. This can now be used to identify the correct combination of frequency values, since for the correct ones the sum over the inner cell values is identical to the marginal value, as shown in @tbl-ckm_attacker.
 
