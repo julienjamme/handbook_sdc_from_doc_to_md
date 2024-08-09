@@ -1140,9 +1140,9 @@ Table&nbsp;5.17: Exemplary Microdata
 <thead>
 <tr class="header">
 <th></th>
-<th style="text-align: center;"><strong>Male</strong></th>
-<th style="text-align: center;"><strong>Female</strong></th>
-<th style="text-align: center;"><strong>Total</strong></th>
+<th style="text-align: center;">Male</th>
+<th style="text-align: center;">Female</th>
+<th style="text-align: center;">Total</th>
 </tr>
 </thead>
 <tbody>
@@ -1185,9 +1185,9 @@ Table&nbsp;5.18: Population counts by sex
 <thead>
 <tr class="header">
 <th></th>
-<th style="text-align: center;"><strong>Male</strong></th>
-<th style="text-align: center;"><strong>Female</strong></th>
-<th style="text-align: center;"><strong>Total</strong></th>
+<th style="text-align: center;">Male</th>
+<th style="text-align: center;">Female</th>
+<th style="text-align: center;">Total</th>
 </tr>
 </thead>
 <tbody>
@@ -1233,42 +1233,40 @@ Table&nbsp;5.19: Population counts by sex (conventional rounding)
 <li><p>If the residual is 2, the probabilities are <span class="math inline">\(2/3\)</span> to round up and <span class="math inline">\(1/3\)</span> to round down.</p></li>
 </ul>
 <table class="table">
-<colgroup>
-<col style="width: 37%">
-<col style="width: 59%">
-</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Original Value</th>
+<th style="text-align: center;">Rounded Value (probability)</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Original Value</td>
-<td style="text-align: left;">Rounded Value (probability)</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0 (<span class="math inline">\(1\)</span>)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0 (<span class="math inline">\(1\)</span>)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0 (<span class="math inline">\(2/3\)</span>) or 3 (<span class="math inline">\(1/3\)</span>)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">0 (<span class="math inline">\(2/3\)</span>) or 3 (<span class="math inline">\(1/3\)</span>)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3(<span class="math inline">\(2/3\)</span>) or 0(<span class="math inline">\(1/3\)</span>)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">3(<span class="math inline">\(2/3\)</span>) or 0(<span class="math inline">\(1/3\)</span>)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3 (<span class="math inline">\(1\)</span>)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">3 (<span class="math inline">\(1\)</span>)</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3(<span class="math inline">\(2/3\)</span>) or 6(<span class="math inline">\(1/3\)</span>)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">3(<span class="math inline">\(2/3\)</span>) or 6(<span class="math inline">\(1/3\)</span>)</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6(<span class="math inline">\(2/3\)</span>) or 3(<span class="math inline">\(1/3\)</span>)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">6(<span class="math inline">\(2/3\)</span>) or 4(<span class="math inline">\(1/3\)</span>)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">6</td>
-<td style="text-align: left;">6 (<span class="math inline">\(1\)</span>)</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6 (<span class="math inline">\(1\)</span>)</td>
 </tr>
 </tbody>
 </table>
@@ -1277,42 +1275,38 @@ Table&nbsp;5.19: Population counts by sex (conventional rounding)
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-counts-sex-round-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 30%">
-<col style="width: 35%">
-<col style="width: 15%">
-</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Male</th>
+<th style="text-align: center;">Female</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td style="text-align: left;"><strong>Male</strong></td>
-<td style="text-align: left;"><strong>Female</strong></td>
-<td style="text-align: left;"><strong>Total</strong></td>
-</tr>
-<tr class="even">
 <td>Area A</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-</tr>
-<tr class="odd">
-<td>Area B</td>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
-<td>Area C</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">35</td>
+<td>Area B</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
 </tr>
 <tr class="odd">
+<td>Area C</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="even">
 <td>Total</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">40</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">40</td>
 </tr>
 </tbody>
 </table>
@@ -1330,42 +1324,38 @@ Table&nbsp;5.20: Population counts by sex (with random rounding)
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-counts-sex-control-round-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 30%">
-<col style="width: 35%">
-<col style="width: 15%">
-</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Male</th>
+<th style="text-align: center;">Female</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td style="text-align: left;"><strong>Male</strong></td>
-<td style="text-align: left;"><strong>Female</strong></td>
-<td style="text-align: left;"><strong>Total</strong></td>
-</tr>
-<tr class="even">
 <td>Area A</td>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">5</td>
-</tr>
-<tr class="odd">
-<td>Area B</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
 </tr>
 <tr class="even">
-<td>Area C</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">20</td>
-<td style="text-align: left;">30</td>
+<td>Area B</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
 </tr>
 <tr class="odd">
+<td>Area C</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">30</td>
+</tr>
+<tr class="even">
 <td>Total</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">25</td>
-<td style="text-align: left;">40</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">40</td>
 </tr>
 </tbody>
 </table>
@@ -1382,32 +1372,34 @@ Table&nbsp;5.21: Population counts by sex (controlled rounding)
 <div aria-describedby="tbl-summary-rounding-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 32%">
-<col style="width: 14%">
-<col style="width: 27%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
 <col style="width: 25%">
 </colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Conventional Rounding</th>
+<th style="text-align: left;">Controlled (and semi-controlled) Rounding</th>
+<th style="text-align: left;">Random rounding</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td style="text-align: left;"><strong>Conventional Rounding</strong></td>
-<td style="text-align: left;"><strong>Controlled (and semi-controlled) Rounding</strong></td>
-<td style="text-align: left;"><strong>Random rounding</strong></td>
-</tr>
-<tr class="even">
-<td>Internal cells add to table totals (additvity)</td>
+<td style="text-align: left;">Internal cells add to table totals (additvity)</td>
 <td style="text-align: left;">No</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Method provides enough SDC protection (and cannot be unpicked)</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">In some situations this method can be unpicked</td>
 </tr>
 <tr class="odd">
-<td>Method provides enough SDC protection (and cannot be unpicked)</td>
-<td style="text-align: left;">No</td>
-<td style="text-align: left;">Yes</td>
-<td style="text-align: left;">In some situations this method can be unpicked.</td>
-</tr>
-<tr class="even">
-<td>Method is quick and easy to implement</td>
+<td style="text-align: left;">Method is quick and easy to implement</td>
 <td style="text-align: left;">Yes</td>
 <td style="text-align: left;">It can take time for this method to find a solution</td>
 <td style="text-align: left;">Yes</td>
@@ -1579,14 +1571,15 @@ r_{i,k} = \max_{j \text{ living in same dwelling as }i}r_{j,k}
 </section>
 <section id="sec-Means_freq" class="level2 page-columns page-full" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="sec-Means_freq"><span class="header-section-number">5.7</span> Publication of mean values</h2>
-<p>In this section, we will explain why original means should rather not be published when the Cell Key Method (or any other non-additive, perturbative SDC method, such as, e.g.&nbsp;Rounding) is applied to frequency counts. We will illustrate this with an example and show ways to publish the mean values in a safer variant. For this purpose we consider a certain population group of size <span class="math inline">\(n\)</span> and for every person <span class="math inline">\(i\in {1,\ldots ,n}\)</span> of this population we denote their corresponding age with <span class="math inline">\(x_i\)</span>. So the average age of this population group can be written as <span class="math inline">\(\frac{1}{n}\cdot\sum_{i=1\ldots n} x_i\)</span>. We now consider the following example scenario, in which both (perturbed) frequencies and (original) mean values are published. <a href="#tbl-ckm_mean" class="quarto-xref">Table&nbsp;<span>5.23</span></a> shows both the perturbed and the original frequency counts, as well as information about the age.</p>
+<p>In this section, we will explain why original means should rather not be published when the Cell Key Method (or any other non-additive, perturbative SDC method, such as, e.g.&nbsp;Rounding) is applied to frequency counts. We will illustrate this with an example and show ways to publish the mean values in a safer variant. For this purpose we consider a certain population group of size <span class="math inline">\(n\)</span> and for every person <span class="math inline">\(i\in {1,\ldots ,n}\)</span> of this population we denote their corresponding age with <span class="math inline">\(x_i\)</span>. So the average age of this population group can be written as <span class="math inline">\((\sum_{i=1\ldots n} x_i)/n\)</span>. We now consider the following example scenario, in which both (perturbed) frequencies and (original) mean values are published. <a href="#tbl-ckm_mean" class="quarto-xref">Table&nbsp;<span>5.23</span></a> shows both the perturbed and the original frequency counts, as well as information about the age.</p>
 <div id="tbl-ckm_mean" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-ckm_mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Cell 1</th>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Cell 1</th>
 <th style="text-align: right;">Cell 2</th>
 <th style="text-align: right;">Marginal</th>
 </tr>
@@ -1596,21 +1589,25 @@ r_{i,k} = \max_{j \text{ living in same dwelling as }i}r_{j,k}
 <td style="text-align: left;">Original Count (<span class="math inline">\(n\)</span>)</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">12</td>
+<td style="text-align: right;">20</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Perturbed Count (<span class="math inline">\(\hat{n}\)</span>)</td>
 <td style="text-align: right;">9</td>
 <td style="text-align: right;">14</td>
+<td style="text-align: right;">19</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Original Sum of Ages (<span class="math inline">\(x\)</span>)</td>
 <td style="text-align: right;">90</td>
 <td style="text-align: right;">95</td>
+<td style="text-align: right;">185</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Original Mean of Ages (<span class="math inline">\(x/n\)</span>)</td>
 <td style="text-align: right;">11.25</td>
 <td style="text-align: right;">7.9167</td>
+<td style="text-align: right;">9.25</td>
 </tr>
 </tbody>
 </table>
@@ -1620,7 +1617,7 @@ Table&nbsp;5.23: An example table with (perturbed) ages and counts
 </figcaption>
 </figure>
 </div>
-Attackers now have the perturbed frequencies as well as the original mean values at their disposal. In our attack scenario, we also assume that attackers know that the maximum deviation of the frequency count is 2. Attackers can therefore conclude that the original case numbers of the inner cells must be between 7 and 11 and between 12 and 16, respectively, and that the marginal must have originally had a value between 17 and 21. For an attacker, this results in the following possible combinations:
+<p>Attackers now have the perturbed frequencies as well as the original mean values at their disposal. In our attack scenario, we also assume that attackers know that the maximum deviation of the frequency count is 2. Attackers can therefore conclude that the original case numbers of the inner cells must be between 7 and 11 and between 12 and 16, respectively, and that the marginal must have originally had a value between 17 and 21. For an attacker, this results in the following possible combinations:</p>
 <ul>
 <li>The marginal is originally 19 and the inner cells are
 <ul>
@@ -1631,8 +1628,9 @@ Attackers now have the perturbed frequencies as well as the original mean values
 <li>7 and 13</li>
 <li>8 and 12</li>
 </ul></li>
-<li>The marginal is originally 21 and the inner cells are +7 and 14
+<li>The marginal is originally 21 and the inner cells are
 <ul>
+<li>7 and 14</li>
 <li>8 and 13</li>
 <li>9 and 12</li>
 </ul></li>
@@ -1725,7 +1723,7 @@ Table&nbsp;5.24: Sample calculation for an attacker
 </figcaption>
 </figure>
 </div>
-<p>Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended. So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e.&nbsp;if <span class="math inline">\(n\)</span> is an original count, <span class="math inline">\(\hat{n}\)</span> is the corresponding perturbed count and <span class="math inline">\(m\)</span> is the corresponding magnitude value, as it gets published, then, in order to avoid the disclosure risk described here, it is better to calculate the mean as <span class="math inline">\(\frac{m}{\hat{n}}\)</span>.</p>
+<p>Additionally, through this calculation, the associated magnitude values are now known as well. If these are confidential, a further problem arises. The publication of original mean values is therefore not recommended. So, when using the Cell Key Method for frequency tables we recommend to use those perturbed counts also when generating mean values, i.e.&nbsp;if <span class="math inline">\(n\)</span> is an original count, <span class="math inline">\(\hat{n}\)</span> is the corresponding perturbed count and <span class="math inline">\(m\)</span> is the corresponding magnitude value, as it gets published, then, in order to avoid the disclosure risk described here, it is better to calculate the mean as <span class="math inline">\(m/\hat{n}\)</span>.</p>
 </section>
 <section id="sec-InfLoss_freq" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="sec-InfLoss_freq"><span class="header-section-number">5.8</span> Information loss</h2>
