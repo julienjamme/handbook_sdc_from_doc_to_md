@@ -25,8 +25,8 @@ Attackers now have the perturbed frequencies as well as the original mean values
     + 8 and 12
 * The marginal is originally 21 and the inner cells are
     + 7 and 14
-	+ 8 and 13
-	+ 9 and 12
+    + 8 and 13
+    + 9 and 12
 
 The attackers can now multiply the original mean values of the table cells known to them with the thus calculated candidates for the associated frequencies. In this way, they obtain estimates for the original magnitude value for each cell. If now for each of those estimates, they sum up those values for the inner cells, they obtain another estimated value for the marginal value. This can now be used to identify the correct combination of frequency values, since for the correct ones the sum over the inner cell values is identical to the marginal value, as shown in @tbl-ckm_attacker.
 
