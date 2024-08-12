@@ -1,4 +1,4 @@
-## Measurement of dislosure risk and information loss
+## Measurement of disclosure risk and information loss
 
 ### Disclosure risk
 As described in Section 5.3 and 5.4 there are a number of different disclosure control methods used to protect frequency tables. Each of these methods modifies the original data in the table in order to reduce the disclosure risk from small cells (e.g. 0's, 1's and 2's). The fundament of assessment of disclosure risk in this case it then the $k$-anonymity rule. Most often it is assumed that $k=3$, although sometimes also $k=2$ or $k=5$ is applied. So, in the frequency tables the primary risk results only for direct identification of an unit resulting from too low frequency and the secondary risk assessment is connected with possibility of deduction of suppressed/perturbed cells by relevant differenciation of table.
