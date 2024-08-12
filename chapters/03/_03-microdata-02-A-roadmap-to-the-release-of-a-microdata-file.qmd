@@ -11,7 +11,7 @@ This section aims at introducing the reader to the process that, starting from t
 
 Specifying, for each stage, the peculiarities of microdata release. In @tbl-roadmap we present an overview of the process.
 
-$\newpage$
+::: {.content-visible unless-format="pdf"}
 
 +:---------------------------------------------------------------------------------+:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:+
 | **Stage of disclosure process**                                                  | **Analyses to be carried out / problem to be addressed**\                                                                                                                                             |
@@ -68,6 +68,69 @@ $\newpage$
 +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Roadmap to releasing a microdata file {#tbl-roadmap}
+
+:::
+
+
+::: {.content-visible when-format="pdf"}
+
+\begin{table}
+\begin{tabular}{|l|l|}
+\hline
+\multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Stage of disclosure \\ process\end{tabular}}} & \textbf{Analyses to be carried out / problem to be addressed}    \\  
+& \hspace{1cm} \textbf{\hspace{1cm} $\Downarrow$}   \\  
+& \textit{\textbf{Results expected}}   \\ 
+\hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}1. Why is \\ confidentiality \\ protection needed\end{tabular}}  & Does the data refer to individuals or legal entity?    \\    
+ & \hspace{1cm} $\Downarrow$      \\   
+ & \textit{We need to protect the statistical unit}   \\ 
+ \hline
+\multirow{15}{*}{\begin{tabular}[c]{@{}l@{}}2. What are the key \\ characteristics and \\ use of the data\end{tabular}}  & Analysis of the type/structure of the data  \\  
+ & \hspace{1cm} $\Downarrow$  \\ 
+ & \textit{Clear vision of which units need protections}  \\ 
+ \cline{2-2} 
+ & Analysis of survey methodology \\ 
+ & \hspace{1cm} $\Downarrow$  \\   
+ & \begin{tabular}[c]{@{}l@{}}\textit{Type of sampling frame, sample/complete enumeration of} \\ \textit{strata, further analysis of survey methodology, calibration}\end{tabular}  \\ 
+ \cline{2-2}  
+ & Analysis of NSI objectives \\ 
+ & \hspace{1cm} $\Downarrow$  \\  
+ & \begin{tabular}[c]{@{}l@{}}\textit{Type of release (PUF, MFR),dissemination policies,} \\  \textit{peculiarities of the phenomenon, coherence between} \\  \textit{multiple releases (PUF and MFR), coherence with released} \\  \textit{tables and on-line databases, etc.}\end{tabular}\\ 
+ \cline{2-2} 
+ & Analysis of user needs   \\  
+ & \hspace{1cm} $\Downarrow$  \\ 
+ & \textit{Priorities for variables, type of analysis, etc.}  \\ 
+ \cline{2-2}  
+ & Analysis of the questionnaire  \\  
+ & \hspace{1cm} $\Downarrow$  \\  
+ & \begin{tabular}[c]{@{}l@{}}\textit{List of variables to be removed, variables to be included,} \\ \textit{some ideas of level of details of structural variables}\end{tabular}  \\ 
+ \hline
+\multirow{9}{*}{3. Disclosure risk (ex ante)}  & Disclosure scenario  \\ 
+ & \hspace{1cm} $\Downarrow$  \\  
+ & \textit{List of identifying variables}  \\ 
+ \cline{2-2} & Definition of risk \\ 
+ & \hspace{1cm} $\Downarrow$  \\ 
+ & \textit{Risk measure}  \\ 
+ \cline{2-2}  & Risk assessment  \\  
+ & \hspace{1cm} $\Downarrow$   \\   
+ & \textit{If the risk is deemed too high need of disclosure limitation method}  \\ 
+ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}4. Disclosure \\ limitation methods\end{tabular}}    & Analysis of type of data involved, NSI policies and users need \\ 
+ & \hspace{1cm} $\Downarrow$  \\ 
+ & \textit{Identification of a disclosure limitation method} \\ \hline
+$5$. Implementation methods & Choice of software, parameters and thresholds for different methods  \\ 
+ \hline
+\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}6. assessment of \\ disclosure risk\index{disclosure risk} \\  and utility (ex post)\end{tabular}} & Ex post analysis of disclosure risk\index{disclosure risk} and information loss   \\ 
+ & \hspace{1cm} $\Downarrow$  \\ 
+ & \textit{In case disclosure risk\index{disclosure risk} and/or utility loss is too high, return to step 5.}  \\ 
+ \hline
+\end{tabular}
+\caption{Roadmap to releasing a microdata file}
+\label{tbl-roadmap}
+\end{table}
+
+:::
+
 
 The idea is to identify for each stage of the process choices that have to be made, analyses that need to be done, problems that need to be addressed and methods to be selected.
 References to the relevant sections where technical topics are discussed in detail will help the beginners in following the process without getting lost in too technical aspects.
@@ -204,7 +267,7 @@ Perturbative methods either modify the identifying variables or modify the confi
 In the former way, unique combinations of scores of identifying variables in the original dataset may disappear and new unique combinations may appear in the perturbed dataset. 
 In this way a user cannot be certain of an identification. 
 Alternatively confidential variables can be modified; in this case even if an identification occurs, the wrong value is associated and disclosure of the original value is avoided (for an example of this case see case study A2). 
-For a description of a variety of perturbative methods see sections [-@sec-perturbative-masking], [-@sec-noise-addition], [-@sec-microaggregation-further] and [-@sec-PRAM].
+For a description of a variety of perturbative methods see sections [-@sec-perturbative-masking], [-@sec-noise-addition-details], [-@sec-microaggregation-further] and [-@sec-PRAM].
 
 Non-perturbative methods do not alter the values of the variables (either identifying or confidential); rather, they produce a reduction of detail in the original dataset. 
 Examples of non-perturbative masking are presented in @sec-nonperturbative-masking.
