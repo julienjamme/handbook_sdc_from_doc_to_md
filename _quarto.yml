@@ -3,7 +3,7 @@ project:
 
 book:
   title: "Handbook on Statistical Disclosure Control"
-  subtitle: ""
+  subtitle: "Second Edition"
   author: 
     - name: Anco Hundepool
     - name: Josep Domingo-Ferrer
@@ -44,48 +44,44 @@ format:
     citation-location: margin
     cap-location: margin
     code-link: true
-  # titlepage-pdf:
-  #   titlepage: academic
+  # pdf:
+  #   # pdf-engine: xelatex
+  #   # fig-pos: 'h'
+  #   latex-tinytex: false
   #   documentclass: scrbook
   #   classoption: ["oneside", "open=any"]
-  #   number-sections: true
-  pdf:
-    # pdf-engine: xelatex
-    # fig-pos: 'h'
-    latex-tinytex: false
-    documentclass: scrbook
-    classoption: ["oneside", "open=any"]
-    papersize: a4
-    toc: true
-    keep-tex: true
-    geometry:
-      - left=3cm
-      - right=3cm
-      # - textwidth=4.5in
-      # - marginparsep=.25in
-      # - marginparwidth=2.25in
-    template-partials:
-      - "before-body.tex"
-      - "_titlepage.tex" 
-    include-in-header: 
-      text: |
-        \usepackage[english]{babel}
-        \usepackage[utf8]{inputenc}
-        \usepackage{float}
-        \usepackage{multirow}
-        \usepackage{hyperref}
-        \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
-        \makeatletter
-        \renewenvironment{table}
-          {\@float{table}[H]}
-          {\end@float}
-        \makeatother
-        \counterwithout{footnote}{chapter}
-        \usepackage{makeidx}
-        \makeindex
-    include-after-body: 
-      text: |
-        \printindex
+  #   papersize: a4
+  #   toc: true
+  #   keep-tex: true
+  #   geometry:
+  #     - left=3cm
+  #     - right=3cm
+  #     # - textwidth=4.5in
+  #     # - marginparsep=.25in
+  #     # - marginparwidth=2.25in
+  #   template-partials:
+  #     - "before-body.tex"
+  #     - "_titlepage.tex" 
+  #   include-in-header: 
+  #     text: |
+  #       \usepackage[english]{babel}
+  #       \usepackage[utf8]{inputenc}
+  #       \usepackage{float}
+  #       \usepackage{multirow}
+  #       \usepackage{hyperref}
+  #       \usepackage{setspace}
+  #       \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+  #       \makeatletter
+  #       \renewenvironment{table}
+  #         {\@float{table}[H]}
+  #         {\end@float}
+  #       \makeatother
+  #       \counterwithout{footnote}{chapter}
+  #       \usepackage{makeidx}
+  #       \makeindex
+  #   include-after-body: 
+  #     text: |
+  #       \printindex
 
 execute:
   freeze: auto
