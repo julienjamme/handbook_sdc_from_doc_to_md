@@ -250,17 +250,15 @@ window.Quarto = {
 </header>
 
 
-<section id="sec-tabular-introduction" class="level2" data-number="4.1">
+<section id="sec-tabular-introduction" class="level2 page-columns page-full" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-tabular-introduction"><span class="header-section-number">4.1</span> Introduction</h2>
 <p>Statistical magnitude tables display sums of observations of a quantitative variable where each sum relates to a group of observations defined by categorical variables observed for a set of respondents.</p>
 <p>Respondents are typically companies but can also be individuals or households, etc. Grouping variables typically give information on geography or economic activity or size, etc. of the respondents. The <em>“cells”</em> of a table are defined by cross-combinations of the grouping variables.</p>
 <p>Each <em>“table cell”</em> presents a sum of a quantitative variable such as income, turnover, expenditure, sales, number of employees, number of animals owned by farms, etc. These sums are the <em>“cell values”</em> (sometimes also referred to as <em>“cell totals”</em>) of a magnitude table. The individual observations of the variable (for each individual respondent) are the <em>“contributions”</em> to the cell value.</p>
-<p>Example: Turnover (number of respondents) by Region and Industry</p>
-<div class="grid">
-<div class="g-col-3">
-
-</div>
-<div class="g-col-6">
+<div class="grid page-columns page-full">
+<div id="tbl-example-intro-4" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-example-intro-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
 <col style="width: 20%">
@@ -308,8 +306,10 @@ window.Quarto = {
 </tbody>
 </table>
 </div>
-<div class="g-col-3">
-
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-example-intro-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Example: Turnover (number of respondents) by Region and Industry
+</figcaption>
+</figure>
 </div>
 </div>
 <p>The <em>“dimension”</em> of a table is given by the number of grouping variables used to specify the table. We say that a table contains <em>“margins”</em> or <em>“marginal cells”</em>, if not all cells of a table are specified by the same number of grouping variables. The smaller the number of grouping variables, the higher the <em>“level”</em> of a marginal cell. A two-dimensional table of some business survey may for instance provide sums of observations grouped by economic activity and company size classes. At the same time it may also display the sums of observations grouped by only economic activity or by only size classes. These are then margins/marginal cells of this table. If a sum across all observations is provided, we refer to it as the <em>“total”</em> or <em>“overall total”</em>.</p>
@@ -389,9 +389,9 @@ Assume now that the table cell relates to more than two respondents. Imagine thi
 Let us reconsider the example once more. Assume this time that in region X there are 51 companies that belong to the mining sector, e.g.&nbsp;company A and 50 very small companies S<sub>1</sub> to S<sub>50</sub>. Assume further that 99&nbsp;% of the turnover in mining in region X is contributed by company A. In that scenario, the cell value (turnover in the mining sector for region X) is a pretty close approximation of the turnover of company A. And even though the potential intruder (in our example mining company B of the neighbour region Y) may not be able to identify all 51 mining companies of region X, it is very likely that they will know that there is one very big company in region X and which company that is.</p>
 <p><em>Sensitivity of variables</em><br>
 The presumption of the sensitivity of a variable often matters in the choice of a particular protection method. For example, especially in the case of tables presenting business magnitude information many agencies decide that this kind of information must be protected also against the kind of approximate disclosure illustrated by example 1d above, because it is so sensitive.</p>
-<p>Considering the above explained intruder scenarios statistical agencies have developed some <em>‘safety rules’</em> (also referred to as <em>‘sensitivity rules’</em> or <em>‘sensitivity measures’</em>), measures to assess disclosure risks. We will now introduce the most popular rules, starting with an overview presenting formal representation of these rules in <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a>. After that, the rules (or rather, classes of rules) will be discussed in detail. We explain in which situations it may make sense to use those rules, using simple examples for illustration where necessary.</p>
+<p>Considering the above explained intruder scenarios statistical agencies have developed some <em>‘safety rules’</em> (also referred to as <em>‘sensitivity rules’</em> or <em>‘sensitivity measures’</em>), measures to assess disclosure risks. We will now introduce the most popular rules, starting with an overview presenting formal representation of these rules in <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.2</span></a>. After that, the rules (or rather, classes of rules) will be discussed in detail. We explain in which situations it may make sense to use those rules, using simple examples for illustration where necessary.</p>
 <p><em>Sensitivity rules</em><br>
-<a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a> briefly presents the most common sensitivity rules. Throughout this chapter we denote <span class="math inline">\(x_{1} \geq x_{2} \geq \cdots \geq x_{N}\)</span> the ordered contributions by respondents <span class="math inline">\(1,2,\ldots,N\)</span>, respectively, to a cell with cell total (or cell value) <span class="math inline">\(X = \sum_{i=1}^N x_{i}\)</span></p>
+<a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.2</span></a> briefly presents the most common sensitivity rules. Throughout this chapter we denote <span class="math inline">\(x_{1} \geq x_{2} \geq \cdots \geq x_{N}\)</span> the ordered contributions by respondents <span class="math inline">\(1,2,\ldots,N\)</span>, respectively, to a cell with cell total (or cell value) <span class="math inline">\(X = \sum_{i=1}^N x_{i}\)</span></p>
 <div id="tbl-sensitivity-rules" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-sensitivity-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -425,7 +425,7 @@ The presumption of the sensitivity of a variable often matters in the choice of 
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-sensitivity-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.1: Sensitivity rules
+Table&nbsp;4.2: Sensitivity rules
 </figcaption>
 </figure>
 </div>
@@ -524,7 +524,7 @@ Often tables are created from datasets based on sample surveys and NSIs collect 
 This procedure cannot be applied in combination with the holding concept, because naturally for the approximate contributions it is unknown which holding they belong to.</p>
 <p>It should be noted here that with the above procedure it may happen that a cell is considered safe, even though the sample estimate of the cell total provides a very close estimate of the unit in the population with the largest value. Assume <em>e.g.</em> the sequence of values in the full population to be 900, 100, 100, and seven times 5. Then the population total would be 1135. Assume that we sampled two units, both with a value of 100, but with different probabilities so that the sampling weights for the two are 1, and 9, respectively, yielding a population estimate of 1000 which will not be sensitive according to the above procedure. If the second largest unit as an intruder subtracts her own contribution (= 100) from the population estimate she will obtain an estimate of the value of the largest unit which exactly matches the true value of 900. But there is of course a sampling error connected to this estimate and this fact should be considered by the intruder.</p>
 <p>On the other hand, there is a certain tendency for overprotection associated to the above procedure, <em>i.e.</em> there is a chance that according to the above procedure an aggregate is unsafe, when in fact it is not. Assume <em>e.g.</em> the sequence of values in the full population to be 100, 50, 50, 1, 1. Assume we have sampled (with unequal probabilities) the unit with value 100 with a sampling weight of 2 associated to it, and one of the units with value 1 with a sampling weight of 3. According to the above procedure two values of 100 would be considered as largest contribution for an estimated cell total of 203 which according to for instance a <span class="math inline">\(p\%\)</span>-rule would be considered as sensitive for any <span class="math inline">\(p&gt;3\)</span> . But in fact, even the second largest unit in the population with a value of 50 will overestimate the value 100 of the largest unit by about 50% when it subtracts her own contribution from the population estimate of 203.</p>
-<p>This tendency for overprotection can be avoided, when, instead of the above procedure, in the case of sample surveys we replace for instance for the <span class="math inline">\(p\%\)</span>‑rule the formulation (<a href="#eq-p-percent-formula" class="quarto-xref"><span>4.2</span></a>) of <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.1</span></a> by the following <span id="eq-p-percent-weighted"><span class="math display">\[
+<p>This tendency for overprotection can be avoided, when, instead of the above procedure, in the case of sample surveys we replace for instance for the <span class="math inline">\(p\%\)</span>‑rule the formulation (<a href="#eq-p-percent-formula" class="quarto-xref"><span>4.2</span></a>) of <a href="#tbl-sensitivity-rules" class="quarto-xref">Table&nbsp;<span>4.2</span></a> by the following <span id="eq-p-percent-weighted"><span class="math display">\[
 \hat{X} - x_{2}^{s} - x_{1}^{s} &lt; \frac{p}{100} x_{1}^{s}
 \tag{4.9}\]</span></span></p>
 <p>where <span class="math inline">\(\hat{X}\)</span> denote the estimated population total, and <span class="math inline">\(x_{i}^{s}\)</span>, <span class="math inline">\(i = 1,2\)</span>, the largest two observations from the sample.</p>
@@ -547,7 +547,7 @@ x_{1}^{s} + \ldots + x_{n}^{s} &gt; \frac{k}{100} \hat{X}
 <p>For reasons explained in the introduction of this chapter, we assume here that tables always include margins and overall totals along with their ‘inner’ cells. Thus, there is always a linear relationship between cells of a table. (Consider for instance example 1a of the introduction to this chapter: The sector result (say: <span class="math inline">\(X_T\)</span>) is the sum of the three sub-sector results (<span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_3\)</span>), i.e.&nbsp;the linear relationship between these four cells is given by the relation <span class="math inline">\(X_T = X_1 + X_2 + X_3\)</span>. As we have seen in example 1a, if it has been established that a disclosure risk is connected to the release of certain cells of a table, then it is not enough to prevent publication of these cells. Other cells must be suppressed (so called ‘complementary’ or ‘secondary’ suppressions), or be otherwise manipulated in order to prevent the value of the protected sensitive cell being recalculated through f.i. differencing.<img src="Images/media/image176.png" style="width:0.2in;height:0.2in"></p>
 <p>Within this section we explain the methodological background of secondary tabular data protection methods.</p>
 <p>At the end of the section we give a brief comparison of secondary cell suppression, partial suppression and controlled tabular adjustment as alternative disclosure limitation techniques.</p>
-<p>When a table is protected by cell suppression, by making use of the linear relation between published and suppressed cell values in a table with suppressed entries, it is always possible for any particular suppressed cell of a table to derive upper and lower bounds for its true value. This holds for either tables with non-negative values, and those tables containing negative values as well, when it is assumed that instead of zero, some other (possibly tight) lower bound for any cell is available to data users in advance of publication. The interval given by these bounds is called the <em>‘feasibility interval’</em>. Example 3<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (<a href="#tbl-example-3" class="quarto-xref">Table&nbsp;<span>4.2</span></a>) illustrates the computation of the feasibility interval in the case of a simple two-dimensional table where all cells may only assume non-negative values:</p>
+<p>When a table is protected by cell suppression, by making use of the linear relation between published and suppressed cell values in a table with suppressed entries, it is always possible for any particular suppressed cell of a table to derive upper and lower bounds for its true value. This holds for either tables with non-negative values, and those tables containing negative values as well, when it is assumed that instead of zero, some other (possibly tight) lower bound for any cell is available to data users in advance of publication. The interval given by these bounds is called the <em>‘feasibility interval’</em>. Example 3<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (<a href="#tbl-example-3" class="quarto-xref">Table&nbsp;<span>4.3</span></a>) illustrates the computation of the feasibility interval in the case of a simple two-dimensional table where all cells may only assume non-negative values:</p>
 <div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Geurts, 1992, Table 10, p 20</p></div></div><div id="tbl-example-3" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -595,7 +595,7 @@ x_{1}^{s} + \ldots + x_{n}^{s} &gt; \frac{k}{100} \hat{X}
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-example-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.2: Example 3
+Table&nbsp;4.3: Example 3
 </figcaption>
 </figure>
 </div>
@@ -646,13 +646,13 @@ X_{12} + X_{22} &amp;= 4 \quad \text{(C2)} \\
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-upper-protection-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.3: Upper protection levels
+Table&nbsp;4.4: Upper protection levels
 </figcaption>
 </figure>
 </div>
-<p>If the distance between upper bound of the feasibility interval and true value of a sensitive cell is below the upper protection level computed according to the formulas of <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.3</span></a>, then this upper bound could be used to derive an estimate for individual contributions of the sensitive cell that is too close according to the safety rule employed, which can easily be proven along the lines of Cox (1981).</p>
+<p>If the distance between upper bound of the feasibility interval and true value of a sensitive cell is below the upper protection level computed according to the formulas of <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.4</span></a>, then this upper bound could be used to derive an estimate for individual contributions of the sensitive cell that is too close according to the safety rule employed, which can easily be proven along the lines of Cox (1981).</p>
 <p>Cell X = 330 with 3 contributions of distinct respondents <span class="math inline">\(x_{1}=300,\ x_{2}=20,\ x_{3}=10\)</span> is confidential (or ‘unsafe’) according to the <span class="math inline">\((1,85)\)</span>- dominance rule. If the feasible upper bound <span class="math inline">\(X^{\max}\)</span> for this confidential cell value is less than <span class="math inline">\(\frac{100}{85} \cdot x_{1} = 352.94\)</span> , then it will provide an upper estimate for the largest contribution <span class="math inline">\(x_{1}\)</span> which is too close according to the <span class="math inline">\((1,85)\)</span>-dominance rule.</p>
-<p>Example 5 proves the formula given in <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.3</span></a> for the case of the <span class="math inline">\(p\%\)</span>-rule:</p>
+<p>Example 5 proves the formula given in <a href="#tbl-upper-protection-levels" class="quarto-xref">Table&nbsp;<span>4.4</span></a> for the case of the <span class="math inline">\(p\%\)</span>-rule:</p>
 <p>Let <span class="math inline">\(X + U\)</span> be the upper bound of the feasibility interval for a cell with cell value <span class="math inline">\(X\)</span> . The second largest respondent can then deduce an upper bound <span class="math inline">\(x_{1}^{U}\)</span>by subtracting its own contribution from that upper bound: <span class="math inline">\(x_{1}^{U} = X + U - x_{2}\)</span>. According to the definition of the <span class="math inline">\(p\%\)</span>-rule proper protection means that <span class="math inline">\(x_{1}^{U} \geq \left( 1 + \frac{p}{100} \right) \cdot x_{1}\)</span>. So, if the feasibility interval provides upper protection, it must hold that <span class="math inline">\(U \geq \left( 1 + \frac{p}{100} \right) \cdot x_{1} - X + x_{2} = p/100 \cdot x_{1} - \left( X - x_{1} - x_{2} \right)\)</span>.</p>
 <p>The distance between upper bound of the feasibility interval and true value of a sensitive cell must exceed the upper protection level; otherwise the sensitive cell is not properly protected. This safety criterion is a necessary, but not always sufficient criterion for proper protection! It is a sufficient criterion, when the largest respondent makes the same contribution also within the combination of suppressed cells within the same aggregation (a row or column relation of the table, for instance), and when no individual contribution of any respondent (or coalition of respondents) to such a combination of suppressed cells is larger than the second largest respondent’s (or coalition’s) contribution.</p>
 <p>Cases where the criterion is not sufficient arise typically, when the only other suppressed cell within the same aggregation is a sensitive cell too (and not the marginal cell of the aggregation), or when the same respondent can contribute to more than one cell within the same aggregation. In these cases, it may turn out that the individual contribution of a respondent may still be disclosed, even though the upper bound of the feasibility interval is well away from the value of the sensitive cell to which this respondent contributes. The most prominent case is that of two cells with only one single contributor (a.k.a. <em>‘singletons’</em>) within the same aggregation. No matter how large the cell values, because they both know their own contribution of course, both can use this additional knowledge to disclose the other’s contribution. For an analytical discussion of these issues see Cox(2001). In principle, a suppression pattern should not be considered as valid, when certain respondents can use their insider knowledge (on their own contribution to a cell) to disclose individual contributions of other respondents.</p>
@@ -817,14 +817,14 @@ A suppression pattern, with only two suppressed cells within a row (or column) o
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-algorithms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.4: Algorithms for practical use
+Table&nbsp;4.5: Algorithms for practical use
 </figcaption>
 </figure>
 </div>
 <p>In the following, we briefly report results of two evaluations studies, in the following referred to as study A, and study B. For further detail on these studies see Giessing (2004) for study A, and Giessing et al.&nbsp;(2006) for study B. Both studies are based on tabulations of a strongly skewed magnitude variable.</p>
 <p>For study A, we used a variety of hierarchical tables generated from the synthetic micro‑data set supplied as CASC deliverable 3-D3. In particular, we generated 2- and 3-dimensional tables, where one of the dimensions had a hierarchical structure. Manipulation of the depth of this hierarchy resulted in 7 different tables, with a total number of cells varying between 460 and 150,000 cells. Note that the Hyper0 method was not included in study A.</p>
 <p>For study B, which was carried out on behalf of the German federal and state statistical offices, we used 2-dimensional tables of the German turnover tax statistics. Results have been derived for tables with 7-level hierarchical structure (given by the NACE economy classification) of the first dimension, and 4‑level structure of the second dimension given by the variable Region.</p>
-<p>We compare the loss of information due to secondary suppression in terms of the number and cell values of secondary suppression, and analyze the of the protected tables. <a href="#tbl-results-study-A" class="quarto-xref">Table&nbsp;<span>4.5</span></a> reports the results regarding the loss of information obtained in study A.</p>
+<p>We compare the loss of information due to secondary suppression in terms of the number and cell values of secondary suppression, and analyze the of the protected tables. <a href="#tbl-results-study-A" class="quarto-xref">Table&nbsp;<span>4.6</span></a> reports the results regarding the loss of information obtained in study A.</p>
 <div id="tbl-results-study-A" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-results-study-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -926,11 +926,11 @@ Table&nbsp;4.4: Algorithms for practical use
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-results-study-A-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions
+Table&nbsp;4.6: Results of study A - Number and value of secondary suppressions
 </figcaption>
 </figure>
 </div>
-<p><a href="#tbl-res-B" class="quarto-xref">Table&nbsp;<span>4.6</span></a> presents information loss results from study B on the two topmost levels of the second dimension variable Region, e.g.&nbsp;on the national, and state level.</p>
+<p><a href="#tbl-res-B" class="quarto-xref">Table&nbsp;<span>4.7</span></a> presents information loss results from study B on the two topmost levels of the second dimension variable Region, e.g.&nbsp;on the national, and state level.</p>
 <div id="tbl-res-B" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-tbl figure page-columns page-full">
 <div aria-describedby="tbl-res-B-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -991,7 +991,7 @@ Table&nbsp;4.5: Results of study A - Number and value of secondary suppressions
 </table>
 </div>
 <figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-res-B-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.6: Results of study B - Number and value of secondary suppressions
+Table&nbsp;4.7: Results of study B - Number and value of secondary suppressions
 </figcaption>
 </figure>
 </div>
