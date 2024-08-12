@@ -10,7 +10,9 @@
 
 ::: {.content-visible when-format="html"}
 
-[Export the pdf version](https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/main/Handbook-on-Statistical-Disclosure-Control.pdf)
+<a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/main/Handbook-on-Statistical-Disclosure-Control.pdf" download>
+  Export the pdf version
+</a>
 
 :::
 
