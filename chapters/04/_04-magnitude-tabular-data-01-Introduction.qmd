@@ -6,17 +6,24 @@ Respondents are typically companies but can also be individuals or households, e
 
 Each *"table cell"* presents a sum of a quantitative variable such as income, turnover, expenditure, sales, number of employees, number of animals owned by farms, etc. These sums are the *"cell values"* (sometimes also referred to as *"cell totals"*) of a magnitude table. The individual observations of the variable (for each individual respondent) are the *"contributions"* to the cell value.
 
-Example: Turnover (number of respondents) by Region and Industry
+::: {.content-visible when-format="pdf"}
 
+\begin{table}
 \begin{tabular}{l|rrrr}
 & Industry A & Industry B & $\cdots$ & Total \\ \hline
-Region 1 & 540 & 231 & $\cdots$ & \\
+Region 1 & 540 (12) & 231 (15) & $\cdots$ & \\
+Region 2 & 48 (2) & 125 (8) & $\cdots$ & \\
+$\cdots$  & $\cdots$ & $\cdots$ & $\cdots$ & 
 \end{tabular}
+\caption{Example: Turnover (number of respondents) by Region and Industry}
+\label{tbl-example-intro-4}
+\end{table}
 
-::: {.grid}
-::: {.g-col-3}
 :::
-::: {.g-col-6}
+
+::: {.content-visible unless-format="pdf"}
+::: {.grid}
+
 +--------------+----------------:+----------------:+-----+-------:+
 |              | Industry A      | Industry B      | ... | Total  |
 +--------------+-----------------+-----------------+-----+--------+
@@ -28,8 +35,9 @@ Region 1 & 540 & 231 & $\cdots$ & \\
 +--------------+-----------------+-----------------+-----+--------+
 | Total        |                 |                 |     |        |
 +--------------+-----------------+-----------------+-----+--------+
-:::
-::: {.g-col-3}
+
+: Example: Turnover (number of respondents) by Region and Industry {#tbl-example-intro-4}
+
 :::
 :::
 

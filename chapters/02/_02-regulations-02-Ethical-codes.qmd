@@ -39,7 +39,7 @@ The 2003 Conference of European Statisticians (CES) of the United Nations Statis
 
 -   Through these guidelines and supporting case studies, to enable countries to improve their arrangements for providing access to microdata.
 
-The sixth United Nations Fundamental Principle of Official Statistics, which was mentioned in Section 1.4 of this handbook, is very clear on statistical confidentiality: "Individual data collected by statistical agencies for statistical compilation, whether they refer to natural or legal persons, are to be strictly confidential and used exclusively for statistical purposes". Any principles for microdata access must be consistent with this Fundamental Principle.
+The sixth United Nations Fundamental Principle of Official Statistics, which was mentioned in @sec-5-stages of this handbook, is very clear on statistical confidentiality: "Individual data collected by statistical agencies for statistical compilation, whether they refer to natural or legal persons, are to be strictly confidential and used exclusively for statistical purposes". Any principles for microdata access must be consistent with this Fundamental Principle.
 
 According to the report by Trewin c.s. the following principles should be used for managing the confidentiality of microdata. Each is discussed in the following paragraphs.
 
