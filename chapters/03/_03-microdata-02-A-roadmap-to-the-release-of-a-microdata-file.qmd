@@ -11,6 +11,8 @@ This section aims at introducing the reader to the process that, starting from t
 
 Specifying, for each stage, the peculiarities of microdata release. In @tbl-roadmap we present an overview of the process.
 
+$\newpage$
+
 +:---------------------------------------------------------------------------------+:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:+
 | **Stage of disclosure process**                                                  | **Analyses to be carried out / problem to be addressed**\                                                                                                                                             |
 |                                                                                  | ⇓\                                                                                                                                                                                                    |

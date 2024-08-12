@@ -3,7 +3,7 @@
 ### Overview of concepts and methods
 
 In this section we explain the basic concepts and methods related to microdata protection. 
-Sections [-@sec-perturbative-masking], [-@sec-nonperturbative-masking], [-@sec-noise-addition] and [-@sec-microaggregation-further] give in-depth descriptions of some particularly complex methods: microaggregation, rank swapping\index{rank swapping}, additive noise and synthetic data (the first two implemented in $\mu$‑ARGUS).
+Sections [-@sec-perturbative-masking], [-@sec-nonperturbative-masking], [-@sec-noise-addition-details] and [-@sec-microaggregation-further] give in-depth descriptions of some particularly complex methods: microaggregation, rank swapping\index{rank swapping}, additive noise and synthetic data (the first two implemented in $\mu$‑ARGUS).
 
 A microdata set $\mathbf{X}$ can be viewed as a file with $n$ records, where each record contains $m$ variables on an individual respondent. 
 The variables can be classified in four categories which are not necessarily disjoint:
@@ -448,7 +448,7 @@ Willenborg, L., and De Waal, T. (2001). *Elements of Statistical Disclosure Cont
 
 Winkler, W. E. (2004). *Re-identification methods for masked microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 216--230, Berlin Heidelberg, 2004. Springer.
 
-### Noise addition {#sec-noise-addition}
+### Noise addition {#sec-noise-addition-details}
 
 <!-- **SECTION 3.3.2 HÖHNE'S METHOD TO BE ADDED BY SARAH AT THE END OF THIS SECTION (remark by Josep)** -->
 
