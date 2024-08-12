@@ -439,7 +439,7 @@ This is so because it is based on cluster analysis and, therefore, links records
 
 The main advantages of using distances for record linkage\index{record linkage} are simplicity for the implementer and intuitiveness for the user. 
 Another strong point is that subjective information (about individuals or variables) can be included in the re-identification process by properly modifying distances. 
-In fact, the next version of the μ‑ARGUS microdata protection package (Hundepool *et al.*, 2005) will incorporate distance-based record linkage\index{record linkage} as a disclosure risk\index{disclosure risk} assessment method.
+In fact, the next version of the $\mu$‑ARGUS microdata protection package (Hundepool *et al.*, 2005) will incorporate distance-based record linkage\index{record linkage} as a disclosure risk\index{disclosure risk} assessment method.
 
 The main difficulty of distance-based record linkage\index{record linkage} consists of coming up with appropriate distances for the variables under consideration. 
 For one thing, the weight of each variable must be decided and this decision is often not obvious. 
