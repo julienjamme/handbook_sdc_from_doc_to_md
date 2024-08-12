@@ -4,30 +4,7 @@
 ### Introduction
 
 The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of disclosure risk\index{disclosure risk} and simultaneous minimization of the information loss arising from the SDC process (what is equivalent to maximization of data utility for the possible users). So, both aspects of this problem will be described and critically discussed in this subchapter. We will present types of disclosure risk\index{disclosure risk}, show how one can measure of disclosure risk\index{disclosure risk} for categorical variables and continuous variables. Because usually for each of such types separate measures are applied, we investigate also a possibility of complex measurement of disclosure risk\index{disclosure risk} taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures for categorical and continuous variables are presented and next complex measures providing synthetic information in this respect are discussed. They are available already in the literature and implemented to the specialized statistical software. Finally, some remarks on the practical realization of trade-off between safety and utility of microdata are collected.
-  
-### Types of disclosure risk
-
-The assessment of the risk of re-identification using disclosed data involves identifying unsafe combinations for categorical variables or their values in the neighbourhood of relevant original values (for continuous variables) or levels (individual, global or hierarchical). The unsafe combinations of values of categorical variables are recognized using e.g. the $k$-anonymity or $l$-diversity rules. It is possible also when the $t$-closeness criterion is applied: in this case all records - and themselves the combinations of values of categorical variables – belonging to unsafe class are regarded to be unsafe. There are several criteria to classify the risk. We present the most important from them.
-
-Due to the range of data that can be used to identify the individual one can distinguish two types of disclosure risk\index{disclosure risk} for a dataset obtained once the SDC process has been applied (cf. Młodak, Pietrzak and Józefowski (2022)): 
-    • internal risk -- when there is a threat of identifying  units only using modified data (it is worth noting that the measures of internal risk can obviously be used to assess the risk of disclosure in the original data),
-    • external risk -- when there is a threat of identifying units by attempting to link data after SDC with information from other sources possibly available to the user.
-
-Internal risk results from the existence of unique combinations of values (exact for categorical variables and -- if possible -- within a certain precision level for continuous variables). External risk depends on the possibility of linking records contained in a statistical dataset (which underwent SDC) with relevant records from other data sources available to the user. 
-
-Internal risk refers to the risk of a user/intruder identifying a given unit only by using information included in the file that has been made available by the data provider (e.g. statistical office). In this case, it is assumed that the user can only rely on information that can be obtained from the data set made available to to him/her. In contrast, external risk refers to the situation when the user can access alternative data sources and use them in an attempt to identify units by linking relevant data from different sources. As can be seen, these two kinds of risks are rather different.
-
-Internal risk seems to be easier to compute than the external risk. Internal threats for confidentiality can be modelled by violation of the aforementioned rules based on frequency of combinations of values of categorical variables and of observations falling into an re-identification precision interval around a given value of continuous variable. However, the estimation of external risk requires a knowledge about possible alternative data sources available for the user. This knowledge is hard to obtain, but we can (with large probability) suppose which possibilities in this respect he/she can have. For instance, if the user is employed in the labour office, one can suppose the he/she has an access to the basis of unemployed persons, which can be linked by him/her with the database from the Labour Force Survey obtained from the official statistics or similar data holder. The internal and external risk can be combined to obtain a total disclosure risk\index{disclosure risk}.   
-
-The key aim of the Statistical Disclosure Control is to achieve optimal balance between minimization of disclosure risk\index{disclosure risk} and simultaneous minimization of the 
-information loss arising from the SDC process (what is equivalent to maximization of data utility for the possible users). So, both aspects of this problem will 
-be described and critically discussed in this subchapter. We will present types of disclosure risk\index{disclosure risk}, show how one can measure of disclosure risk\index{disclosure risk} for categorical 
-variables and continuous variables. Because usually for each of such types separate measures are applied, we investigate also a possibility of complex measurement 
-of disclosure risk\index{disclosure risk} taking them jointly into account. A similar approach was also applied to measures of information loss: types of information loss and its measures 
-for categorical and continuous variables are presented and next complex measures providing synthetic information in this respect are discussed. They are available 
-already in the literature and implemented to the specialized statistical software. Finally, some remarks on the practical realization of trade-off between safety and 
-utility of microdata are collected.
-  
+ 
 ### Types of disclosure risk
 
 The assessment of the risk of re-identification using disclosed data involves identifying unsafe combinations for categorical variables or their values in the 
@@ -254,7 +231,7 @@ $${#eq-CTBIL}
 where $x_{\text{subscripts}}^{\text{file}}$ is the entry of the contingency table of $\text{file}$ at position given by $\text{subscripts}$.
 
 Because the number of contingency tables to be considered depends on the number of variables $|W|$, the number of categories for each variable, and the dimension $K$, 
-a normalized version of @eq-CTBIL may be desirable. This can be obtained by dividing expression ([-@eq-CTBIL]) by the total number of cells in all considered tables.
+a normalized version of ([-@eq-CTBIL]) may be desirable. This can be obtained by dividing expression ([-@eq-CTBIL]) by the total number of cells in all considered tables.
 
 Distance between contingency tables generalizes some of the information loss measures used in the literature. For example, the $\mu$‑ARGUS software 
 (Hundepool et al., 2005) measures information loss for local suppression by counting the number of suppressions. The distance between two contingency tables of 
@@ -273,14 +250,14 @@ protection process is modelled as the noise that would be added to the original 
 As noted earlier, PRAM\index{PRAM} is a method that generalizes noise addition, suppression and recoding methods. Therefore, our description of the use of entropy will be limited to PRAM\index{PRAM}.
 
 Let $V$ be a variable in the original dataset and $V'$ be the corresponding variable in the PRAM\index{PRAM}-protected dataset. 
-Let $P_{V,V'} = \left\{ p\left( V' = j \mid V = i \right) \right\}$ be the PRAM\index{PRAM} Markov matrix. Then, the conditional uncertainty of $V$ given that $V' = j$ is:
+Let $\mathbf{P}_{V,V'} = \left\{\mathbb{P}\left( V' = j \mid V = i \right) \right\}$ be the PRAM\index{PRAM} Markov matrix. Then, the conditional uncertainty of $V$ given that $V' = j$ is:
 $$
-H\left( V \mid V' = j \right) = - \sum\limits_{i = 1}^{n}{p\left( V = i \mid V' = j \right)\log p}\left( V = i \mid V' = j \right) 
+H\left( V \mid V' = j \right) = - \sum\limits_{i = 1}^{n}\mathbb{P}\left( V = i \mid V' = j \right)\log \mathbb{P}\left( V = i \mid V' = j \right) 
 $${#eq-conditional-uncertainty} 
 
-The probabilities in @eq-conditional-uncertainty can be derived from $P_{V,V'}$ using Bayes' formula. Finally, the entropy-based information loss measure $EBIL$ is obtained by accumulating expression ([-@eq-conditional-uncertainty]) for all individuals $r$ in the protected dataset $G$
+The probabilities in ([-@eq-conditional-uncertainty]) can be derived from $\mathbf{P}_{V,V'}$ using Bayes' formula. Finally, the entropy-based information loss measure $EBIL$ is obtained by accumulating expression ([-@eq-conditional-uncertainty]) for all individuals $r$ in the protected dataset $G$
 $$
-EBIL\left( P_{V,V'},G \right) = \sum\limits_{r \in G}^{}{H\left( V \mid V' = j_{r} \right)}
+EBIL\left( \mathbf{P}_{V,V'},G \right) = \sum\limits_{r \in G}^{}{H\left( V \mid V' = j_{r} \right)}
 $$
 where $j_{r}$ is the value taken by $V'$ in record $r$.
 
@@ -345,7 +322,7 @@ Trottini (2003) argues that, since information loss is to be traded off for disc
 
 Młodak (2020) proposed a new measure of information loss for continuous variables in terms of assesment of impact on the intensity of connections, which was slighthly improved by 
 Młodak, Pietrzak and Józefowski (2022). It is based on on diagonal entries of inversed correlation matrices for continuous variables in the original ($R^{-1}$) and 
-perturbed (${R^{\prime}}^{-1}$) data sets, i.e. $\rho_{jj}^{(-1)}$ and ${\rho_{jj}^{\prime}}^{(-1)}$), $j=1,2,\ldots,m_c$ (where $m_c$ is the number of continuous variables):
+perturbed (${R^{\prime}}^{-1}$) data sets, i.e. $\rho_{jj}^{(-1)}$ and ${\rho_{jj}^{\prime}}^{(-1)}$, $j=1,2,\ldots,m_c$ (where $m_c$ is the number of continuous variables):
 $$
 \gamma=\frac{1}{\sqrt{2}}\sqrt{\sum_{j=1}^{m_c}{\left(\frac{\rho_{jj}^{(-1)}}{\sqrt{\sum_{l=1}^m{\left(\rho_{ll}^{(-1)}\right)^2}}}-\frac{{\rho_{jj}^{\prime}}^{(-1)}}{\sqrt{\sum_{l=1}^m{\left({\rho_{ll}^{\prime}}^{(-1)}\right)^2}}}\right)^2}}\in [0,1].
 $${#eq-info-loss-Mlodak}
