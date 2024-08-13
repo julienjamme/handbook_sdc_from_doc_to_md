@@ -875,7 +875,7 @@ In other situations, PRAM\index{PRAM} might produce a microdata file that is saf
 Once that strategy has been determined, the researcher might come to an on-site facility in order to perform the analyses once more on the original microdata hence reducing the amount of time that she has to be at the on-site facility.
 :::
 
-#### References on Pram
+#### References on PRAM
 
 Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census* , Office for National Statistics.
 [[www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf]{.underline}](http://www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf)
@@ -988,7 +988,7 @@ Then $X$ are taken as independent and $Y$ as dependent variables. A multiple reg
 Finally, variables $X$ and $Y_{A}'$ are released in place of $X$ and $Y$.
 
 More formally, let $y$and $x$ be two data matrices, with rows representing respondents and columns representing variables; the row vectors $y_{i}$ and $x_{i}$ will represent the data for the $i$-th respondent, for $i = 1,\cdots,n$. 
-The column vector $u_{j}$ will represent the quasi-identifier\index{quasi-identifier} variable $j$, for $j = 1,\cdots,p$; in other words, the $u_{j}$ are the columns ofquasi-identifier \index{quasi-identifier} matrix $Y$. 
+The column vector $u_{j}$ will represent the quasi-identifier\index{quasi-identifier} variable $j$, for $j = 1,\cdots,p$; in other words, the $u_{j}$ are the columns of quasi-identifier\index{quasi-identifier} matrix $Y$. 
 Conditionally on the specific values for confidential variables, quasi-identifier\index{quasi-identifier} variables for different respondents are assumed to be independent. 
 Conditional on the specific confidential variables $x_{i}$, the quasi-identifier\index{quasi-identifier} variables $Y_{i}$ are assumed to follow a multivariate normal distribution with covariance matrix $\Sigma = \left\{ \sigma_{jk} \right\}$ and a mean vector $x_{i}B$, where $B$ is an $m\times p$ matrix with columns $\beta_{j}$. 
 Thus a separate univariate normal multiple regression model is assumed for each column of $Y$ with regression parameter equal to the corresponding column of $B$, that is, $U_{j} \sim  N\left( x\beta_{j},\sigma_{jj}I \right)$.
