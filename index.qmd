@@ -12,7 +12,7 @@
 
 <a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/main/Handbook-on-Statistical-Disclosure-Control.pdf" download>
   Export the pdf version
-</a>
+</a> (Right click + "Save the link target as...")
 
 :::
 

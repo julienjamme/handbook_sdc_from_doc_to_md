@@ -18,7 +18,7 @@ book:
     - name: Andrzej Młodak
     - name: Johannes Gussenbauer
   date: today
-  date-format: YYYY, MMMM DD
+  date-format: YYYY, MMMM
   repo-url: https://github.com/julienjamme/handbook_sdc_from_doc_to_md
   chapters:
     - index.qmd
@@ -44,44 +44,49 @@ format:
     citation-location: margin
     cap-location: margin
     code-link: true
-  # pdf:
-  #   # pdf-engine: xelatex
-  #   # fig-pos: 'h'
-  #   latex-tinytex: false
-  #   documentclass: scrbook
-  #   classoption: ["oneside", "open=any"]
-  #   papersize: a4
-  #   toc: true
-  #   keep-tex: true
-  #   geometry:
-  #     - left=3cm
-  #     - right=3cm
-  #     # - textwidth=4.5in
-  #     # - marginparsep=.25in
-  #     # - marginparwidth=2.25in
-  #   template-partials:
-  #     - "before-body.tex"
-  #     - "_titlepage.tex" 
-  #   include-in-header: 
-  #     text: |
-  #       \usepackage[english]{babel}
-  #       \usepackage[utf8]{inputenc}
-  #       \usepackage{float}
-  #       \usepackage{multirow}
-  #       \usepackage{hyperref}
-  #       \usepackage{setspace}
-  #       \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
-  #       \makeatletter
-  #       \renewenvironment{table}
-  #         {\@float{table}[H]}
-  #         {\end@float}
-  #       \makeatother
-  #       \counterwithout{footnote}{chapter}
-  #       \usepackage{makeidx}
-  #       \makeindex
-  #   include-after-body: 
-  #     text: |
-  #       \printindex
+  pdf:
+    # pdf-engine: xelatex
+    # fig-pos: 'h'
+    # latex-tinytex: false
+    latex-tinytex: true # for github pages
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    papersize: a4
+    toc: true
+    keep-tex: true
+    geometry:
+      - left=3cm
+      - right=3cm
+      # - textwidth=4.5in
+      # - marginparsep=.25in
+      # - marginparwidth=2.25in
+    template-partials:
+      - "before-body.tex"
+      - "_titlepage.tex" 
+    include-in-header: 
+      text: |
+        \usepackage[english]{babel}
+        \usepackage[utf8]{inputenc}
+        \usepackage{float}
+        \usepackage{multirow}
+        \usepackage{hyperref}
+        \usepackage{setspace}
+        \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+        \usepackage{ragged2e}
+        \usepackage{datetime}
+        \makeatletter
+        \renewenvironment{table}
+          {\@float{table}[H]}
+          {\end@float}
+        \makeatother
+        \counterwithout{footnote}{chapter}
+        \usepackage{makeidx}
+        \makeindex
+        \newdateformat{monthyeardate}{%
+          \monthname[\THEMONTH], \THEYEAR}
+    include-after-body: 
+      text: |
+        \printindex
 
 execute:
   freeze: auto
