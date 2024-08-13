@@ -2,11 +2,11 @@
 
 Box, G. E. P. and Cox, D. R. (1964) *An analysis of transformations.* Journal of Royal Statistical Society, Series B, vol. 26, pp. 211---246.
 
-Castro, J.(2002), *Network flows heuristics for complementary \index{cell suppression}: an empirical evaluation and extensions*, in LNCS 2316, Inference Control in Statistical Databases, J. Domingo-Ferrer (Ed), (2002) 59--73
+Castro, J.(2002), *Network flows heuristics for complementary cell suppression\index{cell suppression}: an empirical evaluation and extensions*, in LNCS 2316, Inference Control in Statistical Databases, J. Domingo-Ferrer (Ed), (2002) 59--73
 
 Castro, J. (2003 a), *'Minimum-Distance Controlled Perturbation Methods for Large-Scale Tabular Data Protection'*, accepted subject to revision to European Journal of Operational Research, 2003
 
-Castro, J. (2003 b) *User's and programmer's manual of the network flows heuristics package for \index{cell suppression} in 2D tables* Technical Report DR 2003-07, Dept. of Statistics and Operations Research, Universitat Politècnica de Catalunya, Barcelona, Spain,2003; See [[http://neon.vb.cbs.nl/casc/deliv/ 41D6_NF1H2D-Tau-Argus.pdf]{.underline}](http://neon.vb.cbs.nl/casc/deliv/ 41D6_NF1H2D-Tau-Argus.pdf)
+Castro, J. (2003 b) *User's and programmer's manual of the network flows heuristics package for cell suppression\index{cell suppression} in 2D tables* Technical Report DR 2003-07, Dept. of Statistics and Operations Research, Universitat Politècnica de Catalunya, Barcelona, Spain,2003; See [[http://neon.vb.cbs.nl/casc/deliv/ 41D6_NF1H2D-Tau-Argus.pdf]{.underline}](http://neon.vb.cbs.nl/casc/deliv/ 41D6_NF1H2D-Tau-Argus.pdf)
 
 Castro, J. (2006). *Minimum-distance controlled perturbation methods for large-scale tabular data protection*, European Journal of Operational Research, 171, 39--52.
 
@@ -72,6 +72,6 @@ bar unter: http://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2013
 
 Van der Meijden, R., (2006) ‚*Improving confidentiality with τ‑ARGUS by focussing on clever usage of microdata'*, in Monographs of Official Statistics. Work session on Statistical Data Confidentiality, Eurostat-Office for Official Publications of the European Communities, Luxembourg, 2006, pp. 363-370
 
-Wolf, P.P. de (2002). *HiTaS: a heuristic approach to \index{cell suppression} in hierarchical tables.* Proceedings of the AMRADS meeting in Luxembourg.
+Wolf, P.P. de (2002). *HiTaS: a heuristic approach to cell suppression\index{cell suppression} in hierarchical tables.* Proceedings of the AMRADS meeting in Luxembourg.
 
 

@@ -21,7 +21,7 @@ However, this assessment concerns risk at the level of individual table cells. W
 
 - the risk measure should be bounded by 0 and 1.
 
-In the currently investigated case of magnitude table one should add one more condition concerning the specificity of this type of data presentation. That is, the larger is the share of the largest contributors in a cell the higher is the \index{disclosure risk}.
+In the currently investigated case of magnitude table one should add one more condition concerning the specificity of this type of data presentation. That is, the larger is the share of the largest contributors in a cell the higher is the disclosure risk\index{disclosure risk}.
 
 Shlomo, Antal and Elliot (2015) proposed in this context measure based on the entropy. According to their approach, a high entropy indicates that the distribution across cells is uniform and a low entropy indicates mainly zeros in a row/column or table with a few non-zero cells. The fewer the number of non-zero cells, the more likely that attribute disclosure occurs. The entropy is given as
 $$
@@ -85,7 +85,7 @@ More difficult is the situation where non-perturbative post-tabular SDC methods 
 For more detail, see discussion on cell costs and cost functions in 4.3.1.
 
 ### References
-Antal, L., Shlomo, N., & Elliot, M. (2014). Measuring \index{disclosure risk} with entropy in population based frequency tables. In *Privacy in Statistical Databases: UNESCO Chair in Data Privacy, International Conference, PSD 2014, Ibiza, Spain, September 17-19, 2014. Proceedings* (pp. 62-78). Springer International Publishing.
+Antal, L., Shlomo, N., & Elliot, M. (2014). Measuring disclosure risk\index{disclosure risk} with entropy in population based frequency tables. In *Privacy in Statistical Databases: UNESCO Chair in Data Privacy, International Conference, PSD 2014, Ibiza, Spain, September 17-19, 2014. Proceedings* (pp. 62-78). Springer International Publishing.
 
 Box, G. E., Cox, D. R. (1964), An analysis of transformations. *Journal of the Royal Statistical Society. Series B (Methodological)*, 26:211–252.
 
@@ -93,4 +93,4 @@ Enderle, T., Giessing, S., & Tent, R. (2020). Calculation of risk probabilities 
 
 Hundepool. A., Domingo-Ferrer. J., Franconi, L., Giessing S., Nordholt, E.S., Spicer, K. and de Wolf, P-P. (2012), *Statistical Disclosure Control*, series: Wiley Series in Survey Methodology, John Wiley & Sons, Ltd., Chichester.
 
-Shlomo, N., Antal, L., & Elliot, M. (2015). Measuring \index{disclosure risk} and data utility for flexible table generators. *Journal of Official Statistics*, 31(2), 305-324.
+Shlomo, N., Antal, L., & Elliot, M. (2015). Measuring disclosure risk\index{disclosure risk} and data utility for flexible table generators. *Journal of Official Statistics*, 31(2), 305-324.

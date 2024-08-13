@@ -550,4 +550,4 @@ Willenborg, L. and De Waal, T. (1996). *Statistical Disclosure Control in Practi
 
 Willenborg, L. and De Waal, T. (2001). *Elements of statistical disclosure control.* Lecture Notes in Statistics, 115, New York: Springer-Verlag.
 
-Winkler, W. E. (1993),. *Matching and \index{record linkage}.* Technical Report RR93/08, Statistical Research Division, U. S. Bureau of the Census (USA), 1993.
+Winkler, W. E. (1993),. *Matching and record linkage\index{record linkage}.* Technical Report RR93/08, Statistical Research Division, U. S. Bureau of the Census (USA), 1993.
