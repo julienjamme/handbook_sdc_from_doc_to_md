@@ -10,9 +10,7 @@
 
 ::: {.content-visible when-format="html"}
 
-<a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/main/Handbook-on-Statistical-Disclosure-Control.pdf" download>
-  Export the pdf version
-</a> (Right click + "Save the link target as...")
+<a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/gh-pages/Handbook-on-Statistical-Disclosure-Control.pdf" download target="_blank">Export the pdf version</a> (Right click + "Save the link target as...")
 
 :::
 
