@@ -433,7 +433,7 @@ Comparison of matrices $X$ and $X^'$ for categorical data requires the definitio
 For a nominal variable $V$ (a categorical variable taking values over an unordered set), the only permitted operation is comparison for equality. This leads to the following distance definition:
 
 $$
-dv(c,c')=\begin{cases}
+d_V(c,c')=\begin{cases}
 0, & \text{if}\;c=c',\\
 1, & \text{if}\;c\neq c', \quad \text{(3.5.4)}
 \end{cases}
