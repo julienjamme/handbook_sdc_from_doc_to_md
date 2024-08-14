@@ -419,7 +419,7 @@ distances, complex distances, etc.),
 
 ### Information loss measures for categorical data
 
-Straightforward computation of measures based on basic arithmetic opereations (addition, subtraction, multiplication, division) or most descriptive statistics (Euclidean distance, mean, variance, correlation, etc.) on categorical data is not possible. The following alternatives are considered in Domingo-Ferrer and Torra (2001):
+Straightforward computation of measures based on basic arithmetic opereations (addition, subtraction, multiplication, division) or most descriptive statistics (Euclidean distance, mean, variance, correlation, etc.) on categorical data is not possible. Neither is the use of most descriptive statistics like Eucledian distance, mean, variance, correlation, etc. The following alternatives are considered in Domingo-Ferrer and Torra (2001):
 • direct comparison of categorical values,
 • comparison of contingency tables,
 • entropy-based measures.
@@ -516,7 +516,7 @@ Source: Domingo-Ferrer, Mateo-Sanz and Torra (2001).
 
 In Yancey, Winkler and Creecy (2002), it is observed that dividing by $x_{\text{ij}}$ causes the $X-X^'$ mean variation to rise sharply when the original value $x_{\text{ij}}$ is close to 0. This dependency on the particular original value being undesirable in an information loss measure, Yancey, Winkler and Creecy (2002) propose to replace the mean variation of $X-X^'$ by the more stable measure
 $$IL1=\frac{1}{np}\sum_{j=1}^p{\sum_{i=1}^n{\frac{|x_{ij}-x_{ij}'|}{\sqrt{2}S_j}}},$$
-where $S_j$ is the standard deviation of the $j$-th variable in the original dataset. This measure was incorporated into the sdcMicro R package. The IL1 measure, in turn, is highly sensitive to small disturbances and weak differentiation of feature values - it may take too high values for variables with low differentiation, and too low - when the differentiation is significant. In practice, if $S_j$ is very close to zero, we obtain as a results INF. It means infinity. In this case, the measure becomes really useless, because it will not allow to compare the loss of information in several microdata sets with statistical confidentiality protected in various ways - if for each of such sets the IL1 measure will be equal to INF.
+where $S_j$ is the standard deviation of the $j$-th variable in the original dataset. This measure was incorporated into the sdcMicro R package. The IL1 measure, in turn, is highly sensitive to small disturbances and weak differentiation of feature values - it may take too high values for variables with low differentiation, and too low - when the differentiation is significant. In practice, if $S_j$ is very close to zero, we obtain as a results INF (infinity). In this case, the measure becomes really useless, because it will not allow to compare the loss of information in several microdata sets with statistical confidentiality protected in various ways - if for each of such sets the IL1 measure will be equal to INF.
 
 Trottini (2003) argues that, since information loss is to be traded off for disclosure risk and the latter is bounded ---there is no risk higher than 100%---, upper bounds should be enforced for information loss measures. In practice, the proposal in Trottini (2003) is to limit those measures in @tbl-loss-information based on the mean variation to a predefined maximum value.
 
