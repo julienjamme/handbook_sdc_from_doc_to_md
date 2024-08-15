@@ -1,4 +1,4 @@
-## Controlled Tabular AdjustmentControlled Tabular Adjustment {#sec-CTA}
+## Controlled Tabular Adjustment {#sec-CTA}
 
 *'Controlled Tabular Adjustment'* (CTA) suggested for instance in Cox and Dandekar (2002), Castro (2003), or Castro and Giessing (2006). CTA is a new emerging protection method for magnitude tabular data. Unlike cell suppression\index{cell suppression}, it is a perturbative method.
 
