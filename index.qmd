@@ -1,6 +1,8 @@
 ::: {.content-visible when-format="html"}
 
+::: {.callout-tip appearance="simple"}
 <a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/gh-pages/Handbook-on-Statistical-Disclosure-Control.pdf" download target="_blank">Export the pdf version</a> (Right click + "Save the link target as...")
+:::
 
 :::
 
@@ -14,6 +16,21 @@ One of the tasks of a Centre of Excellence on SDC launched in 2005 (grant agreem
 One of the tasks of a Centre of Excellence on SDC launched in 2020 (for 4 years), as part of the STACE project (Statistical methods and tools Centers of Excellence, grant agreement 899218–2019-BG-Methodology, 2020–2024), was to update this handbook. With permission of all the original authors, the current second edition was produced by the partners in the STACE project. The format of the handbook was revised to facilitate online as well as offline publication and some new content was added.
 
 The original authors were asked to revise their chapters. In addition to the original authors three additional authors contributed to this second edition of the handbook. Reinhard Tent wrote the new parts on the Cell Key Method for Magnitude Tables and Frequency Tables ([Sections @sec-CKM_mag] and [-@sec-CKM_freq]). Andrzej Młodak contributed to the parts on Risk assessment and Information loss in microdata protection, and Measurement of disclosure risk and information loss in the chapters on Magnitude Tabular Data, and Frequency tables. Johannes Gussenbauer wrote the new part on Targeted Record Swapping (Section @sec-TRS). Julien Jamme led the transfer of the handbook into a new technical set-up.
+
+Some parts of the handbook are considered to contain a bit more advanced information than necessary for a first read. Those sections are marked in this way:
+
+:::{.callout-warning collapse=false}
+## Expert level
+In the online quarto-book version of the handbook these parts can be made hidden or visible by clicking the "$\vee$" sign or the "$>$" sign respectively.
+
+In the pdf version of the handbook these parts will always be visible but marked like this.
+:::
+
+Extended examples are marked in this way:
+
+:::{.callout-note appearance="simple"}
+**Example.** Assume a non-negative continuous variable $X$...
+:::
 
 In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the User Support repository on GitHub ([[https://github.com/sdctools/UserSupport]{.underline}](https://github.com/sdctools/UserSupport)).
 
