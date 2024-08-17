@@ -80,6 +80,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -92,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface to the second edition</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -123,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Preface to the second edition</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,10 +207,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#preface-to-the-second-edition" id="toc-preface-to-the-second-edition" class="nav-link active" data-scroll-target="#preface-to-the-second-edition">Preface to the second edition</a></li>
   </ul>
 </nav>
     </div>
@@ -231,28 +257,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!--
-> *High level description of why we need to consider SDC\
-> Overview of process one must go through when protecting outputs\
-> The trade-off between SDC measures, information loss and risk.\
-> Description of different types of outputs\
-> How handbook should be used\
-> Also mention the glossary\
-> Author: Jane and Luisa*
--->
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
 <p><a href="https://github.com/julienjamme/handbook_sdc_from_doc_to_md/blob/gh-pages/Handbook-on-Statistical-Disclosure-Control.pdf" download="" target="_blank">Export the pdf version</a> (Right click + “Save the link target as…”)</p>
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>In 2006 Eurostat took the initiative of setting up Centres of Excellence (CENEX). The idea behind this scheme is to combine the strengths of the leading National Statistical Institutes (NSIs) in Europe on a certain topic. Often in several NSIs small isolated groups are working on specific topics. Other NSIs even lack the resources to pay enough attention to certain methodological issues. This situation led to the Eurostat initiative on Centres of Excellence. A CENEX could bring together the knowledge on a certain topic at a higher level by supporting the research in the leading countries and to spread this work to the other NSIs. Statistical Disclosure Control (SDC) was selected as a pilot topic. One of the reasons for selecting SDC was a longer tradition in the field of SDC with respect to European cooperation, like the EU framework projects SDC and CASC.</p>
-<p>One of the tasks of this CENEX-project (grant agreement No 25200.2005.001-2005.619) was to write a handbook on Statistical Disclosure Control. The writing of the handbook was coordinated by Anco Hundepool, who also wrote parts of the software. Jane Longhurst and Luisa Franconi wrote the introduction chapter, while Eric Schulte Nordholt wrote the regulation chapter. Josep Domingo-Ferrer was responsible for the microdata chapter with contributions by Anco Hundepool, Luisa Franconi, Jane Longhurst and Peter-Paul de Wolf. Sarah Giessing was responsible for the magnitude chapter and Jane Longhurst for the frequency chapter. The remote access chapter was written by Anco Hundepool and Jane Longhurst. But various other CENEX partners contributed smaller parts. Glòria Pujol Crespo and Caroline Tudor did valuable proofreading. Also the work of the ESSNet-partners, who did the cumbersome task of proofreading and helping with valuable comments, is gratefully acknowledged.</p>
-<p>One of the tasks of a more recent Center of Excellence on SDC, as part of the STACE project (grant agreement 899218–2019-BG-Methodology, 2020–2024), was to update this handbook. With permission of all the original authors, the current updated version was produced by the partners in the STACE project. The format of the handbook was revised to facilitate online as well as offline publication and some new content was added.</p>
-<p>In addition to the original authors three other authors contributed to this new version of the handbook. Reinhard Tent wrote the new parts on the Cell Key Method for Magnitude Tables and Frequency Tables. Andrzej Młodak contributed to the parts on Risk assessment and Information loss in microdata protection, and Measurement of disclosure risk and information loss in the chapters on Magnitude Tabular Data, and Frequency tables. Johannes Gussenbauer wrote the new part on Targeted Record Swapping. Julien Jamme led the transfer of the handbook into a new technical set-up.</p>
-<p>In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the <a href="https://github.com/sdctools/UserSupport"><u>User Support repository on https://github.com/sdctools</u></a>.</p>
-<!--
-The authors see this version of the handbook only as an intermediate version of a book that hopefully will be used and expanded in the future. Therefore we will appreciate your comments and suggestions for improvements. Please send your comments to Anco Hundepool, Statistics Netherlands, P.O. Box 24500, 2490 HA The Hague, The Netherlands, email: [[aj.hundepool\@cbs.nl]{.underline}](mailto:aj.hundepool@cbs.nl?subject=SDC-Handbook).
--->
-<section id="license" class="level2">
-<h2 class="anchored" data-anchor-id="license">License</h2>
+</div>
+</div>
+</div>
+<section id="preface-to-the-second-edition" class="level1 unnumbered">
+<h1 class="unnumbered">Preface to the second edition</h1>
+<p>In 2006 Eurostat took the initiative of setting up Centres of Excellence. The idea behind this scheme is to combine the strengths of the leading National Statistical Institutes (NSIs) in Europe on a certain topic. Often in several NSIs small isolated groups are working on specific topics. Other NSIs even lack the resources to pay enough attention to certain methodological issues. This situation led to the Eurostat initiative on Centres of Excellence. A Centre of Excellence could bring together the knowledge on a certain topic at a higher level by supporting the research in the leading countries and to spread this work to the other NSIs. Statistical Disclosure Control (SDC) was selected as a pilot topic. One of the reasons for selecting SDC was a longer tradition in the field of SDC with respect to European cooperation, like the EU framework projects SDC (<a href="https://cordis.europa.eu/project/id/20462"><u>https://cordis.europa.eu/project/id/20462</u></a>) and CASC (<a href="https://research.cbs.nl/casc/CASCIndex.htm"><u>https://research.cbs.nl/casc/CASCIndex.htm</u></a>).</p>
+<p>One of the tasks of a Centre of Excellence on SDC launched in 2005 (grant agreement No 25200.2005.001-2005.619) was to write a handbook on Statistical Disclosure Control. The writing of the handbook was coordinated by Anco Hundepool, who also wrote parts of the chapter on the software tools (<a href="03-microdata.html#sec-software" class="quarto-xref">Sections&nbsp;<span>3.6 Software</span></a>, <a href="04-magnitude-tabular-data.html#sec-tau-argus-suppression" class="quarto-xref"><span>4.3 The \tau‑ARGUS Implementation of Cell Suppression</span></a> and <a href="04-magnitude-tabular-data.html#sec-methodology-secondary-suppression-tau-argus" class="quarto-xref"><span>4.4 Methodological concepts of secondary cell suppression algorithms in \tau‑ARGUS</span></a>). Jane Longhurst and Luisa Franconi wrote the introduction chapter (<a href="01-Introduction.html">Chapter 1</a>), while Eric Schulte Nordholt wrote the regulation chapter (<a href="02-regulations.html">Chapter 2</a>). Josep Domingo-Ferrer was responsible for the microdata chapter (<a href="03-microdata.html">Chapter 3</a>) with contributions by Anco Hundepool, Luisa Franconi, Jane Longhurst and Peter-Paul de Wolf. Sarah Giessing was responsible for the magnitude chapter (<a href="04-magnitude-tabular-data.html">Chapter 4</a>) and Jane Longhurst for the frequency chapter (<a href="05-frequency-tables.html">Chapter 5</a>). The remote access chapter (<a href="06-remote-access-issues.html">Chapter 6</a>) was written by Anco Hundepool and Jane Longhurst. But various other Centre of Excellence partners contributed smaller parts. Glòria Pujol Crespo and Caroline Tudor did valuable proofreading. Also the work of other partners, who did the cumbersome task of proofreading and helping with valuable comments, is gratefully acknowledged.</p>
+<p>One of the tasks of a Centre of Excellence on SDC launched in 2020 (for 4 years), as part of the STACE project (Statistical methods and tools Centers of Excellence, grant agreement 899218–2019-BG-Methodology, 2020–2024), was to update this handbook. With permission of all the original authors, the current second edition was produced by the partners in the STACE project. The format of the handbook was revised to facilitate online as well as offline publication and some new content was added.</p>
+<p>The original authors were asked to revise their chapters. In addition to the original authors three additional authors contributed to this second edition of the handbook. Reinhard Tent wrote the new parts on the Cell Key Method for Magnitude Tables and Frequency Tables (<a href="04-magnitude-tabular-data.html#sec-CKM_mag" class="quarto-xref">Sections&nbsp;<span>4.6 Cell Key Method for Magnitude Tables</span></a> and <a href="05-frequency-tables.html#sec-CKM_freq" class="quarto-xref"><span>5.4 Cell Perturbation - the Cell Key Method</span></a>). Andrzej Młodak contributed to the parts on Risk assessment and Information loss in microdata protection, and Measurement of disclosure risk and information loss in the chapters on Magnitude Tabular Data, and Frequency tables. Johannes Gussenbauer wrote the new part on Targeted Record Swapping (Section <a href="05-frequency-tables.html#sec-TRS" class="quarto-xref"><span>5.6 Targeted Record Swapping</span></a>). Julien Jamme led the transfer of the handbook into a new technical set-up.</p>
+<p>Some parts of the handbook are considered to contain a bit more advanced information than necessary for a first read. Those sections are marked in this way:</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Expert level
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>In the online quarto-book version of the handbook these parts can be made hidden or visible by clicking the “<span class="math inline">\(\vee\)</span>” sign or the “<span class="math inline">\(&gt;\)</span>” sign respectively.</p>
+<p>In the pdf version of the handbook these parts will always be visible but marked like this.</p>
+</div>
+</div>
+</div>
+<p>Extended examples are marked in this way:</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Example.</strong> Assume a non-negative continuous variable <span class="math inline">\(X\)</span>…</p>
+</div>
+</div>
+</div>
+<p>In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the User Support repository on GitHub (<a href="https://github.com/sdctools/UserSupport"><u>https://github.com/sdctools/UserSupport</u></a>).</p>
+<section id="license" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="license">License</h2>
 <p><img src="Images/media/by-sa.png" class="img-fluid" style="width:0.8in"></p>
 <p>Handbook on Statistical Disclosure Control © 2024 by Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak, Johannes Gussenbauer is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/</p>
 
