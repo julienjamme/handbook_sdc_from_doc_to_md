@@ -166,7 +166,7 @@ data uses. We will say there is little information loss if the protected dataset
 -   A protected microdata set is an *analytically valid* microdata set if it approximately preserves the following with respect to the original data 
 (some conditions apply only to continuous variables):
     - Means and covariances on a small set of subdomains (subsets of records and/or variables)
-    - Marginal values for a few tabulations of the data (the information loss in this approach concerns mainly tables created on the basis of microdata and therefore it will be discussed in [[Chapter 4]{.underline}](04-magnitude-tabular-data.html) and [[Chapter 5]{.underline}](05-frequency-tables.html))
+    - Marginal values for a few tabulations of the data (the information loss in this approach concerns mainly tables created on the basis of microdata and therefore it will be discussed in [Chapter 4](04-magnitude-tabular-data.html) and [Chapter 5](05-frequency-tables.html))
     - At least one distributional characteristic
 -   A microdata set is an *analytically interesting microdata set*, if six variables on important subdomains are provided that can be validly analyzed.\
     More precise conditions of analytical validity and analytical interest cannot be stated without taking specific data uses into account. As imprecise as they may be, the above definitions suggest some possible measures:
@@ -196,7 +196,11 @@ Straightforward computation of measures based on basic arithmetic operations lik
 Neither is the use of most descriptive statistics like Eucledian distance, meanm variance, correlation, etc.
 The following alternatives are considered in Domingo-Ferrer and Torra (2001):
 
-Below we will describe each of such types of measures.
+- Direct comparison of categorical values
+- Comparison of contingency tables
+- Entropy-based measures
+
+Below we will describe examples for each of such types of measures.
 
 #### Direct comparison of categorical values{#sec-direct-comparison}
 :::{.callout-warning collapse=true}
@@ -215,7 +219,10 @@ where $c$ is a category in an original record and $c'$ is the category which has
 
 For an ordinal variable $V$ (a categorical variable taking values over a totally ordered set), let $\leq V$ be the total order operator over the range $D(V)$ of $V$. Define the distance between categories $c$ and $c^{\prime}$ as the number of categories between the minimum and the maximum of $c$ and $c^{\prime}$ divided by the cardinality of the range:
 
-$$\text{dc}\left(c,c^{\prime}\right)=\frac{\left|c^{\prime\prime}\text{:min}\left(c,c^{\prime}\right)\leq c^{\prime\prime}<\text{max}\left(c,c^{\prime}\right)\right|}{\left|D(V)\right|}$${#eq-dist_categ}
+$$
+\text{dc}\left(c,c^{\prime}\right)=\frac{\left|c^{\prime\prime}\text{:min}\left(c,c^{\prime}\right)\leq c^{\prime\prime}<\text{max}\left(c,c^{\prime}\right)\right|}{\left|D(V)\right|}
+$${#eq-dist_categ}
+
 :::
 
 #### Comparison of contingency tables{#sec-contingency-table}
@@ -266,9 +273,6 @@ The above measure can be generalized for multivariate datasets if $V$ and $V^{\p
 While using entropy to measure information loss is attractive from a theoretical point of view, its interpretation in terms of data utility loss is less obvious than for the previously discussed measures.
 :::
 
-
-
-
 ### Information loss measures for continuous data
 
 Assume a microdata set with $n$ individuals (records) $I_{1},I_{2},\cdots,I_{n}$ and $p$ continuous variables $Z_{1},Z_{2},\cdots,Z_{p}$. Let $X$ be the matrix representing the original microdata set (rows are records and columns are variables). Let $X^{'}$ be the matrix representing the protected microdata set. The following tools are useful to characterize the information contained in the dataset:
@@ -299,7 +303,7 @@ $\overline{X^{\phantom{'}}} - \overline{X^{'}}$). Similarly, for $V - V^{'}$meas
 |:-------------:	|:-----------------------------------------------------------------------------------:	|:-----------------------------------------------------------------------------------:	|:------------------------------------------------------------------------------------------------------:	|
 |  $X-X'$  	|            $\frac{\sum\limits_{j=1}^{p}\sum\limits_{i=1}^{n}(x_{ij} - x_{ij}')^2}{np}$            	|            $\frac{\sum\limits_{j=1}^{p}\sum\limits_{i=1}^{n}|x_{ij} - x_{ij}'|}{np}$            	|            $\frac{\sum\limits_{j=1}^{p}\sum\limits_{i=1}^{n}\frac{|x_{ij} - x_{ij}'|}{|x_{ij}|}}{np}$            	|
 |  $V-V'$  	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}(v_{ij} - v_{ij}')^2}{p(p+1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}|v_{ij} - v_{ij}'|}{p(p+1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}\frac{|v_{ij} - v_{ij}'|}{|v_{ij}|}}{p(p+1)/2}$ 	|
-|  $R-R'$  	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}(r_{ij} - r_{ij}')^2}{p(p-1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}|r_{ij} - r_{ij}'|}{p(p-1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i \leq j}\frac{|r_{ij} - r_{ij}'|}{|r_{ij}|}}{p(p-1)/2}$ 	|
+|  $R-R'$  	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i < j}(r_{ij} - r_{ij}')^2}{p(p-1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i < j}|r_{ij} - r_{ij}'|}{p(p-1)/2}$ 	| $\frac{\sum\limits_{j=1}^{p}\sum\limits_{1 \leq i < j}\frac{|r_{ij} - r_{ij}'|}{|r_{ij}|}}{p(p-1)/2}$ 	|
 | $RF-RF'$ 	|         $\frac{\sum\limits_{j=1}^{p}w_j\sum\limits_{i=1}^{p}(rf_{ij} - rf_{ij}')^2}{p^2}$         	|         $\frac{\sum\limits_{j=1}^{p}w_j\sum\limits_{i=1}^{p}|rf_{ij} - rf_{ij}'|}{p^2}$         	|        $\frac{\sum\limits_{j=1}^{p} w_j \sum\limits_{i=1}^{p}\frac{|rf_{ij} - rf_{ij}'|}{|rf_{ij}|}}{p^2}$       	|
 |  $C-C'$  	|                       $\frac{\sum\limits_{i=1}^{p}(c_i - c_i')^2}{p}$                      	|                       $\frac{\sum\limits_{i=1}^{p}|c_i - c_i'|}{p}$                      	|                       $\frac{\sum\limits_{i=1}^{p}\frac{|c_i - c_{i}'|}{|c_i|}}{p}$                       	|
 |  $F-F'$  	|          $\frac{\sum\limits_{j=1}^{p}w_j\sum\limits_{i=1}^{p}(f_{ij} - f_{ij}')^2}{p^2}$          	|          $\frac{\sum\limits_{j=1}^{p}w_j\sum\limits_{i=1}^{p}|f_{ij} - f_{ij}'|}{p^2}$          	|         $\frac{\sum\limits_{j=1}^{p} w_j \sum\limits_{i=1}^{p}\frac{|f_{ij} - f_{ij}'|}{|f_{ij}|}}{p^2}$         	|
@@ -308,7 +312,7 @@ $\overline{X^{\phantom{'}}} - \overline{X^{'}}$). Similarly, for $V - V^{'}$meas
 
 In Yancey, Winkler and Creecy (2002), it is observed that dividing by $x_{\text{ij}}$ causes the $X - X^{'}$mean variation to rise sharply when the original value $x_{\text{ij}}$ 
 is close to 0. This dependency on the particular original value being undesirable in an information loss measure, Yancey, Winkler and Creecy (2002) propose to replace the mean 
-variation of $X - X^{'}$ by the more stable measure
+variation of $X - X^{'}$ by the more stable measure IL1 given by
 $$
   \frac{1}{np}\sum_{j=1}^p\sum_{i=1}^n\frac{|x_{ij}-x'_{ij}|}{\sqrt{2} S_j}
 $$
@@ -334,6 +338,9 @@ The method will be not applicable if the correlation matrix is singular. The mai
 and takes all connections between analysed variables, even those hard to observe, into account. $\gamma$ can be computed in the sdcMicro R package using the function `IL_correl()`.
 
 ### Complex measures of information loss
+
+:::{.callout-warning collapse=true}
+## Expert level
 
 The above presented concepts of information loss prompt the question whether it is possible to construct complex measure of information loss taking variables of all measurement
 scales into account. The relevant proposal was formulated by Młodak (2020) and applied by Młodak, Pietrzak and Józefowski (2022) to the case of microdata from the Polish survey of 
@@ -415,6 +422,8 @@ The measures ([-@eq-lambda-distance]) and ([-@eq-lambda-infoloss]) can be expres
 respectively. The greater the value of $\lambda/\lambda_j$, the bigger the loss/contribution. In this way users obtain clear and easily understandable information about expected
 information loss owing to the application of SDC. These measures were implemented to the sdcMicro R package and are computed by the function `IL_variables`.
 
+:::
+
 ### Practical realization of trade-off between safety and utility of microdata
 
 Achieving the optimal balance between minimization of dislosure risk and minimization of the information loss is not easy. 
@@ -426,7 +435,7 @@ held (such information is usually provided in official data access request). The
 establishment of used measure in this context. For instance, if the users prefers comparison of distributions of some phenomena, then the measures of distribution disturbance should 
 have much higher priority than others. On the other hand, if the subject of interest of an user are connections between some features, then for categorical variables the information 
 loss should be assessed using the measures for contingency tables (as they are in fact frequency tables, this problem is discussed in 
-[[Chapter 5]{.underline}](05-frequency-tables.html)). For continuous variables the aforementioned measures of impact on the intensity of connections can be, of course, applied.
+[Chapter 5](05-frequency-tables.html)). For continuous variables the aforementioned measures of impact on the intensity of connections can be, of course, applied.
 
 Similarly as e.g. in the case of significance and loss in testing of statistical hypotheses, the most obvious and easy approach to obtain reasonable compromise 
 between these two expectations is to apply one of two following ways:

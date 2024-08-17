@@ -21,12 +21,12 @@ This can be prepared (partially) externally or it can be specified interactively
 2. **Threshold-rule/risk models.** Selection and computation of frequency tables on which several SDC-methods (like risk models, threshold rule) are based
 3. **Global recoding.** Selection of possible recodings and inspection of the results.
 4. Selection and application of **other protection methods** like:
-    a.  Microaggregation ([-@sec-microaggregation])
-    b.  PRAM\index{PRAM} ([-@sec-PRAM])
-    c.  Rounding ([-@sec-rounding])
-    d.  Top and bottom coding ([-@sec-top-and-bottom-coding])
-    e.  Rank swapping ([-@sec-data-rank-swapping])
-    f.  Noise addition ([-@sec-noise-addition])
+    -  Microaggregation ([-@sec-microaggregation])
+    -  PRAM\index{PRAM} ([-@sec-PRAM])
+    -  Rounding ([-@sec-rounding])
+    -  Top and bottom coding ([-@sec-top-and-bottom-coding])
+    -  Rank swapping ([-@sec-data-rank-swapping])
+    -  Noise addition ([-@sec-noise-addition])
 5. **Risk model:** selection of the risk-level
 6. **Generate the safe micro file.** During this process all data transformations specified above. This is also the moment that all remaining unsafe combinations will be protected by local suppressions. Also an extensive report will be generated.
 
@@ -59,7 +59,7 @@ Once a problem instance has been created, some helpful summary statistics such a
     This allows to quickly try out different parameter settings and makes the process of applying SDC methods quite interactive.
 
     The package allows to (for example) add stochastic noise to numerical variables ([-@sec-noise-addition]) using `addNoise()`, post-randomize values in categorically scaled variables ([-@sec-PRAM]) with function `pram()`, create synthetic microdata ([-@sec-synthetic-data]) with method `dataGen()` or perform global recoding ([-@sec-global-recoding]) by using `globalRecode()`. 
-    Furthermore it is possible to apply rank-swapping ([-@sec-data-rank-swapping]) with function `rankSwap()`, compute SUDA-scores ([-@sec-SUDA]) using `suda2()`, compute individual risk estimates ([-@sec-argus-individual-risk)] with `indivRisk()` and `freqCalc()` as well as make a set of categorical key variables fulfill $k$-anonymity using `kAnon()`. 
+    Furthermore it is possible to apply rank-swapping ([-@sec-data-rank-swapping]) with function `rankSwap()`, compute SUDA-scores ([-@sec-SUDA]) using `suda2()`, compute individual risk estimates ([-@sec-argus-individual-risk]) with `indivRisk()` and `freqCalc()` as well as make a set of categorical key variables fulfill $k$-anonymity using `kAnon()`. 
     In the current versions of the package, TRS (targeted record swapping, [-@sec-TRS]) is implemented and can be called using the `recordSwap()` function. 
     A detailed discussion and overview is available in a custom [vignette](https://sdctools.github.io/sdcMicro/articles/recordSwapping.html).
 

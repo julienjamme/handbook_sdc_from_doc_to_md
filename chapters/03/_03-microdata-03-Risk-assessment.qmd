@@ -2,8 +2,6 @@
 
 ### Overview {#sec-risk-overview}
 
-<!--**SECTION 3.2.1 LUISA COULD PERHAPS ADD SOMETHING IN THIS SECTION FROM THE MATERIALS IN THE INTRODUCTION OF THE RECORD LINKAGE PDF, SECTION 1 OF THAT PDF (remark by Josep)**-->
-
 Microdata has many analytical advantages over aggregated data, but also poses more serious disclosure issues because of the many variables that are disseminated in one file. 
 For microdata, disclosure occurs when there is a possibility that an individual can be re-identified by an intruder using information contained in the file, and when on the basis of that, confidential information is obtained. 
 Microdata are released only after taking out directly identifying variables, such as names, addresses, and identity numbers. 
@@ -193,8 +191,6 @@ If a key is considered unsafe according to this rule, protection is required. Th
 These techniques are described in the sections [-@sec-global-recoding] and [-@sec-local-suppression].
 
 ### ARGUS individual risk methodology {#sec-argus-individual-risk}
-:::{.callout-warning collapse=true}
-## Expert level
 
 If a distinction between units rare in the sample from a unit rare in the population wants to be made then an inferential step may be followed. 
 In the initial proposal by Benedetti and Franconi (1998), further developed in Franconi and Polettini (2004) and implemented in $\mu$‑ARGUS, the uncertainty on $F_k$ is accounted for in a Bayesian fashion by introducing the distribution of the population frequencies given the sample frequencies. 
@@ -247,6 +243,9 @@ Under this approach, individuals are at risk because their probability of re-ide
 
 In order to reduce the number of local suppressions, the procedure of releasing a safe file considers preliminary steps of protection using techniques such as *global recoding* (see @sec-global-recoding). 
 Recoding of selected variables will indeed lower the individual risk and therefore the re-identification rate of the file.
+
+:::{.callout-warning collapse="true"}
+## Expert level
 
 *Threshold setting using the re-identification rate*\
 Consider the re-identification rate $\xi$: a key $k$ contributes to $\xi$ an amount $r_kf_k$ of expected re‑identifications. 
@@ -319,8 +318,6 @@ For a discussion on this issue see Polettini (2004).
 :::
 
 ### The Poisson model with log-linear modelling {#sec-poisson-log-linear}
-:::{.callout-warning collapse=true}
-## Expert level
 
 As defined in Skinner and Elamir (2004), assuming that the $F_{k}$ are independently Poisson distributed with means $\left\{\lambda_{k} \right\}$ and assuming a Bernoulli sampling scheme with equal selection probably $\pi$, then $f_{k}$ and $F_{k} - f_{k}$ are independently Poisson distributed as: $f_{k} \mid \lambda_{k} \sim \operatorname{Pois} \left(\pi\lambda_{k} \right)$ and $F_{k} - f_{k} \mid \lambda_{k} \sim \operatorname{Pois} \left( ( 1 - \pi ) \lambda_{k} \right)$ . The individual risk measure for a sample unique is defined as $r_{k} = \mathbb{E}_{\lambda_{k}} \left( \frac{1}{F_{k}} \mid f_{k} = 1 \right)$ which is equal to: 
 
@@ -341,6 +338,9 @@ $$
 where $\text{SU}$ is the set of all sample uniques.
 
 More details on this method are available from Skinner and Shlomo (2005, 2006) and Shlomo and Barton (2006).
+
+:::{.callout-warning collapse="true"}
+## Expert level
 
 Skinner and Shlomo (2005, 2006) have developed goodness-of-fit criteria for selecting the most robust log-linear model that will provide accurate estimates for the global disclosure risk\index{disclosure risk} measure detailed above. 
 The method begins with a log-linear model where a high test statistic indicates under-fitting (*i.e.*, the disclosure risk\index{disclosure risk} measures will be over-estimated). 
@@ -368,14 +368,15 @@ In each local neighbourhood of cell *k* a smoothing polynomial regression model 
 :::
 
 ### SUDA {#sec-SUDA}
-:::{.callout-warning collapse=true}
-## Expert level
 
 The Special Uniques Detection Algorithm (SUDA) (Elliot et.al., 2005) is a software system (windows application available as freeware under restricted licence) that provides disclosure risk\index{disclosure risk} broken down by record, variable, variable value and by interactions of those. 
 It is based on the concept of a "special unique". A special unique is a record that is a sample unique on a set of variables and that is also unique on a subset of those variables. 
 Empirical work has shown that special uniques are more likely to be population unique than random uniques. 
 Special uniques can be classified according to the size and number of the smallest subset of key variables that defines the record as unique, known as minimal sample uniques (MSU). 
 In the algorithm, all MSUs are found for each record on all possible subsets of the key variables where the maximum size of the subsets *m* is specified by the user. 
+
+:::{.callout-warning collapse="true"}
+## Expert level
 
 SUDA grades and orders records within a microdata file according to the level of risk. 
 The method assigns a per record matching probability to a sample unique based on the number and size of minimal uniques. 
@@ -395,18 +396,16 @@ $$
 $$
 
 The advantage of this method is that it relates to a practical model of data intrusion, and it is possible to compare different values directly.
- The disadvantages are that it is sensitive to level of the max MSU parameter and is calculated in a heuristic manner. 
- In addition it is difficult to compare disclosure risk\index{disclosure risk} across different files. 
- However, the method has been extensively tested and was used successfully for the detection of high-risk records in the UK Sample of Anonymized Records (SAR) drawn from the 2001 Census (Merrett, 2004). 
- The assessment showed that the DIS-SUDA measure calculated from the algorithm provided a good estimate for the individual disclosure risk\index{disclosure risk} measure, especially for the case when the number of key variables, $m = 6$. 
- The algorithm also identifies the variables and value of variables that are contributing most to the disclosure risk\index{disclosure risk} of the record.
+The disadvantages are that it is sensitive to level of the max MSU parameter and is calculated in a heuristic manner. 
+In addition it is difficult to compare disclosure risk\index{disclosure risk} across different files. 
+However, the method has been extensively tested and was used successfully for the detection of high-risk records in the UK Sample of Anonymized Records (SAR) drawn from the 2001 Census (Merrett, 2004). 
+The assessment showed that the DIS-SUDA measure calculated from the algorithm provided a good estimate for the individual disclosure risk\index{disclosure risk} measure, especially for the case when the number of key variables, $m = 6$. 
+The algorithm also identifies the variables and value of variables that are contributing most to the disclosure risk\index{disclosure risk} of the record.
 
 A new algorithm, SUDA2 has been developed, Elliot et al (2005), that improves SUDA using several methods. The development provides a much faster tool that can handle larger datasets.
 :::
 
 ### Record Linkage {#sec-record-linkage}
-:::{.callout-warning collapse=true}
-## Expert level
 
 Roughly speaking, record linkage\index{record linkage} consists of linking each record $a$ in file $A$ (protected file) to a record $b$ in file $B$ (original file). 
 The pair $(a,b)$ is a match if $b$ turns out to be the original record corresponding to $a$. 
@@ -417,11 +416,10 @@ The number of matches gives an estimation of the number of protected records who
  Accordingly, disclosure risk\index{disclosure risk} is defined as the proportion of matches among the total number of records in $A$.
 
 The main types of record linkage\index{record linkage} used to measure identity disclosure in SDC are discussed below. 
-An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [[handbook]{.underline}](https://research.cbs.nl/casc/handbook.htm)).
-:::
+An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [[https://research.cbs.nl/casc/handbook.htm]{.underline}](https://research.cbs.nl/casc/handbook.htm)).
 
 #### Distance-based record linkage\index{record linkage}
-:::{.callout-warning collapse=true}
+:::{.callout-warning collapse="true"}
 ## Expert level
 
 Distance-based record linkage\index{record linkage} consists of linking each record $a$ in file $A$ to its nearest record $b$ in file $B$. 
@@ -447,7 +445,7 @@ Choosing a suitable distance is also especially thorny in the cases of categoric
 :::
 
 #### Probabilistic record linkage\index{record linkage}
-:::{.callout-warning collapse=true}
+:::{.callout-warning collapse="true"}
 ## Expert level
 
 Like distance-based record linkage\index{record linkage}, probabilistic record linkage\index{record linkage} aims at linking pairs of records $(a,b)$ in datasets $A$ and $B$, respectively. 
@@ -470,7 +468,7 @@ However, they do not require rescaling or weighting of variables. The user only 
 :::
 
 #### Other record linkage\index{record linkage} methods
-:::{.callout-warning collapse=true}
+:::{.callout-warning collapse="true"}
 ## Expert level
 
 Recently, the use of other record linkage\index{record linkage} methods has also been considered for disclosure risk\index{disclosure risk} assessment. 
