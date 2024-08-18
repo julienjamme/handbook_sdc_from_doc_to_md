@@ -305,8 +305,90 @@ the data utility for users and data provider as a source of reliable, creadible 
 
 In practice, the data holder (e.g. official statistics) prefers rather the first approach as the strict protection of data privacy is usually an obligation imposed by valid law regulations. So, assurance of the safety of confidential information is very important.     
 
+### Example
+  
+  The manner of assessing disclosure risk and information loss owing to the application of SDC methods was demonstrated using data from a case study published on the website of International Household Survey Network (IHSN)[^1] Statistical Disclosure Control for Microdata: A Practice Guide - Case Study Data and R Script, being a supplement to the book by Benschop, Machingauta and Welch (2022). Use was made of part of the code from the first study of this type, in which the authors applied SDC measures to a set of farms using the sdcMicro package.
+  
+  The following categorical variables were selected as key variables: REGION, URBRUR (area of residence), HHSIZE (household size), OWNAGLAND (agricultural land ownership), RELIG (religion of household head). The authors of the case study applied local data suppression to these variables. 
+  
+  SDC was also applied to quantitative variables concerning 1) expenditure: TFOODEXP (total food expenditure), TALCHEXP (total alcohol expenditure), TCLTHEXP (total expenditure on clothing and footwear), THOUSEXP (total expenditure on housing), TFURNEXP (total expenditure on furnishing ), THLTHEXP (total expenditure on health), TTRANSEXP (total expenditure on transport), TCOMMEXP (total expenditure on communications), TRECEXP (total expenditure on recreation), TEDUEXP (total expenditure on education), TRESTHOTEXP (total expenditure on restaurants and hotel ), TMISCEXP (total miscellaneous expenditure); 2) income: INCTOTGROSSHH (total gross household income – annual), INCRMT (total amount of remittances received from remittance sending members), INCWAGE (wage and salaries – annual), INCFARMBSN (gross income from household farm businesses – annual), INCNFARMBSN (gross income from household non-farm businesses – annual), INCRENT (rental income – annual), INCFIN (financial income from savings, loans, tax refunds, maturity payments on insurance), INCPENSN (pension and other social assistance – annual), INCOTHER (other income – annual), and 3) land size: LANDSIZEHA (land size owned by household in ha). 1% noise was added to the variables relating to all components of expenditure and income; 5% noise was added to outliers. Values of the LANDSIZEHA variable were rounded (1 digit for plots smaller than 1 and to no digits for plots larger than 1) and grouped (values in intervals 5-19 to 13, and values in intervals 20-39 to 30, values larger than 40 to 40).
+  
+  In the case study, the PRAM method was applied to variables describing apartment equipment: ROOF (roof type), WATER (main source of water), TOILET (main toilet facility), ELECTCON (electricity), FUELCOOK (main cooking fuel), OWNMOTORCYCLE (ownership of motorcycle), CAR (ownership of car), TV (ownership of television), LIVESTOCK (number of large-sized livestock owned). The data were stratified by REGION variable making sure that variants of the transformed variables were not modified in 80% of cases.
+  
+  The set of data anonymised in the manner described above was used as the starting point for the assessment of the risk of disclosure and information loss. Tables @tbl-example-individual-risk and @tbl-example-global-risk shows descriptive statistics for the risk of disclosure in the case of key variables before and after applying local suppression. While the risk was significantly reduced, one must bear in mind that the risk of disclosure was already relatively low in the original dataset. The maximum value of individual risk dropped from 5.5% in the original dataset to 0.3% after applying local suppression. The global risk in the original set was on average equal to 0.05%, which means that the expected number of disclosed units was 0.99; after applying local suppression, the global risk dropped to less than 0.02, which means that the expected number of disclosed units was 0.35.
+  
+  As regards the assessment of disclosure risk for quantitative variables, an interval of [0.0%, 83.5%] was chosen, where the upper limit represents the worst case scenario in which the intruder is sure that each nearest neighbour is in fact the correct linkage.
+  
+  Several of the measures mentioned above have been developed to assess the loss of information. Based on distances between values of variables that were to be anonymised in the original set and the their values in the anonymised set, $\lambda$ measures were calculated. Table @tbl-example-information-loss shows the general value of $\lambda$ and its values for individual variables ($\lambda_k$). The overall loss  of information for the anonymised variables is 14.3%. The greatest loss is observed for quantitative variables to which noise was added; in the case of INCTOTGROSSHH, the loss of information measured by $\lambda$ reaches 83.4%. The loss of information was much lower in the case of key variables subjected to local suppression and those modified with the PRAM method: the maximum loss was 9.7% and 9.4%, respectively.
+  
+  Overall information loss was determined using two measures described above: $IL1$ and $\lambda$. $IL1$ was equal to 79.4, which indicates relatively large standard deviations of anonymised values of quantitative variables from standard deviations of the original variables. The value of the second measure, which is based on correlation coefficients, is 0.6%, which indicates a slight loss of information regarding correlations between the quantitative variables. Nevertheless, it should be stressed that as a result of to numerous cases of non-response in the quantitative variables, the value of $\lambda$ was calculated on the basis of only 111 observations, i.e. less than 6% of all units.
+  
+  The above assessment was conducted using the R sdcMicro package. Because some of the information loss measures described above are not implemented in this package, they were not used in the assessment.
+  
+  : Descriptive statistics of individual risk measures for quantitative variables {#tbl-example-individual-risk}
+  
+  | **Statistic**                  | **Original values**    | **Values after anonymisation** |
+  | :----------------------------- | ---------------------: | -----------------------------: |
+  | Min                            | 0.0007                 | 0.0007                         |
+  | Q1                             | 0.0021                 | 0.0021                         |
+  | Me                             | 0.0067                 | 0.0059                         |
+  | Q3                             | 0.0213                 | 0.0161                         |
+  | Max                            | 5.5434                 | 0.3225                         |
+  | Mean                           | 0.0502                 | 0.0176                         |
+  : Global risk measures for quantitative variables {#tbl-example-global-risk}
+  
+  | **Statistic**                  | **Original values**    | **Values after anonymisation** |
+  | :----------------------------- | ---------------------: | -----------------------------: |            
+  | Risk %                         | 0.0502                 | 0.0176                         |
+  | Expected number of disclosures | 0.9895                 | 0.3476                         |
+  
+  
+  : Loss of information due to anonymisation, overall and for individual variables {#tbl-example-information-loss}
+  
+  | **Variable**  |$\lambda$ (%)|
+  | :-----------  | --------:   |
+  | **OVERALL**   | **14.3**    |
+  | URBRUR        | 0.5         |
+  | REGION        | 0.2         |
+  | OWNAGLAND     | 2.5         |
+  | RELIG         | 1.1         |
+  | LANDSIZEHA    | 9.7         |
+  | TANHHEXP      | 50.7        |
+  | TFOODEXP      | 38.3        |
+  | TALCHEXP      | 12.6        |
+  | TCLTHEXP      | 8.4         |
+  | THOUSEXP      | 14.6        |
+  | TFURNEXP      | 6.0         |
+  | THLTHEXP      | 12.3        |
+  | TTRANSEXP     | 18.5        |
+  | TCOMMEXP      | 9.2         |
+  | TRECEXP       | 4.5         |
+  | TEDUEXP       | 41.4        |
+  | TRESTHOTEXP   | 16.6        |
+  | TMISCEXP      | 6.4         |
+  | INCTOTGROSSHH | 73.6        |
+  | INCRMT        | 32.1        |
+  | INCWAGE       | 71.0        |
+  | INCFARMBSN    | 15.1        |
+  | INCNFARMBSN   | 24.0        |
+  | INCRENT       | 10.4        |
+  | INCFIN        | 1.3         |
+  | INCPENSN      | 17.1        |
+  | INCOTHER      | 17.7        |
+  | ROOF          | 6.0         |
+  | TOILET        | 7.6         |
+  | WATER         | 9.4         |
+  | ELECTCON      | 1.7         |
+  | FUELCOOK      | 4.3         |
+  | OWNMOTORCYCLE | 3.3         |
+  | CAR           | 1.5         |
+  | TV            | 7.3         |
+  | LIVESTOCK     | 1.3         |
+[^1]: http://www.ihsn.org/software/disclosure-control-toolbox
 
 ### References
+
+Benschop, T., Machingauta, C., and Welch, M. (2022). *Statistical Disclosure Control: A Practice Guide*, [[https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/]{.underline}](https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/)
 
 Chatfield, C., and Collins, A. J., (1980). *Introduction to Multivariate Analysis*, Chapman and Hall, London, 1980.
 
