@@ -51,7 +51,7 @@ between relevant perturbed ones; such measures can be e.g. correlation coefficie
 ### Information loss measures for categorical data
 
 Straightforward computation of measures based on basic arithmetic operations like addition, subtraction, multiplication and division on categorical data is not possible. 
-Neither is the use of most descriptive statistics like Eucledian distance, mean variance, correlation, etc.
+Neither is the use of most descriptive statistics like Euclidean distance, mean variance, correlation, etc.
 The following alternatives are considered in Domingo-Ferrer and Torra (2001):
 
 - Direct comparison of categorical values
