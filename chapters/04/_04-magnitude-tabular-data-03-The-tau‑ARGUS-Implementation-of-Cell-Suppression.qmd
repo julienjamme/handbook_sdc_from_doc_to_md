@@ -131,9 +131,9 @@ Based on the assumption of a simple but probably more realistic disclosure scena
 
 $\tau$-ARGUS offers basically two algorithms, Modular and Hypercube, both satisfying the above-mentioned minimum standards regarding disclosure risk\index{disclosure risk}. Both take a backtracking approach to protect hierarchical tables within an iterative procedure: they subdivide hierarchical tables into sets of linked, unstructured tables. The cell suppression\index{cell suppression} problem is solved for each subtable separately. Secondary suppressions are coordinated for overlapping subtables.
 
-The Modular approach, a.k.a. HiTaS algorithm (see de Wolf, 2002), is based on the optimal solution as implemented by Fischetti and Salazar-González. By breaking down the hierarchical table in smaller non-structured subtables, protecting these subtables and linking the subtables together by a backtracking procedure the whole table is protected. For a description of the modular approach see @modular, the optimal Fischetti/Salazar-González method is described in section @optimal. See also Fischetti and Salazar-González (2000).
+The Modular approach, a.k.a. HiTaS algorithm (see de Wolf, 2002), is based on the optimal solution as implemented by Fischetti and Salazar-González. By breaking down the hierarchical table in smaller non-structured subtables, protecting these subtables and linking the subtables together by a backtracking procedure the whole table is protected. For a description of the modular approach see @sec-modular, the optimal Fischetti/Salazar-González method is described in section @sec-optimal. See also Fischetti and Salazar-González (2000).
 
-The Hypercube is based on a hypercube heuristic implemented by Repsilber (2002). See also the descriptions of this method in @hypercube.
+The Hypercube is based on a hypercube heuristic implemented by Repsilber (2002). See also the descriptions of this method in @sec-hypercube.
 
 Note that in the current implementation of $\tau$-ARGUS, use of the optimization tools requires a license for additional commercial software (LP-solver), whereas use of the hypercube method is free. While Modular is only available for the Windows platform, of Hypercube there are also versions for Unix, IBM (OS 390) and SNI (BS2000).
 
