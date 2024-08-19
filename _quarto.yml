@@ -17,6 +17,7 @@ book:
     - name: Reinhard Tent
     - name: Andrzej Młodak
     - name: Johannes Gussenbauer
+    - name: Kamil Wilak
   date: today
   date-format: YYYY, MMMM
   repo-url: https://github.com/julienjamme/handbook_sdc_from_doc_to_md
