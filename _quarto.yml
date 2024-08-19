@@ -43,7 +43,7 @@ format:
       - custom.scss
     reference-location: margin
     citation-location: margin
-    cap-location: margin
+    cap-location: bottom
     code-link: true
   pdf:
     # pdf-engine: xelatex
