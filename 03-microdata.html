@@ -1469,7 +1469,7 @@ Expert level
 <p>Tendick, P., and Matloff, N. (1994). <em>A modified random perturbation method for database security</em>. ACM Transactions on Database Systems, 19:47–63.</p>
 </section>
 </section>
-<section id="sec-microaggregation-further" class="level3 page-columns page-full" data-number="3.4.5">
+<section id="sec-microaggregation-further" class="level3" data-number="3.4.5">
 <h3 data-number="3.4.5" class="anchored" data-anchor-id="sec-microaggregation-further"><span class="header-section-number">3.4.5</span> Microaggregation: further details</h3>
 <p>Consider a microdata set with <span class="math inline">\(p\)</span> continuous variables and <span class="math inline">\(n\)</span> records (<em>i.e.</em>, the result of recording <span class="math inline">\(p\)</span> variables on <span class="math inline">\(n\)</span> individuals). A particular record can be viewed as an instance of <span class="math inline">\(\mathbf{X}' = \left( \mathbf{X}_{1},\cdots,\mathbf{X}_{p} \right)\)</span>, where the <span class="math inline">\(\mathbf{X}_{i}\)</span> are the variables. With these individuals, <span class="math inline">\(g\)</span> groups are formed with <span class="math inline">\(n_{i}\)</span> individuals in the <span class="math inline">\(i\)</span>-th group (<span class="math inline">\(n_{i} \geq k\)</span> and <span class="math inline">\(n = \Sigma_{}^{}n_{i}\)</span>). Denote by <span class="math inline">\(x_{\text{ij}}\)</span> the <span class="math inline">\(j\)</span>-th record in the <span class="math inline">\(i\)</span>-th group; denote by <span class="math inline">\({\overline{x}}_{i}\)</span> the average record over the <span class="math inline">\(i\)</span>-th group, and by <span class="math inline">\(\overline{x}\)</span> the average record over the whole set of <span class="math inline">\(n\)</span> individuals.</p>
 <p>The optimal <span class="math inline">\(k\)</span>-partition (from the information loss point of view) is defined to be the one that maximizes within-group homogeneity; the higher the within-group homogeneity, the lower the information loss, since microaggregation replaces values in a group by the group centroid. The sum of squares criterion is common to measure homogeneity in clustering. The within-groups sum of squares <span class="math inline">\(\text{SSE}\)</span> is defined as</p>
@@ -1692,16 +1692,16 @@ Table&nbsp;3.6: Example - 3-anonymous version of the SME dataset after optimal m
 </div>
 </div>
 </div>
-<section id="fixed-vs.-variable-group-size" class="level4 page-columns page-full" data-number="3.4.5.1">
+<section id="fixed-vs.-variable-group-size" class="level4" data-number="3.4.5.1">
 <h4 data-number="3.4.5.1" class="anchored" data-anchor-id="fixed-vs.-variable-group-size"><span class="header-section-number">3.4.5.1</span> Fixed vs.&nbsp;variable group size</h4>
 <p>Classical microaggregation algorithms (Defays and Nanopoulos, 1993) required that all groups except perhaps one be of size <span class="math inline">\(k\)</span>; allowing groups to be of size <span class="math inline">\(k\)</span> depending on the structure of data was termed <em>data-oriented microaggregation</em> (Mateo-Sanz and Domingo-Ferrer, 1999), (Domingo-Ferrer and Mateo-Sanz, 2002). <a href="#fig-fixed-vs-variable-sized-group" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> illustrates the advantages of variable-sized groups. If classical fixed-size microaggregation with <span class="math inline">\(k = 3\)</span> is used, we obtain a partition of the data into three groups, which looks rather unnatural for the data distribution given. On the other hand, if variable-sized groups are allowed then the five data on the left can be kept in a single group and the four data on the right in another group; such a variable-size grouping yields more homogeneous groups, which implies lower information loss.</p>
 <p>However, except for specific cases such as the one depicted in <a href="#fig-fixed-vs-variable-sized-group" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>, the small gain in within-group homogeneity obtained with variable-sized groups hardly justifies the higher computational overhead of this option with respect to fixed-sized groups. This is particularly evident for multivariate data, as noted by&nbsp;Sande (2002).</p>
-<div id="fig-fixed-vs-variable-sized-group" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div id="fig-fixed-vs-variable-sized-group" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fixed-vs-variable-sized-group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Images/media/image66.png" style="width:3.8in;height:2.4in" class="figure-img">
 </div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-fixed-vs-variable-sized-group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fixed-vs-variable-sized-group-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3.1: Variable-sized groups versus fixed-sized groups
 </figcaption>
 </figure>
@@ -2755,20 +2755,20 @@ Table&nbsp;3.10: Loss of information due to anonymisation, overall and for indiv
 <p>Yancey, W. E., Winkler, W. E., and Creecy, R. H. (2002). <em>Disclosure risk assessment in perturbative microdata protection.</em> In J.&nbsp;Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 135–152, Berlin Heidelberg, 2002. Springer.</p>
 </section>
 </section>
-<section id="sec-software" class="level2 page-columns page-full" data-number="3.6">
+<section id="sec-software" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="sec-software"><span class="header-section-number">3.6</span> Software</h2>
-<section id="sec-mu-argus" class="level3 page-columns page-full" data-number="3.6.1">
+<section id="sec-mu-argus" class="level3" data-number="3.6.1">
 <h3 data-number="3.6.1" class="anchored" data-anchor-id="sec-mu-argus"><span class="header-section-number">3.6.1</span> <span class="math inline">\(\mu\)</span>-ARGUS</h3>
 <p>The <span class="math inline">\(\mu\)</span>-ARGUS software has been developed to facilitate statisticians, mainly in the NSI’s, to apply the SDC-methods described above to create safe micro data files. It is a tool to apply the SDC-methodology, not a black-box that will create a safe file without knowing the background of the SDC-methodology. The development of <span class="math inline">\(\mu\)</span>‑ARGUS has started at Statistics Netherlands by implementing the Dutch methods and rules. With this software as a starting point many other methods have been added. Several of these methods have been developed and/or actually implemented during the CASC-project.</p>
 <p>In this section we will just a short overview of <span class="math inline">\(\mu\)</span>-ARGUS, as an extensive manual is available, fully describing the software.</p>
 <p>The starting point of <span class="math inline">\(\mu\)</span>-ARGUS has been implementation of the threshold rules for identifying unsafe records and procedures for global recoding and local suppression.</p>
 <p><strong>Data:</strong> <span class="math inline">\(\mu\)</span>-ARGUS can both protect fixed and free format ASCII files.</p>
-<div id="fig-mu-argus-overview" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div id="fig-mu-argus-overview" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mu-argus-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Images/media/mu_argus_overview.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-mu-argus-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mu-argus-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3.2: Overview of <span class="math inline">\(\mu\)</span>-ARGUS
 </figcaption>
 </figure>
