@@ -142,12 +142,12 @@ We now analyse in turn each of the six stages.
 The starting point deals with the need of confidentiality protection which is at the base of any release of microdata. 
 If the microdata do not refer to legal entity or individual persons it can be released without confidentiality protection: an example is the amount of rain fall in a region. 
 If microdata pertain only of public variables, in most cases they might be released: the legislation usually treats such data as excluded from statistical confidentiality. 
-However, in general, data refer to individual or enterprises and contains confidential variables (degree of disability, income, turnover, expenses, etc.) and therefore need to be protected.
+However, in general, data refer to individual or enterprises and contains confidential variables (health related data, income, turnover, expenses, etc.) and therefore need to be protected.
 
 ### Characteristics and uses of microdata
 
 Of course different levels of protection are needed for different type of users. This theme leads us to the second stage of the process i.e. the study of the key uses and characteristics of the data. 
-Here the initial question is whether the microdata file we are going to release is intended for a general public (public use file) or whether it is created for analysis or research purpose (research use files). 
+Here the initial question is whether the microdata file we are going to release is intended for a general public (public use file) or whether it is created for research purpose (research use files). 
 In the latter case the microdata will be released according to predefined procedures and legal binding (see also @sec-licensing). 
 The difference in user's type implies different user's needs, different disclosure scenarios, different types of analyses we expect to be performed with the released data, different statistics we may intend to preserve and different amount of protection we intend to apply. 
 We now analyse all these issues in terms.
@@ -164,7 +164,7 @@ Typical questions that need to be addressed are:
 If this is the case care needs to be taken in checking both levels/types of units involved. 
 *E.g.*, do schools/universities/enterprises need to be protected besides students/graduates/employees?
 
-*What type of sampling design has been used?* Are there strata (or units of the earlier stages sampling in two- or multistage sampling design -- e.g. units of first stage sampling in two-stage sampling design) which have been censured? Of course a complete enumeration of a strata (typical in business surveys) implies different and higher risks than a sample. 
+*What type of sampling design has been used?* Are there strata (or units of earlier stages in a two- or multistage sampling design) which have been censured? Of course a complete enumeration of a strata (typical in business surveys) implies different and higher risks than a sample. 
 Is two- or multistage sampling used with different types of units in the different stages?
 
 An analysis of the questionnaire is useful to analyse the type of information present in the file: possible identifying variables (of which identifiers and quasi-identifiers), confidential variables and sensitive variables.
@@ -219,8 +219,8 @@ This implies first a definition of possible situations at risk (disclosure scena
 A disclosure scenario is the definition of realistic assumptions about what an intruder might know about respondents and what information would be available to him to match against the microdata to be released and potentially make an identification and disclosure.
 
 Again different types of releases may require different disclosure scenarios and different definitions of risk. 
-For example the nosy neighbourhood scenario described in @sec-disclosure-risk-scenarios, possibly with knowledge of the presence of the respondent in the sample (implying that sample uniques are a relevant quantity of interest for risk definition), maybe deemed adequate for a public use file. 
-A researcher that needs to perform an analysis for research purposes should be perceived differently in this context.
+For example the nosy neighbourhood scenario described in @sec-disclosure-risk-scenarios, possibly with knowledge of the presence of the respondent in the sample (implying that sample uniques are a relevant quantity of interest for risk definition), may be deemed adequate for a public use file. 
+A different trust might be put in a researcher that needs to perform an analysis for research purposes.
 This implies, as a minimum step, a higher level of acceptable risk and a different scenario the spontaneous identification scenario.
 
 *Spontaneous recognition*\
@@ -239,8 +239,8 @@ Different approaches are used if the identifying variables are categorical of co
 In the former case at the basis of the definition is the concept of a 'key' (i.e. the combination of categories of the identifying variables): see @sec-risk-overview for a classification of different definitions. 
 Whereas if continuous identifying variables are present in the file a possibility is to use the concept of density: see Ichim (2009) for a detailed analysis of definitions of risk in the case of continuous variables. 
 Of course, the problem is even more complicated when we deal with a mixture of categorical and numerical key variables; for an example of this situation (quite common in enterprise microdata) see case study A1 (Community Innovation Survey).
-Another solution in this context can be the assessment of disclosure risk\index{disclosure risk} based on the (expected) number of units for which a value of the given continuous variable falls into the respectively defined (using established threshold of deviation) surrounding of a given observation. 
-This approach can be perceived as some variation of $k$-anonymity in this case.
+Another solution in this context can be the assessment of disclosure risk\index{disclosure risk} based on the (expected) number of units for which a value of the given continuous variable falls into the respectively defined (using established threshold of deviation) neighborhood of a given observation. 
+This approach can be perceived as some variation of $k$-anonymity in this case.\
 
 *Risk assessment*\
 Once a formal definition of risk has been chosen we need to measure/estimate it. 
@@ -296,7 +296,7 @@ An example of the application of this reasoning for the definition of a dissemin
 
 ### Implementation
 
-The key action of the SDC process is the implementation of the whole procedure, choice of software, parameters and levels of acceptable risks.
+The next stage of the SDC process is the implementation of the whole procedure, choice of software, parameters and levels of acceptable risks.
 
 Documentation is an essential part of any dissemination strategy both for auditing from external authorities and transparency towards users. 
 The former may include description of legal and administrative steps for a risk management policy together with the technical solution applied. 
@@ -310,10 +310,10 @@ The released microdata should be obviously accompanied by all necessary metadata
 
 The last - but, of course, not least - stage of the procedure is the ex post assessment of disclosure risk\index{disclosure risk} and computation of the expected information loss\index{information loss} due to SDC. 
 The ex post risk assessment (usually made using the same measures as in the case of ex ante assessement, for comparability) allows for confirmation whether the used procedure eliminates or sufficiently reduces the threat of unit identification or not. 
-If not, a modification of used methods (*e.g.* by changing some tools, modification of parameters, etc.) should be made. This means back to the step "SDC-methods".
+If not, a modification of used methods (*e.g.* by changing some tools, modification of parameters, etc.) should be made. This means back to either the step "Disclosure limitation methods" or the step "Implementation".
 
 An assessment of information loss caused by the applied protection methods is highly recommended. 
-The knowledge of possible loss of information is key for data utility for possible users. If the information loss is too great then the used methods or their parameterization should be changed (coming back to step "SDC-methods"). One should remain that simultaneously the disclosure risk\index{disclosure risk} should be also as small as possible. Thus, these quantities should be harmonized. 
+The knowledge of possible loss of information is key for data utility for possible users. If the information loss is too great then the used methods or their parameterization should be changed (coming back to step "Disclosure limitation methods"). One should remain that simultaneously the disclosure risk\index{disclosure risk} should be also as small as possible. Thus, these quantities should be harmonized. 
 A detailed description of information loss measures is reported in @sec-informationloss-microdata; examples of how to check in practice the amount of distortion or modification in the protected microdata is presented in case studies A1 and A2.
 
-Of course, the results of computation of discloure risk (both final and indirect, if applicable) and information loss should be saved in the documentation of the whole process. However, whereas the value of measures of disclosure risk is confidential and known only by entitled staff of the data holder, the level of expected information loss should be made available to the user each time. It is very important as the one of a factor influencing the quality of the final analysis results obtained by him/her.
+Of course, the results of computation of discloure risk (both final and indirect, if applicable) and information loss should be saved in the documentation of the whole process. However, whereas the values of measures of disclosure risk are confidential and known only by entitled staff of the data holder, the level of expected information loss should be made available to the user. It is a very important factor influencing the quality of the final analysis results obtained by him/her.
