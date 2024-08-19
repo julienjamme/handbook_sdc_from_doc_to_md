@@ -82,7 +82,7 @@ More difficult is the situation where non-perturbative post-tabular SDC methods 
 
 - cell value - an optimal solution is leaving in publication as many cells with higher values as possible. 
 
-For more detail, see discussion on cell costs and cost functions in 4.3.1.
+For more details, see discussion on cell costs and cost functions in 4.3.1.
 
 ### References
 Antal, L., Shlomo, N., & Elliot, M. (2014). Measuring disclosure risk\index{disclosure risk} with entropy in population based frequency tables. In *Privacy in Statistical Databases: UNESCO Chair in Data Privacy, International Conference, PSD 2014, Ibiza, Spain, September 17-19, 2014. Proceedings* (pp. 62-78). Springer International Publishing.
