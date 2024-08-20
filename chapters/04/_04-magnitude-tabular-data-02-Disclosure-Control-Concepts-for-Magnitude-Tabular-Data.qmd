@@ -55,12 +55,12 @@ Considering the above explained intruder scenarios statistical agencies have dev
                                *i.e.* $$x_{1} + \ldots + x_{n} > \frac{k}{100} X$${#eq-dominance-formula}
 
   **$p\%$-rule**               the cell total minus the 2 largest contributions $x_{1}$ and $x_{2}$ is less than $p\%$ of the largest contribution, 
-                               *i.e.*[^5] $$X - x_{2} - x_{1} < \frac{p}{100}x_{1}$${#eq-p-percent-formula}
+                               *i.e.*[^6] $$X - x_{2} - x_{1} < \frac{p}{100}x_{1}$${#eq-p-percent-formula}
   ---------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 : Sensitivity rules {#tbl-sensitivity-rules}
 
-[^5]: $X − x_{n} − \cdots − x_{2} − x_{1} < \frac{p}{100} x_{1}$ for the case of coalitions of $n-1$ respondents, where $n>2$
+[^6]: $X − x_{n} − \cdots − x_{2} − x_{1} < \frac{p}{100} x_{1}$ for the case of coalitions of $n-1$ respondents, where $n>2$
 
 Note that both the dominance rule and the $p\%$-rule are meaningful only when all contributions are non-negative. Moreover, the dominance rule does not make sense for $k=100$ and neither does the $p\%$-rule for $p = 0$. Both rules are asymptotically equal to minimum frequency rules for $k\rightarrow 100$, or $p \rightarrow 0$ respectively.
 
@@ -292,15 +292,14 @@ When a table is protected by cell suppression\index{cell suppression}, by making
 :::{.callout-note appearance="simple"}
 **Example 3** This example (Geurts, 1992, Table 10, p 20) illustrates the computation of the feasibility interval in the case of a simple two-dimensional table where all cells may only assume non-negative values:
 
-| **Example** 	| **1 ** 	| **2 ** 	| **Total** 	|
-|-------------	|:------:	|:------:	|:---------:	|
-| **1**       	|    $X_{11}$    	|    $X_{12}$    	|     7     	|
-| **2**       	|    $X_{21}$    	|    $X_{22}$    	|     3     	|
-| **3**       	|    3   	|    3   	|     6     	|
-| **Total**   	|    9   	|    7   	|     16    	|
+|           | 1      | 2      | Total     |
+|-----------|:------:|:------:|:---------:|
+| **1**     |    $X_{11}$    	|    $X_{12}$    	|     7     	|
+| **2**     |    $X_{21}$    	|    $X_{22}$    	|     3     	|
+| **3**     |    3   	|    3   	|     6     	|
+| **Total** |    9   	|    7   	|     16    	|
 
 : Example 3 {#tbl-example-3}
-
 
 For this table the following linear relations hold:
 
@@ -320,14 +319,14 @@ A general mathematical statement for the linear programming problem to compute u
 
 In principle, a set of suppressions (the *'suppression pattern'*) should only be considered valid, if the bounds for the feasibility interval of any sensitive cell cannot be used to deduce bounds on an individual respondent contribution contributing to that cell that are too close according to the sensitivity rule employed. For a mathematical statement of that condition, we determine safety bounds for primary suppressions. We call the deviation between those safety bounds and the true cell value *'upper and lower protection levels'*. The formulas of @tbl-upper-protection-levels can be used to compute upper protection levels. Out of symmetry considerations the lower protection level is often set identical to the upper protection level.
 
-| Sensitivity rule 	|              Upper protection level              	|
-|------------------	|:------------------------------------------------:	|
-| $(1,k)$-rule       	|                  $\frac{100}{k}x_1 - X$                 	|
-| $(n,k)$-rule       	| $\frac{100}{k} \cdot (x_{1} + x_{2} + \cdots + x_{n}) − X$ 	|
-| $p\%$-rule          	|      $\frac{p}{100} \cdot x_{1} − (X − x_{1} − x_{2})$     	|
-| $(p,q)$-rule       	|       $\frac{p}{q} \cdot x_{1} − (X − x_{1} − x_{2})$      	|
+| Sensitivity rule 	|              Upper protection level                         |
+|------------------	|:-----------------------------------------------------------:|
+| $(1,k)$-rule      | $\frac{100}{k}x_1 - X$                                    	|
+| $(n,k)$-rule      | $\frac{100}{k} \cdot (x_{1} + x_{2} + \cdots + x_{n}) − X$ 	|
+| $p\%$-rule        | $\frac{p}{100} \cdot x_{1} − (X − x_{1} − x_{2})$         	|
+| $(p,q)$-rule      | $\frac{p}{q} \cdot x_{1} − (X − x_{1} − x_{2})$           	|
 
-: Upper protection levels {#tbl-upper-protection-levels}
+:Upper protection levels {#tbl-upper-protection-levels}
 
 Note that we recommend using protection levels of zero when instead of a concentration rule only a minimum frequency rule has been used for primary disclosure risk\index{disclosure risk} assessment. As explained in [-@sec-sensitive-cells-magnitude-tables], minimum frequency rules (instead of concentration rules) should only be used, if it is enough to prevent exact disclosure only. And in such a case, a protection level of zero should be enough. Using $\tau$-ARGUS this can be achieved by setting the parameter 'minimum frequency range' to zero.
 

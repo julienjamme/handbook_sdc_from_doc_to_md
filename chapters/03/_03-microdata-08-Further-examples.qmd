@@ -4,9 +4,9 @@ In this section we provide examples based on real surveys of the various steps d
 
 ### Labour Force Survey
 
-The Labour Force Survey[^2] is one of the surveys subject to Regulation EC 831/2002 on access to microdata for scientific purposes. The Labour Force Survey (LFS) is the main data source for the analysis of the labour market, employment, unemployment as well as the conditions and the level of involvement at the labour market. Some of the main observed variables are:
+The Labour Force Survey[^3] is one of the surveys subject to Regulation EC 831/2002 on access to microdata for scientific purposes. The Labour Force Survey (LFS) is the main data source for the analysis of the labour market, employment, unemployment as well as the conditions and the level of involvement at the labour market. Some of the main observed variables are:
 
-[^2]:The European Union Labour Force Survey (EU LFS)? is conducted in the 25 Member States of the European Union and 3 countries of the European Free Trade Association (EFTA) in accordance with Council Regulation (EEC) No. 577/98 of 9 March 98: [http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1913,47567825,1913_47568351&_dad=portal&_schema=PORTAL](http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1913,47567825,1913_47568351&_dad=portal&_schema=PORTAL)
+[^3]:The European Union Labour Force Survey (EU LFS)? is conducted in the 25 Member States of the European Union and 3 countries of the European Free Trade Association (EFTA) in accordance with Council Regulation (EEC) No. 577/98 of 9 March 98: [http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1913,47567825,1913_47568351&_dad=portal&_schema=PORTAL](http://epp.eurostat.ec.europa.eu/portal/page?_pageid=1913,47567825,1913_47568351&_dad=portal&_schema=PORTAL)
 
 1. demographic variable: (gender, year of birth, marital status, relationship to reference person, place of residence);
 2. labour status: (labour status during the reference week, etc.);
@@ -15,9 +15,9 @@ The Labour Force Survey[^2] is one of the surveys subject to Regulation EC 831/2
 5. income;
 6. technical item relating to the interview.
 
-The sampling designs in the EU-LFS[^3] are extremely varied. Most NSIs employ some kind of multistage stratified random sampling design, especially those that do not have central population register available.
+The sampling designs in the EU-LFS[^4] are extremely varied. Most NSIs employ some kind of multistage stratified random sampling design, especially those that do not have central population register available.
 
-[^3]: [http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/KS-CC-06-007/EN/KS-CC-06-007-EN.PDF](http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/KS-CC-06-007/EN/KS-CC-06-007-EN.PDF)
+[^4]: [http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/KS-CC-06-007/EN/KS-CC-06-007-EN.PDF](http://epp.eurostat.ec.europa.eu/cache/ITY_OFFPUB/KS-CC-06-007/EN/KS-CC-06-007-EN.PDF)
 
 In the document Eurostat (2004) a proposal for the anonymisation of the LFS is presented. Here we show a possible approach to disclosure scenario definition that leads to the definition of the identifying variables.
 
@@ -38,9 +38,9 @@ The Community Innovation Survey is one of the surveys subject to Regulation CE 8
 
 In this section we propose a study of disclosure scenarios to define identifying variables and a risk assessment analysis to single out the records at risk for the Community Innovation Survey (CIS) based on Ichim (2006). A protection stage is then outlined giving different choices. The interested reader is referred to that paper for more information on the whole process.
 
-CIS provides information on the characteristics of innovation activity at enterprise level[^4]. The CIS statistical population is determined by the size of the enterprise (all enterprises with 10 or more employees) and its principal economic activity.
+CIS provides information on the characteristics of innovation activity at enterprise level[^5]. The CIS statistical population is determined by the size of the enterprise (all enterprises with 10 or more employees) and its principal economic activity.
 
-[^4]: Some of the main observed variables in the CIS3 are : principal economic activity, geographical information, number of employees in 1998 and 2000, turnover in 1998 and 2000, exports in 1998 and 2000, gross investment in tangible goods: 2000, number of valid patents at end of 2000, number of employees with higher education (in line with the number of employees in 2000), expenditure in intramural RD (in line with the turnover in 2000), expenditure in extramural RD (in line with the turnover in 2000), expenditure in acquisition of machinery (in line with the turnover in 2000), expenditure in other external knowledge (in line with the turnover in 2000), expenditure in training, market (in line with the turnover in 2000), total innovation expenditure (in line with the turnover in 2000), number of persons involved in intra RD (in line with the number of employees in 2000).
+[^5]: Some of the main observed variables in the CIS3 are : principal economic activity, geographical information, number of employees in 1998 and 2000, turnover in 1998 and 2000, exports in 1998 and 2000, gross investment in tangible goods: 2000, number of valid patents at end of 2000, number of employees with higher education (in line with the number of employees in 2000), expenditure in intramural RD (in line with the turnover in 2000), expenditure in extramural RD (in line with the turnover in 2000), expenditure in acquisition of machinery (in line with the turnover in 2000), expenditure in other external knowledge (in line with the turnover in 2000), expenditure in training, market (in line with the turnover in 2000), total innovation expenditure (in line with the turnover in 2000), number of persons involved in intra RD (in line with the number of employees in 2000).
 
 *Disclosure scenario*\
 Since generally business registers are publicly available, it is supposed that an intruder could use such information to identify an enterprise. Public business registers report general information on name, address, turnover (TURN), number of employees (EMP), principal activity of an enterprise (NACE), region (NUTS). Therefore, the identifying variables of the hypothesized disclosure scenario are: economic classification (NACE), region (NUTS), number of employees (EMP) and turnover (TURN). The information content of these variables must be somehow reduced in order to increase the intruder uncertainty. An initial coding performed on such variables was: NACE at 2 digits, Nuts recoded at national level (no regional breakdown) and three enterprise size classes.

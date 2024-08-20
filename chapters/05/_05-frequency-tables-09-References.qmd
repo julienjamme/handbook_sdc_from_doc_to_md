@@ -19,5 +19,3 @@ Shlomo, N. and Young, C. (2005) *Information Loss Measures for Frequency Tables,
 Shlomo, N. and Young, C. (2006) *Statistical Disclosure Control Methods Through a Risk-Utility Framework,* PSD\'2006 Privacy in Statistical Databases, Springer LNCS proceedings, to appear.
 
 Willenborg, L., and Ton de Waal. (1996) *Statistical Disclosure Control in Practice.* Lecture Notes in Statistics no 111 Springer-Verlag. New York.
-
-

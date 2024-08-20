@@ -32,7 +32,7 @@ Extended examples are marked in this way:
 **Example.** Assume a non-negative continuous variable $X$...
 :::
 
-In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the User Support repository on GitHub ([[https://github.com/sdctools/UserSupport]{.underline}](https://github.com/sdctools/UserSupport)).
+In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the User Support repository on GitHub ([[https://github.com/sdctools/UserSupport]{.underline}](https://github.com/sdcTools/UserSupport)).
 
 ## License {.unnumbered .unlisted}
 ![](Images/media/by-sa.png){width="0.8in"}

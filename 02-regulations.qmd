@@ -1,4 +1,4 @@
-# Regulations, a general Background
+# Confidentiality in legal acts and ethical codes
 
 {{< include chapters/02/_02-regulations-01-Introduction.qmd >}}
 
