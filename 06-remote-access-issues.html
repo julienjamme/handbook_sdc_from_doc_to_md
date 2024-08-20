@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -153,7 +124,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-regulations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regulations, a general Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Confidentiality in legal acts and ethical codes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,7 +175,7 @@ window.Quarto = {
   <li><a href="#confidentiality-protection-of-the-analysis-results" id="toc-confidentiality-protection-of-the-analysis-results" class="nav-link" data-scroll-target="#confidentiality-protection-of-the-analysis-results"><span class="header-section-number">6.6</span> Confidentiality protection of the analysis results</a>
   <ul class="collapse">
   <li><a href="#output-checking" id="toc-output-checking" class="nav-link" data-scroll-target="#output-checking"><span class="header-section-number">6.6.1</span> Output checking</a></li>
-  <li><a href="#rules-for-designing-programs-for-controlled-teleprocessing-using-microdata-of-official-statistics-in-germany" id="toc-rules-for-designing-programs-for-controlled-teleprocessing-using-microdata-of-official-statistics-in-germany" class="nav-link" data-scroll-target="#rules-for-designing-programs-for-controlled-teleprocessing-using-microdata-of-official-statistics-in-germany"><span class="header-section-number">6.6.2</span> Rules for designing programs for controlled teleprocessing using microdata of official statistics in Germany</a></li>
+  <li><a href="#basic-rules-concerning-the-program-code-example-from-german-oﬀicial-statistics" id="toc-basic-rules-concerning-the-program-code-example-from-german-oﬀicial-statistics" class="nav-link" data-scroll-target="#basic-rules-concerning-the-program-code-example-from-german-oﬀicial-statistics"><span class="header-section-number">6.6.2</span> Basic rules concerning the program code: Example from German oﬀicial statistics</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6.7</span> References</a></li>
   </ul>
@@ -280,208 +251,47 @@ window.Quarto = {
 <p>Output checking is the process of checking the disclosure risk of research results based on microdata files made available in RDCs. NSIs and other institutions can establish their own rules for output checking.</p>
 <p>In 2009, a document 'Guidelines for the checking of output based on microdata research' was prepared within the European project ESSnet SDC. In 2015, this document was a basis for a document 'Guidelines for Output Checking' prepared within the DwB (Data without Boundaries) project. Both documents provide guidelines and practical advice for output checkers. Principles-based model and rule-of-thumb model are described; the former considers the entire context of the output, while the latter is based on strict rules. The overall rule of thumb is defined and its application to different types of output is described. Organisational aspects of output checking are discussed.</p>
 </section>
-<section id="rules-for-designing-programs-for-controlled-teleprocessing-using-microdata-of-official-statistics-in-germany" class="level3 page-columns page-full" data-number="6.6.2">
-<h3 data-number="6.6.2" class="anchored" data-anchor-id="rules-for-designing-programs-for-controlled-teleprocessing-using-microdata-of-official-statistics-in-germany"><span class="header-section-number">6.6.2</span> Rules for designing programs for controlled teleprocessing using microdata of official statistics in Germany</h3>
-<section id="introduction-1" class="level4" data-number="6.6.2.1">
+<section id="basic-rules-concerning-the-program-code-example-from-german-oﬀicial-statistics" class="level3 page-columns page-full" data-number="6.6.2">
+<h3 data-number="6.6.2" class="anchored" data-anchor-id="basic-rules-concerning-the-program-code-example-from-german-oﬀicial-statistics"><span class="header-section-number">6.6.2</span> Basic rules concerning the program code: Example from German oﬀicial statistics</h3>
+<section id="introduction-1" class="level4 page-columns page-full" data-number="6.6.2.1">
 <h4 data-number="6.6.2.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">6.6.2.1</span> Introduction</h4>
-<p>As in many other countries, German official data are subject to statutory data protection regulations. Therefore, results produced on the basis of statistical data are checked for confidentiality and critical values are suppressed. This applies both to publications of the statistical offices and to the results of scientific projects supported by the research data centres (RDC) of German official statistics. Since the research data centres were set up in Germany in 2001, microdata requests from the scientific community have considerably increased. In this context, researchers do their own analyses of microdata coming from the wide range of statistics offered by the research data centres. In Germany, various ways of data access have been established for researchers. A way of access frequently used is controlled teleprocessing - or controlled remote data processing - , which runs on non-anonymised original data thus giving the researcher the opportunity to exploit the full information content of official microdata. For controlled remote data processing the user first of all gets a data structure file from the research data centre whose structure is that of the original file, but whose content is not. Based on that file, the data user develops a program code using the statistics software SAS, SPSS or STATA, checks it for errors and sends it to the research data centre via e-mail. The output of his program is then checked for confidentiality and returned also by e-mail. Checking the produced results for confidentiality is done manually.</p>
-<p>Manual confidentiality checks are time-consuming and labour-intensive, as is shown in chapter 6.3. The responsible staff member must be familiar with both the analysed statistics and the specific research project. He must ensure primary and secondary confidentiality and keep track of the secondary confidentiality protection performed even with repeated outputs. In particular, he must check the transmitted program code for intentional and unintentional disclosure of the data. The experience of the research data centres of official statistics in Germany shows that the projects dealt with are very different in terms of volume and complexity of the transmitted programs. In some cases, there is much need for clarification and, depending on how the project proceeds, a variety of individual arrangements must be made with the data user. A more or less long start-up and acquaintance phase on both sides is necessary in every project. Combining that experience at the research data centres has led to the wish to reduce both the adjustment phase and the checking times by standardising the program design.</p>
+<p>As in many other countries, German oﬀicial microdata are subject to strict data protection regulations. Therefore, results produced on the basis of statistical microdata are checked for confidentiality risks and critical values are suppressed or altered. This applies both to publications of the Statistical Oﬀices and to results that are generated by researchers via the Research Data Centres (RDC) of German oﬀicial statistics.</p>
+<p>The RDC offer the scientific community a wide variety of data from different statistics. Since the RDC were established in Germany in 2001, microdata requests have considerably increased and analyses are getting more and more complex. Thus, the checks for statistical disclosure control, which are mostly done manually <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, became a very time-consuming and labour-intensive part of RDC work. Experience from several hundred research projects has shown that those confidentiality checks can be accomplished easier if the program code and the resulting output structure follow a given set of rules. To make the application of these rules as user friendly as possible, the RDC of German official statics developed sample program codes for different programming languages (see https://www.forschungsdatenzentrum.de/en/confidentiality).</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;A mostly manual handling of the confidentiality check has several disadvantages (inefficient, possible mistakes, …) but, in contrast to automated systems, it does not completely block certain procedures and commands but allows individual decisions: when calling up critical procedures, and depending on the data or the specific analysis, the RDC staff can decide to what extent the analysis results can be transmitted to the user or be retained for confidentiality reasons. Necessary changes can easily be communicated to the user.</p></div></div><p>The purpose of the rules and the sample program codes is</p>
+<ul>
+<li>to make program code easily and quickly understandable,</li>
+<li>to include all necessary information for the output check,</li>
+<li>to clearly indicate the relations between different sets of output,</li>
+<li>to facilitate readability,</li>
+<li>to differentiate between output for release and output that is only created for the confidentiality check,</li>
+<li>to apply uniform standards to projects performed at different locations of the RDC,</li>
+<li>to thus reduce the time it takes to check an output,</li>
+<li>and, where necessary, to enable a smooth change of the project staff at the RDC without causing delays in the project progress.</li>
+</ul>
 </section>
 <section id="rules-for-program-design" class="level4 page-columns page-full" data-number="6.6.2.2">
 <h4 data-number="6.6.2.2" class="anchored" data-anchor-id="rules-for-program-design"><span class="header-section-number">6.6.2.2</span> Rules for program design</h4>
-<p><em><strong>Goals</strong></em></p>
-<p>To simplify project handling, and especially the confidentiality checks, the research data centres of the Federation and the Länder have developed a catalogue of rules for program design when using controlled teleprocessing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Its purpose is to allow:</p>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;The main persons involved in developing the rules for program design as part of the ad-hoc working group on “confidentiality and documentation” of the research data centres of the Federation and the Länder are: Heike Habla, Jörg Höhne, Ricarda Nauenburg, Ramona Pohl, Dr.&nbsp;Heinz Stralla and Alexander Vogel. The chapter was written by Andrea Harausz and Ricarda Nauenburg.</p></div></div><ul>
-<li><p>to shape the envisaged analysis steps in a traceable manner,</p></li>
-<li><p>to facilitate readability of the user-specific “programming handwritings”,</p></li>
-<li><p>to apply uniform standards to projects performed at different locations of the research data centres of the Federation and the Länder,</p></li>
-<li><p>and, where necessary, to change the project staff at the RDC without causing delays in the project progress.</p></li>
-</ul>
-<p>The benefits obtained from those rules for the research data centres involve a considerable advantage for users, too: The checking time for the output, for which users undoubtedly are urgently waiting for, will substantially be reduced.</p>
-<p><em><strong>Program heading</strong></em></p>
-<p>Specifically, the following requirements have been included in the rules:</p>
-<p>The program developed by the researcher should include a program heading, indicating the project title, the data material used, and contact information of the data user. The project title and the information on data material used allow rapid identification of the program at the research data centre. The contact information is important because in case of faulty programs the user can immediately be contacted by telephone or e-mail in order to agree on modifications.</p>
-<p><em><strong>Program explanation</strong></em></p>
-<p>Also, a program explanation should be provided at the beginning of the program, describing its purpose. Where applicable, information is also required on how the current analyses fit into the project’s state of affairs and progress, on the reference to previous and future analyses, or possible changes in the analysis strategy. The explanation should also contain a list of variables of the original dataset used and of the new variables created by the program code, including its labels. Such information facilitates orientation when checking the results. Repeated analyses involving minor changes will more easily be recognised and cross-table confidentiality, which requires comparison with previous outputs, can be performed more rapidly. The names and contents of newly formed variables are more easily recognised by the checking person if they have been mentioned before.</p>
-<p><em><strong>Output tables</strong></em></p>
-<p>The output tables should meet specific format requirements. Every output element should have a title and a serial number. Tables must be self-explanatory, i.e.&nbsp;the table stub and rows must clearly show the table content. Tables should be manageable, that is, they must not exceed a reasonable size. Tables showing totals must have a column for the underlying number of cases to allow checking the frequency and dominance rules. These requirements are based, among other things, on the experience made with confidentiality checks of poorly structured and oversized tables. Output numbering has proved necessary to allow referring to a number when communicating with the data user, rather than having to describe in detail the content of an analysis (often quite similar to other ones) to identify the table.</p>
-<p><em><strong>Path reference</strong></em></p>
-<p>Path references to files used should be put at the beginning of the program. This provides an overview of what files are loaded by the program and what files are stored. This allows the research data centre to adjust the paths (which is frequently necessary) more rapidly than when having to search the entire program for load and store commands.</p>
-<p><em><strong>Structure</strong></em></p>
-<p>The program code should be clearly structured visually; loops should be indented and some space should be left between program blocks. Capital and small letters should be used consistently, program sections should be numbered, and long programs should be subdivided into modules. This, together with the following three items, will allow reducing the time required for getting acquainted with different programming styles and for understanding the program goals and output content.</p>
-<p><em><strong>Comments</strong></em></p>
-<p>Comments should be given on the program. All program blocks and individual commands needing explanation or analyses should be provided with intelligible and sufficiently detailed comments to facilitate understanding of the program steps. Especially the macros must be documented in detail. Variables must be indicated with their labels in the comment.</p>
-<p><em><strong>Variable names</strong></em></p>
-<p>Descriptive names should be given to newly formed variables; intelligible variable labels and, where applicable, value labels should be added.</p>
-<p><em><strong>Presentation</strong></em></p>
-<p>Designations of elements used in the code should not be changed (example: relations [everywhere either “<span class="math inline">\(&gt;\)</span>” or “GT”], missing values [<span class="math inline">\(0\)</span> or <span class="math inline">\(-x\)</span>], etc.).</p>
-<p><em><strong>Logging</strong></em></p>
-<p>The log function of the statistics software (creating log files) must be activated by the user’s program code or in any case must not be deactivated, depending on the statistics software. Creating the logs allows archiving the project, so that possible disclosures can be detected later.</p>
-<p><em><strong>Changing the code</strong></em></p>
-<p>Where minor changes are applied to the program, only the relevant program elements should be recalculated. The usual procedure for one’s own workplace is to perform complete runs of a program with minor changes again and again until a satisfactory result has been obtained. For controlled teleprocessing, however, this means that nearly identical outputs have to be checked again and again.</p>
-</section>
-<section id="summary" class="level4" data-number="6.6.2.3">
-<h4 data-number="6.6.2.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.6.2.3</span> Summary</h4>
-<p>Different from the program rules required by automated systems, these rules do not completely block certain procedures and commands. Manual handling allows taking individual decisions – when calling up critical procedures, and depending on the data or the specific analysis – to what extent the analysis results thus obtained can be transmitted to the user or must be retained for confidentiality reasons. In this manner, users can make optimal use of the information content of the data.</p>
-<p>Supplementary to the catalogue of rules, a model program (cf. <a href="#sec-programmingSPSS" class="quarto-xref"><span>Section 6.6.2.4</span></a>) has been designed and is available for the statistics packages offered (SPSS, STATA and SAS). In addition, a glossary is provided, containing the terms used in the jargon of official statistics, in programming languages and statistical packages, scientific notation and everyday language and translating them into each other.</p>
-<p>The program criteria developed are sent in the form of a letter to the researchers and are part of the data usage contract. The purpose of the letter is to ask users for understanding of the list of rules, to avoid misunderstandings from the beginning, and to rapidly and efficiently make users acquainted with the rules of controlled teleprocessing, which may be quite different from the work methods they are used to at their own workplace. When developing the criteria, the model programs and the glossary, the aim was to make them generally acceptable, thus making it easier for the very different scientific users to meet the requirements.</p>
-<p>From the viewpoint of the research data centres, the individual items are maximum requirements for developing perfect program codes. If the criteria are not entirely met in some cases, it is up to the discretion of the RDC staff member to decide to what extent it is possible for him to check the results. As the research projects are handled individually and personally, interpreting the rules to the users’ benefit is rather liberal. If, however, a project is getting very difficult to follow, the research data centres may refer to the rules that must be adhered to.</p>
-</section>
-<section id="sec-programmingSPSS" class="level4" data-number="6.6.2.4">
-<h4 data-number="6.6.2.4" class="anchored" data-anchor-id="sec-programmingSPSS"><span class="header-section-number">6.6.2.4</span> Programming example in SPSS</h4>
-<pre><code>***************************************************************************.
-*** open log file.                            
-set journal on.
-set journal="path\log_name of program code.jnl". 
-set printback=on.
-
-***************************************************************************.
-***************************************************************************.
-***                 project title:  Women and Work in Germany       
-***                             data:   Micro Census 1985
-***                                                                     
-***      name of program code:  name of program code.sps               
-***          date of creation:  date                           
-***                    author:  name                            
-***                    e-mail:  e-mail address                 
-***                     phone:  phone number
-***                                                                     
-***       name of output file:  name of program code.spo                           
-***                                                                     
-***      statistical software:  SPSS version 13.0                   
-***                                                                    
-***                          outline:   analysis of multiple person numbers, data check     
-***                                                                     
-***                       variables:                            
-***                                 ef1:    Land    
-***                                 ef2:    administrative district             
-***                                 ef3:    sample district number        
-***                                 ef4:    household number        
-***                                 ef5:    person number
-***                                 ef6:    family number
-***                                 ef23:   age
-***                                 ef26:   population group        
-***                                 ef27:   population in private households 
-***                                 ef28:   population at family residence
-***                                 ef38:   marital status.
-***                                                                      
-***             created variables:     
-***                             persnr: person number            
-***                              famnr: family number             
-***                           hhnr: household number             
-***                         nrdiff: consistency of household number 
-***                             and family number                               
-***                       piddiff: test on unique person number                   
-***
-***            weighting variable: 
-***                               gew1: weighting variable from ef253
-***                                                                     
-***                                                                     
-***************************************************************************.
-***************************************************************************.
-
-
-*(1)*** original data: mc95org.
-FILE HANDLE mz85org /Name='path\mc_1985.sav'.
-
-**** save new variables: mc85working.
-FILE HANDLE mc85working /Name='path\mc_1985_working_1.sav'.
-
-
-***************************************************************************.
-*(2)*** read data.
-GET FILE=mc85org.
-
-**** select private households (ef27 eq 1) at main residence (ef26 lt 3) and 
-**** at family residence ef28 eq 1.
-SELECT IF (ef27 EQ 1) &amp; (ef26 LT 3) &amp; (ef28 EQ 1).
-
-
-***************************************************************************.
-*(3)*** generate household and family number from ef1-ef6.
-**** pers ef1-ef5
-**** hh ef1-ef4
-**** fam ef1-ef4 + ef6.
-SORT CASES BY ef1 ef2 ef3 ef4 ef5.
-COMPUTE persnr=(ef1*10000000000)+(ef2*1000000000)+(ef3*100000)+(ef4*1000)+(ef5*10).
-EXE.
-
-SORT CASES BY ef1 ef2 ef3 ef4 .
-COMPUTE hhnr=(ef1*10000000000)+(ef2*1000000000)+(ef3*100000)+(ef4*1000).
-EXE.
-
-SORT CASES BY ef1 ef2 ef3 ef4 ef6.
-COMPUTE famnr=(ef1*10000000000)+(ef2*1000000000)+(ef3*100000)+(ef4*1000)+(ef6*1).
-EXE.
-
-**** labeling.
-VARIABLE LABELS persnr 'person number'.
-VARIABLE LABELS hhnr 'household number'.
-VARIABLE LABELS famnr 'family number'.
-
-
-***************************************************************************.
-*(4)*** weighting.
-**** multiply the weighting variable by 0.1.
-COMPUTE gew=(ef253 * 0.1).
-EXE.
-
-WEIGHT BY gew .
-***************************************************************************.
-*(5)***compare household number (hhnr)  - family number (famnr) - person number (persnr).
-COMPUTE nrdiff=0.
-
-**** if family number (famnr) unequal household number (hhnr) then consistency 
-
-of household number and family number (nrdiff) = 1.
-
-DO IF famnr NE hhnr.
-    COMPUTE nrdiff=1.
-END IF.
-
-**** labeling.
-VARIABLE LABELS nrdiff 'consistency of household number and family number'.
-VALUE LABELS nrdiff 1 'household number and family number inconsistent'
-                                0 'household number and family number consistent.       
-
-TITLE "output no. 1: constistency of household number and family number".
-FREQ VAR=nrdiff.
-
-
-***************************************************************************.
-*(6)*** test on unique person number (persnr).
-SORT CASES BY persnr.
-COMPUTE piddiff=0.
-EXE.
-
-**** if person number (persnr) is equal to previous person number, then test on unique person numbers (piddiff) = 1.
-IF persnr EQ LAG(persnr) piddiff=1.
-EXE.
-
-**** labeling.
-VARIABLE LABELS piddiff 'test on unique person number'.
-VALUE LABELS piddiff    1'multiple person number'
-                                0'unique person number'. 
-
-TITLE "output no. 2: multiple person numbers".  
-FREQ VAR=piddiff.
-
-
-***************************************************************************.
-*(7)*** user defined table (counts)
-**** mean and valid cases (N) of age (ef23) by marital status (ef38).
-
-CTABLES
-  /VLABELS VARIABLES=ef38 ef23 DISPLAY=DEFAULT
-  /TABLE ef23 [MEAN, VALIDN F40.0] BY ef38
-  /CATEGORIES VARIABLES=ef38 ORDER=A KEY=VALUE EMPTY=EXCLUDE
-  /TITLES
-   TITLE= 'output no. 3: cross table age and marital status'.
-
-
-***************************************************************************.
-*(8)*** save new variables.
-SAVE OUTFILE=mc85working.</code></pre>
+<p>The rules that have to be applied by the data users are stated below. They are an outline of the RDC’s “Regulations on the analysis of microdata”.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn2"><p><sup>2</sup>&nbsp;Research Data Centres of the Federal Statistical Office and the Statistical Offices of the Federal States: Regulations on the analysis of microdata in the Research Data Centres of the Federal Statistical Office and the Statistical Offices of the Federal States (RDC). Düsseldorf, 2022. https://www.forschungsdatenzentrum.de/en/confidentiality</p></div></div><p><em><strong>Clear Structure</strong></em></p>
+<p>The program code has to be written with a clear structure and all program steps have to be comprehensible. A master program code is to be used if the code is separated into several files. All specifications that have to be adjusted by the RDC to execute the program code (path specification, name of the dataset, …) are to be stated only once and in the header of the (master) program code.</p>
+<p><em><strong>Detailed commentary</strong></em></p>
+<p>All steps for preparation and analysis of the data have to be commented reasonably and in detail. Their content has to be described.</p>
+<p><em><strong>Uniqueness of variable and value labels</strong></em></p>
+<p>Variable and value labels have to be assigned uniquely and with descriptive names. If a new variable is created or if an existing variable is adjusted then all related labels have to be assigned newly and to be stated in the header of the program code.</p>
+<p><em><strong>Reproducibility of the output</strong></em></p>
+<p>All output has to be identically reproducible by the associated program code. The logging has to be switched on at the beginning of the code and may not be switched off at any time.</p>
+<p><em><strong>Specification of the output formats</strong></em></p>
+<p>All tabular and analytical results are to be saved in a processable format so the RDC are able to conduct to the confidentiality check. In contrast, all graphical results have to be saved in a non-processable format to prevent underlying values or numbers of cases to be released.</p>
+<p><em><strong>Marking of output to be released and output for the confidentiality check</strong></em></p>
+<p>The RDC distinguish between output that is to be checked by the RDC staff and released for publication and output that is generated only for the conduction of the confidentiality check. Both output categories and their relations have to be unambiguously marked.</p>
+<p><em><strong>Output of the underlying numbers of cases and marking of the relations</strong></em></p>
+<p>For all output that is to be released, the underlying unweighted number of cases is to be stated. If diagrams and graphics are to be released then additional tables with the depicted values and the underlying unweighted numbers of cases have to be stated and to be marked unambiguously.</p>
+<p><em><strong>Output of difference groups and marking of relations</strong></em></p>
+<p>If results for one or more associated and not overlapping subgroup(s) are created in addition to results for the whole population then the results for the remaining (possibly summarised) subgroup(s) always have to be stated as well. Missing values should preferably be stated separately to avoid difference problems in the following analyses. In case of overlapping sub-groups the number of cases has to be stated for every intersection.</p>
+<p><em><strong>Output of certain values for the check for dominance and marking of relations</strong></em></p>
+<p>If value tables (sums) are created then the number of cases and the highest two individual values have to be stated. [Note: In Germany, this only applies to economic or tax statistics.]</p>
+<p><em><strong>Non-redundancy of statistical results</strong></em></p>
+<p>In the course of a project, identical statistical results may only be marked for release once. If results have to be released again in duly substantiated exceptional cases, an exact reference to the according earlier analysis has to be made.</p>
 </section>
 </section>
 </section>
