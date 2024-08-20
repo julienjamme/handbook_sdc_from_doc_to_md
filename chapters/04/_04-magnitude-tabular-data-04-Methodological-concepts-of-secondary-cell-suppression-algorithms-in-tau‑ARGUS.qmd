@@ -18,11 +18,11 @@ The optimal solution is the result of solving this complex optimisation problem.
 
 However this method is used very successfully in the modular approach described in the next section.
 
-> **Reference:**
+**Reference:**
 
 Fischetti, M. and J.J. Salazar-González (1998). *Models and Algorithms for Optimizing Cell Suppression in Tabular Data with Linear Constraints.* Technical Paper, University of La Laguna, Tenerife.
 
-### Modular {#sec-modular} <!--{#modular .Opmaakprofiel-Kop-3-+-Na:--3-pt}-->
+### Modular {#sec-modular}
 
 The modular (HiTaS) solution is a heuristic approach to cell suppression\index{cell suppression} in hierarchical tables. Hierarchical tables are specially linked tables: at least one of the spanning variables exhibits a hierarchical structure, *i.e*. contains (many) sub-totals.
 
@@ -54,9 +54,10 @@ However the current implementation of the network flows do (not yet) protect aga
 
 ### Hypercube {#sec-hypercube}
 
-In order to ensure tractability also of big applications, $\tau$−ARGUS interfaces with the GHM*ITER* hypercube method of R. D. Repsilber of the Landesamt für Datenverarbeitung und Statistik in Nordrhein-Westfalen/Germany, offering a quick heuristic solution. The method has been described in depth in (Repsilber, 1994), or (Repsilber, 2002). For a briefer description see (Giessing and Repsilber, 2002).
+In order to ensure tractability also of big applications, $\tau$−ARGUS interfaces with the GHM*ITER* hypercube method of R. D. Repsilber of the Landesamt für Datenverarbeitung und Statistik in Nordrhein-Westfalen/Germany, offering a quick heuristic solution. The method has been described in depth in (Repsilber, 1994), or (Repsilber, 2002). For a briefer description see (Giessing and Repsilber, 2002).\
 
-> The approach builds on the fact that a suppressed cell in a simple n‑dimensional table without substructure cannot be disclosed exactly if that cell is contained in a pattern of suppressed, nonzero cells, forming the corner points of a hypercube.
+***The method***\
+The approach builds on the fact that a suppressed cell in a simple n‑dimensional table without substructure cannot be disclosed exactly if that cell is contained in a pattern of suppressed, nonzero cells, forming the corner points of a hypercube.
 
 The algorithm subdivides n-dimensional tables with hierarchical structure into a set of $n$-dimensional sub-tables without substructure. These sub-tables are then protected successively in an iterative procedure that starts from the highest level. Successively for any primary suppression in the current sub-table, all possible hypercubes with this cell as one of the corner points are constructed.
 
@@ -68,9 +69,10 @@ The 'hypercube criterion' is a sufficient but not a necessary criterion for a 's
 
 -   is not able to consider protection maybe already provided by other cell suppressions (suppressed cells that are not corner points of this hypercube) within the same sub‑table,
 
--   does not consider the sensitivity of multi‑contributor primary suppressions properly, that is, it does not consider the protection already provided to the individual respondent contributions in advance of cell suppression\index{cell suppression} through aggregation of these contributions.
+-   does not consider the sensitivity of multi‑contributor primary suppressions properly, that is, it does not consider the protection already provided to the individual respondent contributions in advance of cell suppression\index{cell suppression} through aggregation of these contributions.\
 
-In the implementation offered by $\tau$‑ARGUS, GHMITER makes sure that a single respondent cell will never appear to be corner point of one hypercube only, but of two hypercubes at least. Otherwise it could happen that a single respondent, who often can be reasonably assumed to know that he is the only respondent, could use his knowledge on the amount of his own contribution to recalculate the value of any other suppressed corner point of this hypercube. Because of this strategy, the method yields $\text{PS2}^*$ standard (c.f. section ).
+***ARGUS settings***\
+In the implementation offered by $\tau$‑ARGUS, GHMITER makes sure that a single respondent cell will never appear to be corner point of one hypercube only, but of two hypercubes at least. Otherwise it could happen that a single respondent, who often can be reasonably assumed to know that he is the only respondent, could use his knowledge on the amount of his own contribution to recalculate the value of any other suppressed corner point of this hypercube. Because of this strategy, the method yields PS2\* standard (c.f. @sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus).
 
-When protection against inferential disclosure is requested, the settings of the method are determined on basis of the assumptions that an intruder could estimate each cell value to within bounds of $\pm q\%$ prior to the publication, where the percentage of $q$ for those *a priori* bounds is selected by the $\tau$‑ARGUS user. Considering these *a priori* bounds, $\tau$‑ARGUS determines the settings for the hypercube method in such a way, that it yields $\text{PS1}^*$ protection standard (c.f. section ). Because the method is unable to \'add\' the protection given by multiple hypercubes, in certain situations it will be unable to confirm that a cell has been protected properly according to $\text{PS1}^*$ standard and will attempt to select the hypercube that provides the largest amount of protection to the target suppression in that situation.
+When protection against inferential disclosure is requested, the settings of the method are determined on basis of the assumptions that an intruder could estimate each cell value to within bounds of $\pm q\%$ prior to the publication, where the percentage of $q$ for those *a priori* bounds is selected by the $\tau$‑ARGUS user. Considering these *a priori* bounds, $\tau$‑ARGUS determines the settings for the hypercube method in such a way, that it yields PS1\* protection standard (c.f. @sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus). Because the method is unable to 'add' the protection given by multiple hypercubes, in certain situations it will be unable to confirm that a cell has been protected properly according to PS1\* standard and will attempt to select the hypercube that provides the largest amount of protection to the target suppression in that situation.
 

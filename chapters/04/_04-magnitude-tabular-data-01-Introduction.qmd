@@ -22,7 +22,6 @@ $\cdots$  & $\cdots$ & $\cdots$ & $\cdots$ &
 :::
 
 ::: {.content-visible unless-format="pdf"}
-::: {.grid}
 
 +--------------+----------------:+----------------:+-----+-------:+
 |              | Industry A      | Industry B      | ... | Total  |
@@ -38,7 +37,6 @@ $\cdots$  & $\cdots$ & $\cdots$ & $\cdots$ &
 
 : Example: Turnover (number of respondents) by Region and Industry {#tbl-example-intro-4}
 
-:::
 :::
 
 The *"dimension"* of a table is given by the number of grouping variables used to specify the table. We say that a table contains *"margins"* or *"marginal cells"*, if not all cells of a table are specified by the same number of grouping variables. The smaller the number of grouping variables, the higher the *"level"* of a marginal cell. A two-dimensional table of some business survey may for instance provide sums of observations grouped by economic activity and company size classes. At the same time it may also display the sums of observations grouped by only economic activity or by only size classes. These are then margins/marginal cells of this table. If a sum across all observations is provided, we refer to it as the *"total"* or *"overall total"*.

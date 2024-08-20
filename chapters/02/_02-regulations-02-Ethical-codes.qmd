@@ -1,6 +1,6 @@
 ## Ethical codes
 
-Many Member States have an ethical code that forms the basis of the production of official statistics.
+Many Member States have an ethical code that forms the basis of the production of official statistics. Additionally, there are internationally recognised ethical codes that are discussed in this section.
 
 *ISI Declaration on Professional Ethics*\
 After an intense preparation process taking place from 1979 to 1985, the International Statistical Institute (ISI) adopted the ISI Declaration on Professional Ethics in 1985. A newer version was adopted in 2010 by the ISI Council. Finally, an updated version was endorsed by the ISI Executive Committee. Whilst the 2010 Declaration content remains largely valid, the increasing use of a diversity of data sources, linked data sets and computationally heavy statistical methods has required updates introduced in 2023.
@@ -9,7 +9,6 @@ After an intense preparation process taking place from 1979 to 1985, the Interna
 On 24 February 2005 the Statistical Programme Committee adopted the European Statistics Code of Practice. On 17 November 2017 a renewed version of this Code was adopted by the European Statistical System Committee (ESSC). This Code of Practice has the dual purpose of:
 
 -   Improving trust and confidence in the independence, integrity and accountability of both National Statistical Authorities and Eurostat, and in the credibility and quality of the statistics they produce and disseminate (i.e. an external focus);
-
 -   Promoting the application of best international statistical principles, methods and practices by all producers of European Statistics to enhance their quality (i.e. an internal focus).
 
 The Code of Practice is based on 15 Principles. Governance authorities and statistical authorities in the European Union commit themselves to adhering to the principles fixed in this code and to reviewing its implementation periodically by the use of Indicators of Good Practice for each of the 15 Principles, which are to be used as references. Principle 5 concerns statistical confidentiality and is cited below.
@@ -21,22 +20,16 @@ The Code of Practice is based on 15 Principles. Governance authorities and stati
 Indicators
 
 - 5.1 Statistical confidentiality is guaranteed in law.
-
--	5.2 Staff sign legal confidentiality commitments on appointment.
-
--	5.3 Penalties are prescribed for any wilful breaches of statistical confidentiality.
-
--	5.4 Guidelines and instructions are provided to staff on the protection of statistical confidentiality throughout the statistical processes. The confidentiality policy is made known to the public.
-
--	5.5 The necessary regulatory, administrative, technical and organisational measures are in place to protect the security and integrity of statistical data and their transmission, in accordance with best practices, international standards, as well as European and national legislation.
-
--	5.6 Strict protocols apply to external users accessing statistical microdata for research purposes.
+- 5.2 Staff sign legal confidentiality commitments on appointment.
+- 5.3 Penalties are prescribed for any wilful breaches of statistical confidentiality.
+- 5.4 Guidelines and instructions are provided to staff on the protection of statistical confidentiality throughout the statistical processes. The confidentiality policy is made known to the public.
+- 5.5 The necessary regulatory, administrative, technical and organisational measures are in place to protect the security and integrity of statistical data and their transmission, in accordance with best practices, international standards, as well as European and national legislation.
+- 5.6 Strict protocols apply to external users accessing statistical microdata for research purposes.
 
 *UNECE principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access*\
 The 2003 Conference of European Statisticians (CES) of the United Nations Statistical Commission for Europe installed a Task Force, chaired by Dennis Trewin (at that time the Australian Statistician), to draft Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access. In their final report of 2007 the following two key objectives in these guidelines are mentioned:
 
 -   To foster greater uniformity of approach by countries whilst facilitating better access to microdata by the research community for worthwhile papers;
-
 -   Through these guidelines and supporting case studies, to enable countries to improve their arrangements for providing access to microdata.
 
 The sixth United Nations Fundamental Principle of Official Statistics, which was mentioned in @sec-5-stages of this handbook, is very clear on statistical confidentiality: "Individual data collected by statistical agencies for statistical compilation, whether they refer to natural or legal persons, are to be strictly confidential and used exclusively for statistical purposes". Any principles for microdata access must be consistent with this Fundamental Principle.

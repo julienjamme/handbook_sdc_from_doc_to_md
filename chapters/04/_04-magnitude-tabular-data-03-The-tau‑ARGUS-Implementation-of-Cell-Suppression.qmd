@@ -71,7 +71,7 @@ For cell suppression\index{cell suppression}, the idea of equating a minimum los
 
 \
 
-***Cost function and $\lambda$***\
+***Cost function***\
 The cost function indicates the relative importance of a cell. In principle the user could attach a separate cost to each individual cell, but that will become a rather cumbersome operation. Therefore in $\tau$‑ARGUS a few standard cost functions are available[^7]:
 
 -   Unity, i.e. all cells have equal weight (just minimising the number of suppressions)
@@ -84,6 +84,8 @@ The cost function indicates the relative importance of a cell. In principle the 
 
 [^7]: One of the secondary cell suppression\index{cell suppression} methods of $\tau$-ARGUS, the hypercube method, uses an elaborate internal weighting scheme in order to avoid to some extent the suppression of totals and subtotals which is essential for the performance of the method. In order to avoid that this internal weighting scheme is thrown out of balance, it has been decided to make the cost function facilities of t-ARGUS inoperational for this method.
 
+:::{.callout-warning collapse="true"}
+## Expert level
 Especially in the latter two cases the cell value could give too much preference to the larger cells. Is a 10 times bigger cell really 10 times as important? Sometimes there is a need to be a bit more moderate. Some transformation of the cost function is desired. Popular transformations are square-root or a log-transformation. Box and Cox (1960) have proposed a system of power transformations:
 
 $$
@@ -102,6 +104,8 @@ x^{\lambda} \quad &\text{for }\lambda\neq0 \\
 $$
 
 So choosing $\lambda = \frac{1}{2}$ will give the square-root.
+
+:::
 
 ### Evaluation of Secondary Cell Suppression algorithms offered by $\tau$‑ARGUS {#sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus}
 
@@ -149,7 +153,7 @@ Both Modular and Hypercube provide sufficient protection according to standards 
 | **Protection** | **Interval/Exact** | PS1*                   |  PS1*         |  PS1       |
 |  **standard**  |   **disclosure**   |                        |               |            |
 |                +--------------------+------------------------+---------------+------------+
-|                |    **Singleton**   | PS2                    |    PS2*       |  PS2*      |
+|                |    **Singleton**   | PS2                    |  PS2*         |  PS2*      |
 +----------------+--------------------+------------------------+---------------+------------+
 
 : Algorithms for practical use {#tbl-algorithms}
@@ -395,7 +399,7 @@ In this file the user can specify for each cell (by giving the values of the spa
 -   specify a new value of the cost function for a cell; this can be either high or low. This will influence the chance of a cell as a candidate for sec. suppression.\
     Note that this option is not valid for the hypercube, as the hypercube has its own cost function that cannot be influenced.
 
-> Further details of this file can be found in the $\tau$‑ARGUS manual.
+Further details of this file can be found in the $\tau$‑ARGUS manual.
 
 \
 ***Periodical data***\
