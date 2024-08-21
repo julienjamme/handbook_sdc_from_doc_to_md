@@ -179,7 +179,7 @@ This algorithm is independently used on each original variable in the original d
 
 It is reasonable to expect that multivariate statistics computed from data swapped with this algorithm will be less distorted than those computed after an unconstrained swap. 
 In earlier empirical work by these authors on continuous microdata protection (Domingo-Ferrer and Torra, 2001), rank swapping\index{rank swapping} has been identified as a particularly well-performing method in terms of the trade-off between disclosure risk\index{disclosure risk} and information loss. 
-Consequently, it is one of the techniques that have been implemented in the $\mu$‑ARGUS package (Hundepool *et al.*, 2005).
+Consequently, it is one of the techniques that have been implemented in the $\mu$‑ARGUS package (see *e.g.* Hundepool *et al.*, 2014).
 
 :::{.callout-note appearance="simple"}
 **Example.** In @tbl-ex-rank-swapping, we can see an original microdata set on the left and its rankswapped version on the right. 
@@ -257,8 +257,8 @@ The PRAM\index{PRAM} matrix contains a row for each possible value of each varia
 MASSC (Singh, Yu and Dunteman, 2003) is a masking method whose acronym summarizes its four steps: Micro Agglomeration, Substitution, Subsampling and Calibration. We briefly recall the purpose of those four steps: 
 
 1.  Micro agglomeration is applied to partition the original dataset into risk strata (groups of records which are at a similar risk of disclosure). These strata are formed using the key variables, *i.e.* the quasi-identifiers in the records. The idea is that those records with rarer combinations of key variables are at a higher risk.
-2. Optimal probabilistic substitution is then used to perturb the original data. (i.e. substitution is governed by a Markov matrix like in PRAM\index{PRAM}, see \[Singh, Yu and Dunteman, 2003\] for details)
-3. Optimal probabilistic subsampling is used to suppress some variables or even entire records (i.e. variables and/or records are suppressed with a certain probability set as parameters).
+2. Optimal probabilistic substitution is then used to perturb the original data (*i.e.* substitution is governed by a Markov matrix like in PRAM\index{PRAM}, see \[Singh, Yu and Dunteman, 2003\] for details).
+3. Optimal probabilistic subsampling is used to suppress some variables or even entire records (*i.e.* variables and/or records are suppressed with a certain probability set as parameters).
 4. Optimal sampling weight calibration is used to preserve estimates for outcome variables in the treated database whose accuracy is critical for the intended data use.
 
 MASSC, to the best of our knowledge, is the first attempt at designing a perturbative masking method in such a way that disclosure risk\index{disclosure risk} can be analytically quantified. 
@@ -307,7 +307,7 @@ With the above sampling fraction, the maximum absolute error for estimating a ma
 :::
 
 #### Global recoding {#sec-global-recoding}
-For a categorical variable $V_{i}$, several categories are combined to form new (less specific) categories, thus resulting in a new $V_{i}'$ with $\left| D\left( V_{i}' \right) \right| < \left| D\left( V_{i} \right) \right|$ where $|\cdot |$ is the cardinality operator and $D(V_i)$ denotes the domain of variable $V_i$, *i.e.*, the possible values $V_i$ can have. For a continuous variable, global recoding means replacing $V_{i}$ by another variable $V_{i}'$ which is a discretized version of $V_{i}$. In other words, a potentially infinite range $D\left( V_{i} \right)$ is mapped onto a finite range $D\left( V_{i}' \right)$. This is the technique used in $\mu$‑ARGUS (Hundepool *et al.* 2005).
+For a categorical variable $V_{i}$, several categories are combined to form new (less specific) categories, thus resulting in a new $V_{i}'$ with $\left| D\left( V_{i}' \right) \right| < \left| D\left( V_{i} \right) \right|$ where $|\cdot |$ is the cardinality operator and $D(V_i)$ denotes the domain of variable $V_i$, *i.e.*, the possible values $V_i$ can have. For a continuous variable, global recoding means replacing $V_{i}$ by another variable $V_{i}'$ which is a discretized version of $V_{i}$. In other words, a potentially infinite range $D\left( V_{i} \right)$ is mapped onto a finite range $D\left( V_{i}' \right)$. This is the technique used in $\mu$‑ARGUS (see *e.g.* Hundepool *et al.* 2014).
 
 This technique is more appropriate for categorical microdata, where it helps disguise records with strange combinations of categorical variables. 
 Global recoding is used heavily by statistical offices.
@@ -330,15 +330,15 @@ Suppose furthermore that both the combinations 'Place of residence = Amsterdam',
 To obtain a uniform categorisation of 'Occupation' we would, however, not publish these combinations, but only the combination 'Place of residence = Amsterdam', 'Gender = Female' and 'Occupation = Statistician or Mathematician'.
 
 #### Top and bottom coding {#sec-top-and-bottom-coding}
-Top and bottom coding is a special case of global recoding which can be used on variables that can be ranked, that is, continuous or categorical ordinal. The idea is that top values (those above a certain threshold) are lumped together to form a new category. The same is done for bottom values (those below a certain threshold). See the $\mu$‑ARGUS manual (Hundepool *et al.* 2005).
+Top and bottom coding is a special case of global recoding which can be used on variables that can be ranked, that is, continuous or categorical ordinal. The idea is that top values (those above a certain threshold) are lumped together to form a new category. The same is done for bottom values (those below a certain threshold). See the $\mu$‑ARGUS manual (*e.g.* Hundepool *et al.* 2014).
 
 #### Local suppression {#sec-local-suppression}
-Certain values of individual variables are suppressed with the aim of increasing the set of records agreeing on a combination of key values. Ways to combine local suppression and global recoding are discussed in (De Waal and Willenborg, 1995) and implemented in $\mu$‑ARGUS (Hundepool *et al.* 2005).
+Certain values of individual variables are suppressed with the aim of increasing the set of records agreeing on a combination of key values. Ways to combine local suppression and global recoding are discussed in (De Waal and Willenborg, 1995) and implemented in $\mu$‑ARGUS (see *e.g.* Hundepool *et al.* 2014).
 
 If a continuous variable $V_{i}$ is part of a set of key variables, then each combination of key values is probably unique. 
 Since it does not make sense to systematically suppress the values of $V_{i}$, we conclude that local suppression is rather oriented to categorical variables.
 
-When local suppression is applied, one or more values in an unsafe combination are suppressed, i.e. replaced by a missing value. 
+When local suppression is applied, one or more values in an unsafe combination are suppressed, *i.e.* replaced by a missing value. 
 For instance, in the above example we can protect the unsafe combination 'Place of residence = Urk', 'Gender = Female' and 'Occupation = Statistician' by suppressing the value of 'Occupation', assuming that the number of females in Urk is sufficiently high. 
 The resulting combination is then given by 'Place of residence = Urk', 'Gender = Female' and 'Occupation = missing'. 
 Note that instead of suppressing the value of 'Occupation' one could also suppress the value of another variable of the unsafe combination. 
@@ -367,7 +367,7 @@ Domingo-Ferrer, J., and Mateo-Sanz, J. M. (2002). *Practical data-oriented micro
 
 Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk\index{disclosure risk}.* In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
-Domingo-Ferrer, J., and Torra, V., (2001*). Disclosure protection methods and information loss for microdata*. In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
+Domingo-Ferrer, J., and Torra, V., (2001). *Disclosure protection methods and information loss for microdata*. In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf]{.underline}](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
 
 Duncan, G. T., and Pearson, R. W. (1991). *Enhancing access to microdata while protecting confidentiality: prospects for the future*. Statistical Science, 6:219--239, 1991.
 
@@ -383,7 +383,7 @@ Heer, G. R. (1993). *A bootstrap procedure to preserve statistical confidentiali
 
 Höhne (2004), Varianten von Zufallsüberlagerung (German), working paper of the project group \'De facto anonymisation of business microdata\', Wiesbaden.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V. and Giessing, S. (2005). *$\mu$-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/MUmanual4.0.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V. and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Kooiman, P. L, Willenborg, L, and Gouweleeuw, J. M. (1998). *PRAM: A method for disclosure limitation of microdata*. Technical report, Statistics Netherlands (Voorburg, NL), 1998.
 
@@ -527,7 +527,7 @@ The method consists of several steps:
 6. Back-transform to the original scale.
 
 In the European project CASC (IST-2000-25069), the practicality and usability of this algorithm was assessed. 
-Unfortunately, the internal CASC report by Brand (2002b) concluded that:\
+Unfortunately, the internal CASC report by Brand and Giessing (2002) concluded that:\
 *"All in all, the results indicate that an algorithm as complex as the one proposed by Sullivan can only be applied by experts. Every application is very time-consuming and requires expert knowledge on the data and the algorithm."*
 :::
 
@@ -545,7 +545,7 @@ With the exception of the not very practical method of Sullivan (1989), additive
 
 Brand, R. (2002). *Microdata protection through noise addition*. In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 97--116, Berlin Heidelberg, 2002. Springer.
 
-Brand, R. (2002b). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics*, European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/11d1.pdf).
+Brand, R. and Giessing, S. (2002). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics*, European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [[https://research.cbs.nl/casc/deliv/11d1.pdf]{.underline}](https://research.cbs.nl/casc/deliv/11d1.pdf).
 
 Domingo-Ferrer, J., Sebé, F., and Castellà, J. (2004). *On the security of noise addition for privacy in statistical databases.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 149--161, Berlin Heidelberg, 2004. Springer.
 
@@ -709,7 +709,7 @@ Domingo-Ferrer, J., and Torra, V. (2005). *Ordinal, continuous and heterogenerou
 
 Hansen, S. L. and Mukherjee, S. (2003*). A polynomial algorithm for optimal univariate microaggregation*. IEEE Transactions on Knowledge and Data Engineering, 15(4):1043--1044, 2003.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V., and Giessing, S. (2005*). $\mu$-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, May 2005. [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/MUmanual4.0.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Mateo-Sanz, J. M. and Domingo-Ferrer, J. (1999). *A method for data-oriented multivariate microaggregation*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 89--99, Luxemburg, 1999. Office for Official Publications of the European Communities.
 
@@ -739,13 +739,13 @@ Since the probability mechanism that is used when applying PRAM\index{PRAM} is k
 To that end, one can make use of correction methods similar to those used in case of misclassification and randomised response situations.
 
 PRAM was used in 2001 UK Census to produce an end-user licence version of the Samples of Anonymised Records (SARs). 
-See Gross(2004) [[www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf]{.underline}](http://www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf) for a full description.
+See Gross(2004) for a full description.
 
 #### PRAM, the method
 :::{.callout-warning collapse=true}
 ## Expert level
 
-In this section a short theoretical description of PRAM\index{PRAM} is given. For a detailed description of the method, see e.g., Gouweleeuw *et al.* (1998a and 1998b). For a discussion of several issues concerning the method and its consequences, see *e.g.*, De Wolf *et al.* (1998).
+In this section a short theoretical description of PRAM\index{PRAM} is given. For a detailed description of the method, see *e.g.*, Gouweleeuw *et al.* (1998a and 1998b). For a discussion of several issues concerning the method and its consequences, see *e.g.*, De Wolf *et al.* (1998).
 
 Let $\xi$ denote a categorical variable in the original file to which PRAM\index{PRAM} will be applied and let $X$ denote the same variable in the perturbed file. 
 Moreover, assume that $\xi$, and hence $X$ as well, has $K$ categories, labelled $1,\ldots,K$. 
@@ -793,11 +793,11 @@ where $\mathbf{P}_{X}$ denotes the PRAM\index{PRAM}-matrix corresponding to the 
 
 [^1]:When $X$ has $K$ categories and $Y$ has $L$ categories, the 2-dimensional frequency table $T_{XY}$ is a $K\times L$ matrix.
 
-For more information about correction methods for statistical analyses applied to data that have been protected with PRAM\index{PRAM}, we refer to e.g., Gouweleeuw *et al.* (1998a) and Van den Hout (1999 and 2004).
+For more information about correction methods for statistical analyses applied to data that have been protected with PRAM\index{PRAM}, we refer to *e.g.*, Gouweleeuw *et al.* (1998a) and Van den Hout (1999 and 2004).
 
 *Choice of PRAM\index{PRAM}-matrix*\
 The exact choice of transition probabilities influences both the amount of information loss as well as the amount of disclosure limitation. 
-Moreover, in certain situations 'illogical' changes could occur, e.g., changing the gender of a female respondent with ovarian cancer to male. 
+Moreover, in certain situations 'illogical' changes could occur, *e.g.* changing the gender of a female respondent with ovarian cancer to male. 
 These kind of changes would attract the attention of a possible intruder which should be avoided.
 
 It is thus important to choose the transition probabilities in an appropriate way. 
@@ -824,8 +824,7 @@ Once that strategy has been determined, the researcher might come to an on-site 
 
 #### References on PRAM
 
-Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census* , Office for National Statistics.
-[[www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf]{.underline}](http://www.ccsr.ac.uk/sars/events/2004-09-30/gross.pdf)
+Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census* , Office for National Statistics. [[https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf]{.underline}](https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf)
 
 Cator, E., Hensbergen A. and Y. Rozenholc (2005), *Statistical Disclosure Control using PRAM\index{PRAM}*, Proceedings of the 48th European Study Group Mathematics with Industry, Delft, The Netherlands, 15-19 March 2004. Delft University Press, 2005, p. 23 -- 30.
 
@@ -837,9 +836,9 @@ Van den Hout, A. (2000), *The analysis of data perturbed by PRAM\index{PRAM}*, D
 
 Van den Hout, A. (2004), *Analyzing misclassified data: randomized response and post randomization*, Ph.D. thesis, Utrecht University.
 
-De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM\index{PRAM}*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf) Related Papers)
+De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM\index{PRAM}*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf))
 
-De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM\index{PRAM}*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/related/Sdp_98_2.pdf))
+De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM\index{PRAM}*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/Related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/Related/Sdp_98_2.pdf))
 
 ### Synthetic microdata {#sec-synthetic-data}
 
@@ -1181,7 +1180,7 @@ Aggarwal, C. C., and Yu, P. S. (2004). *A condensation approach to privacy prese
 
 Burridge, J. (2004). *Information preserving statistical obfuscation.* Statistics and Computing, 13:321--327, 2003.
 
-Crystal.Ball. [[http://www.cbpro.com/]{.underline}](http://www.cbpro.com/).
+Crystal.Ball. [[http://www.aertia.com/en/productos.asp?pid=245]{.underline}](http://www.aertia.com/en/productos.asp?pid=245).
 
 Dandekar, R., Cohen, M., and Kirkendall, N. (2002). *Sensitive micro data protection using latin hypercube sampling technique.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 245--253, Berlin Heidelberg, Springer.
 
@@ -1207,7 +1206,7 @@ Liew, C. K., Choi, U. J., and Liew, C. J. (1985). *A data distortion by probabil
 
 Mateo-Sanz, J. M., Martínez-Ballesté, A., and Domingo-Ferrer, J. (2004). *Fast generation of accurate synthetic microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 298--306, Berlin Heidelberg, Springer.
 
-Muralidhar, K, and Sarathy, R, (2008). *Generating sufficiency-based nonsynthetic perturbed data*. Transactions on Data Privacy, 1(1):17--33, 2008. [[http://www.tdp.cat/issues/tdp.a005a08.pdf]{.underline}](http://www.tdp.cat/issues/tdp.a005a08.pdf).
+Muralidhar, K, and Sarathy, R, (2008). *Generating sufficiency-based nonsynthetic perturbed data*. Transactions on Data Privacy, 1(1):17--33, 2008. [[https://www.tdp.cat/issues/tdp.a005a08.pdf]{.underline}](https://www.tdp.cat/issues/tdp.a005a08.pdf).
 
 Polettini, S., Franconi, L., and Stander, J. (2002). *Model based disclosure protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 83--96, Berlin Heidelberg. Springer.
 

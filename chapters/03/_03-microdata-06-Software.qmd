@@ -34,8 +34,10 @@ When the above scheme has been followed a safe microdata file has been generated
 
 This architecture of $\mu$‑ARGUS has the advantage that all real SDC-work, that will be done interactively, will have a very quick response time. Inspecting the results of various recodings is easy and simple.
 
+The most recent release of $\mu$-ARGUS can be found on GitHub ([[https://github.com/sdcTools/muargus/releases]{.underline}](https://github.com/sdcTools/muargus/releases)).
+
 ### sdcMicro {#sec-sdcmicro}
-[sdcMicro](https://github.com/sdcTools/sdcMicro) is an [R](https://r-project.org) package implementing almost all methods discussed in @sec-microdata-protection-methods. 
+`sdcMicro` ([[https://github.com/sdcTools/sdcMicro]{.underline}](https://github.com/sdcTools/sdcMicro)) is an [R](https://r-project.org) package implementing almost all methods discussed in @sec-microdata-protection-methods. 
 The required steps to use the package are essentially the same as outlined in @sec-mu-argus and are quickly summarized below as well.
 
 1.  **Definition of a problem**
@@ -61,7 +63,7 @@ Once a problem instance has been created, some helpful summary statistics such a
     The package allows to (for example) add stochastic noise to numerical variables ([-@sec-noise-addition]) using `addNoise()`, post-randomize values in categorically scaled variables ([-@sec-PRAM]) with function `pram()`, create synthetic microdata ([-@sec-synthetic-data]) with method `dataGen()` or perform global recoding ([-@sec-global-recoding]) by using `globalRecode()`. 
     Furthermore it is possible to apply rank-swapping ([-@sec-data-rank-swapping]) with function `rankSwap()`, compute SUDA-scores ([-@sec-SUDA]) using `suda2()`, compute individual risk estimates ([-@sec-argus-individual-risk]) with `indivRisk()` and `freqCalc()` as well as make a set of categorical key variables fulfill $k$-anonymity using `kAnon()`. 
     In the current versions of the package, TRS (targeted record swapping, [-@sec-TRS]) is implemented and can be called using the `recordSwap()` function. 
-    A detailed discussion and overview is available in a custom [vignette](https://sdctools.github.io/sdcMicro/articles/recordSwapping.html).
+    A detailed discussion and overview is available in a custom vignette ([[https://sdctools.github.io/sdcMicro/articles/recordSwapping.html]{.underline}](https://sdctools.github.io/sdcMicro/articles/recordSwapping.html)).
 
 3.  **Exporting Results**
 Once the interactive process has been finished, the package allows to quickly write out a safe dataset that contains all applied techniques also respecting any settings defined when initializing the object itself such as *"ghost-variables"* using function `writeSafeFile()`. 
@@ -69,4 +71,4 @@ Once the interactive process has been finished, the package allows to quickly wr
     Further more there is a `report()` functionality available that can be applied to an sdc-object at any time. This method can be called to either generate an internal or external report summarizing the process. The difference between the internal and the external report is the level of detail. While the external report is targeted for public consumption and does not contain any (sensitive) values such as specific parameter settings, the internal report lists any techniques that have been applied to protect the microdata in great detail. Both variants result in a `html` file that can easily be shared.
 
 4.  **Graphical User-Interface**
-Creating safe, protected microdata files is often a challenging task. Also having to dive into `R` and write code to perform several steps of the procedure can be a hurdle for non-experts in `R`. In order to mitigate this problem and to facilitate the use of `sdcMicro`, the package comes with an interactive, shiny-based graphical user-interface (Meindl, 2019). The interface can be started using the `sdcApp` function and its functionality is explained in detail in a custom [vignette](https://sdctools.github.io/sdcMicro/articles/sdcMicro.html)
+Creating safe, protected microdata files is often a challenging task. Also having to dive into `R` and write code to perform several steps of the procedure can be a hurdle for non-experts in `R`. In order to mitigate this problem and to facilitate the use of `sdcMicro`, the package comes with an interactive, shiny-based graphical user-interface (Meindl, 2019). The interface can be started using the `sdcApp` function and its functionality is explained in detail in a custom vignette ([[https://sdctools.github.io/sdcMicro/articles/sdcMicro.html]{.underline}](https://sdctools.github.io/sdcMicro/articles/sdcMicro.html)).

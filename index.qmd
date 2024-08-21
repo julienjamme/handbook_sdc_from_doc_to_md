@@ -6,7 +6,6 @@
 
 :::
 
-
 # Preface to the second edition {.unnumbered}
 
 In 2006 Eurostat took the initiative of setting up Centres of Excellence. The idea behind this scheme is to combine the strengths of the leading National Statistical Institutes (NSIs) in Europe on a certain topic. Often in several NSIs small isolated groups are working on specific topics. Other NSIs even lack the resources to pay enough attention to certain methodological issues. This situation led to the Eurostat initiative on Centres of Excellence. A Centre of Excellence could bring together the knowledge on a certain topic at a higher level by supporting the research in the leading countries and to spread this work to the other NSIs. Statistical Disclosure Control (SDC) was selected as a pilot topic. One of the reasons for selecting SDC was a longer tradition in the field of SDC with respect to European cooperation, like the EU framework projects SDC ([[https://cordis.europa.eu/project/id/20462]{.underline}](https://cordis.europa.eu/project/id/20462)) and CASC ([[https://research.cbs.nl/casc/CASCIndex.htm]{.underline}](https://research.cbs.nl/casc/CASCIndex.htm)).
@@ -34,9 +33,17 @@ Extended examples are marked in this way:
 
 In spite of all the improvements and additions, the authors still see this version of the handbook as a “live document” that could be updated from time to time. Therefore, we will appreciate your comments and suggestions for further improvements. Please submit your comments or suggestions to the Issues page of the User Support repository on GitHub ([[https://github.com/sdctools/UserSupport]{.underline}](https://github.com/sdcTools/UserSupport)).
 
+::: {.content-visible when-format="pdf"}
+
+::: {.callout-tip appearance="simple"}
+An online version of this handbook can be found at [[To be decided]{.underline}](ToBeDecided)
+:::
+
+:::
+
 ## License {.unnumbered .unlisted}
 ![](Images/media/by-sa.png){width="0.8in"}
 
-Handbook on Statistical Disclosure Control © 2024 by Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak, Johannes Gussenbauer, Kamil Wilak, is licensed under CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+Handbook on Statistical Disclosure Control © 2024 by Anco Hundepool, Josep Domingo-Ferrer, Luisa Franconi, Sarah Giessing, Rainer Lenz, Jane Naylor, Eric Schulte Nordholt, Giovanni Seri, Peter-Paul De Wolf, Reinhard Tent, Andrzej Młodak, Johannes Gussenbauer, Kamil Wilak, is licensed under CC BY-SA 4.0. To view a copy of this license, visit [[https://creativecommons.org/licenses/by-sa/4.0/]{.underline}](https://creativecommons.org/licenses/by-sa/4.0/)
 
 

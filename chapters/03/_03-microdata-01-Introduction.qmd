@@ -17,14 +17,14 @@ On the other hand, the user of protected microdata should obtain most important 
 
 In general, two types of microdata files are released by NSIs, namely public use files (PUF) and research use files (MFR). 
 The disclosure risk\index{disclosure risk} in public use files is entirely managed by the design of the file and the application of SDC methods. 
-For research use microdata files SDC methods will be applied in addition to some restrictions on access and use, e.g. under a licence or access agreement,
+For research use microdata files SDC methods will be applied in addition to some restrictions on access and use, *e.g.* under a licence or access agreement,
 such as those provided by Commission Regulation 831/2202, see @sec-laws. 
 Necessarily the research release files contain more detail than the public use files.
 The estimated expected information loss should be computed both as total and for each variable separately, if possible.
 
 Some NSIs will also provide access to microdata in datalaboratories/research centres or via remote access/execution. 
 Datalabs allow approved users on-site access to more identifiable microdata. Typically datalab users are legally prohibited from disclosing information 
-and are subject to various stringent controls, e.g. close supervision on-site to protect the security of the data and output checking, to assist with disclosure control. 
+and are subject to various stringent controls, *e.g.* close supervision on-site to protect the security of the data and output checking, to assist with disclosure control. 
 For remote execution researchers are provided with a full description of the microdata. 
 They then send prepared scripts to the NSI who run the analysis, check and return the results. 
 Remote access is a secure on-line facility where the researchers connect to the NSI's server (via passwords and other security devices) where the data and programs are located. 
@@ -35,5 +35,5 @@ The researcher does not have complete access to the whole data itself; however t
 @sec-roadmap goes through the whole process of creating a microdata file for external users from the original microdata. 
 The aim of such section is to briefly analyse the different stages of the disclosure process providing references to the relevant sections where each step will be described in more details.
 @sec-software is dedicated to the software. [Sections @sec-intro-example] and [-@sec-further-example] provide some examples. 
-Further and more detailed examples can be found in Case studies available on the ([[CASC-website]{.underline}](https://research.cbs.nl/casc/handbook.htm)). 
-[Chapter 6](06-remote-access-issues.html) of this handbook provides more details on different microdata access issues such as research centres, remote access/execution and licensing.
+Further and more detailed examples can be found in Case studies available on the CASC website ([[https://research.cbs.nl/casc/handbook.htm#casestudies]{.underline}](https://research.cbs.nl/casc/handbook.htm#casestudies)). 
+[Chapter 6](06-remote-access-issues.html) of the current handbook provides more details on different microdata access issues such as research centres, remote access/execution and licensing.

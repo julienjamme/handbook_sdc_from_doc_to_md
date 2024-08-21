@@ -104,5 +104,5 @@ In [Chapter 7](07-glossary.html) a glossary of statistical terms used in Statist
 Duncan, G., Keller-McNulty, S., and Stokes, S. (2001) *Disclosure Risk vs. Data Utility: the R-U Confidentiality Map,* Technical Report LA-UR-01-6428, Statistical Sciences Group, Los Alamos, N.M.: Los Alamos National Laboratory
 
 Trewin, D et al. (2007) *Principles and Guidelines of Good Practice for Managing Statistical Confidentiality and Microdata Access*, UNECE United Nations Economic commission for Europe: 
-[[https://unece.org/.../Managing.statistical.confidentiality.and.microdata.access.pdf]{.underline}](https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf)
+[[https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf]{.underline}](https://unece.org/fileadmin/DAM/stats/publications/Managing.statistical.confidentiality.and.microdata.access.pdf)
 

@@ -3,9 +3,9 @@
 
 ### Concepts and types of information loss and its measures
 
-The application of SDC methods entails the loss of some information. It arises as a result e.g. from gaps occurring in data when non-perturbative SDC methods are used, 
+The application of SDC methods entails the loss of some information. It arises as a result *e.g.* from gaps occurring in data when non-perturbative SDC methods are used, 
 or perturbations when perturbative SDC tools are used. Because of this loss the analytical worth of the disclosed data for the user decreases, which means there is 
-a possibility that results of computations and analyses based on such data will be inadequate (e.g. the precision of estimation could be much worse). 
+a possibility that results of computations and analyses based on such data will be inadequate (*e.g.* the precision of estimation could be much worse). 
 
 A strict evaluation of information loss must be based on the data uses to be supported by the protected data. The greater the differences between the results obtained on 
 original and protected data for those uses, the higher the loss of information. However, very often microdata protection cannot be performed in a data use specific manner, 
@@ -39,14 +39,14 @@ by an SDC method.
 Taking the aforementioned premises into account, for microdata the information loss can concern the differences in distributions, in diversification and in shape 
 and power of connections between various features. Therefore, the following types of measures of information loss are distinguished:    
 
-1. Measures of distribution disturbance – measures based on distances between original and perturbed values of variables (e.g. mean, mean of relative
+1. Measures of distribution disturbance – measures based on distances between original and perturbed values of variables (*e.g.* mean, mean of relative
 distances, complex distances, etc.),
 2. Measures of impact on variance of estimation – computed using distances between variances for averages of continuous variables before and after SDC 
 or multi-factor ANOVA for a selected dependent variable in relation to selected independent categorical variables (in this case, the measure of information loss 
 involves a comparison of components of coefficients of determination $R^2$ - in terms of within-group and inter-group variance - for relevant models based on original 
 and perturbed values (cf. Hundepool et al. (2012))),
 3. Measures of impact on the intensity of connections – comparisons of measures of direction and intensity of connections between original continuous variables and 
-between relevant perturbed ones; such measures can be e.g. correlation coefficients or test of independence.
+between relevant perturbed ones; such measures can be *e.g.* correlation coefficients or test of independence.
 
 ### Information loss measures for categorical data
 
@@ -99,7 +99,7 @@ Because the number of contingency tables to be considered depends on the number 
 a normalized version of ([-@eq-CTBIL]) may be desirable. This can be obtained by dividing expression ([-@eq-CTBIL]) by the total number of cells in all considered tables.
 
 Distance between contingency tables generalizes some of the information loss measures used in the literature. For example, the $\mu$‑ARGUS software 
-(Hundepool et al., 2005) measures information loss for local suppression by counting the number of suppressions. The distance between two contingency tables of 
+(see *e.g.* Hundepool et al., 2014) measures information loss for local suppression by counting the number of suppressions. The distance between two contingency tables of 
 dimension one returns twice the number of suppressions. This is because, when category $A$ is suppressed for one record, two entries of the contingency table are changed: 
 the count of records with category $A$ decreases and the count of records with the "missing" category increases.
 :::
@@ -184,7 +184,7 @@ Trottini (2003) argues that, since information loss is to be traded off for disc
 
 Młodak (2020) proposed a new measure of information loss for continuous variables in terms of assesment of impact on the intensity of connections, which was slighthly improved by 
 Młodak, Pietrzak and Józefowski (2022). It is based on on diagonal entries of inversed correlation matrices for continuous variables in the original ($R^{-1}$) and 
-perturbed (${R^{\prime}}^{-1}$) data sets, i.e. $\rho_{jj}^{(-1)}$ and ${\rho_{jj}^{\prime}}^{(-1)}$, $j=1,2,\ldots,m_c$ (where $m_c$ is the number of continuous variables):
+perturbed (${R^{\prime}}^{-1}$) data sets, *i.e.* $\rho_{jj}^{(-1)}$ and ${\rho_{jj}^{\prime}}^{(-1)}$, $j=1,2,\ldots,m_c$ (where $m_c$ is the number of continuous variables):
 $$
 \gamma=\frac{1}{\sqrt{2}}\sqrt{\sum_{j=1}^{m_c}{\left(\frac{\rho_{jj}^{(-1)}}{\sqrt{\sum_{l=1}^m{\left(\rho_{ll}^{(-1)}\right)^2}}}-\frac{{\rho_{jj}^{\prime}}^{(-1)}}{\sqrt{\sum_{l=1}^m{\left({\rho_{ll}^{\prime}}^{(-1)}\right)^2}}}\right)^2}}\in [0,1].
 $${#eq-info-loss-Mlodak}
@@ -202,7 +202,7 @@ and takes all connections between analysed variables, even those hard to observe
 
 The above presented concepts of information loss prompt the question whether it is possible to construct complex measure of information loss taking variables of all measurement
 scales into account. The relevant proposal was formulated by Młodak (2020) and applied by Młodak, Pietrzak and Józefowski (2022) to the case of microdata from the Polish survey of 
-accidents at work. For categorical variables it is based on the approaches [-@sec-direct-comparison]  <!--(3.5.1)--> and [-@sec-contingency-table] <!--(3.5.2)-->, i.e. if the variable $X_j$ is nominal, then (treating NA as a separate level)
+accidents at work. For categorical variables it is based on the approaches [-@sec-direct-comparison]  <!--(3.5.1)--> and [-@sec-contingency-table] <!--(3.5.2)-->, *i.e.* if the variable $X_j$ is nominal, then (treating NA as a separate level)
 $$
 d(x_{ij}^{\prime},x_{ij})=\begin{cases}
 1&\text{if}\; x_{ij}^{\prime}=x_{ij},\cr
@@ -219,7 +219,7 @@ $${#eq-distance-ordinal}
 
 where $\mathfrak{r}(x_{ij}^{\prime},x_{ij})$ is the absolute difference in categories between $x_{ij}^{\prime}$ and $x_{ij}$. These partial distances take always values from [0,1]. There are, however, some problems with using them, especially if recoding is applied. The number of categories of a recoded variable in the original set and in the set after SDC will be different. Therefore, in the first place, it should be ensured that the numbers of the categories left unchanged are identical in both variants. For example, if before recoding the variable $X_j$ had $\mathfrak{r}_j$=8 categories marked as 1,2,3,4,5,6,7,8 and as a result of recoding categories 2 and 3 and 6 and 7 were combined, then the new categories should have respectively numbers 1,2,4,5,6,8. Then the option ([-@eq-distance-ordinal]) for categorical variables applies in this case as well.
 
-Much more complicated situation occurs for continuous variables. Młodak (2020) proposed several options is this respect, e.g. normalized absolute value or normalized square of difference between ${x_{ij}}^{\prime}$ and $x_{ij}$, i.e. 
+Much more complicated situation occurs for continuous variables. Młodak (2020) proposed several options is this respect, *e.g.* normalized absolute value or normalized square of difference between ${x_{ij}}^{\prime}$ and $x_{ij}$, *i.e.* 
 $$
 d(x_{ij}^{\prime},x_{ij})=|x_{ij}^{\prime}-x_{ij}| / \max_{k=1,2,\ldots,n}⁡|x_{kj}^{\prime}-x_{kj}|,
 $$ {#eq-distance-continuous1}
@@ -295,7 +295,7 @@ have much higher priority than others. On the other hand, if the subject of inte
 loss should be assessed using the measures for contingency tables (as they are in fact frequency tables, this problem is discussed in 
 [Chapter 5](05-frequency-tables.html)). For continuous variables the aforementioned measures of impact on the intensity of connections can be, of course, applied.
 
-Similarly as e.g. in the case of significance and loss in testing of statistical hypotheses, the most obvious and easy approach to obtain reasonable compromise 
+Similarly as *e.g.* in the case of significance and loss in testing of statistical hypotheses, the most obvious and easy approach to obtain reasonable compromise 
 between these two expectations is to apply one of two following ways:
 
 - establishing arbitrarily maximum allowable level of disclosure risk\index{disclosure risk} and minimize the information loss in this situation - it defends, first of all, 
@@ -303,7 +303,7 @@ the data confidentiality and trust to data holder in terms of privacy protection
 - establishing arbitrarily maximum allowable level of information loss and minimize the disclosure risk\index{disclosure risk} in this situation - it defends, first of all, 
 the data utility for users and data provider as a source of reliable, creadible and useful data. 
 
-In practice, the data holder (e.g. official statistics) prefers rather the first approach as the strict protection of data privacy is usually an obligation imposed by valid law regulations. So, assurance of the safety of confidential information is very important.     
+In practice, the data holder (*e.g.* official statistics) prefers rather the first approach as the strict protection of data privacy is usually an obligation imposed by valid law regulations. So, assurance of the safety of confidential information is very important.     
 
 ### Example
   
@@ -321,7 +321,7 @@ In practice, the data holder (e.g. official statistics) prefers rather the first
   
   Several of the measures mentioned above have been developed to assess the loss of information. Based on distances between values of variables that were to be anonymised in the original set and the their values in the anonymised set, $\lambda$ measures were calculated. Table @tbl-example-information-loss shows the general value of $\lambda$ and its values for individual variables ($\lambda_k$). The overall loss  of information for the anonymised variables is 14.3%. The greatest loss is observed for quantitative variables to which noise was added; in the case of INCTOTGROSSHH, the loss of information measured by $\lambda$ reaches 83.4%. The loss of information was much lower in the case of key variables subjected to local suppression and those modified with the PRAM method: the maximum loss was 9.7% and 9.4%, respectively.
   
-  Overall information loss was determined using two measures described above: $IL1$ and $\lambda$. $IL1$ was equal to 79.4, which indicates relatively large standard deviations of anonymised values of quantitative variables from standard deviations of the original variables. The value of the second measure, which is based on correlation coefficients, is 0.6%, which indicates a slight loss of information regarding correlations between the quantitative variables. Nevertheless, it should be stressed that as a result of to numerous cases of non-response in the quantitative variables, the value of $\lambda$ was calculated on the basis of only 111 observations, i.e. less than 6% of all units.
+  Overall information loss was determined using two measures described above: $IL1$ and $\lambda$. $IL1$ was equal to 79.4, which indicates relatively large standard deviations of anonymised values of quantitative variables from standard deviations of the original variables. The value of the second measure, which is based on correlation coefficients, is 0.6%, which indicates a slight loss of information regarding correlations between the quantitative variables. Nevertheless, it should be stressed that as a result of to numerous cases of non-response in the quantitative variables, the value of $\lambda$ was calculated on the basis of only 111 observations, *i.e.* less than 6% of all units.
   
   The above assessment was conducted using the R sdcMicro package. Because some of the information loss measures described above are not implemented in this package, they were not used in the assessment.
   
@@ -384,7 +384,7 @@ In practice, the data holder (e.g. official statistics) prefers rather the first
   | CAR           | 1.5         |
   | TV            | 7.3         |
   | LIVESTOCK     | 1.3         |
-[^2]: http://www.ihsn.org/software/disclosure-control-toolbox
+[^2]: [[https://www.ihsn.org/software/disclosure-control-toolbox]{.underline}](https://www.ihsn.org/software/disclosure-control-toolbox)
 
 ### References
 
@@ -398,9 +398,9 @@ De Waal, A. G., and Willenborg, L. C. R. J. (1999). *Information loss through 
 
 Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk\index{disclosure risk}*. In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
-Domingo-Ferrer, J., and Torra, V. (2001). *Disclosure protection methods and information loss for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
+Domingo-Ferrer, J., and Torra, V. (2001). *Disclosure protection methods and information loss for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf]{.underline}](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V., Brand, R:, and Giessing, S. (2005). *$\mu$-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc]{.underline}](https://research.cbs.nl/casc/deliv/MUmanual4.0.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., Brand, R:, and Giessing, S. (2005). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Hundepool, A., Domingo–Ferrer, J., Franconi, L., Giessing, S., Nordholt, E. S., Spicer, K., & de Wolf, P. (2012). *Statistical Disclosure Control*. John Wiley & Sons, Ltd.
 
@@ -410,7 +410,7 @@ Młodak, A. (2020). Information loss resulting from statistical disclosure contr
 
 Młodak, A., Pietrzak, M., & Józefowski, T. (2022). The trade–off between the risk of disclosure and data utility in SDC: A case of data from a survey of accidents at work. *Statistical Journal of the IAOS*, 38 (4), 1503–1511.
 
-Trottini, M. (2003) . *Decision models for data disclosure limitation*. PhD thesis, Carnegie Mellon University, 2003. [[http://www.niss.org/dgii/TR/Thesis-Trottini-final.pdf]{.underline}](http://www.niss.org/dgii/TR/Thesis-Trottini-final.pdf).
+Trottini, M. (2003) . *Decision models for data disclosure limitation*. PhD thesis, Carnegie Mellon University, 2003.
 
 Willenborg, L., and De Waal, T., (2001). *Elements of Statistical Disclosure Control*. Springer-Verlag, New York, 2001.
 

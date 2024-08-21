@@ -2,7 +2,7 @@
 
 In order to meet the needs of the researcher community to analyse the rich datasets compiled by the NSIs, while safeguarding the confidentiality constraints, the first solution was to create special rooms in the premises of the NSIs (RDCs). The NSI makes available special computers for the researchers. On this computer the necessary software for the research will be installed by the NSI together with the necessary datasets. Ideally these computers have no connection whatsoever to the internet and there is no email. Also drives for removable discs are not available and the use of memory sticks has to be blocked. The access to the internal production network of the NSI has to be blocked as well, preventing the possibilities of the researchers to access other sensitive information. Installing a printer is a risk as well as is the use of phones. Supervision of the RDC is always needed.
 
-The datasets to be used in the RDC have to be anonymised (i.e. at least the name, address etc are removed). It is also advisable to restrict the variables available to the set that is needed for the specific research.
+The datasets to be used in the RDC have to be anonymised (*i.e.* at least the name, address etc are removed). It is also advisable to restrict the variables available to the set that is needed for the specific research.
 
 On these computers the researchers should neverthe­less be able to fully analyse the data files and complete their analysis. When the research is finished the results have to be released to the researchers. Before this can be done, NSI staff has to check the research results. Unfortunately this is not a straightforward, easy task. This will be discussed in section 6.6.
 
