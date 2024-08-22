@@ -351,59 +351,59 @@ The freedom that one has in selecting the values that are to be suppressed allow
 
 Brand, R. (2002*). Microdata protection through noise addition.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 97--116, Berlin Heidelberg, 2002. Springer.
 
-Dalenius T., and Reiss, S. P. (1978). *Data-swapping: a technique for disclosure control* (extended abstract). In Proc. of the ASA Section on Survey Research Methods, pages 191--194, Washington DC, 1978. American Statistical Association.
+Dalenius T., and Reiss, S.P. (1978). *Data-swapping: a technique for disclosure control* (extended abstract). In Proc. of the ASA Section on Survey Research Methods, pages 191--194, Washington DC, 1978. American Statistical Association.
 
 *Defays, D., and Nanopoulos, P. (1993). Panels of enterprises and confidentiality: the small aggregates method*. In Proc. of 92 Symposium on Design and Analysis of Longitudinal Surveys, pages 195--204, Ottawa, 1993. Statistics Canada.
 
-De Waal, A. G., and Willenborg, L.C.R.J. (1995). *Global recodings and local suppressions in microdata sets*. In Proceedings of Statistics Canada Symposium'95, pages 121--132, Ottawa, 1995. Statistics Canada.
+De Waal, A.G., and Willenborg, L.C.R.J. (1995). *Global recodings and local suppressions in microdata sets*. In Proceedings of Statistics Canada Symposium'95, pages 121--132, Ottawa, 1995. Statistics Canada.
 
-De Waal, A.G. and Willenborg, L. C. R. J. (1999). *Information loss through global recoding and local suppression*. Netherlands Official Statistics, 14:17--20, 1999. special issue on SDC.
+De Waal, A.G. and Willenborg, L.C.R.J. (1999). *Information loss through global recoding and local suppression*. Netherlands Official Statistics, 14:17--20, 1999. special issue on SDC.
 
-De Wolf, P.-P., Gouweleeuw, J. M., Kooiman, P., and Willenborg, L.C.R.J. (1999). *Reflections on PRAM\index{PRAM}*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 337--349, Luxemburg, 1999. Office for Official Publications of the European Communities.
+De Wolf, P.P., Gouweleeuw, J. M., Kooiman, P., and Willenborg, L.C.R.J. (1999). *Reflections on PRAM\index{PRAM}*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 337--349, Luxemburg, 1999. Office for Official Publications of the European Communities.
 
-Domingo-Ferrer, J., and Mateo-Sanz, J. M. (1999). *On resampling for statistical confidentiality in contingency tables.* Computers & Mathematics with Applications, 38:13--32, 1999.
+Domingo-Ferrer, J., and Mateo-Sanz, J.M. (1999). *On resampling for statistical confidentiality in contingency tables.* Computers & Mathematics with Applications, 38:13--32, 1999.
 
-Domingo-Ferrer, J., and Mateo-Sanz, J. M. (2002). *Practical data-oriented microaggregation for statistical disclosure control*. IEEE Transactions on Knowledge and Data Engineering, 14(1):189--201, 2002.
+Domingo-Ferrer, J., and Mateo-Sanz, J.M. (2002). *Practical data-oriented microaggregation for statistical disclosure control*. IEEE Transactions on Knowledge and Data Engineering, 14(1):189--201, 2002.
 
-Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk\index{disclosure risk}.* In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
+Domingo-Ferrer, J., Mateo-Sanz, J.M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk\index{disclosure risk}.* In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
-Domingo-Ferrer, J., and Torra, V., (2001). *Disclosure protection methods and information loss for microdata*. In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf]{.underline}](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
+Domingo-Ferrer, J., and Torra, V., (2001). *Disclosure protection methods and information loss for microdata*. In P. Doyle, J.I. Lane, J.J.M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
 
-Duncan, G. T., and Pearson, R. W. (1991). *Enhancing access to microdata while protecting confidentiality: prospects for the future*. Statistical Science, 6:219--239, 1991.
+Duncan, G.T., and Pearson, R.W. (1991). *Enhancing access to microdata while protecting confidentiality: prospects for the future*. Statistical Science, 6:219--239, 1991.
 
-Fienberg, S. E., and McIntyre, J. (2004). *Data swapping: variations on a theme by dalenius and reiss.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 14--29, Berlin Heidelberg, 2004. Springer.
+Fienberg, S.E., and McIntyre, J. (2004). *Data swapping: variations on a theme by dalenius and reiss.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 14--29, Berlin Heidelberg, 2004. Springer.
 
-Gouweleeuw, J. M., Kooiman, P., Willenborg, L. C. R. J., and De Wolf, P.-P. (1997*). Post randomisation for statistical disclosure control: Theory and implementation*, Research paper no. 9731 (Voorburg: Statistics Netherlands).
+Gouweleeuw, J.M., Kooiman, P., Willenborg, L.C.R.J., and de Wolf, P.P. (1997*). Post randomisation for statistical disclosure control: Theory and implementation*, Research paper no. 9731 (Voorburg: Statistics Netherlands).
 
 Greenberg, B. (1987). *Rank swapping for ordinal data*, Washington, DC: U. S. Bureau of the Census (unpublished manuscript).
 
-Hansen, S. L., and Mukherjee, S. (2003). *A polynomial algorithm for optimal univariate microaggregation*. IEEE Transactions on Knowledge and Data Engineering, 15(4):1043--1044, 2003.
+Hansen, S.L., and Mukherjee, S. (2003). *A polynomial algorithm for optimal univariate microaggregation*. IEEE Transactions on Knowledge and Data Engineering, 15(4):1043--1044, 2003.
 
-Heer, G. R. (1993). *A bootstrap procedure to preserve statistical confidentiality in contingency tables*. In D. Lievesley, editor, Proc. of the International Seminar on Statistical Confidentiality, pages 261--271, Luxemburg, 1993. Office for Official Publications of the European Communities.
+Heer, G.R. (1993). *A bootstrap procedure to preserve statistical confidentiality in contingency tables*. In D. Lievesley, editor, Proc. of the International Seminar on Statistical Confidentiality, pages 261--271, Luxemburg, 1993. Office for Official Publications of the European Communities.
 
 Höhne (2004), Varianten von Zufallsüberlagerung (German), working paper of the project group \'De facto anonymisation of business microdata\', Wiesbaden.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V. and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., de Wolf, P.P., Domingo-Ferrer, J., Torra, V. and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
-Kooiman, P. L, Willenborg, L, and Gouweleeuw, J. M. (1998). *PRAM: A method for disclosure limitation of microdata*. Technical report, Statistics Netherlands (Voorburg, NL), 1998.
+Kooiman, P., Willenborg, L, and Gouweleeuw, J.M. (1998). *PRAM: A method for disclosure limitation of microdata*. Technical report, Statistics Netherlands (Voorburg, NL), 1998.
 
-Mateo-Sanz, J. M., and Domingo-Ferrer, J. (1999) . *A method for data-oriented multivariate microaggregation*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 89--99, Luxemburg, 1999. Office for Official Publications of the European Communities.
+Mateo-Sanz, J.M., and Domingo-Ferrer, J. (1999) . *A method for data-oriented multivariate microaggregation*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 89--99, Luxemburg, 1999. Office for Official Publications of the European Communities.
 
 Moore, R. (1996). *Controlled data swapping techniques for masking public use microdata sets, 1996*. U. S. Bureau of the Census, Washington, DC, (unpublished manuscript).
 
 Oganian, A., and Domingo-Ferrer, J. (2001). *On the complexity of optimal microaggregation for statistical disclosure control*. Statistical Journal of the United Nations Economic Commissions for Europe, 18(4):345--354, 2001.
 
-Reiss, S. P, (1984). *Practical data-swapping: the first steps*. ACM Transactions on Database Systems, 9:20--37, 1984.
+Reiss, S.P, (1984). *Practical data-swapping: the first steps*. ACM Transactions on Database Systems, 9:20--37, 1984.
 
-Reiss, S. P., Post, M. J., and Dalenius, T. (1982). *Non-reversible privacy transformations*. In Proceedings of the ACM Symposium on Principles of Database Systems, pages 139--146, Los Angeles, CA, 1982. ACM.
+Reiss, S.P., Post, M.J., and Dalenius, T. (1982). *Non-reversible privacy transformations*. In Proceedings of the ACM Symposium on Principles of Database Systems, pages 139--146, Los Angeles, CA, 1982. ACM.
 
-Reiter, J. P. (2005). *Releasing multiply-imputed, synthetic public use microdata: An illustration and empirical study.* Journal of the Royal Statistical Society, Series A, 168:185--205, 2005.
+Reiter, J.P. (2005). *Releasing multiply-imputed, synthetic public use microdata: An illustration and empirical study.* Journal of the Royal Statistical Society, Series A, 168:185--205, 2005.
 
 Sande, G. (2002). *Exact and approximate methods for data directed microaggregation in one or more dimensions*. International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems, 10(5):459--476, 2002.
 
-Singh, A. C, Yu, F., and Dunteman, G. H. (2003) *. Massc: A new data mask for limiting statistical information loss and disclosure*. In H. Linden, J. Riecan, and L. Belsby, editors, Work Session on Statistical Data Confidentiality 2003, Monographs in Official Statistics, pages 373--394, Luxemburg, 2004. Eurostat.
+Singh, A. C, Yu, F., and Dunteman, G.H. (2003) *. Massc: A new data mask for limiting statistical information loss and disclosure*. In H. Linden, J. Riecan, and L. Belsby, editors, Work Session on Statistical Data Confidentiality 2003, Monographs in Official Statistics, pages 373--394, Luxemburg, 2004. Eurostat.
 
-Sullivan, G. R. (1989). *The Use of Added Error to Avoid Disclosure in Microdata Releases*. PhD thesis, Iowa State University, 1989.
+Sullivan, G.R. (1989). *The Use of Added Error to Avoid Disclosure in Microdata Releases*. PhD thesis, Iowa State University, 1989.
 
 Torra, V. (2004). *Microaggregation for categorical variables: a median based approach*. In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 162--174, Berlin Heidelberg, 2004. Springer.
 
@@ -411,7 +411,7 @@ Willenborg, L. and De Waal, T. (1996) . *Statistical Disclosure Control in Pract
 
 Willenborg, L., and De Waal, T. (2001). *Elements of Statistical Disclosure Control.* Springer-Verlag, New York, 2001.
 
-Winkler, W. E. (2004). *Re-identification methods for masked microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 216--230, Berlin Heidelberg, 2004. Springer.
+Winkler, W.E. (2004). *Re-identification methods for masked microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 216--230, Berlin Heidelberg, 2004. Springer.
 
 ### Noise addition {#sec-noise-addition-details}
 
@@ -545,7 +545,7 @@ With the exception of the not very practical method of Sullivan (1989), additive
 
 Brand, R. (2002). *Microdata protection through noise addition*. In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 97--116, Berlin Heidelberg, 2002. Springer.
 
-Brand, R. and Giessing, S. (2002). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics*, European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [[https://research.cbs.nl/casc/deliv/11d1.pdf]{.underline}](https://research.cbs.nl/casc/deliv/11d1.pdf).
+Brand, R. and Giessing, S. (2002). *Tests of the applicability of sullivan's algorithm to synthetic data and real business data in official statistics*, European Project IST-2000-25069 CASC, Deliverable 1.1-D1, [https://research.cbs.nl/casc/deliv/11d1.pdf](https://research.cbs.nl/casc/deliv/11d1.pdf).
 
 Domingo-Ferrer, J., Sebé, F., and Castellà, J. (2004). *On the security of noise addition for privacy in statistical databases.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 149--161, Berlin Heidelberg, 2004. Springer.
 
@@ -587,9 +587,26 @@ For a microdata set consisting of $p$ variables, these can be microaggregated to
 Also the way to form groups may vary. We next review the main proposals in the literature.
 
 :::{.callout-note appearance="simple"}
-**Example.** This example illustrates the use of microaggregation for SDC and, more specifically, for $k$-anonymization (Samarati and L. Sweeney, 1998), (Samarati, 2001), (Sweeney, 2002), (Domingo-Ferrer and Torra, 2005). A $k$-anonymous dataset allows no re-identification of a respondent within a group of at least $k$respondents. We show in @tbl-ex-sme-dataset a dataset giving, for 11 small or medium enterprises (SMEs) in a certain town, the company name, the surface in square meters of the company's premises, its number of employees, its turnover and its net profit. Clearly, the company name is an identifier. We will consider that turnover and net profit are confidential outcome variables. A first SDC measure is to suppress the identifier "Company name" when releasing the dataset for public use. However, note that the surface of the company's premises and its number of employees can be used by a snooper as key variables. Indeed, it is easy for anybody to gauge to a sufficient accuracy the surface and number of employees of a target SME. Therefore, if the only privacy measure taken when releasing the dataset in @tbl-ex-sme-dataset is to suppress the company name, a snooper knowing that company K&K Sarl has about a dozen employees crammed in a small flat of about 50 m will still be able to use the released data to link company K&K Sarl with turnover 645,223 Euros and net profit 333,010 Euros. @tbl-ex-three-anonym-sme is a 3-anonymous version of the dataset in @tbl-ex-sme-dataset. The identifier "Company name" was suppressed and optimal bivariate microaggregation with $k = 3$ was used on the key variables "Surface" and "No. employees" (in general, if there are $p$ key variables, multivariate microaggregation with dimension $p$ should be used to mask all of them). Both variables were standardized to have mean $0$ and variance $1$ before microaggregation, in order to give them equal weight, regardless of their scale. Due to the small size of the dataset, it was feasible to compute optimal microaggregation by exhaustive search. The information or variability loss incurred for those two variables in standardized form can be measured by the within-groups sum of squares . Dividing by the total sum of squares $SST=22$ ---sum of squared Euclidean distances from all 11 pairs of standardized (surface, number of employees) to their average--- yielded a variability loss measure $SSE_{opt}/SST=0.34$ bounded between 0 and 1.
+**Example.** This example illustrates the use of microaggregation for SDC and, more specifically, for $k$-anonymization (Samarati and L. Sweeney, 1998), (Samarati, 2001), (Sweeney, 2002), (Domingo-Ferrer and Torra, 2005). 
+A $k$-anonymous dataset allows no re-identification of a respondent within a group of at least $k$respondents. We show in @tbl-ex-sme-dataset a dataset giving, for 11 small or medium enterprises (SMEs) in a certain town, 
+the company name, the surface in square meters of the company's premises, its number of employees, its turnover and its net profit. Clearly, the company name is an identifier. We will consider that turnover and net profit 
+are confidential outcome variables. A first SDC measure is to suppress the identifier "Company name" when releasing the dataset for public use. However, note that the surface of the company's premises and its number of 
+employees can be used by a snooper as key variables. Indeed, it is easy for anybody to gauge to a sufficient accuracy the surface and number of employees of a target SME. Therefore, if the only privacy measure taken when 
+releasing the dataset in @tbl-ex-sme-dataset is to suppress the company name, a snooper knowing that company K&K Sarl has about a dozen employees crammed in a small flat of about 50 m will still be able to use the released 
+data to link company K&K Sarl with turnover 645,223 Euros and net profit 333,010 Euros. @tbl-ex-three-anonym-sme is a 3-anonymous version of the dataset in @tbl-ex-sme-dataset. The identifier "Company name" was suppressed 
+and optimal bivariate microaggregation with $k = 3$ was used on the key variables "Surface" and "No. employees" (in general, if there are $p$ key variables, multivariate microaggregation with dimension $p$ should be used to 
+mask all of them). Both variables were standardized to have mean $0$ and variance $1$ before microaggregation, in order to give them equal weight, regardless of their scale. Due to the small size of the dataset, 
+it was feasible to compute optimal microaggregation by exhaustive search. The information or variability loss incurred for those two variables in standardized form can be measured by the within-groups sum of squares. 
+Dividing by the total sum of squares $SST=22$ ---sum of squared Euclidean distances from all 11 pairs of standardized (surface, number of employees) to their average--- yielded a variability loss measure $SSE_{opt}/SST=0.34$ 
+bounded between 0 and 1.
 
-*It can be seen that the 11 records were microaggregated into three groups: one group with the 1st, 2nd, 3rd and 10th records (companies with large surface and many employees), a second group with the 4th, 5th and 9th records (companies with large surface and few employees) and a third group with the 6th, 7th, 8th and 11th records (companies with a small surface). Upon seeing @tbl-ex-three-anonym-sme, a snooper knowing that company K&K Sarl crams a dozen employees in a small flat hesitates between the four records in the third group. Therefore, since turnover and net profit are different for all records in the third group, the snooper cannot be sure about their values for K&K Sarl.*
+*It can be seen that the 11 records were microaggregated into three groups: one group with the 1st, 2nd, 3rd and 10th records (companies with large surface and many employees), a second group with the 4th, 5th and 9th records 
+(companies with large surface and few employees) and a third group with the 6th, 7th, 8th and 11th records (companies with a small surface). Upon seeing @tbl-ex-three-anonym-sme, a snooper knowing that company K&K Sarl crams a 
+dozen employees in a small flat hesitates between the four records in the third group. Therefore, since turnover and net profit are different for all records in the third group, the snooper cannot be sure about their values for K&K Sarl.*
+
+:::
+
+:::{.callout-note appearance="minimal"}
 
 | **_Company name_** 	| **_Surface (m2)_** 	| **_No. employees_** 	| **_Turnover (Euros)_** 	| **_Net profit (Euros)_** 	|
 |:------------------:	|------------------:	|-------------------:	|----------------------:	|------------------------:	|
@@ -709,7 +726,7 @@ Domingo-Ferrer, J., and Torra, V. (2005). *Ordinal, continuous and heterogenerou
 
 Hansen, S. L. and Mukherjee, S. (2003*). A polynomial algorithm for optimal univariate microaggregation*. IEEE Transactions on Knowledge and Data Engineering, 15(4):1043--1044, 2003.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., and Giessing, S. (2014). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Mateo-Sanz, J. M. and Domingo-Ferrer, J. (1999). *A method for data-oriented multivariate microaggregation*. In J. Domingo-Ferrer, editor, Statistical Data Protection, pages 89--99, Luxemburg, 1999. Office for Official Publications of the European Communities.
 
@@ -824,7 +841,15 @@ Once that strategy has been determined, the researcher might come to an on-site 
 
 #### References on PRAM
 
-Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census* , Office for National Statistics. [[https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf]{.underline}](https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf)
+:::{.content-visible when-format="html"}
+Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census*, Office for National Statistics.\
+([https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post<wbr>_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf](https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf))
+:::
+
+:::{.content-visible when-format="pdf"}
+Gross, B., Guiblin,Ph, and K. Merrett (2004), *Implementing the Post Randomisation method To the Individual Sample of Anonymised Records (SAR) from the 2001 Census*, Office for National Statistics.\
+([https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post\hspace{0pt}_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf](https://doc.ukdataservice.ac.uk/doc/7208/mrdoc/pdf/7208_implementing_the_post_randomisation_method_to_the_individual_sar_from_the_2001_census.pdf))
+:::
 
 Cator, E., Hensbergen A. and Y. Rozenholc (2005), *Statistical Disclosure Control using PRAM\index{PRAM}*, Proceedings of the 48th European Study Group Mathematics with Industry, Delft, The Netherlands, 15-19 March 2004. Delft University Press, 2005, p. 23 -- 30.
 
@@ -836,9 +861,9 @@ Van den Hout, A. (2000), *The analysis of data perturbed by PRAM\index{PRAM}*, D
 
 Van den Hout, A. (2004), *Analyzing misclassified data: randomized response and post randomization*, Ph.D. thesis, Utrecht University.
 
-De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM\index{PRAM}*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf]{.underline}](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf))
+De Wolf, P.P. and I. Van Gelder (2004), *An empirical evaluation of PRAM\index{PRAM}*, Discussion paper 04012, Statistics Netherlands. This paper can also be found on the CASC-Website ([https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf](https://research.cbs.nl/casc/Related/discussion-paper-04012.pdf))
 
-De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM\index{PRAM}*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([[https://research.cbs.nl/casc/Related/Sdp_98_2.pdf]{.underline}](https://research.cbs.nl/casc/Related/Sdp_98_2.pdf))
+De Wolf, P.P., J.M. Gouweleeuw, P. Kooiman and L.C.R.J. Willenborg (1998), *Reflections on PRAM\index{PRAM}*, Proceedings of the conference "Statistical Data Protection", March 25-27 1998, Lisbon, Portugal. This paper can also be found on the CASC-Website ([https://research.cbs.nl/casc/Related/Sdp_98_2.pdf](https://research.cbs.nl/casc/Related/Sdp_98_2.pdf))
 
 ### Synthetic microdata {#sec-synthetic-data}
 
@@ -1180,7 +1205,7 @@ Aggarwal, C. C., and Yu, P. S. (2004). *A condensation approach to privacy prese
 
 Burridge, J. (2004). *Information preserving statistical obfuscation.* Statistics and Computing, 13:321--327, 2003.
 
-Crystal.Ball. [[http://www.aertia.com/en/productos.asp?pid=245]{.underline}](http://www.aertia.com/en/productos.asp?pid=245).
+Crystal.Ball. [http://www.aertia.com/en/productos.asp?pid=245](http://www.aertia.com/en/productos.asp?pid=245).
 
 Dandekar, R., Cohen, M., and Kirkendall, N. (2002). *Sensitive micro data protection using latin hypercube sampling technique.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 245--253, Berlin Heidelberg, Springer.
 
@@ -1206,7 +1231,7 @@ Liew, C. K., Choi, U. J., and Liew, C. J. (1985). *A data distortion by probabil
 
 Mateo-Sanz, J. M., Martínez-Ballesté, A., and Domingo-Ferrer, J. (2004). *Fast generation of accurate synthetic microdata.* In J. Domingo-Ferrer and V. Torra, editors, Privacy in Statistical Databases, volume 3050 of LNCS, pages 298--306, Berlin Heidelberg, Springer.
 
-Muralidhar, K, and Sarathy, R, (2008). *Generating sufficiency-based nonsynthetic perturbed data*. Transactions on Data Privacy, 1(1):17--33, 2008. [[https://www.tdp.cat/issues/tdp.a005a08.pdf]{.underline}](https://www.tdp.cat/issues/tdp.a005a08.pdf).
+Muralidhar, K, and Sarathy, R, (2008). *Generating sufficiency-based nonsynthetic perturbed data*. Transactions on Data Privacy, 1(1):17--33, 2008. [https://www.tdp.cat/issues/tdp.a005a08.pdf](https://www.tdp.cat/issues/tdp.a005a08.pdf).
 
 Polettini, S., Franconi, L., and Stander, J. (2002). *Model based disclosure protection.* In J. Domingo-Ferrer, editor, Inference Control in Statistical Databases, volume 2316 of LNCS, pages 83--96, Berlin Heidelberg. Springer.
 

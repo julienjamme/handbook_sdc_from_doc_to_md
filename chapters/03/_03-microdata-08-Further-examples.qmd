@@ -6,7 +6,7 @@ In this section we provide examples based on real surveys of the various steps d
 
 The Labour Force Survey[^3] is one of the surveys subject to Regulation EC 831/2002 on access to microdata for scientific purposes. The Labour Force Survey (LFS) is the main data source for the analysis of the labour market, employment, unemployment as well as the conditions and the level of involvement at the labour market. Some of the main observed variables are:
 
-[^3]:The European Union Labour Force Survey (EU LFS)? is conducted in the 25 Member States of the European Union and 3 countries of the European Free Trade Association (EFTA) in accordance with Council Regulation (EEC) No. 577/98 of 9 March 98: [[https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A31998R0577]{.underline}](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A31998R0577)
+[^3]:The European Union Labour Force Survey (EU LFS)? is conducted in the 25 Member States of the European Union and 3 countries of the European Free Trade Association (EFTA) in accordance with Council Regulation (EEC) No. 577/98 of 9 March 98: [https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A31998R0577](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A31998R0577)
 
 1. demographic variable: (gender, year of birth, marital status, relationship to reference person, place of residence);
 2. labour status: (labour status during the reference week, etc.);
@@ -59,7 +59,7 @@ Eurostat (2004). *Proposal on anonymised LFS microdata.* CSC 2004/B5/ item 2.2.2
 
 Eurostat (2006). *The CIS4. An amended version of the micro-data anonymisation method*. Doc. Eurostat/F4/STI/CIS/M2/8.
 
-Ichim, D. (2006). *Microdata anonymisation of the Community Innovation Survey: a density based clustering approach for risk assessment.* Contribution Istat. Shortly available from [[https://www.istat.it/wp-content/uploads/2018/07/2007_2-1.pdf]{.underline}](https://www.istat.it/wp-content/uploads/2018/07/2007_2-1.pdf)
+Ichim, D. (2006). *Microdata anonymisation of the Community Innovation Survey: a density based clustering approach for risk assessment.* Contribution Istat. Shortly available from [https://www.istat.it/wp-content/uploads/2018/07/2007_2-1.pdf](https://www.istat.it/wp-content/uploads/2018/07/2007_2-1.pdf)
 
 Trottini, M., Franconi, L. and Polettini, S. (2006). *Italian Household Expenditure Survey: A proposal for Data Dissemination.* In Domingo Ferrer, J and Franconi, L. (eds) Privacy in Statistical Databases, CENEX-SDC Project International Conference, Rome, Italy, December 2006, 318-333.
 

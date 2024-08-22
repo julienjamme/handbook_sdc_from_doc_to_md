@@ -6,7 +6,7 @@ The software package $\tau$‑ARGUS provides software tools for disclosure prote
 
 We start this section by introducing the basic issues related to the question of how to properly set up a tabular data protection problem for a given set of tables that are intended to be published, discussing tabular data structures, and particularly tables with hierarchical structures. @sec-evaluation-of-secondary-cell-suppression-algorithms-offered-by-tau-argus provides an evaluation of algorithms for secondary cell suppression\index{cell suppression} offered by $\tau$-ARGUS, including a recommendation on which tool to use in which situation. After that, in @sec-efficient-protection-process we give some guidance on processing table protection efficiently, especially in the case of linked tables. We finish the section with an introductive example in @sec-introductive-example.
 
-The latest version of $\tau$-ARGUS can be found on GitHub ([[https://github.com/sdcTools/tauargus/releases]{.underline}](https://github.com/sdcTools/tauargus/releases)).
+The latest version of $\tau$-ARGUS can be found on GitHub ([https://github.com/sdcTools/tauargus/releases](https://github.com/sdcTools/tauargus/releases)).
 
 ### Setting up a Tabular Data Protection Problem in Practice {#sec-setting-up-a-tabular-data-protection-problem-in-practice}
 

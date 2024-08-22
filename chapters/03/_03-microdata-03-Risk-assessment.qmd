@@ -416,7 +416,7 @@ The number of matches gives an estimation of the number of protected records who
  Accordingly, disclosure risk\index{disclosure risk} is defined as the proportion of matches among the total number of records in $A$.
 
 The main types of record linkage\index{record linkage} used to measure identity disclosure in SDC are discussed below. 
-An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [[https://research.cbs.nl/casc/handbook.htm#casestudies]{.underline}](https://research.cbs.nl/casc/handbook.htm#casestudies)).
+An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [https://research.cbs.nl/casc/handbook.htm#casestudies](https://research.cbs.nl/casc/handbook.htm#casestudies)).
 
 #### Distance-based record linkage\index{record linkage}
 :::{.callout-warning collapse="true"}
@@ -491,12 +491,12 @@ Dempster A. P., Laird N. M., and Rubin D. B. (1977), *Maximum likelihood from in
 
 Deville, J.C. and Särndal, C.E. (1992). *Calibration estimators in survey sampling*, Journal of the American Statistical Association 87, 367--382.
 
-Domingo-Ferrer J., and Torra, V. (2001), *A quantitative comparison of disclosure control methods for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 111--134, Amsterdam, 2001. North-Holland. [[https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf]{.underline}](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf).
+Domingo-Ferrer J., and Torra, V. (2001), *A quantitative comparison of disclosure control methods for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 111--134, Amsterdam, 2001. North-Holland. [https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf).
 
 Domingo-Ferrer, J., and Torra, V. (2003), *Disclosure risk assessment in statistical microdata protection via advanced record linkage\index{record linkage}.* Statistics and Computing, 13:343--354.
 
 Elamir, E., Skinner, C. (2004) *Record-level Measures of Disclosure Risk for Survey Microdata*, Journal of Official Statistics, Vol. 22, No. 3, 2006, pp. 525–539. See also: Southampton Statistical Sciences Research Institute, University of Southampton, methodology working paper:\
-[[https://eprints.soton.ac.uk/8175/]{.underline}](https://eprints.soton.ac.uk/8175/)
+[https://eprints.soton.ac.uk/8175/](https://eprints.soton.ac.uk/8175/)
 
 Elliot, M. J., (2000). *DIS: A new approach to the Measurement of Statistical Disclosure Risk.* International Journal of Risk Management 2(4), pp 39-48.
 
@@ -512,7 +512,7 @@ Franconi, L. and Polettini, S. (2004). *Individual risk estimation in $\mu$-ARGU
 
 Franconi, L. and Seri, G. (2000). *Microdata Protection at the Italian National Statistical Insititute (Istat): A User Perspective. Of Significance* Journal of the Association of Public Data Users -- Volume 2 Number 1 2000, page. 57-64.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2014), *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., de Wolf, P.P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2014), *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Jackson, P., Longhurst, J. (2005), *Providing access to data and making microdata safe, experiences of the ONS*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
@@ -534,7 +534,7 @@ Shlomo, N., Barton, J. (2006) *Comparison of Methods for Estimating Disclosure R
 
 Skinner, C., Shlomo, N. (2005), *Assessing disclosure risk\index{disclosure risk} in microdata using record-level measures*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
-Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models*, Journal of the American Statistical Association, 103 (483). pp. 989-1001. See also: [[http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf]{.underline}](http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf).
+Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models*, Journal of the American Statistical Association, 103 (483). pp. 989-1001. See also: [http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf](http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf).
 
 Skinner, C., Holmes, D. (1998), *Estimating the re-identification risk per record in microdata*, JOS, Vol.14.
 

@@ -6,7 +6,7 @@ Castro, J.(2002), *Network flows heuristics for complementary cell suppression\i
 
 Castro, J. (2003 a), *'Minimum-Distance Controlled Perturbation Methods for Large-Scale Tabular Data Protection'*, accepted subject to revision to European Journal of Operational Research, 2003.
 
-Castro, J. (2003 b) *User's and programmer's manual of the network flows heuristics package for cell suppression\index{cell suppression} in 2D tables* Technical Report DR 2003-07, Dept. of Statistics and Operations Research, Universitat Politècnica de Catalunya, Barcelona, Spain,2003; See [[https://research.cbs.nl/casc/deliv/41D6_NF1H2D-Tau-Argus.pdf]{.underline}](https://research.cbs.nl/casc/deliv/41D6_NF1H2D-Tau-Argus.pdf).
+Castro, J. (2003 b) *User's and programmer's manual of the network flows heuristics package for cell suppression\index{cell suppression} in 2D tables* Technical Report DR 2003-07, Dept. of Statistics and Operations Research, Universitat Politècnica de Catalunya, Barcelona, Spain,2003; See [https://research.cbs.nl/casc/deliv/41D6_NF1H2D-Tau-Argus.pdf](https://research.cbs.nl/casc/deliv/41D6_NF1H2D-Tau-Argus.pdf).
 
 Castro, J. (2006). *Minimum-distance controlled perturbation methods for large-scale tabular data protection*, European Journal of Operational Research, 171, 39--52.
 
@@ -29,15 +29,15 @@ Cox, L., Orelien, J. G., Shah, B. V. (2006), *A Method for Preserving Statistica
 De Wolf, P.P. (2002), 'HiTaS*: A Heustic Approach to Cell Suppression in Hierarchical Tables',* In: 'Inference Control in Statistical Databases' Domingo-Ferrer (Ed.), Springer (Lecture notes in computer science; Vol. 2316).
 
 De Wolf, P.P. (2007), '*Cell suppression in a special class of linked tables*', paper presented at the Joint ECE/Eurostat Worksession on Statistical Confidentiality in Manchester, December 2007, available at
-[[https://unece.org/sites/default/files/datastore/fileadmin/DAM/stats/documents/ece/ces/2007/12/confidentiality/wp.21.e.pdf]{.underline}](https://unece.org/sites/default/files/datastore/fileadmin/DAM/stats/documents/ece/ces/2007/12/confidentiality/wp.21.e.pdf).
+[https://unece.org/sites/default/files/datastore/fileadmin/DAM/stats/documents/ece/ces/2007/12/confidentiality/wp.21.e.pdf](https://unece.org/sites/default/files/datastore/fileadmin/DAM/stats/documents/ece/ces/2007/12/confidentiality/wp.21.e.pdf).
 
 De Wolf, P.P., Giessing, S. (2008) *How to make the $\tau$‑ARGUS Modular Method Applicable to Linked Tables*. In: Domingo-Ferrer, Josep; Saygin, Yücel (Eds.): Privacy in Statistical Databases 2008, Lecture Notes in Computer Science , Vol. 5262, Springer, Heidelberg (2008), p.227-238.
 
-Enderle, T., Giessing, S., Tent, R. (2018), '*Designing Confidentiality on the Fly Methodology – Three Aspects'*, In: Domingo-Ferrer, J., Montes, F. (eds) Privacy in Statistical Databases. PSD 2018. Lecture Notes in Computer Science, vol 11126. Springer, Cham. [[https://doi.org/10.1007/978-3-319-99771-1_3]{.underline}](https://doi.org/10.1007/978-3-319-99771-1_3).
+Enderle, T., Giessing, S., Tent, R. (2018), '*Designing Confidentiality on the Fly Methodology – Three Aspects'*, In: Domingo-Ferrer, J., Montes, F. (eds) Privacy in Statistical Databases. PSD 2018. Lecture Notes in Computer Science, vol 11126. Springer, Cham. [https://doi.org/10.1007/978-3-319-99771-1_3](https://doi.org/10.1007/978-3-319-99771-1_3).
 
-EU (2004), *Community statistics relating to the trading of goods between Member States,* [[https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML]{.underline}](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML).
+EU (2004), *Community statistics relating to the trading of goods between Member States,* [https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML).
 
-Fraser, Bruce/Wooton, Janice (2005), '*A proposed method for confidentialising tabular output to protect against differencing'* Work session on Statistical Data Confidentiality, [[https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2005/wp.35.e.pdf]{.underline}](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2005/wp.35.e.pdf).
+Fraser, Bruce/Wooton, Janice (2005), '*A proposed method for confidentialising tabular output to protect against differencing'* Work session on Statistical Data Confidentiality, [https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2005/wp.35.e.pdf](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2005/wp.35.e.pdf).
 
 Geurts, J. (1992), *'Heuristics for Cell Suppression in Tables'*, working paper, Netherlands Central Bureau of Statistics.
 
@@ -51,11 +51,11 @@ Giessing, S., Hundepool, A., Castro, J. (2007) *Rounding Methods for Protecting 
 
 Fischetti, M, Salazar Gonzales, J.J. (2000), '*Models and Algorithms for Optimizing Cell Suppression Problem in Tabular Data with Linear Constraints'*, in Journal of the American Statistical Association, Vol. 95, pp 916.
 
-Hundepool, A, Wetering, A van de, Ramaswamy, R, Wolf, P.P. de, Giessing, S, Fischetti, M, Salazar, JJ, Castro, J, Lowthian, P, (2014), $\tau$-ARGUS 4.1 user manual, Statistics Netherlands, Voorburg NL, Feb. 2014. [[https://research.cbs.nl/casc/Software/TauManualV4.1.pdf]{.underline}](https://research.cbs.nl/casc/Software/TauManualV4.1.pdf).
+Hundepool, A, Wetering, A van de, Ramaswamy, R, Wolf, P.P. de, Giessing, S, Fischetti, M, Salazar, JJ, Castro, J, Lowthian, P, (2014), $\tau$-ARGUS 4.1 user manual, Statistics Netherlands, Voorburg NL, Feb. 2014. [https://research.cbs.nl/casc/Software/TauManualV4.1.pdf](https://research.cbs.nl/casc/Software/TauManualV4.1.pdf).
 
 Ichim, D., Franconi, L. (2006), *Calibration estimator for magnitude tabular data protection,* Proceedings of the conference Privacy in Statistical Databases 2006, December 2006, Rome, Italy.
 
-Loeve, A. (2001), '*Notes on sensitivity measures and protection levels'*, Research paper, Statistics Netherlands, available at [[https://research.cbs.nl/casc/Related/marges.pdf]{.underline}](https://research.cbs.nl/casc/Related/marges.pdf).
+Loeve, A. (2001), '*Notes on sensitivity measures and protection levels'*, Research paper, Statistics Netherlands, available at [https://research.cbs.nl/casc/Related/marges.pdf](https://research.cbs.nl/casc/Related/marges.pdf).
 
 Meindl, B. *Linking Complementary Cell Suppression and the Software R,* paper presented at the New Techniques and Technologies (NTTS) Conference, 18.-20. Feb. 2009 in Brussels.
 
@@ -66,7 +66,7 @@ Repsilber, R. D. (1994), '*Preservation of Confidentiality in Aggregated data'*,
 Repsilber, D. (2002), '*Sicherung persönlicher Angaben in Tabellendaten'* - in Statistische Analysen und Studien Nordrhein-Westfalen, Landesamt für Datenverarbeitung und Statistik NRW, Ausgabe 1/2002 (in German).
 
 Thompson, Gwenda/Broadfoot, Stephen/Elazar, Daniel (2013), '*Methodology for the Automatic Confidentialisation of Statistical Outputs from Remote Servers at the Australian Bureau of Statistics'*, Paper presented at the Joint UNECE/Eurostat Work Session on
-Statistical Data Confidentiality. Ottawa 2013. See [[https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2013/Topic_1_ABS.pdf]{.underline}](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2013/Topic_1_ABS.pdf).
+Statistical Data Confidentiality. Ottawa 2013. See [https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2013/Topic_1_ABS.pdf](https://www.unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.46/2013/Topic_1_ABS.pdf).
 
 Van der Meijden, R., (2006) ‚*Improving confidentiality with $\tau$‑ARGUS by focussing on clever usage of microdata'*, in Monographs of Official Statistics. Work session on Statistical Data Confidentiality, Eurostat-Office for Official Publications of the European Communities, Luxembourg, 2006, pp. 363-370.
 

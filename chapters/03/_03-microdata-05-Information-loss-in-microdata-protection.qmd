@@ -384,11 +384,11 @@ In practice, the data holder (*e.g.* official statistics) prefers rather the fir
   | CAR           | 1.5         |
   | TV            | 7.3         |
   | LIVESTOCK     | 1.3         |
-[^2]: [[https://www.ihsn.org/software/disclosure-control-toolbox]{.underline}](https://www.ihsn.org/software/disclosure-control-toolbox)
+[^2]: [https://www.ihsn.org/software/disclosure-control-toolbox](https://www.ihsn.org/software/disclosure-control-toolbox)
 
 ### References
 
-Benschop, T., Machingauta, C., and Welch, M. (2022). *Statistical Disclosure Control: A Practice Guide*, [[https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/]{.underline}](https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/)
+Benschop, T., Machingauta, C., and Welch, M. (2022). *Statistical Disclosure Control: A Practice Guide*, [https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/](https://readthedocs.org/projects/sdcpractice/downloads/pdf/latest/)
 
 Chatfield, C., and Collins, A. J., (1980). *Introduction to Multivariate Analysis*, Chapman and Hall, London, 1980.
 
@@ -398,9 +398,9 @@ De Waal, A. G., and Willenborg, L. C. R. J. (1999). *Information loss through 
 
 Domingo-Ferrer, J., Mateo-Sanz, J. M., and Torra, V. (2001). *Comparing sdc methods for microdata on the basis of information loss and disclosure risk\index{disclosure risk}*. In Pre-proceedings of ETK-NTTS'2001 (vol. 2), pages 807--826, Luxemburg, 2001. Eurostat.
 
-Domingo-Ferrer, J., and Torra, V. (2001). *Disclosure protection methods and information loss for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [[https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf]{.underline}](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
+Domingo-Ferrer, J., and Torra, V. (2001). *Disclosure protection methods and information loss for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 91--110, Amsterdam, 2001. North-Holland. [https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Disclosure.pdf).
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., Brand, R:, and Giessing, S. (2005). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [[https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf]{.underline}](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.P., Domingo-Ferrer, J., Torra, V., Brand, R:, and Giessing, S. (2005). *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Hundepool, A., Domingo–Ferrer, J., Franconi, L., Giessing, S., Nordholt, E. S., Spicer, K., & de Wolf, P. (2012). *Statistical Disclosure Control*. John Wiley & Sons, Ltd.
 
