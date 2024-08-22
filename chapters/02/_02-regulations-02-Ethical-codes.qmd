@@ -8,8 +8,8 @@ After an intense preparation process taking place from 1979 to 1985, the Interna
 *European Statistics Code of Practice*\
 On 24 February 2005 the Statistical Programme Committee adopted the European Statistics Code of Practice. On 17 November 2017 a renewed version of this Code was adopted by the European Statistical System Committee (ESSC). This Code of Practice has the dual purpose of:
 
--   Improving trust and confidence in the independence, integrity and accountability of both National Statistical Authorities and Eurostat, and in the credibility and quality of the statistics they produce and disseminate (i.e. an external focus);
--   Promoting the application of best international statistical principles, methods and practices by all producers of European Statistics to enhance their quality (i.e. an internal focus).
+-   Improving trust and confidence in the independence, integrity and accountability of both National Statistical Authorities and Eurostat, and in the credibility and quality of the statistics they produce and disseminate (*i.e.* an external focus);
+-   Promoting the application of best international statistical principles, methods and practices by all producers of European Statistics to enhance their quality (*i.e.* an internal focus).
 
 The Code of Practice is based on 15 Principles. Governance authorities and statistical authorities in the European Union commit themselves to adhering to the principles fixed in this code and to reviewing its implementation periodically by the use of Indicators of Good Practice for each of the 15 Principles, which are to be used as references. Principle 5 concerns statistical confidentiality and is cited below.
 

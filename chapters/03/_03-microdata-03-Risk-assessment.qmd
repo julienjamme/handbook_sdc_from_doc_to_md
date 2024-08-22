@@ -68,7 +68,7 @@ In @sec-intro-example we make some suggestions on practical implementation and i
 *Ok, but later ... when we will be close to the final version* -->
 
 The definition of a disclosure scenario is a first step towards the development of a strategy for producing a "safe" microdata file (MF). 
-A scenario synthetically describes (i) which is the information potentially available to the intruder, and (ii) how the intruder would use such information to identify an individual i.e. the intruder's attack means and strategy.
+A scenario synthetically describes (i) which is the information potentially available to the intruder, and (ii) how the intruder would use such information to identify an individual *i.e.* the intruder's attack means and strategy.
  Often, defining more than one scenario might be convenient, because different sources of information might be alternatively or simultaneously available to the intruder. 
  Moreover, re-identification risk can be assessed keeping into account different scenarios at the same time.
 
@@ -117,7 +117,7 @@ To define the disclosure scenario, the following assumptions are made. Most of t
 3.  the external file available to the intruder contains the individual direct identifiers and a set of categorical identifying variables that are also present in the sample;
 4.  the intruder tries to match a unit $i$ in the sample with a unit $i^*$ in the population register by comparing the values of the identifying variables in the two files;
 5.  the intruder has no extra information other than that contained in the external file;
-6.  a re-identification occurs when a link between a sample unit $i$ and a population unit $i^*$ is established and $i^*$ is actually the individual of the population from which the sampled unit $i$ was derived; e.g. the match has to be a correct match before an identification takes place.
+6.  a re-identification occurs when a link between a sample unit $i$ and a population unit $i^*$ is established and $i^*$ is actually the individual of the population from which the sampled unit $i$ was derived; *e.g.* the match has to be a correct match before an identification takes place.
 
 Moreover we add the following assumptions:
 
@@ -175,7 +175,7 @@ We assume that the $f_k$ are observed but the $F_k$ are not observed.
 The ARGUS threshold rule is based on easily applicable rules and views of safety/unsafety of microdata that is used at Statistics Netherlands. The implementation of these rules was the main reason to start the development of the software package $\mu$‑ARGUS.
 
 In a disclosure scenario, keys a combination of identifying variables, are supposed to be used by an intruder to re-identify a respondent. 
-Re-identification of a respondent can occur when this respondent is rare in the population with respect to a certain key value, i.e. a combination of values of identifying variables.
+Re-identification of a respondent can occur when this respondent is rare in the population with respect to a certain key value, *i.e.* a combination of values of identifying variables.
 Hence, rarity of respondents in the population with respect to certain key values should be avoided. 
 When a respondent appears to be rare in the population with respect to a key value, then disclosure control measures should be taken to protect this respondent against re-identification.
 
@@ -213,7 +213,7 @@ where $\sum\limits_{i:k(i)=k}^{}w_{i}$ is an estimate of $F_k$ based on the samp
 The procedure relies on the assumption that the available data are a sample from a larger population. 
 *If the sampling weights are not available, or if data represent the whole population, the strategy used to estimate the individual risk is not meaningful*.
 
-In the $\mu$‑ARGUS manual (Hundepool *et al.*, 2004) a fully detailed description of the approach is reported. This brief note is based on Polettini (2004).
+In the $\mu$‑ARGUS manual (see *e.g.* Hundepool *et al.*, 2014) a fully detailed description of the approach is reported. This brief note is based on Polettini (2004).
 
 *Assessing the risk for the whole file*\
 The individual risk provides a measure of risk *at the individual level*. 
@@ -225,7 +225,7 @@ $$
 \xi = \frac{1}{n}\sum\limits_{k=1}^{K}{f_{k}r_{k}} \quad .
 $$
 
-$\xi$ provides a measure of *global risk, i.e.* a measure of disclosure risk\index{disclosure risk} for the whole file, which does not depend on the sample size and can be used to assess the risk of the file or to compare different types of release; for the mathematical details see Polettini (2004).
+$\xi$ provides a measure of *global risk*, *i.e.* a measure of disclosure risk\index{disclosure risk} for the whole file, which does not depend on the sample size and can be used to assess the risk of the file or to compare different types of release; for the mathematical details see Polettini (2004).
 
 The *percentage of expected re-identifications*, *i.e.* the value $\psi=100\cdot\xi\%$ provides an equivalent measure of global risk.
 
@@ -253,7 +253,7 @@ Since units belonging to the same key $k$ have the same individual risk, keys ca
 Let the subscript ($k$) denotes the $k$-th element in this ordering. A threshold $r^*$ on the individual risk can be set. 
 Consequently, unsafe cells are those for which $r_{k} \geq r^*$ that can be indexed by $(k) = k^{*} + 1,\ldots,K$. 
 The key $k^{*}$ is in a one-to-one correspondence to $r^{*}$. This allows setting an upper bound $\xi^{*}$ on the re‑identification rate of the released file (after data protection) substituting $r_kf_k$ with $r^{*}f_{(k)}$ for each ($k$). 
-For the mathematical details see Polettini (2004) and the Argus manual (Hundepool *et al.*, 2004).
+For the mathematical details see Polettini (2004) and the Argus manual (*e.g.* Hundepool *et al.*, 2014).
 
 The approach pursued so far can be reversed. Therefore, selecting a *threshold* $\tau$ *on the re-identification rate* $\xi$ determines a key index $k^{*}$ which corresponds to a value for $r^{*}$. 
 Using $r^{*}$ as a threshold for the individual risk keeps the re‑identification rate $\xi$ of the released file below $\tau$. 
@@ -281,7 +281,7 @@ and is the same for all the individuals in household $g$ and equals $r_{g}^{h}$.
 
 *Threshold setting for the household risk*\
 Since all the individuals in a given household have the same household risk, the expected number of re‑identified records in household $g$ equals $|g|r_{g}^{h}$. The re‑identification rate in a hierarchical file can be then defined as $\xi^{h} = \frac{1}{n}\sum\limits_{g=1}^{G}{|g|r_{g}^{h}}$, where $G$ is the total number of households in the file. 
-The re‑identification rate can be used to define a threshold $r^{h^{\ast}}$ on the household risk $r^{h}$, much in the same way as for the individual risk. For the mathematical details see Polettini (2004) and the Argus manual (Hundepool *et al.*, 2004).
+The re‑identification rate can be used to define a threshold $r^{h^{\ast}}$ on the household risk $r^{h}$, much in the same way as for the individual risk. For the mathematical details see Polettini (2004) and the Argus manual (*e.g.* Hundepool *et al.*, 2014).
 
 Note that the household risk $r_{g}^{h}$ of household $g$ is computed by the individual risks of its household members. 
 For a given household, it might happen that a household is unsafe ($r_{g}^{h}$ exceeds the threshold) because just one of its members, $i$, say, has a high value $r_{i}$ of the individual risk. 
@@ -416,7 +416,7 @@ The number of matches gives an estimation of the number of protected records who
  Accordingly, disclosure risk\index{disclosure risk} is defined as the proportion of matches among the total number of records in $A$.
 
 The main types of record linkage\index{record linkage} used to measure identity disclosure in SDC are discussed below. 
-An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [[https://research.cbs.nl/casc/handbook.htm]{.underline}](https://research.cbs.nl/casc/handbook.htm)).
+An illustrative example can be found on the CASC-website as one of the case-studies linked to this handbook (see [https://research.cbs.nl/casc/handbook.htm#casestudies](https://research.cbs.nl/casc/handbook.htm#casestudies)).
 
 #### Distance-based record linkage\index{record linkage}
 :::{.callout-warning collapse="true"}
@@ -437,7 +437,7 @@ This is so because it is based on cluster analysis and, therefore, links records
 
 The main advantages of using distances for record linkage\index{record linkage} are simplicity for the implementer and intuitiveness for the user. 
 Another strong point is that subjective information (about individuals or variables) can be included in the re-identification process by properly modifying distances. 
-In fact, the next version of the $\mu$‑ARGUS microdata protection package (Hundepool *et al.*, 2005) will incorporate distance-based record linkage\index{record linkage} as a disclosure risk\index{disclosure risk} assessment method.
+In fact, the next version of the $\mu$‑ARGUS microdata protection package (*e.g.* Hundepool *et al.*, 2014) will incorporate distance-based record linkage\index{record linkage} as a disclosure risk\index{disclosure risk} assessment method.
 
 The main difficulty of distance-based record linkage\index{record linkage} consists of coming up with appropriate distances for the variables under consideration. 
 For one thing, the weight of each variable must be decided and this decision is often not obvious. 
@@ -491,12 +491,12 @@ Dempster A. P., Laird N. M., and Rubin D. B. (1977), *Maximum likelihood from in
 
 Deville, J.C. and Särndal, C.E. (1992). *Calibration estimators in survey sampling*, Journal of the American Statistical Association 87, 367--382.
 
-Domingo-Ferrer J., and Torra, V. (2001), *A quantitative comparison of disclosure control methods for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 111--134, Amsterdam, 2001. North-Holland. [[http://vneumann.etse.urv.es/publications/bcpi]{.underline}](http://vneumann.etse.urv.es/publications/bcpi).
+Domingo-Ferrer J., and Torra, V. (2001), *A quantitative comparison of disclosure control methods for microdata.* In P. Doyle, J. I. Lane, J. J. M. Theeuwes, and L. Zayatz, editors, Confidentiality, Disclosure and Data Access: Theory and Practical Applications for Statistical Agencies, pages 111--134, Amsterdam, 2001. North-Holland. [https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf](https://crises-deim.urv.cat/webCrises/publications/bcpi/cliatpasa01Aquantitative.pdf).
 
 Domingo-Ferrer, J., and Torra, V. (2003), *Disclosure risk assessment in statistical microdata protection via advanced record linkage\index{record linkage}.* Statistics and Computing, 13:343--354.
 
-Elamir, E., Skinner, C. (2004) *Record-level Measures of Disclosure Risk for Survey Microdata*, Journal of Official Statistics (forthcoming). See also: Southampton Statistical Sciences Research Institute, University of Southampton, methodology working paper:\
-[[http://eprints.soton.ac.uk/8175/01/s3ri-workingpaper-m04-02.pdf]{.underline}](http://eprints.soton.ac.uk/8175/01/s3ri-workingpaper-m04-02.pdf)
+Elamir, E., Skinner, C. (2004) *Record-level Measures of Disclosure Risk for Survey Microdata*, Journal of Official Statistics, Vol. 22, No. 3, 2006, pp. 525–539. See also: Southampton Statistical Sciences Research Institute, University of Southampton, methodology working paper:\
+[https://eprints.soton.ac.uk/8175/](https://eprints.soton.ac.uk/8175/)
 
 Elliot, M. J., (2000). *DIS: A new approach to the Measurement of Statistical Disclosure Risk.* International Journal of Risk Management 2(4), pp 39-48.
 
@@ -512,7 +512,7 @@ Franconi, L. and Polettini, S. (2004). *Individual risk estimation in $\mu$-ARGU
 
 Franconi, L. and Seri, G. (2000). *Microdata Protection at the Italian National Statistical Insititute (Istat): A User Perspective. Of Significance* Journal of the Association of Public Data Users -- Volume 2 Number 1 2000, page. 57-64.
 
-Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., De Wolf, P.-P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2005), *$\mu$-ARGUS version 4.0 Software and User's Manual*. Statistics Netherlands, Voorburg NL, may 2005. [[https://research.cbs.nl/casc]{.underline}](http://neon.vb.cbs.nl/casc/deliv/MUmanual4.0.pdf).
+Hundepool, A., Van de Wetering, A., Ramaswamy, R., Franconi, L., Capobianchi, A., de Wolf, P.P., Domingo-Ferrer, J., Torra, V., Brand, R., and Giessing, S. (2014), *$\mu$-ARGUS version 5.1 Software and User's Manual*. Statistics Netherlands, Voorburg NL, 2014. [https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf](https://research.cbs.nl/casc/Software/MUmanual5.1.3.pdf).
 
 Jackson, P., Longhurst, J. (2005), *Providing access to data and making microdata safe, experiences of the ONS*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
@@ -534,7 +534,7 @@ Shlomo, N., Barton, J. (2006) *Comparison of Methods for Estimating Disclosure R
 
 Skinner, C., Shlomo, N. (2005), *Assessing disclosure risk\index{disclosure risk} in microdata using record-level measures*, proceedings of the UNECE/Eurostat work session on statistical data confidentiality, Geneva, November 2005
 
-Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models*, see: <http://eprints.soton.ac.uk/41842/01/s3ri-workingpaper-m06-14.pdf>
+Skinner, C.J., Shlomo, N. (2006) *Assessing Identification Risk in Survey Microdata Using Log-linear Models*, Journal of the American Statistical Association, 103 (483). pp. 989-1001. See also: [http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf](http://eprints.lse.ac.uk/39112/1/Assessing_Identification_Risk_in_Survey_Microdata%28lsero%29.pdf).
 
 Skinner, C., Holmes, D. (1998), *Estimating the re-identification risk per record in microdata*, JOS, Vol.14.
 
