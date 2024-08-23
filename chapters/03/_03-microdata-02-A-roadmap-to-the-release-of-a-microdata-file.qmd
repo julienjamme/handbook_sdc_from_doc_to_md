@@ -1,6 +1,6 @@
 ## A roadmap to the release of a microdata file {#sec-roadmap}
 
-This section aims at introducing the reader to the process that, starting from the original microdata file as it is produced by survey specialists, ends with the creation of a file for external users. This roadmap will drive you through the six stage process for disclosure, mostly outlined in @sec-5-stages i.e.
+This section aims at introducing the reader to the process that, starting from the original microdata file as it is produced by survey specialists, ends with the creation of a file for external users. This roadmap will drive you through the six stage process for disclosure, mostly outlined in @sec-5-stages *i.e.*
 
 1.  why is confidentiality protection needed;
 2.  what are the key characteristics and use of the data;
@@ -64,7 +64,7 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 6\. assessment of disclosure risk\index{disclosure risk} and utility (ex post)   | Ex post analysis of disclosure risk\index{disclosure risk} and information loss\                                                                                                                      |
 |                                                                                  | ⇓\                                                                                                                                                                                                    |
-|                                                                                  | *In case disclosure risk\index{disclosure risk} and/or utility loss is too high, return to step 5.*                                                                                                   |
+|                                                                                  | *In case disclosure risk\index{disclosure risk} and/or utility loss is too high, return to step 4 or 5.*                                                                                              |
 +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Roadmap to releasing a microdata file {#tbl-roadmap}
@@ -73,56 +73,56 @@ Specifying, for each stage, the peculiarities of microdata release. In @tbl-road
 
 
 ::: {.content-visible when-format="pdf"}
-
 \begin{table}
-\begin{tabular}{|l|l|}
+\hspace*{-1cm}%
+\begin{tabular}{|l|c|}
 \hline
 \multirow{3}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Stage of disclosure \\ process\end{tabular}}} & \textbf{Analyses to be carried out / problem to be addressed}    \\  
-& \hspace{1cm} \textbf{\hspace{1cm} $\Downarrow$}   \\  
+& \textbf{$\Downarrow$}   \\  
 & \textit{\textbf{Results expected}}   \\ 
 \hline
 \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}1. Why is \\ confidentiality \\ protection needed\end{tabular}}  & Does the data refer to individuals or legal entity?    \\    
- & \hspace{1cm} $\Downarrow$      \\   
+ & $\Downarrow$      \\   
  & \textit{We need to protect the statistical unit}   \\ 
  \hline
 \multirow{15}{*}{\begin{tabular}[c]{@{}l@{}}2. What are the key \\ characteristics and \\ use of the data\end{tabular}}  & Analysis of the type/structure of the data  \\  
- & \hspace{1cm} $\Downarrow$  \\ 
+ & $\Downarrow$  \\ 
  & \textit{Clear vision of which units need protections}  \\ 
  \cline{2-2} 
  & Analysis of survey methodology \\ 
- & \hspace{1cm} $\Downarrow$  \\   
+ & $\Downarrow$  \\   
  & \begin{tabular}[c]{@{}l@{}}\textit{Type of sampling frame, sample/complete enumeration of} \\ \textit{strata, further analysis of survey methodology, calibration}\end{tabular}  \\ 
  \cline{2-2}  
  & Analysis of NSI objectives \\ 
- & \hspace{1cm} $\Downarrow$  \\  
+ & $\Downarrow$  \\  
  & \begin{tabular}[c]{@{}l@{}}\textit{Type of release (PUF, MFR),dissemination policies,} \\  \textit{peculiarities of the phenomenon, coherence between} \\  \textit{multiple releases (PUF and MFR), coherence with released} \\  \textit{tables and on-line databases, etc.}\end{tabular}\\ 
  \cline{2-2} 
  & Analysis of user needs   \\  
- & \hspace{1cm} $\Downarrow$  \\ 
+ & $\Downarrow$  \\ 
  & \textit{Priorities for variables, type of analysis, etc.}  \\ 
  \cline{2-2}  
  & Analysis of the questionnaire  \\  
- & \hspace{1cm} $\Downarrow$  \\  
+ & $\Downarrow$  \\  
  & \begin{tabular}[c]{@{}l@{}}\textit{List of variables to be removed, variables to be included,} \\ \textit{some ideas of level of details of structural variables}\end{tabular}  \\ 
  \hline
 \multirow{9}{*}{3. Disclosure risk (ex ante)}  & Disclosure scenario  \\ 
- & \hspace{1cm} $\Downarrow$  \\  
+ & $\Downarrow$  \\  
  & \textit{List of identifying variables}  \\ 
  \cline{2-2} & Definition of risk \\ 
- & \hspace{1cm} $\Downarrow$  \\ 
+ & $\Downarrow$  \\ 
  & \textit{Risk measure}  \\ 
  \cline{2-2}  & Risk assessment  \\  
- & \hspace{1cm} $\Downarrow$   \\   
+ & $\Downarrow$   \\   
  & \textit{If the risk is deemed too high need of disclosure limitation method}  \\ 
  \hline
 \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}4. Disclosure \\ limitation methods\end{tabular}}    & Analysis of type of data involved, NSI policies and users need \\ 
- & \hspace{1cm} $\Downarrow$  \\ 
+ & $\Downarrow$  \\ 
  & \textit{Identification of a disclosure limitation method} \\ \hline
 $5$. Implementation methods & Choice of software, parameters and thresholds for different methods  \\ 
  \hline
 \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}6. assessment of \\ disclosure risk\index{disclosure risk} \\  and utility (ex post)\end{tabular}} & Ex post analysis of disclosure risk\index{disclosure risk} and information loss   \\ 
- & \hspace{1cm} $\Downarrow$  \\ 
- & \textit{In case disclosure risk\index{disclosure risk} and/or utility loss is too high, return to step 5.}  \\ 
+ & $\Downarrow$  \\ 
+ & \textit{In case disclosure risk\index{disclosure risk} and/or utility loss is too high, return to step 4 or 5.}  \\ 
  \hline
 \end{tabular}
 \caption{Roadmap to releasing a microdata file}
@@ -146,7 +146,7 @@ However, in general, data refer to individual or enterprises and contains confid
 
 ### Characteristics and uses of microdata
 
-Of course different levels of protection are needed for different type of users. This theme leads us to the second stage of the process i.e. the study of the key uses and characteristics of the data. 
+Of course different levels of protection are needed for different type of users. This theme leads us to the second stage of the process *i.e.* the study of the key uses and characteristics of the data. 
 Here the initial question is whether the microdata file we are going to release is intended for a general public (public use file) or whether it is created for research purpose (research use files). 
 In the latter case the microdata will be released according to predefined procedures and legal binding (see also @sec-licensing). 
 The difference in user's type implies different user's needs, different disclosure scenarios, different types of analyses we expect to be performed with the released data, different statistics we may intend to preserve and different amount of protection we intend to apply. 
@@ -171,7 +171,7 @@ An analysis of the questionnaire is useful to analyse the type of information pr
 
 *Preliminary work on variables*\
 In this stage the setting of objectives from the viewpoint of the NSI and the user are defined. 
-From the NSI side dissemination policies are clarified (e.g. level of dissemination of NACE, geography, etc. or coherence with published tables). 
+From the NSI side dissemination policies are clarified (*e.g.* level of dissemination of NACE, geography, etc. or coherence with published tables). 
 From the user point of view a list of priorities in the structural variables of the survey, requests for minimum level of details for such variables and type of analysis to be performed (ratios, weighted totals, regressions, etc).
 
 The characteristics of the phenomenon under study should also be considered as well as the dissemination policy of the Statistical Institute. 
@@ -202,14 +202,14 @@ Examples of possible relative recodings (*e.g.* with respect to region of reside
 
 *Coherence with published tables*\
 At this initial stage of the analysis information should be collected on what has already been published/what it is going to be released from the microdata set: dissemination plan, which type of tables and what classification/aggregation was used for the variables. 
-This is to avoid different classifications in different release: the geographical breakdown, as well as classification of other variables in the survey (e.g. age, type of work etc.), should be coherent with the published marginals. 
+This is to avoid different classifications in different release: the geographical breakdown, as well as classification of other variables in the survey (*e.g.* age, type of work etc.), should be coherent with the published marginals. 
 For example, if a certain classification of the variable age is published in a table the microdata file should use a classification which has compatible break points so that to avoid gaining information by differencing. 
 Release of date of birth is highly discouraged. 
 Also, as far as possible, published totals should be preserved for transparency.
 
 ### Disclosure risk (ex ante)
 
-Moreover, in case of multiple release of the same survey (e.g. PUF and microdata for research) coherence should be maintained also between different released files in the sense that releasing different files at the same time shouldn't allow the gaining of more information than for one file alone (see, Trottini et al., 2006). 
+Moreover, in case of multiple release of the same survey (*e.g.* PUF and microdata for research) coherence should be maintained also between different released files in the sense that releasing different files at the same time shouldn't allow the gaining of more information than for one file alone (see, Trottini et al., 2006). 
 The principles apply also to the release of longitudinal or panel microdata, where the differences between records pertaining to the same case in different waves will reflect 'events' that have occurred to that case, as well as the attributes of the individuals.
 
 Once the characteristics and uses of the survey data are clear, it is time to start the real analysis of the disclosure risk\index{disclosure risk} in relation to files with originally collected data -- *ex ante* assessment (in one of next subsections we will indicated also on a necessity of making *ex post* assessment of disclosure risk\index{disclosure risk} to verify effciency of used SDC methods).
@@ -230,13 +230,13 @@ Moreover, the largest enterprises are also the most identifiable ones as recogni
 Consequently, a spontaneous identification or recognition might occur. A description of different scenarios is presented in @sec-disclosure-risk-scenarios; examples of spontaneous identification scenarios for MFR are reported in case studies A1 and A2.\ 
 
 *Definition of risk*\
-From the adopted scenario we can extract the list of identifying variables i.e. the variables that may allow the identification of a unit. 
+From the adopted scenario we can extract the list of identifying variables *i.e.* the variables that may allow the identification of a unit. 
 These will be the basis for defining the risk of disclosure. 
 Intuitively, a unit is at risk of identification when it cannot be confused with several other units. 
 The difficulty is to express this simple concept using sound statistical methodology.
 
 Different approaches are used if the identifying variables are categorical of continuous. 
-In the former case at the basis of the definition is the concept of a 'key' (i.e. the combination of categories of the identifying variables): see @sec-risk-overview for a classification of different definitions. 
+In the former case at the basis of the definition is the concept of a 'key' (*i.e.* the combination of categories of the identifying variables): see @sec-risk-overview for a classification of different definitions. 
 Whereas if continuous identifying variables are present in the file a possibility is to use the concept of density: see Ichim (2009) for a detailed analysis of definitions of risk in the case of continuous variables. 
 Of course, the problem is even more complicated when we deal with a mixture of categorical and numerical key variables; for an example of this situation (quite common in enterprise microdata) see case study A1 (Community Innovation Survey).
 Another solution in this context can be the assessment of disclosure risk\index{disclosure risk} based on the (expected) number of units for which a value of the given continuous variable falls into the respectively defined (using established threshold of deviation) neighborhood of a given observation. 
@@ -281,7 +281,7 @@ Again the examples and the case studies A1 and A2 may help in clarifying differe
 
 *User needs and types of protection*\
 From the needs of the users and the types of analyses that could be performed on the data one could gain information for the choice of the type of protection that could be applied to the microdata. 
-Also users could express priorities in the need of maintaining some variables intact (e.g., for business usually NACE is the most important variable, then employees, and so on).
+Also users could express priorities in the need of maintaining some variables intact (*e.g.*, for business usually NACE is the most important variable, then employees, and so on).
 
 *Information loss*\
 For research purposes maybe we could be interested in maintaining the possibility of being able to reproduce the published tables. 

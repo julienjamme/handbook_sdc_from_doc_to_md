@@ -7,7 +7,7 @@ The disclosure risk\index{disclosure risk}  for tabular data (especially magnitu
 
 - secondary risk.
 
-The primary risk concerns the threat for direct identification of an unit resulting from too low frequency or existence of outliers according to the presented magnitude in the cell. The secondary risk assessment is necessary due to the fact that primary confidential cells in detailed tables may still not ensure sufficient protection against re-identification: together with single cells also sums for larger groups, i.e. the margins are computed. Then the protection of the primary sensitive cells can be undone, by some differencing. Therefore the risk of such an event should also be assessed. 
+The primary risk concerns the threat for direct identification of an unit resulting from too low frequency or existence of outliers according to the presented magnitude in the cell. The secondary risk assessment is necessary due to the fact that primary confidential cells in detailed tables may still not ensure sufficient protection against re-identification: together with single cells also sums for larger groups, *i.e.* the margins are computed. Then the protection of the primary sensitive cells can be undone, by some differencing. Therefore the risk of such an event should also be assessed. 
 
 The key measure for assessing primary disclosure risk\index{disclosure risk}  in the case of magnitude tables is based on the $(n,k)$-dominance or $p\%$ rules (c.f. @sec-sensitive-cells-magnitude-tables, @tbl-sensitivity-rules). In some formal regulations or recommendations it is assumed $n=1$ and $k=75$. Hovever, in @sec-sensitive-cells-magnitude-tables, following the reach practical experience, it is recommended to use $n>1$ in this context. Quite commonly the $(n,k)$-dominance is combined with $k$-anonymity: a cell is regarded as unsafe if it violates the $k$-anonymity or the $(n,k)$-dominance. Therefore the dislosure risk can be measured as the share of cells violating the finally assumed principle. A broader discussion on an application of these rules to assess the disclosure risk\index{disclosure risk} is performed in @sec-disclosure-control-concepts-tables. See also Hundepool et al. (2012).
 
@@ -32,13 +32,13 @@ $$
 1-\frac{H}{\log n}. 
 $${#eq-entropy-normalized}
 
-This approach, however, doesn't take our fifth condition into account. So, one can extend ([-@eq-entropy-normalized]) to the form combining both aspects, e.g. in the following way: 
+This approach, however, doesn't take our fifth condition into account. So, one can extend ([-@eq-entropy-normalized]) to the form combining both aspects, *e.g.* in the following way: 
 $$
 r=1-\frac{1}{2}\left(\frac{H}{\log n}+\frac{1}{n}\sum_{i=1}^n{\frac{x_{i(\text{max})}}{\sum_{j\in C_i}{x_j}}}\right),
 $$
 where $x_{i(\text{max})}$ is the share of the largest contributors to the cell $C_i$ and $x_j$ is the contribution of the $j$-th unit to it. This measure takes value from $[0,1]$ and is easily interpretable. 
 
-The disclosure risk\index{disclosure risk}  assessment can be also adjusted to the specificity of currently used SDC method. For instance, Enderle, Giessing and Tent (2020) have proposed an original risk measure for continous data perturbed using the Cell Key approach. It assumes that an intruder can know the amount of noise and the maximum deviation parameter. Then he/she can determine the feasibility intervals for original internal and margin cells using the noisy values. The risk estimate is then a weighted sum of risk probabilities, e.g. risk probabilites computed by summing up certain probabilities defined by the p-table relating to "risky" constellations, weighted by the empirical probability of the respective constellation to occur in a given test dataset. 
+The disclosure risk\index{disclosure risk}  assessment can be also adjusted to the specificity of currently used SDC method. For instance, Enderle, Giessing and Tent (2020) have proposed an original risk measure for continous data perturbed using the Cell Key approach. It assumes that an intruder can know the amount of noise and the maximum deviation parameter. Then he/she can determine the feasibility intervals for original internal and margin cells using the noisy values. The risk estimate is then a weighted sum of risk probabilities, *e.g.* risk probabilites computed by summing up certain probabilities defined by the p-table relating to "risky" constellations, weighted by the empirical probability of the respective constellation to occur in a given test dataset. 
 
 ### Information loss
 
@@ -62,7 +62,7 @@ $$
 $$
 where $n_A$ is the number of cells included in the aggregate $A$.
 
-One can also propose to use in this context the sum of relative absolute deviations, i.e. the the sum of relative differences between cell values in both tables:
+One can also propose to use in this context the sum of relative absolute deviations, *i.e.* the the sum of relative differences between cell values in both tables:
 $$
 \text{RAD}(A)=\sum_{c\in A}{\frac{|T_1(c)-T_0(c)|}{T_0(c)}}.
 $$
@@ -72,7 +72,7 @@ $$
 \text{HD}(A)=\sqrt{\frac{1}{2}\sum_{c\in A}{\left(\sqrt{T_1(c)}-\sqrt{T_0(c)}\right)^2}}.
 $$
 
-However, there may be missing data in the tables. When perturbative SDC methods are applied, these gaps will result mainly from missing data occurring in the original microdata being a basis of construction of tables. In this case, during computation of cell values one can omit these gaps or earlier make an imputation of them. The only inconvenience may appear when there are no data concerning the categories defined by the cell. Then one must either resign from a given structure of the table (e.g. by combining some of the original categories into another, more coarse one), or the measure of loss should be based on the measurement of loss at the level of microdata corresponding to this cell, performed in the manner described in [Chapter 3](03-microdata.html).
+However, there may be missing data in the tables. When perturbative SDC methods are applied, these gaps will result mainly from missing data occurring in the original microdata being a basis of construction of tables. In this case, during computation of cell values one can omit these gaps or earlier make an imputation of them. The only inconvenience may appear when there are no data concerning the categories defined by the cell. Then one must either resign from a given structure of the table (*e.g.* by combining some of the original categories into another, more coarse one), or the measure of loss should be based on the measurement of loss at the level of microdata corresponding to this cell, performed in the manner described in [Chapter 3](03-microdata.html).
  
 More difficult is the situation where non-perturbative post-tabular SDC methods are used. For assessing information loss from the perspective of the data user, one can make a comparison of tables before and after the SDC process. For this, one should simulate a table, in which for missing cells their values are imputed. On the other hand, for controlling the process of selection of secondary cell suppression\index{cell suppression} , information loss will be expressed as the sum of costs incurred due to it. The problem is whether the weight of each cell in the table is the same, or whether cells with a higher value have a higher weight (cf. the discussion in @sec-setting-up-a-tabular-data-protection-problem-in-practice). In practice, suppression of too many cells with high values can significantly decrease the utility of disseminated data. The issue of information loss can be variously expressed, depending on preferences and needs of a user. In this way, it is possible to influence the operation of the algorithm for selecting cells for secondary suppression. In @sec-setting-up-a-tabular-data-protection-problem-in-practice (see also Hundepool et al. (2012)) we indicate the most common criteria taken into account when the cost function for cell suppression\index{cell suppression}  is defined:
 

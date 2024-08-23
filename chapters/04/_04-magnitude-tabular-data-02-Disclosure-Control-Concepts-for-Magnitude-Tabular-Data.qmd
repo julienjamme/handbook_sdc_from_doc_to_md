@@ -17,7 +17,7 @@ But what if a cell value does not relate to one, but to two respondents?
 
 :::{.callout-note appearance="simple"}
 **Example 1b**
-Let us assume this time that both companies (A and B) are located in region X, and are the only mining companies there. Let us further assume that they both are aware of this fact. Then again publication of the cell value implies a disclosure risk\index{disclosure risk} (this time to both companies): if any of the two companies look into the publication and subtract their own contribution to the cell value (i.e. the turnover they reported) from the cell value, they will be able to disclose the turnover of the other company.
+Let us assume this time that both companies (A and B) are located in region X, and are the only mining companies there. Let us further assume that they both are aware of this fact. Then again publication of the cell value implies a disclosure risk\index{disclosure risk} (this time to both companies): if any of the two companies look into the publication and subtract their own contribution to the cell value (*i.e.* the turnover they reported) from the cell value, they will be able to disclose the turnover of the other company.
 :::
 
 :::{.callout-note appearance="simple"}
@@ -25,13 +25,13 @@ Let us assume this time that both companies (A and B) are located in region X, a
 Assume now that the table cell relates to more than two respondents. Imagine this time that four companies (A, B, C and D) are located in region X. Then theoretically three of them (B, C and D, say) could form a *coalition* to disclose the turnover of company A. Such a coalition might be a rather theoretical construct. An equivalent but perhaps more likely scenario could be that of another party who knows the contributions of companies B, C and D (perhaps a financial advisor working for all three companies) who would then be able to disclose also the turnover of company A by subtracting the contributions of B, C and D from the cell value.
 :::
 
-The examples above are based on the intruder scenario typical for business data: it is usually assumed, that the "intruders", those who might be interested in disclosing individual respondent data, may be "other players in the field", e.g. competitors of the respondent or other parties who are generally well informed on the situation in the part of the economy to which the particular cell relates. Such intruder scenarios make sense, because, unlike microdata files for researchers, tabular data released by official statistics are accessible to everybody -- which means they are accessible in particular to those well informed parties.
+The examples above are based on the intruder scenario typical for business data: it is usually assumed, that the "intruders", those who might be interested in disclosing individual respondent data, may be "other players in the field", *e.g.* competitors of the respondent or other parties who are generally well informed on the situation in the part of the economy to which the particular cell relates. Such intruder scenarios make sense, because, unlike microdata files for researchers, tabular data released by official statistics are accessible to everybody -- which means they are accessible in particular to those well informed parties.
 
 In the scenarios of example 1 there is a risk that magnitude information is disclosed exactly. But how about approximate disclosure?
 
 :::{.callout-note appearance="simple"}
 **Example 1d**
-Let us reconsider the example once more. Assume this time that in region X there are 51 companies that belong to the mining sector, e.g. company A and 50 very small companies S~1~ to S~50~. Assume further that 99 % of the turnover in mining in region X is contributed by company A. In that scenario, the cell value (turnover in the mining sector for region X) is a pretty close approximation of the turnover of company A. And even though the potential intruder (in our example mining company B of the neighbour region Y) may not be able to identify all 51 mining companies of region X, it is very likely that they will know that there is one very big company in region X and which company that is.
+Let us reconsider the example once more. Assume this time that in region X there are 51 companies that belong to the mining sector, *e.g.* company A and 50 very small companies S~1~ to S~50~. Assume further that 99 % of the turnover in mining in region X is contributed by company A. In that scenario, the cell value (turnover in the mining sector for region X) is a pretty close approximation of the turnover of company A. And even though the potential intruder (in our example mining company B of the neighbour region Y) may not be able to identify all 51 mining companies of region X, it is very likely that they will know that there is one very big company in region X and which company that is.
 :::
 
 \
@@ -76,7 +76,7 @@ When the disseminating agency thinks it is enough to prevent exact disclosure, a
 
 Normally the minimum frequency $n$ will be set to 3.
 
-An exception is the case when for some $n_0$ larger than 3 the agency thinks it is realistic to assume that a coalition of $n_0 - 2$ respondents contributing to the same cell may pool their data to disclose the contribution of another respondent. In such a case we set $n$ to $n_0$. Example 1c above provides an instance for this case with $n_0=5$. (The intruder knows the pooled data of $5 - 2 = 3$ companies (e.g. B, C and D)).
+An exception is the case when for some $n_0$ larger than 3 the agency thinks it is realistic to assume that a coalition of $n_0 - 2$ respondents contributing to the same cell may pool their data to disclose the contribution of another respondent. In such a case we set $n$ to $n_0$. Example 1c above provides an instance for this case with $n_0=5$. (The intruder knows the pooled data of $5 - 2 = 3$ companies (*e.g.* B, C and D)).
 
 It should be stressed here that a minimum frequency larger than 3 normally does not make much sense, even though in example 1c, for some cells of a table it may happen that such a 'pooled data' situation actually occurs. Usually there is no way for an agency to know for which cell which size to assume for the 'pool'. Let us assume, for instance, that in a cell with 100 respondents 99 are in the stock market and are therefore obliged to publish data which are also their contributions to that cell value. Then we should consider 99 as the size of the pool, because anybody could add up (*i.e.* pool) these 99 published data values in order to disclose the (confidential) contribution of company 100 who is not in the stock market. But should the agency really consider all cells with less than 101 respondents as unsafe?
 
@@ -113,7 +113,7 @@ $$
 (X - x_{2}) - x_{1} < \frac{100 - k}{100} X
 $${#eq-dominance-relative-error}
 
-In this formulation, the $(2,k)$-rule looks very similar to the formulation of the $p\%$-rule given by ([-@eq-p-percent-formula]). Both rules define an aggregate to be sensitive, when the estimate $\hat{x}_{1} = X - x_{2}$ does not overestimate the true value of $x_{1}$ 'sufficiently'. The difference between both rules is in how they determine this 'sufficiency'. According to the $p\%$-rule, it is expressed as a rate (i.e. $p\%$) of the true value of the largest contribution $x_{1}$, while according to the $(2,k)$‑rule, it is expressed as a rate (i.e. $(100-k)\%$) of the aggregate total $X$. Considering this, the concept of the $p\%$-rule seems to be more natural than that of the $(2,k)$-rule.
+In this formulation, the $(2,k)$-rule looks very similar to the formulation of the $p\%$-rule given by ([-@eq-p-percent-formula]). Both rules define an aggregate to be sensitive, when the estimate $\hat{x}_{1} = X - x_{2}$ does not overestimate the true value of $x_{1}$ 'sufficiently'. The difference between both rules is in how they determine this 'sufficiency'. According to the $p\%$-rule, it is expressed as a rate (*i.e.* $p\%$) of the true value of the largest contribution $x_{1}$, while according to the $(2,k)$‑rule, it is expressed as a rate (*i.e.* $(100-k)\%$) of the aggregate total $X$. Considering this, the concept of the $p\%$-rule seems to be more natural than that of the $(2,k)$-rule.
 
 $(2,k)$-rules correspond to $p\%$-rules in the following way:
 
@@ -129,7 +129,7 @@ We therefore recommend use of the $p\%$‑rule instead of a $(2,k)$‑dominance 
 
 \
 ***How to obtain the $p$ parameter?***\
-When we replace a $(2,k)$‑dominance rule, by a $p\%$‑rule, the natural choice is to derive the parameter $p$ from $k = 100 \frac{100}{100 + p}$ , e.g. to set $p = 100 \frac{100 - k}{k}$
+When we replace a $(2,k)$‑dominance rule, by a $p\%$‑rule, the natural choice is to derive the parameter $p$ from $k = 100 \frac{100}{100 + p}$ , *e.g.* to set $p = 100 \frac{100 - k}{k}$
 
 Thus, a $(2,80)$‑dominance rule would be replaced by a $p\%$‑rule with $p = 25$, a $(2,95)$‑dominance rule by a $p\%$‑rule with $p = 5.26$ .
 
@@ -183,7 +183,7 @@ $$
 p^* := 100  \frac{p}{q}
 $${#eq-p-star}
 
-Of course we can also adapt the $(n,k)$-dominance rule to account for $q\%$ relative a priori bounds: Let e.g. $n = 2$. According to ([-@eq-dominance-relative-error]) above, an aggregate should then be considered unsafe when the second largest respondent could estimate the largest contribution $x_{1}$ to within $(100 - k)$ percent of $X$ , by subtracting her own contribution and the estimate ${\hat{X}}_{R}$ from the cell total, *i.e.* when $|\left( X - x_{2} \right) - x_{1} - {\hat{X}}_{R}| < (100 - k)/100  X$. Just as in the case of the $p\%$-rule, we see that the aggregate is sensitive, when $X_{R} < \frac{100 - k}{q} X$, and that for given parameters $k$ and $q$ the parameter $k^*$ corresponding to $q^* = 100$ should be chosen such that
+Of course we can also adapt the $(n,k)$-dominance rule to account for $q\%$ relative a priori bounds: Let *e.g.* $n = 2$. According to ([-@eq-dominance-relative-error]) above, an aggregate should then be considered unsafe when the second largest respondent could estimate the largest contribution $x_{1}$ to within $(100 - k)$ percent of $X$ , by subtracting her own contribution and the estimate ${\hat{X}}_{R}$ from the cell total, *i.e.* when $|\left( X - x_{2} \right) - x_{1} - {\hat{X}}_{R}| < (100 - k)/100  X$. Just as in the case of the $p\%$-rule, we see that the aggregate is sensitive, when $X_{R} < \frac{100 - k}{q} X$, and that for given parameters $k$ and $q$ the parameter $k^*$ corresponding to $q^* = 100$ should be chosen such that
 $$
 \frac{100-k^*}{100} = \frac{100-k}{q}
 $${#eq-k-star}
@@ -210,7 +210,7 @@ $x_{r} + x_{s} > \frac{k}{100} X,$ for the $(2,k)$-dominance rule.
 ***Foreign trade rules***\
 In foreign trade statistics traditionally a special rule is applied. Only for those enterprises that have actively asked for protection of their information special sensitivity rules are applied. This implies that if the largest contributor to a cell asks for protection and contributes over a certain percentage to the cell total, that cell is considered a primarily unsafe cell.
 
-Given the normal level of detail in the foreign trade tables the application of the standard sensitivity rules would imply that a very large proportion of the table should have been suppressed. This is considered not to be a desirable situation and for a long time there have not been serious complaints. This has led to this special rule. And this rule has a legal basis in the European [[regulation 638/2004]{.underline}](http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML).
+Given the normal level of detail in the foreign trade tables the application of the standard sensitivity rules would imply that a very large proportion of the table should have been suppressed. This is considered not to be a desirable situation and for a long time there have not been serious complaints. This has led to this special rule. And this rule has a legal basis in the European regulation 638/2004 [https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32004R0638:EN:HTML).
 
 In $\tau$‑ARGUS special options (*the request rule*) have been introduced to apply this rule. The secondary cell suppression\index{cell suppression} will be done in the standard way.
 
@@ -278,7 +278,7 @@ In @sec-secondary-protection-methods we introduce into the concepts of secondary
 
 ### Secondary tabular data protection methods {#sec-secondary-protection-methods}
 
-For reasons explained in the introduction of this chapter, we assume here that tables always include margins and overall totals along with their 'inner' cells. Thus, there is always a linear relationship between cells of a table. (Consider for instance example 1a of the introduction to this chapter: The sector result (say: $X_T$) is the sum of the three sub-sector results ($X_1$ to $X_3$), i.e. the linear relationship between these four cells is given by the relation $X_T = X_1 + X_2 + X_3$. As we have seen in example 1a, if it has been established that a disclosure risk\index{disclosure risk} is connected to the release of certain cells of a table, then it is not enough to prevent publication of these cells. Other cells must be suppressed (so called 'complementary' or 'secondary' suppressions), or be otherwise manipulated in order to prevent the value of the protected sensitive cell being recalculated through f.i. differencing.
+For reasons explained in the introduction of this chapter, we assume here that tables always include margins and overall totals along with their 'inner' cells. Thus, there is always a linear relationship between cells of a table. (Consider for instance example 1a of the introduction to this chapter: The sector result (say: $X_T$) is the sum of the three sub-sector results ($X_1$ to $X_3$), *i.e.* the linear relationship between these four cells is given by the relation $X_T = X_1 + X_2 + X_3$. As we have seen in example 1a, if it has been established that a disclosure risk\index{disclosure risk} is connected to the release of certain cells of a table, then it is not enough to prevent publication of these cells. Other cells must be suppressed (so called 'complementary' or 'secondary' suppressions), or be otherwise manipulated in order to prevent the value of the protected sensitive cell being recalculated through f.i. differencing.
 
 Within this section we explain the methodological background of secondary tabular data protection methods.
 
@@ -350,7 +350,7 @@ Cases where the criterion is not sufficient arise typically, when the only other
 
 :::
 
-The problem of finding an optimum set of suppressions known as the 'secondary cell suppression\index{cell suppression} problem' is to find a valid set of secondary suppressions with a minimum loss of information connected to it. For a mathematical statement of the secondary cell suppression\index{cell suppression} problem see e.g. Fischetti and Salazar (2000).
+The problem of finding an optimum set of suppressions known as the 'secondary cell suppression\index{cell suppression} problem' is to find a valid set of secondary suppressions with a minimum loss of information connected to it. For a mathematical statement of the secondary cell suppression\index{cell suppression} problem see *e.g.* Fischetti and Salazar (2000).
 
 However, cell suppression\index{cell suppression} is not the only option to protect magnitude tables. As one alternative to cell suppression\index{cell suppression}, *'Partial Suppression'* has been suggested in Salazar (2003). The partial suppression problem is to find a valid suppression pattern, where the size of the feasibility intervals is minimal. The idea of the partial suppression method is to publish the feasibility intervals of the resulting suppression pattern. Because there is a perception that the majority of users of the publications prefer the statistical agencies to provide actual figures rather than intervals, and partial suppression tends to affect more cells than cell suppression\index{cell suppression}, this method has not yet been implemented.
 

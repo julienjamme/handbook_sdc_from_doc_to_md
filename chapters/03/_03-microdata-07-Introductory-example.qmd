@@ -18,11 +18,11 @@ If these rules are violated, global recoding and local suppression are applied t
 For business microdata these rules are not appropriate. Opposite to personal microdata business data tends to be much more skewed. Each business is much more visible in a microdata set. This makes it very hard to make a safe business micro dataset.
 
 *Microdata for the general public*\
-The software package $\mu$-ARGUS (Hundepool et al, 2005) is also of help in producing public use microdata files. For public use microdata files one could use the following set of rules:
+The software package $\mu$-ARGUS (see *e.g.* Hundepool et al, 2014) is also of help in producing public use microdata files. For public use microdata files one could use the following set of rules:
 
 1. The microdata must be at least one year old before they may be released.
 2. Direct identifiers should not be released. Also direct regional variables, nationality, country of birth and ethnicity should not be released.
-3. Only one kind of indirect regional variables (e.g. the size class of the place of residence) may be released. The combinations of values of the indirect regional variables should be sufficiently scattered, i.e. each area that can be distinguished should contain at least 200 000 persons in the target population and, moreover, should consist of municipalities from at least six of the twelve provinces in the Netherlands. The number of inhabitants of a municipality in an area that can be distinguished should be less than 50 % of the total number of inhabitants in that area.
+3. Only one kind of indirect regional variables (*e.g.* the size class of the place of residence) may be released. The combinations of values of the indirect regional variables should be sufficiently scattered, *i.e.* each area that can be distinguished should contain at least 200 000 persons in the target population and, moreover, should consist of municipalities from at least six of the twelve provinces in the Netherlands. The number of inhabitants of a municipality in an area that can be distinguished should be less than 50 % of the total number of inhabitants in that area.
 4. The number of identifying variables in the microdata is at most 15.
 5. Sensitive variables should not be released.
 6. It should be impossible to derive additional identifying information from the sampling weights.
